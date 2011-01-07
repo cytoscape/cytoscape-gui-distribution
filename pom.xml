@@ -1,0 +1,58 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <parent>
+    <artifactId>parent</artifactId>
+    <groupId>org.cytoscape</groupId>
+    <version>3.0.0-alpha4-SNAPSHOT</version>
+  </parent>
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.cytoscape</groupId>
+  <artifactId>gui-distribution</artifactId>
+  <version>1.0-SNAPSHOT</version>
+
+  <name>Cytoscape</name>
+
+  <packaging>pom</packaging>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <!-- this assembly is only for the startlevel modules, distribution has its own -->
+        <plugin>
+          <artifactId>maven-assembly-plugin</artifactId>
+          <dependencies>
+            <dependency>
+              <groupId>org.cytoscape</groupId>
+              <artifactId>startlevel-assembly</artifactId>
+              <version>${version}</version>
+            </dependency>
+          </dependencies>
+          <executions>
+            <execution>
+              <id>make-assembly</id>
+              <phase>package</phase>
+              <goals>
+                <goal>single</goal>
+              </goals>
+              <configuration>
+                <descriptorRefs>
+                  <descriptorRef>startlevel-assembly</descriptorRef>
+                </descriptorRefs>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+  <modules>
+    <module>startlevel-1</module>
+    <module>startlevel-2</module>
+    <module>startlevel-3</module>
+    <module>distribution</module>
+  </modules>
+
+</project>
