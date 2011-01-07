@@ -52,19 +52,19 @@
 	  <classifier>jar-with-dependencies</classifier>
     </dependency>
     <dependency>
-      <groupId>org.cytoscape</groupId>
+      <groupId>org.cytoscape.gui-distribution</groupId>
       <artifactId>startlevel-1</artifactId>
       <version>${version}</version>
       <type>zip</type>
     </dependency>
     <dependency>
-      <groupId>org.cytoscape</groupId>
+      <groupId>org.cytoscape.gui-distribution</groupId>
       <artifactId>startlevel-2</artifactId>
       <version>${version}</version>
       <type>zip</type>
     </dependency>
     <dependency>
-      <groupId>org.cytoscape</groupId>
+      <groupId>org.cytoscape.gui-distribution</groupId>
       <artifactId>startlevel-3</artifactId>
       <version>${version}</version>
       <type>zip</type>
