@@ -35,6 +35,23 @@
       <artifactId>pax-confman-propsloader</artifactId>
       <version>0.2.2</version>
     </dependency>
+    <dependency>
+      <groupId>org.apache.felix</groupId>
+      <artifactId>org.apache.felix.gogo.command</artifactId>
+      <version>0.6.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.felix</groupId>
+      <artifactId>org.apache.felix.gogo.shell</artifactId>
+      <version>0.6.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.felix</groupId>
+      <artifactId>org.apache.felix.gogo.runtime</artifactId>
+      <version>0.6.1</version>
+    </dependency>
+
+
   </dependencies>
 
 </project>

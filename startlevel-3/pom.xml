@@ -68,7 +68,6 @@
 			<artifactId>spring-osgi-io</artifactId>
 			<version>${spring.osgi.version}</version>
 		</dependency>
-
 		<dependency>
 			<groupId>org.aspectj</groupId>
 			<artifactId>com.springsource.org.aspectj.weaver
@@ -82,7 +81,6 @@
 			<version>1.6.3.RELEASE</version>
 		</dependency>
 
-
 		<!-- 3rd Party Libraries -->
 		<dependency>
 			<groupId>com.lowagie.text</groupId>
@@ -91,39 +89,34 @@
 			<version>2.0.8</version>
 		</dependency>
 
-
 		<!-- Wrapped 3rd Party Libraries -->
-		<dependency>
-			<groupId>org.cytoscape.wrappers</groupId>
-			<artifactId>com.l2fprod.common.sheet
-			</artifactId>
-			<version>7.3</version>
-		</dependency>
-		<dependency>
-			<groupId>org.cytoscape.wrappers</groupId>
-			<artifactId>org.swinglabs.swingx</artifactId>
-			<version>1.6.1</version>
-		</dependency>
-		<dependency>
-			<groupId>org.cytoscape.wrappers</groupId>
-			<artifactId>com.l2fprod.common.shared
-			</artifactId>
-			<version>7.3</version>
-		</dependency>
-		<dependency>
-			<groupId>org.cytoscape.wrappers</groupId>
-			<artifactId>com.l2fprod.common.fontchooser
-			</artifactId>
-			<version>7.3</version>
-		</dependency>
-
+        <dependency>
+            <groupId>org.cytoscape.wrappers</groupId>
+            <artifactId>org.swinglabs.swingx</artifactId>
+            <version>1.6.1</version>
+        </dependency>
+		<!-- 
+		For reasons I don't understand the sheet bundle needs to
+		start *before* the shared and fontchooser bundles. To enforce
+		this the bundle has been moved back to startlevel-2.
+        <dependency>
+            <groupId>cytoscape-temp</groupId>
+            <artifactId>l2fprod-common-sheet</artifactId>
+            <version>7.3</version>
+        </dependency>
+		-->
+        <dependency>
+            <groupId>cytoscape-temp</groupId>
+            <artifactId>l2fprod-common-shared</artifactId>
+            <version>7.3</version>
+        </dependency>
+        <dependency>
+            <groupId>cytoscape-temp</groupId>
+            <artifactId>l2fprod-common-fontchooser</artifactId>
+            <version>7.3</version>
+        </dependency>
 
 		<!-- Cytoscape API Bundles -->
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>table-browser-impl</artifactId>
-			<version>1.0-SNAPSHOT</version>
-		</dependency>
 		<dependency>
 			<groupId>org.cytoscape</groupId>
 			<artifactId>model-api</artifactId>
@@ -205,8 +198,17 @@
 			<version>3.0.0-alpha2-SNAPSHOT</version>
 		</dependency>
 
-
 		<!-- Cytoscape Implementation Bundles -->
+		<dependency>
+			<groupId>org.cytoscape</groupId>
+			<artifactId>search-impl</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.cytoscape</groupId>
+			<artifactId>table-browser-impl</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
 		<dependency>
 			<groupId>org.cytoscape</groupId>
 			<artifactId>swing-application-impl</artifactId>
@@ -317,7 +319,6 @@
 			<artifactId>swing-util</artifactId>
 			<version>1.0-SNAPSHOT</version>
 		</dependency>
-
 		<dependency>
 			<groupId>org.cytoscape</groupId>
 			<artifactId>math-xform</artifactId>
@@ -335,7 +336,6 @@
 			<artifactId>jhall</artifactId>
 			<version>1.0</version>
 		</dependency>
-
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>com.springsource.org.apache.commons.collections</artifactId>
@@ -348,12 +348,14 @@
 			<artifactId>plugin-impl</artifactId>
 			<version>3.0.0-alpha2-SNAPSHOT</version>
 		</dependency>
+
 		<!-- A utility that allows you to register services dynamically -->
 		<dependency>
 			<groupId>org.cytoscape</groupId>
 			<artifactId>service-util</artifactId>
 			<version>3.0.0-alpha1</version>
 		</dependency>
+
 		<!-- Editor Plugin -->
 		<dependency>
 			<groupId>org.cytoscape</groupId>
@@ -372,7 +374,6 @@
 			<artifactId>prefuse</artifactId>
 			<version>20071021</version>
 		</dependency>
-
 
 		<!-- linkout plugin -->
 		<dependency>
@@ -447,24 +448,6 @@
 			<artifactId>jfree-jcommon</artifactId>
 			<version>1.0.15</version>
 		</dependency>
-
-		<!-- gogo shell -->
-    <dependency>
-      <groupId>org.apache.felix</groupId>
-      <artifactId>org.apache.felix.gogo.command</artifactId>
-      <version>0.6.1</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.felix</groupId>
-      <artifactId>org.apache.felix.gogo.shell</artifactId>
-      <version>0.6.1</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.felix</groupId>
-      <artifactId>org.apache.felix.gogo.runtime</artifactId>
-      <version>0.6.1</version>
-    </dependency>
-
 	</dependencies>
 
 </project>
