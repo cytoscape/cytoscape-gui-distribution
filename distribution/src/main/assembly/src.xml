@@ -22,6 +22,7 @@
         <include>org.cytoscape:launcher:jar:jar-with-dependencies</include>
       </includes>
       <unpack>false</unpack>
+	  <outputFileNameMapping>cytoscape-launcher.jar</outputFileNameMapping>
     </dependencySet>
     <dependencySet>
       <includes>
