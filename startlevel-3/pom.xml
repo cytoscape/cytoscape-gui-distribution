@@ -461,34 +461,34 @@
 		
 		<!-- Apache poi -->
 		<dependency>
-      		<groupId>org.apache.xmlbeans</groupId>
-      		<artifactId>xmlbeans</artifactId>
-      		<version>2.4.0</version>
+			<groupId>org.apache.xmlbeans</groupId> 
+			<artifactId>com.springsource.org.apache.xmlbeans</artifactId> 
+			<version>2.4.0</version> 
       	</dependency>
     	<dependency>
-      		<groupId>org.apache.poi</groupId>
-      		<artifactId>poi</artifactId>
+      		<groupId>org.dom4j</groupId>
+      		<artifactId>com.springsource.org.dom4j</artifactId>
+      		<version>1.6.1</version>
+    	</dependency>
+    	<dependency>
+      		<groupId>cytoscape-temp</groupId>
+      		<artifactId>org.apache.poi</artifactId>
       		<version>3.6</version>
     	</dependency>
     	<dependency>
-      		<groupId>org.apache.poi</groupId>
-      		<artifactId>poi-contrib</artifactId>
+      		<groupId>cytoscape-temp</groupId>
+      		<artifactId>org.apache.poi-contrib</artifactId>
      		 <version>3.6</version>
     	</dependency>
     	<dependency>
-      		<groupId>org.apache.poi</groupId>
-      		<artifactId>poi-ooxml</artifactId>
+      		<groupId>cytoscape-temp</groupId>
+      		<artifactId>org.apache.poi-ooxml</artifactId>
      		<version>3.6</version>
     	</dependency>
     	<dependency>
-      		<groupId>org.apache.poi</groupId>
-      		<artifactId>poi-ooxml-schemas</artifactId>
+      		<groupId>cytoscape-temp</groupId>
+      		<artifactId>org.apache.poi-ooxml-schemas</artifactId>
       		<version>3.6</version>
-    	</dependency>
-    	<dependency>
-      		<groupId>dom4j</groupId>
-      		<artifactId>dom4j</artifactId>
-      		<version>1.6.1</version>
     	</dependency>
 	
 		<!-- table-import-imp -->
