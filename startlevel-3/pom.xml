@@ -490,7 +490,13 @@
       		<artifactId>dom4j</artifactId>
       		<version>1.6.1</version>
     	</dependency>
-		
+	
+		<!-- table-import-imp -->
+		<dependency>
+      		<groupId>org.cytoscape</groupId>
+      		<artifactId>table-import-impl</artifactId>
+      		<version>1.0-SNAPSHOT</version>
+      	</dependency>	
 
 	</dependencies>
 
