@@ -503,6 +503,18 @@
       		<version>1.0-SNAPSHOT</version>
       	</dependency>	
 
+		<!-- Filters -->
+		<dependency>
+			<groupId>org.cytoscape</groupId>
+			<artifactId>filter-impl</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>cytoscape-temp</groupId>
+			<artifactId>violinstrings</artifactId>
+			<version>1.0.2</version>
+		</dependency>
+		
 	</dependencies>
 
 </project>
