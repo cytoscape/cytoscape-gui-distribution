@@ -476,22 +476,7 @@
 		</dependency>
 		<dependency>
 			<groupId>cytoscape-temp</groupId>
-			<artifactId>org.apache.poi</artifactId>
-			<version>3.6</version>
-		</dependency>
-		<dependency>
-			<groupId>cytoscape-temp</groupId>
-			<artifactId>org.apache.poi-contrib</artifactId>
-			<version>3.6</version>
-		</dependency>
-		<dependency>
-			<groupId>cytoscape-temp</groupId>
-			<artifactId>org.apache.poi-ooxml</artifactId>
-			<version>3.6</version>
-		</dependency>
-		<dependency>
-			<groupId>cytoscape-temp</groupId>
-			<artifactId>org.apache.poi-ooxml-schemas</artifactId>
+			<artifactId>org.apache.poi-all</artifactId>
 			<version>3.6</version>
 		</dependency>
 
