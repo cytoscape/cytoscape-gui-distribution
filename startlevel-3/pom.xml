@@ -1,28 +1,28 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
-  <parent>
-    <groupId>org.cytoscape</groupId>
-    <artifactId>gui-distribution</artifactId>
-    <version>1.0-SNAPSHOT</version>
-  </parent>
+	<parent>
+		<groupId>org.cytoscape</groupId>
+		<artifactId>gui-distribution</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
 
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>org.cytoscape.gui-distribution</groupId>
-  <artifactId>startlevel-3</artifactId>
-  <version>1.0-SNAPSHOT</version>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.cytoscape.gui-distribution</groupId>
+	<artifactId>startlevel-3</artifactId>
+	<version>1.0-SNAPSHOT</version>
 
-  <packaging>pom</packaging>
+	<packaging>pom</packaging>
 
-  <name>StartLevel 3 Bundles</name>
+	<name>StartLevel 3 Bundles</name>
 
-  <build>
-    <plugins>
-      <plugin>
-        <artifactId>maven-assembly-plugin</artifactId>
-      </plugin>
-    </plugins>
-  </build>
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
 
 	<dependencies>
 
@@ -90,31 +90,25 @@
 		</dependency>
 
 		<!-- Wrapped 3rd Party Libraries -->
-        <dependency>
-            <groupId>org.cytoscape.wrappers</groupId>
-            <artifactId>org.swinglabs.swingx</artifactId>
-            <version>1.6.1</version>
-        </dependency>
-		<!-- 
-		For reasons I don't understand the sheet bundle needs to
-		start *before* the shared and fontchooser bundles. To enforce
-		this the bundle has been moved back to startlevel-2.
-        <dependency>
-            <groupId>cytoscape-temp</groupId>
-            <artifactId>l2fprod-common-sheet</artifactId>
-            <version>7.3</version>
-        </dependency>
-		-->
-        <dependency>
-            <groupId>cytoscape-temp</groupId>
-            <artifactId>l2fprod-common-shared</artifactId>
-            <version>7.3</version>
-        </dependency>
-        <dependency>
-            <groupId>cytoscape-temp</groupId>
-            <artifactId>l2fprod-common-fontchooser</artifactId>
-            <version>7.3</version>
-        </dependency>
+		<dependency>
+			<groupId>org.cytoscape.wrappers</groupId>
+			<artifactId>org.swinglabs.swingx</artifactId>
+			<version>1.6.1</version>
+		</dependency>
+		<!-- For reasons I don't understand the sheet bundle needs to start *before* 
+			the shared and fontchooser bundles. To enforce this the bundle has been moved 
+			back to startlevel-2. <dependency> <groupId>cytoscape-temp</groupId> <artifactId>l2fprod-common-sheet</artifactId> 
+			<version>7.3</version> </dependency> -->
+		<dependency>
+			<groupId>cytoscape-temp</groupId>
+			<artifactId>l2fprod-common-shared</artifactId>
+			<version>7.3</version>
+		</dependency>
+		<dependency>
+			<groupId>cytoscape-temp</groupId>
+			<artifactId>l2fprod-common-fontchooser</artifactId>
+			<version>7.3</version>
+		</dependency>
 
 		<!-- Cytoscape API Bundles -->
 		<dependency>
@@ -196,6 +190,11 @@
 			<groupId>org.cytoscape</groupId>
 			<artifactId>property-api</artifactId>
 			<version>3.0.0-alpha2-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.cytoscape</groupId>
+			<artifactId>webservice-api</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 
 		<!-- Cytoscape Implementation Bundles -->
@@ -346,11 +345,11 @@
 			<artifactId>com.springsource.org.apache.commons.collections</artifactId>
 			<version>3.2.1</version>
 		</dependency>
-		 <dependency>
-		 	<groupId>cytoscape-temp</groupId>
+		<dependency>
+			<groupId>cytoscape-temp</groupId>
 			<artifactId>colt</artifactId>
 			<version>1.2.0</version>
-		 </dependency>
+		</dependency>
 
 		<!-- Simplified Plugin Support -->
 		<dependency>
@@ -458,22 +457,22 @@
 			<artifactId>jfree-jcommon</artifactId>
 			<version>1.0.15</version>
 		</dependency>
-		
+
 		<!-- Apache poi -->
 		<dependency>
-			<groupId>org.apache.xmlbeans</groupId> 
-			<artifactId>com.springsource.org.apache.xmlbeans</artifactId> 
-			<version>2.4.0</version> 
+			<groupId>org.apache.xmlbeans</groupId>
+			<artifactId>com.springsource.org.apache.xmlbeans</artifactId>
+			<version>2.4.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.dom4j</groupId>
 			<artifactId>com.springsource.org.dom4j</artifactId>
 			<version>1.6.1</version>
 		</dependency>
-		<dependency> 
-			<groupId>javax.xml.stream</groupId> 
-			<artifactId>com.springsource.javax.xml.stream</artifactId> 
-			<version>1.0.1</version> 
+		<dependency>
+			<groupId>javax.xml.stream</groupId>
+			<artifactId>com.springsource.javax.xml.stream</artifactId>
+			<version>1.0.1</version>
 		</dependency>
 		<dependency>
 			<groupId>cytoscape-temp</groupId>
@@ -495,13 +494,20 @@
 			<artifactId>org.apache.poi-ooxml-schemas</artifactId>
 			<version>3.6</version>
 		</dependency>
-	
+
 		<!-- table-import-imp -->
 		<dependency>
-      		<groupId>org.cytoscape</groupId>
-      		<artifactId>table-import-impl</artifactId>
-      		<version>1.0-SNAPSHOT</version>
-      	</dependency>	
+			<groupId>org.cytoscape</groupId>
+			<artifactId>table-import-impl</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
+
+		<!-- Web service clients  -->
+		<dependency>
+			<groupId>org.cytoscape</groupId>
+			<artifactId>webservice-biomart-client</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 
 		<!-- Filters -->
 		<dependency>
