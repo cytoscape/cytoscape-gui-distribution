@@ -492,10 +492,15 @@
 			<version>1.0-SNAPSHOT</version>
 		</dependency>
 
-		<!-- Web service clients  -->
+		<!-- Web service clients -->
 		<dependency>
 			<groupId>org.cytoscape</groupId>
 			<artifactId>webservice-biomart-client</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.cytoscape</groupId>
+			<artifactId>webservice-ncbi-client</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 
@@ -510,7 +515,7 @@
 			<artifactId>violinstrings</artifactId>
 			<version>1.0.2</version>
 		</dependency>
-		
+
 	</dependencies>
 
 </project>
