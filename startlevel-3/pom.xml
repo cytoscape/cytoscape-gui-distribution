@@ -495,12 +495,12 @@
 		<!-- Web service clients -->
 		<dependency>
 			<groupId>org.cytoscape</groupId>
-			<artifactId>webservice-biomart-client</artifactId>
+			<artifactId>webservice-biomart-client-impl</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>org.cytoscape</groupId>
-			<artifactId>webservice-ncbi-client</artifactId>
+			<artifactId>webservice-ncbi-client-impl</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 
