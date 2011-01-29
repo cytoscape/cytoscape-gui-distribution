@@ -4,7 +4,7 @@
   <parent>
     <artifactId>parent</artifactId>
     <groupId>org.cytoscape</groupId>
-    <version>3.0.0-alpha4-SNAPSHOT</version>
+    <version>3.0.0-alpha5</version>
   </parent>
 
   <modelVersion>4.0.0</modelVersion>
@@ -17,6 +17,20 @@
   <packaging>pom</packaging>
 
   <build>
+        <plugins>
+            <plugin>
+                <inherited>false</inherited>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.1</version>
+                <configuration>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
+                    <goals>deploy</goals>
+                    <!-- so that impl bundles with modules will build correctly -->
+                    <preparationGoals>clean install</preparationGoals>
+                </configuration>
+            </plugin>
+        </plugins>
     <pluginManagement>
       <plugins>
         <!-- this assembly is only for the startlevel modules, distribution has its own -->
