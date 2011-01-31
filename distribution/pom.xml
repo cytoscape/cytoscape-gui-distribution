@@ -9,7 +9,7 @@
 
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.cytoscape.gui-distribution</groupId>
-  <artifactId>distribution</artifactId>
+  <artifactId>cytoscape</artifactId>
 
   <name>Distribution</name>
 
@@ -48,7 +48,7 @@
     <dependency>
       <groupId>org.cytoscape</groupId>
       <artifactId>launcher</artifactId>
-      <version>${version}</version>
+      <version>3.0.0-alpha1</version>
 	  <classifier>jar-with-dependencies</classifier>
     </dependency>
     <dependency>

@@ -46,7 +46,7 @@
             <dependency>
               <groupId>org.cytoscape</groupId>
               <artifactId>startlevel-assembly</artifactId>
-              <version>${version}</version>
+              <version>3.0.0-alpha1</version>
             </dependency>
           </dependencies>
           <executions>
