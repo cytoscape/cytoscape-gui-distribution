@@ -394,16 +394,12 @@
 			<version>3.0.0-alpha1</version>
 		</dependency>
 
-		<!-- PSI-MI 
-
-		currently broken with model-impl alpha2
-
+		<!-- PSI-MI -->
 		<dependency>
 			<groupId>org.cytoscape</groupId>
 			<artifactId>psi-mi-impl</artifactId>
-			<version>3.0.0-alpha1</version>
+			<version>1.0-SNAPSHOT</version>
 		</dependency>
-		-->
 
 		<!-- network analyzer -->
 		<dependency>
