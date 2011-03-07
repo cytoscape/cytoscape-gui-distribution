@@ -93,6 +93,7 @@
   </build>
 
   <modules>
+    <module>splash-launcher</module>
     <module>startlevel-1</module>
     <module>startlevel-2</module>
     <module>startlevel-3</module>

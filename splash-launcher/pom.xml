@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <parent>
+    <groupId>org.cytoscape</groupId>
+    <artifactId>gui-distribution</artifactId>
+    <version>3.0.0-M2-SNAPSHOT</version>
+  </parent>
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.cytoscape.gui-distribution</groupId>
+  <artifactId>splash-launcher</artifactId>
+
+  <packaging>jar</packaging>
+
+  <name>SplashScreen Launcher</name>
+
+  <build>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <filtering>true</filtering>
+      </resource>
+    </resources>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>batik-maven-plugin</artifactId>
+        <version>1.0-beta-1</version>
+        <configuration>
+          <srcDir>${project.build.directory}/classes/images/versioned-svg</srcDir>
+          <destDir>${project.build.directory}/classes/images</destDir>
+        </configuration>
+        <executions>
+          <execution>
+            <!-- just needs to happen after resources are copied -->
+            <phase>compile</phase>
+            <goals>
+              <goal>rasterize</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <configuration>
+          <descriptorRefs>
+            <descriptorRef>jar-with-dependencies</descriptorRef>
+          </descriptorRefs>
+          <archive>
+            <manifest>
+              <mainClass>org.cytoscape.launcher.internal.Launcher</mainClass>
+            </manifest>
+            <manifestEntries>
+              <SplashScreen-Image>images/CytoscapeSplashScreen.png</SplashScreen-Image>
+            </manifestEntries>
+          </archive>
+        </configuration>
+        <executions>
+          <execution>
+            <id>splash-assembly</id>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.cytoscape</groupId>
+      <artifactId>launcher</artifactId>
+      <version>3.0.0-alpha2-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
+
+</project>

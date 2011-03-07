@@ -19,7 +19,7 @@
   <dependencySets>
     <dependencySet>
       <includes>
-        <include>org.cytoscape:launcher:jar:jar-with-dependencies</include>
+        <include>org.cytoscape.gui-distribution:splash-launcher:jar:jar-with-dependencies</include>
       </includes>
       <unpack>false</unpack>
 	  <outputFileNameMapping>cytoscape-launcher.jar</outputFileNameMapping>

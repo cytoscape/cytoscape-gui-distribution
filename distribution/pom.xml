@@ -46,9 +46,9 @@
 
   <dependencies>
     <dependency>
-      <groupId>org.cytoscape</groupId>
-      <artifactId>launcher</artifactId>
-      <version>3.0.0-alpha2-SNAPSHOT</version>
+      <groupId>org.cytoscape.gui-distribution</groupId>
+      <artifactId>splash-launcher</artifactId>
+      <version>${version}</version>
 	  <classifier>jar-with-dependencies</classifier>
     </dependency>
     <dependency>
