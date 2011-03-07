@@ -308,11 +308,6 @@
 		</dependency>
 		<dependency>
 			<groupId>org.cytoscape</groupId>
-			<artifactId>splash</artifactId>
-			<version>3.0.0-alpha1</version>
-		</dependency>
-		<dependency>
-			<groupId>org.cytoscape</groupId>
 			<artifactId>swing-util</artifactId>
 			<version>3.0.0-alpha2-SNAPSHOT</version>
 		</dependency>
@@ -358,7 +353,7 @@
 		<dependency>
 			<groupId>org.cytoscape</groupId>
 			<artifactId>plugin-impl</artifactId>
-			<version>3.0.0-alpha2</version>
+			<version>3.0.0-alpha3-SNAPSHOT</version>
 		</dependency>
 
 		<!-- A utility that allows you to register services dynamically -->
