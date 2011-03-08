@@ -48,6 +48,11 @@
       <artifactId>org.apache.felix.gogo.runtime</artifactId>
       <version>0.6.1</version>
     </dependency>
+    <dependency>
+      <groupId>org.cytoscape</groupId>
+      <artifactId>splash-updater-impl</artifactId>
+      <version>3.0.0-alpha1-SNAPSHOT</version>
+    </dependency>
 
 
   </dependencies>
