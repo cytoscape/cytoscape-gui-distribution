@@ -23,6 +23,7 @@
           <descriptors>
             <descriptor>src/main/assembly/src.xml</descriptor>
           </descriptors>
+		  <appendAssemblyId>false</appendAssemblyId>
         </configuration>
         <executions>
           <execution>
@@ -48,25 +49,25 @@
     <dependency>
       <groupId>org.cytoscape.gui-distribution</groupId>
       <artifactId>splash-launcher</artifactId>
-      <version>${version}</version>
+      <version>${project.version}</version>
 	  <classifier>jar-with-dependencies</classifier>
     </dependency>
     <dependency>
       <groupId>org.cytoscape.gui-distribution</groupId>
       <artifactId>startlevel-1</artifactId>
-      <version>${version}</version>
+      <version>${project.version}</version>
       <type>zip</type>
     </dependency>
     <dependency>
       <groupId>org.cytoscape.gui-distribution</groupId>
       <artifactId>startlevel-2</artifactId>
-      <version>${version}</version>
+      <version>${project.version}</version>
       <type>zip</type>
     </dependency>
     <dependency>
       <groupId>org.cytoscape.gui-distribution</groupId>
       <artifactId>startlevel-3</artifactId>
-      <version>${version}</version>
+      <version>${project.version}</version>
       <type>zip</type>
     </dependency>
   </dependencies>
