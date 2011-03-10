@@ -39,6 +39,22 @@
             </goals>
           </execution>
         </executions>
+        <!-- We need to specify this plugin dependency ONLY to exclude the 
+             FOP library, which pulls in a duplicate copy of some XML libs. -->
+        <dependencies>
+          <dependency>
+            <groupId>batik</groupId>
+            <artifactId>batik-rasterizer-ext</artifactId>
+            <version>1.6-1</version>
+            <scope>compile</scope>
+            <exclusions>
+               <exclusion>
+                 <artifactId>fop</artifactId>
+                 <groupId>fop</groupId>
+               </exclusion>
+            </exclusions>
+          </dependency>
+        </dependencies>
       </plugin>
       <plugin>
         <artifactId>maven-assembly-plugin</artifactId>
