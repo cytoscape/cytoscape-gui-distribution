@@ -52,7 +52,7 @@
                 <inherited>false</inherited>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
-                <version>2.1</version>
+                <version>${maven-release-plugin.version}</version>
                 <configuration>
                     <autoVersionSubmodules>true</autoVersionSubmodules>
                     <goals>deploy</goals>
@@ -65,7 +65,9 @@
       <plugins>
         <!-- this assembly is only for the startlevel modules, distribution has its own -->
         <plugin>
+	  <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-assembly-plugin</artifactId>
+	  <version>2.2</version>
           <dependencies>
             <dependency>
               <groupId>org.cytoscape</groupId>
