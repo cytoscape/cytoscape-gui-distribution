@@ -83,6 +83,7 @@
                 <goal>single</goal>
               </goals>
               <configuration>
+			    <appendAssemblyId>false</appendAssemblyId>
                 <descriptorRefs>
                   <descriptorRef>startlevel-assembly</descriptorRef>
                 </descriptorRefs>
