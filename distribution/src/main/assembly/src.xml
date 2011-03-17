@@ -24,6 +24,7 @@
       </includes>
       <unpack>false</unpack>
 	  <outputFileNameMapping>cytoscape-launcher.jar</outputFileNameMapping>
+	  <fileMode>0644</fileMode>
     </dependencySet>
     <dependencySet>
       <includes>
@@ -31,6 +32,7 @@
       </includes>
       <outputDirectory>bundles</outputDirectory>
       <unpack>true</unpack>
+	  <fileMode>0644</fileMode>
     </dependencySet>
   </dependencySets>
 </assembly>
