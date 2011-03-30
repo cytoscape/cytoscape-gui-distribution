@@ -187,7 +187,7 @@
 		<dependency>
 			<groupId>org.cytoscape</groupId>
 			<artifactId>property-api</artifactId>
-			<version>3.0.0-alpha2</version>
+			<version>3.0.0-alpha4-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>org.cytoscape</groupId>
@@ -386,7 +386,7 @@
 		<dependency>
 			<groupId>org.cytoscape</groupId>
 			<artifactId>linkout-impl</artifactId>
-			<version>3.0.0-alpha1</version>
+			<version>3.0.0-alpha2-SNAPSHOT</version>
 		</dependency>
 
 		<!-- PSI-MI -->
