@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
 	<parent>
 		<groupId>org.cytoscape</groupId>
@@ -331,6 +332,11 @@
 			<artifactId>webservice-impl</artifactId>
 			<version>3.0.0-alpha2-SNAPSHOT</version>
 		</dependency>
+		<dependency>
+			<groupId>org.cytoscape</groupId>
+			<artifactId>presentation-impl</artifactId>
+			<version>3.0.0-alpha3-SNAPSHOT</version>
+		</dependency>
 
 		<!-- Other dependencies -->
 		<dependency>
@@ -509,7 +515,7 @@
 			<version>1.0.2</version>
 		</dependency>
 
-		<!--  SBML -->
+		<!-- SBML -->
 		<dependency>
 			<groupId>org.cytoscape</groupId>
 			<artifactId>sbml-impl</artifactId>
@@ -555,14 +561,14 @@
 			<artifactId>xstream</artifactId>
 			<version>1.3.1</version>
 		</dependency>
-	
+
 		<!-- to load bundle plugins -->
 		<dependency>
 			<groupId>org.apache.felix</groupId>
 			<artifactId>org.apache.felix.fileinstall</artifactId>
 			<version>3.1.10</version>
 		</dependency>
-		
+
 	</dependencies>
 
 </project>
