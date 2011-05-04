@@ -108,6 +108,11 @@
 			<artifactId>l2fprod-common-fontchooser</artifactId>
 			<version>7.3</version>
 		</dependency>
+		<dependency>
+			<groupId>cytoscape-temp</groupId>
+			<artifactId>opencsv</artifactId>
+			<version>2.1</version>
+		</dependency>
 
 		<!-- Cytoscape API Bundles -->
 		<dependency>
