@@ -187,6 +187,11 @@
 		</dependency>
 		<dependency>
 			<groupId>org.cytoscape</groupId>
+			<artifactId>layout-impl</artifactId>
+			<version>3.0.0-alpha1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.cytoscape</groupId>
 			<artifactId>presentation-api</artifactId>
 			<version>3.0.0-alpha3-SNAPSHOT</version>
 		</dependency>
