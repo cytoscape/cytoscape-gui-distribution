@@ -163,7 +163,7 @@
 		<dependency>
 			<groupId>org.cytoscape</groupId>
 			<artifactId>dnd-api</artifactId>
-			<version>3.0.0-alpha1</version>
+			<version>3.0.0-alpha2-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>org.cytoscape</groupId>
@@ -416,7 +416,7 @@
 		<dependency>
 			<groupId>org.cytoscape</groupId>
 			<artifactId>network-analyzer-impl</artifactId>
-			<version>3.0.0-alpha1</version>
+			<version>3.0.0-alpha2-SNAPSHOT</version>
 		</dependency>
 
 		<!-- Required by plugin manager -->
