@@ -9,16 +9,16 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.cytoscape</groupId>
   <artifactId>gui-distribution</artifactId>
-  <version>3.0.0-M2</version>
+  <version>3.0.0-M3-SNAPSHOT</version>
 
   <name>Cytoscape</name>
 
   <packaging>pom</packaging>
 
     <scm>
-        <connection>scm:svn:http://chianti.ucsd.edu/svn/core3/gui-distribution/tags/gui-distribution-3.0.0-M2</connection>
-        <developerConnection>scm:svn:svn+ssh://grenache.ucsd.edu/cellar/common/svn/core3/gui-distribution/tags/gui-distribution-3.0.0-M2</developerConnection>
-        <url>http://chianti.ucsd.edu/svn/core3/gui-distribution/tags/gui-distribution-3.0.0-M2</url>
+        <connection>scm:svn:http://chianti.ucsd.edu/svn/core3/gui-distribution/trunk</connection>
+        <developerConnection>scm:svn:svn+ssh://grenache.ucsd.edu/cellar/common/svn/core3/gui-distribution/trunk</developerConnection>
+        <url>http://chianti.ucsd.edu/svn/core3/gui-distribution/trunk</url>
     </scm>
 
     <repositories>
