@@ -90,7 +90,7 @@
     <dependency>
       <groupId>org.cytoscape</groupId>
       <artifactId>launcher</artifactId>
-      <version>3.0.0-alpha2-SNAPSHOT</version>
+      <version>3.0.0-alpha2</version>
     </dependency>
   </dependencies>
 
