@@ -214,7 +214,7 @@
 		<dependency>
 			<groupId>org.cytoscape</groupId>
 			<artifactId>table-browser-impl</artifactId>
-			<version>3.0.0-alpha3</version>
+			<version>3.0.0-alpha4-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>org.cytoscape</groupId>
@@ -229,7 +229,7 @@
 		<dependency>
 			<groupId>org.cytoscape</groupId>
 			<artifactId>event-impl</artifactId>
-			<version>3.0.0-alpha3</version>
+			<version>3.0.0-alpha4-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>org.cytoscape</groupId>
