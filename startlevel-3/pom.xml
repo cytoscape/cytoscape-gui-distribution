@@ -474,6 +474,11 @@
 			<artifactId>freehep-graphics-base</artifactId>
 			<version>2.1.3</version>
 		</dependency>
+		<dependency>
+			<groupId>cytoscape-temp</groupId>
+			<artifactId>freehep-io</artifactId>
+			<version>2.1</version>
+		</dependency>
 
 		<!-- jfreechart -->
 		<dependency>
