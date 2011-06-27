@@ -95,12 +95,26 @@
     </pluginManagement>
   </build>
 
-  <modules>
-    <module>splash-launcher</module>
-    <module>startlevel-1</module>
-    <module>startlevel-2</module>
-    <module>startlevel-3</module>
-    <module>distribution</module>
-  </modules>
-
+  <profiles>
+    <profile>
+      <id>work</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <modules>
+        <module>startlevel-3</module>
+        <module>distribution</module>
+      </modules>
+    </profile>
+    <profile>
+      <id>all</id>
+      <modules>
+        <module>splash-launcher</module>
+        <module>startlevel-1</module>
+        <module>startlevel-2</module>
+        <module>startlevel-3</module>
+        <module>distribution</module>
+      </modules>
+    </profile>
+  </profiles>
 </project>
