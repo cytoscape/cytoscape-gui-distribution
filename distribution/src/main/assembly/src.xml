@@ -12,6 +12,21 @@
 	  <fileMode>0644</fileMode>
     </fileSet>
     <fileSet>
+	  <directory>${basedir}/../startlevel-1/target/bundles</directory>
+	  <outputDirectory>bundles/startlevel-1</outputDirectory>
+	  <fileMode>0644</fileMode>
+    </fileSet>
+    <fileSet>
+	  <directory>${basedir}/../startlevel-2/target/bundles</directory>
+	  <outputDirectory>bundles/startlevel-2</outputDirectory>
+	  <fileMode>0644</fileMode>
+    </fileSet>
+    <fileSet>
+	  <directory>${basedir}/../startlevel-3/target/bundles</directory>
+	  <outputDirectory>bundles/startlevel-3</outputDirectory>
+	  <fileMode>0644</fileMode>
+    </fileSet>
+    <fileSet>
 	  <directory>${basedir}/src/main/bin</directory>
 	  <outputDirectory>/</outputDirectory>
 	  <fileMode>0755</fileMode>
@@ -24,14 +39,6 @@
       </includes>
       <unpack>false</unpack>
 	  <outputFileNameMapping>cytoscape-launcher.jar</outputFileNameMapping>
-	  <fileMode>0644</fileMode>
-    </dependencySet>
-    <dependencySet>
-      <includes>
-        <include>org.cytoscape.gui-distribution:startlevel-*:zip</include>
-      </includes>
-      <outputDirectory>bundles</outputDirectory>
-      <unpack>true</unpack>
 	  <fileMode>0644</fileMode>
     </dependencySet>
   </dependencySets>

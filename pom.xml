@@ -61,38 +61,31 @@
                 </configuration>
             </plugin>
         </plugins>
-    <pluginManagement>
-      <plugins>
-        <!-- this assembly is only for the startlevel modules, distribution has its own -->
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-assembly-plugin</artifactId>
-          <version>${maven-assembly-plugin.version}</version>
-          <dependencies>
-            <dependency>
-              <groupId>org.cytoscape</groupId>
-              <artifactId>startlevel-assembly</artifactId>
-              <version>3.0.0-alpha2</version>
-            </dependency>
-          </dependencies>
-          <executions>
-            <execution>
-              <id>make-assembly</id>
-              <phase>package</phase>
-              <goals>
-                <goal>single</goal>
-              </goals>
-              <configuration>
-			    <appendAssemblyId>false</appendAssemblyId>
-                <descriptorRefs>
-                  <descriptorRef>startlevel-assembly</descriptorRef>
-                </descriptorRefs>
-              </configuration>
-            </execution>
-          </executions>
-        </plugin>
-      </plugins>
-    </pluginManagement>
+   <pluginManagement>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <version>2.2</version>
+        <executions>
+          <execution>
+            <id>copy-dependencies</id>
+            <phase>package</phase>
+            <goals>
+              <goal>copy-dependencies</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${project.build.directory}/bundles</outputDirectory>
+              <overWriteReleases>false</overWriteReleases>
+              <overWriteSnapshots>true</overWriteSnapshots>
+              <overWriteIfNewer>true</overWriteIfNewer>
+              <excludeTransitive>true</excludeTransitive>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+   </pluginManagement>
   </build>
 
   <profiles>
@@ -102,6 +95,8 @@
         <activeByDefault>true</activeByDefault>
       </activation>
       <modules>
+        <module>startlevel-1</module>
+        <module>startlevel-2</module>
         <module>startlevel-3</module>
         <module>distribution</module>
       </modules>

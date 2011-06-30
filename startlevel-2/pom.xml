@@ -17,7 +17,7 @@
   <build>
     <plugins>
       <plugin>
-        <artifactId>maven-assembly-plugin</artifactId>
+        <artifactId>maven-dependency-plugin</artifactId>
       </plugin>
     </plugins>
   </build>
