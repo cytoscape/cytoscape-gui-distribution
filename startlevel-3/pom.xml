@@ -380,7 +380,7 @@
 		<!-- A utility that allows you to register services dynamically -->
 		<dependency>
 			<groupId>org.cytoscape</groupId>
-			<artifactId>service-util</artifactId>
+			<artifactId>service-api</artifactId>
 			<version>3.0.0-alpha3-SNAPSHOT</version>
 		</dependency>
 
