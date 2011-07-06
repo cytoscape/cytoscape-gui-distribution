@@ -264,7 +264,7 @@
 		</dependency>
 		<dependency>
 			<groupId>org.cytoscape</groupId>
-			<artifactId>work-spring-hack</artifactId>
+			<artifactId>work-spring-api</artifactId>
 			<version>3.0.0-alpha3-SNAPSHOT</version>
 		</dependency>
 		<dependency>
