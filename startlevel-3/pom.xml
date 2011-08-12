@@ -210,6 +210,12 @@
 			<artifactId>webservice-api</artifactId>
 			<version>${cytoscape.api.version}</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.cytoscape</groupId>
+			<artifactId>application-api</artifactId>
+			<version>${cytoscape.api.version}</version>
+		</dependency>
 
 		<!-- Cytoscape Implementation Bundles -->
 		<dependency>
@@ -340,6 +346,12 @@
 		<dependency>
 			<groupId>org.cytoscape</groupId>
 			<artifactId>presentation-impl</artifactId>
+			<version>${cytoscape.impl.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.cytoscape</groupId>
+			<artifactId>application-impl</artifactId>
 			<version>${cytoscape.impl.version}</version>
 		</dependency>
 
