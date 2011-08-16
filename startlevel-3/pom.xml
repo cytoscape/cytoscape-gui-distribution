@@ -122,6 +122,11 @@
 		<!-- Cytoscape API Bundles -->
 		<dependency>
 			<groupId>org.cytoscape</groupId>
+			<artifactId>di-util-api</artifactId>
+			<version>${cytoscape.api.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.cytoscape</groupId>
 			<artifactId>model-api</artifactId>
 			<version>${cytoscape.api.version}</version>
 		</dependency>
@@ -267,11 +272,6 @@
 			<groupId>org.cytoscape</groupId>
 			<artifactId>io-impl</artifactId>
 			<version>${cytoscape.impl.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>work-spring-api</artifactId>
-			<version>${cytoscape.api.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.cytoscape</groupId>
