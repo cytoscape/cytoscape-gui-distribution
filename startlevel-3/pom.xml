@@ -639,6 +639,13 @@
 			<version>3.1</version>
 		</dependency>
 
+		<!-- network merge plugin -->
+		<dependency>
+			<groupId>org.cytoscape</groupId>
+			<artifactId>network-merge-impl</artifactId>
+			<version>${cytoscape.impl.version}</version>
+		</dependency>
+
 		<!-- to load bundle plugins -->
 		<dependency>
 			<groupId>org.apache.felix</groupId>
