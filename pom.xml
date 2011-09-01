@@ -15,16 +15,16 @@
 
   <packaging>pom</packaging>
 
-    <scm>
-        <connection>scm:svn:http://chianti.ucsd.edu/svn/core3/gui-distribution/trunk</connection>
-        <developerConnection>scm:svn:svn+ssh://grenache.ucsd.edu/cellar/common/svn/core3/gui-distribution/trunk</developerConnection>
-        <url>http://chianti.ucsd.edu/svn/core3/gui-distribution/trunk</url>
-    </scm>
+	<scm>
+		<connection>${scm.connection.root}/gui-distribution/trunk</connection>
+		<developerConnection>${scm.dev.connection.root}/gui-distribution/trunk</developerConnection>
+		<url>${scm.url.root}/gui-distribution/trunk</url>
+	</scm>
 
 	<properties>
-		<cytoscape.api.version>3.0.0-alpha6-SNAPSHOT</cytoscape.api.version>
-		<cytoscape.impl.version>3.0.0-alpha6-SNAPSHOT</cytoscape.impl.version>
-		<cytoscape.support.version>3.0.0-alpha6-SNAPSHOT</cytoscape.support.version>
+		<cytoscape.api.version>3.0.0-alpha6</cytoscape.api.version>
+		<cytoscape.impl.version>3.0.0-alpha6</cytoscape.impl.version>
+		<cytoscape.support.version>3.0.0-alpha6</cytoscape.support.version>
 	</properties>
 
     <repositories>
