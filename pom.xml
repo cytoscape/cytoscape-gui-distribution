@@ -3,22 +3,22 @@
   <parent>
     <artifactId>parent</artifactId>
     <groupId>org.cytoscape</groupId>
-    <version>3.0.0-alpha8-SNAPSHOT</version>
+    <version>3.0.0-alpha8</version>
 		<relativePath>../parent</relativePath>
   </parent>
 
   <modelVersion>4.0.0</modelVersion>
   <artifactId>gui-distribution</artifactId>
-  <version>3.0.0-M3-SNAPSHOT</version>
+  <version>3.0.0-M3</version>
 
   <name>Cytoscape</name>
 
   <packaging>pom</packaging>
 
 	<scm>
-		<connection>${scm.connection.root}/gui-distribution/trunk</connection>
-		<developerConnection>${scm.dev.connection.root}/gui-distribution/trunk</developerConnection>
-		<url>${scm.url.root}/gui-distribution/trunk</url>
+		<connection>${scm.connection.root}/gui-distribution/tags/gui-distribution-3.0.0-M3</connection>
+		<developerConnection>${scm.dev.connection.root}/gui-distribution/tags/gui-distribution-3.0.0-M3</developerConnection>
+		<url>${scm.url.root}/gui-distribution/tags/gui-distribution-3.0.0-M3</url>
 	</scm>
 
 	<properties>
