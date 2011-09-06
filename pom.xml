@@ -22,9 +22,9 @@
 	</scm>
 
 	<properties>
-		<cytoscape.api.version>3.0.0-alpha7-SNAPSHOT</cytoscape.api.version>
-		<cytoscape.impl.version>3.0.0-alpha7-SNAPSHOT</cytoscape.impl.version>
-		<cytoscape.support.version>3.0.0-alpha7-SNAPSHOT</cytoscape.support.version>
+		<cytoscape.api.version>3.0.0-alpha7</cytoscape.api.version>
+		<cytoscape.impl.version>3.0.0-alpha7</cytoscape.impl.version>
+		<cytoscape.support.version>3.0.0-alpha6</cytoscape.support.version>
 	</properties>
 
     <repositories>
