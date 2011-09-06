@@ -4,7 +4,7 @@
   <parent>
     <groupId>org.cytoscape</groupId>
     <artifactId>gui-distribution</artifactId>
-    <version>3.0.0-M3</version>
+    <version>3.0.0-M4-SNAPSHOT</version>
   </parent>
 
   <modelVersion>4.0.0</modelVersion>
@@ -51,7 +51,7 @@
     <dependency>
       <groupId>org.cytoscape.gui-distribution</groupId>
       <artifactId>splash-launcher</artifactId>
-      <version>3.0.0-M3</version>
+      <version>3.0.0-M4-SNAPSHOT</version>
 	  <classifier>jar-with-dependencies</classifier>
     </dependency>
 <!--     <dependency> -->
