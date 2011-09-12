@@ -437,7 +437,7 @@
 		<dependency>
 			<groupId>org.cytoscape</groupId>
 			<artifactId>psi-mi-impl</artifactId>
-			<version>1.0</version>
+			<version>${cytoscape.impl.version}</version>
 		</dependency>
 
 		<!-- network analyzer -->
