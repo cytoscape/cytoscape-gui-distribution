@@ -54,24 +54,6 @@
       <version>3.0.0-M4-SNAPSHOT</version>
 	  <classifier>jar-with-dependencies</classifier>
     </dependency>
-<!--     <dependency> -->
-<!--       <groupId>org.cytoscape.gui-distribution</groupId> -->
-<!--       <artifactId>startlevel-1</artifactId> -->
-<!--       <version>${project.version}</version> -->
-<!--       <type>zip</type> -->
-<!--     </dependency> -->
-<!--     <dependency> -->
-<!--       <groupId>org.cytoscape.gui-distribution</groupId> -->
-<!--       <artifactId>startlevel-2</artifactId> -->
-<!--       <version>${project.version}</version> -->
-<!--       <type>zip</type> -->
-<!--     </dependency> -->
-<!--     <dependency> -->
-<!--       <groupId>org.cytoscape.gui-distribution</groupId> -->
-<!--       <artifactId>startlevel-3</artifactId> -->
-<!--       <version>${project.version}</version> -->
-<!--       <type>zip</type> -->
-<!--     </dependency> -->
   </dependencies>
 
 </project>

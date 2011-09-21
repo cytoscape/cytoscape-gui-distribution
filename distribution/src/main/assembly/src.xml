@@ -27,6 +27,76 @@
 	  <fileMode>0644</fileMode>
     </fileSet>
     <fileSet>
+	  <directory>${basedir}/../startlevel-10/target/bundles</directory>
+	  <outputDirectory>bundles/startlevel-10</outputDirectory>
+	  <fileMode>0644</fileMode>
+    </fileSet>
+    <fileSet>
+	  <directory>${basedir}/../startlevel-15/target/bundles</directory>
+	  <outputDirectory>bundles/startlevel-15</outputDirectory>
+	  <fileMode>0644</fileMode>
+    </fileSet>
+    <fileSet>
+	  <directory>${basedir}/../startlevel-20/target/bundles</directory>
+	  <outputDirectory>bundles/startlevel-20</outputDirectory>
+	  <fileMode>0644</fileMode>
+    </fileSet>
+    <fileSet>
+	  <directory>${basedir}/../startlevel-25/target/bundles</directory>
+	  <outputDirectory>bundles/startlevel-25</outputDirectory>
+	  <fileMode>0644</fileMode>
+    </fileSet>
+    <fileSet>
+	  <directory>${basedir}/../startlevel-30/target/bundles</directory>
+	  <outputDirectory>bundles/startlevel-30</outputDirectory>
+	  <fileMode>0644</fileMode>
+    </fileSet>
+    <fileSet>
+	  <directory>${basedir}/../startlevel-35/target/bundles</directory>
+	  <outputDirectory>bundles/startlevel-35</outputDirectory>
+	  <fileMode>0644</fileMode>
+    </fileSet>
+    <fileSet>
+	  <directory>${basedir}/../startlevel-40/target/bundles</directory>
+	  <outputDirectory>bundles/startlevel-40</outputDirectory>
+	  <fileMode>0644</fileMode>
+    </fileSet>
+    <fileSet>
+	  <directory>${basedir}/../startlevel-45/target/bundles</directory>
+	  <outputDirectory>bundles/startlevel-45</outputDirectory>
+	  <fileMode>0644</fileMode>
+    </fileSet>
+    <fileSet>
+	  <directory>${basedir}/../startlevel-50/target/bundles</directory>
+	  <outputDirectory>bundles/startlevel-50</outputDirectory>
+	  <fileMode>0644</fileMode>
+    </fileSet>
+    <fileSet>
+	  <directory>${basedir}/../startlevel-55/target/bundles</directory>
+	  <outputDirectory>bundles/startlevel-55</outputDirectory>
+	  <fileMode>0644</fileMode>
+    </fileSet>
+    <fileSet>
+	  <directory>${basedir}/../startlevel-60/target/bundles</directory>
+	  <outputDirectory>bundles/startlevel-60</outputDirectory>
+	  <fileMode>0644</fileMode>
+    </fileSet>
+    <fileSet>
+	  <directory>${basedir}/../startlevel-65/target/bundles</directory>
+	  <outputDirectory>bundles/startlevel-65</outputDirectory>
+	  <fileMode>0644</fileMode>
+    </fileSet>
+    <fileSet>
+	  <directory>${basedir}/../startlevel-70/target/bundles</directory>
+	  <outputDirectory>bundles/startlevel-70</outputDirectory>
+	  <fileMode>0644</fileMode>
+    </fileSet>
+    <fileSet>
+	  <directory>${basedir}/../startlevel-75/target/bundles</directory>
+	  <outputDirectory>bundles/startlevel-75</outputDirectory>
+	  <fileMode>0644</fileMode>
+    </fileSet>
+    <fileSet>
 	  <directory>${basedir}/src/main/bin</directory>
 	  <outputDirectory>/</outputDirectory>
 	  <fileMode>0755</fileMode>

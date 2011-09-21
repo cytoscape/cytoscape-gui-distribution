@@ -1,0 +1,48 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<parent>
+		<groupId>org.cytoscape</groupId>
+		<artifactId>gui-distribution</artifactId>
+		<version>3.0.0-M4-SNAPSHOT</version>
+	</parent>
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.cytoscape.gui-distribution</groupId>
+	<artifactId>startlevel-15</artifactId>
+
+	<packaging>pom</packaging>
+
+	<name>StartLevel 15 Bundles</name>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-dependency-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.cytoscape</groupId>
+			<artifactId>property-impl</artifactId>
+			<version>${cytoscape.impl.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.cytoscape</groupId>
+			<artifactId>graph-render</artifactId>
+			<version>${cytoscape.impl.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.cytoscape</groupId>
+			<artifactId>util-intr</artifactId>
+			<version>${cytoscape.impl.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.cytoscape</groupId>
+			<artifactId>spacial</artifactId>
+			<version>${cytoscape.impl.version}</version>
+		</dependency>
+	</dependencies>
+
+</project>

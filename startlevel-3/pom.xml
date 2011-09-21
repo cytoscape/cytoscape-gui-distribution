@@ -24,7 +24,7 @@
 
 	<dependencies>
 
-		<!-- Spring Framework Bundles -->
+		<!-- Spring Framework Bundles 
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>org.springframework.aop</artifactId>
@@ -74,16 +74,6 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.osgi</groupId>
-			<artifactId>spring-osgi-extender</artifactId>
-			<version>${spring.osgi.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.osgi</groupId>
-			<artifactId>spring-osgi-core</artifactId>
-			<version>${spring.osgi.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.osgi</groupId>
 			<artifactId>spring-osgi-io</artifactId>
 			<version>${spring.osgi.version}</version>
 		</dependency>
@@ -100,6 +90,18 @@
 			<version>1.6.3.RELEASE</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.springframework.osgi</groupId>
+			<artifactId>spring-osgi-extender</artifactId>
+			<version>${spring.osgi.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.osgi</groupId>
+			<artifactId>spring-osgi-core</artifactId>
+			<version>${spring.osgi.version}</version>
+		</dependency>
+
+		-->
 		<!-- 3rd Party Libraries -->
 		<!-- Latest version of iText has broken OSGi metadata and we have to wait until they fix it... -->
 		<!-- <dependency>
@@ -140,241 +142,6 @@
 			<version>2.1</version>
 		</dependency>
 
-		<!-- Cytoscape API Bundles -->
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>di-util-api</artifactId>
-			<version>${cytoscape.api.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>model-api</artifactId>
-			<version>${cytoscape.api.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>viewmodel-api</artifactId>
-			<version>${cytoscape.api.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>vizmap-api</artifactId>
-			<version>${cytoscape.api.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>vizmap-gui-api</artifactId>
-			<version>${cytoscape.api.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>work-api</artifactId>
-			<version>${cytoscape.api.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>work-swing-api</artifactId>
-			<version>${cytoscape.api.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>swing-application-api</artifactId>
-			<version>${cytoscape.api.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>event-api</artifactId>
-			<version>${cytoscape.api.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>plugin-api</artifactId>
-			<version>${cytoscape.api.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>dnd-api</artifactId>
-			<version>${cytoscape.api.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>io-api</artifactId>
-			<version>${cytoscape.api.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>session-api</artifactId>
-			<version>${cytoscape.api.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>core-task-api</artifactId>
-			<version>${cytoscape.api.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>layout-api</artifactId>
-			<version>${cytoscape.api.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>layout-impl</artifactId>
-			<version>${cytoscape.impl.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>presentation-api</artifactId>
-			<version>${cytoscape.api.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>property-api</artifactId>
-			<version>${cytoscape.api.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>webservice-api</artifactId>
-			<version>${cytoscape.api.version}</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>application-api</artifactId>
-			<version>${cytoscape.api.version}</version>
-		</dependency>
-
-		<!-- Cytoscape Implementation Bundles -->
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>search-impl</artifactId>
-			<version>${cytoscape.impl.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>table-browser-impl</artifactId>
-			<version>${cytoscape.impl.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>swing-application-impl</artifactId>
-			<version>${cytoscape.impl.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>ding-presentation-impl</artifactId>
-			<version>${cytoscape.impl.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>event-impl</artifactId>
-			<version>${cytoscape.impl.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>model-impl</artifactId>
-			<version>${cytoscape.impl.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>work-swing-impl</artifactId>
-			<version>${cytoscape.impl.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>core-task-impl</artifactId>
-			<version>${cytoscape.impl.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>session-impl</artifactId>
-			<version>${cytoscape.impl.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>io-impl</artifactId>
-			<version>${cytoscape.impl.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>viewmodel-impl</artifactId>
-			<version>${cytoscape.impl.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>vizmap-impl</artifactId>
-			<version>${cytoscape.impl.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>graph-render</artifactId>
-			<version>${cytoscape.impl.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>util-intr</artifactId>
-			<version>${cytoscape.impl.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>spacial</artifactId>
-			<version>${cytoscape.impl.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>equations-api</artifactId>
-			<version>${cytoscape.api.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>equations-impl</artifactId>
-			<version>${cytoscape.impl.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>vizmap-gui-impl</artifactId>
-			<version>${cytoscape.impl.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>log-swing-impl</artifactId>
-			<version>${cytoscape.impl.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>property-impl</artifactId>
-			<version>${cytoscape.impl.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>swing-util-api</artifactId>
-			<version>${cytoscape.api.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>manual-layout-impl</artifactId>
-			<version>${cytoscape.impl.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>layout-cytoscape-impl</artifactId>
-			<version>${cytoscape.impl.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>webservice-impl</artifactId>
-			<version>${cytoscape.impl.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>presentation-impl</artifactId>
-			<version>${cytoscape.impl.version}</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>application-impl</artifactId>
-			<version>${cytoscape.impl.version}</version>
-		</dependency>
 
 		<!-- Other dependencies -->
 		<dependency>
@@ -393,58 +160,10 @@
 			<version>1.2.0</version>
 		</dependency>
 
-		<!-- Simplified Plugin Support -->
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>plugin-impl</artifactId>
-			<version>${cytoscape.impl.version}</version>
-		</dependency>
-
-		<!-- A utility that allows you to register services dynamically -->
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>service-api</artifactId>
-			<version>${cytoscape.api.version}</version>
-		</dependency>
-
-		<!-- Editor Plugin -->
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>editor-impl</artifactId>
-			<version>${cytoscape.impl.version}</version>
-		</dependency>
-
-		<!-- prefuse layouts -->
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>layout-prefuse-impl</artifactId>
-			<version>${cytoscape.impl.version}</version>
-		</dependency>
 		<dependency>
 			<groupId>cytoscape-temp</groupId>
 			<artifactId>prefuse</artifactId>
 			<version>20071021</version>
-		</dependency>
-
-		<!-- linkout plugin -->
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>linkout-impl</artifactId>
-			<version>${cytoscape.impl.version}</version>
-		</dependency>
-
-		<!-- PSI-MI -->
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>psi-mi-impl</artifactId>
-			<version>${cytoscape.impl.version}</version>
-		</dependency>
-
-		<!-- network analyzer -->
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>network-analyzer-impl</artifactId>
-			<version>${cytoscape.impl.version}</version>
 		</dependency>
 
 		<!-- Required by plugin manager -->
@@ -462,13 +181,6 @@
 			<groupId>org.cytoscape.wrappers</groupId>
 			<artifactId>org.swinglabs.swing-layout</artifactId>
 			<version>1.0.3</version>
-		</dependency>
-
-		<!-- Ding's custom graphics manager -->
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>ding-customgraphics-manager-impl</artifactId>
-			<version>${cytoscape.impl.version}</version>
 		</dependency>
 
 		<!-- freehep -->
@@ -527,43 +239,13 @@
 			<version>3.6</version>
 		</dependency>
 
-		<!-- table-import-imp -->
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>table-import-impl</artifactId>
-			<version>${cytoscape.impl.version}</version>
-		</dependency>
 
-		<!-- Web service clients -->
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>webservice-biomart-client-impl</artifactId>
-			<version>${cytoscape.impl.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>webservice-ncbi-client-impl</artifactId>
-			<version>${cytoscape.impl.version}</version>
-		</dependency>
-
-		<!-- Filters -->
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>filter-impl</artifactId>
-			<version>${cytoscape.impl.version}</version>
-		</dependency>
 		<dependency>
 			<groupId>cytoscape-temp</groupId>
 			<artifactId>violinstrings</artifactId>
 			<version>1.0.2</version>
 		</dependency>
 
-		<!-- SBML -->
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>sbml-impl</artifactId>
-			<version>${cytoscape.impl.version}</version>
-		</dependency>
 		<dependency>
 			<groupId>cytoscape-temp</groupId>
 			<artifactId>jsbml</artifactId>
@@ -600,12 +282,6 @@
 			<version>1.3.1</version>
 		</dependency>
 
-		<!-- BioPAX plugin -->
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>biopax-impl</artifactId>
-			<version>${cytoscape.impl.version}</version>
-		</dependency>
 		<dependency>
 			<groupId>cytoscape-temp</groupId>
 			<artifactId>paxtools-core</artifactId>
@@ -632,23 +308,10 @@
     		<version>2.4.0</version>
 		</dependency>
 		
-		<!-- cPath2 plugin -->
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>cpath2-impl</artifactId>
-			<version>${cytoscape.impl.version}</version>
-		</dependency>
 		<dependency>
 			<groupId>cytoscape-temp</groupId>
 			<artifactId>commons-httpclient</artifactId>
 			<version>3.1</version>
-		</dependency>
-
-		<!-- network merge plugin -->
-		<dependency>
-			<groupId>org.cytoscape</groupId>
-			<artifactId>network-merge-impl</artifactId>
-			<version>${cytoscape.impl.version}</version>
 		</dependency>
 
 		<!-- to load bundle plugins -->
