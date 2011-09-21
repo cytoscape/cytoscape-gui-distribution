@@ -609,7 +609,12 @@
 		<dependency>
 			<groupId>cytoscape-temp</groupId>
 			<artifactId>paxtools-core</artifactId>
-			<version>3.0.0</version>
+			<version>4.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>cytoscape-temp</groupId>
+			<artifactId>biopax-converter</artifactId>
+			<version>4.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>cytoscape-temp</groupId>
@@ -621,11 +626,16 @@
 			<artifactId>collections-generic</artifactId>
 			<version>4.01</version>
 		</dependency>
+<!-- 		<dependency> -->
+<!--     		<groupId>javax.persistence</groupId> -->
+<!--     		<artifactId>com.springsource.javax.persistence</artifactId> -->
+<!--     		<version>2.0.0</version> -->
+<!-- 		</dependency> -->
 		<dependency>
-			<groupId>org.jdom</groupId>
-			<artifactId>jdom</artifactId>
-			<version>1.1</version>
-		</dependency>		
+    		<groupId>org.apache.commons</groupId>
+    		<artifactId>com.springsource.org.apache.commons.lang</artifactId>
+    		<version>2.4.0</version>
+		</dependency>
 		
 		<!-- cPath2 plugin -->
 		<dependency>
