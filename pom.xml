@@ -1,149 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-  <parent>
-    <artifactId>parent</artifactId>
-    <groupId>org.cytoscape</groupId>
-    <version>3.0.0-alpha9-SNAPSHOT</version>
+	<parent>
+		<groupId>org.cytoscape</groupId>
+		<artifactId>parent</artifactId>
+		<version>3.0.0-alpha9-SNAPSHOT</version>
 		<relativePath>../parent</relativePath>
-  </parent>
-
-  <modelVersion>4.0.0</modelVersion>
-  <artifactId>gui-distribution</artifactId>
-  <version>3.0.0-M4-SNAPSHOT</version>
-
-  <name>Cytoscape</name>
-
-  <packaging>pom</packaging>
-
-	<scm>
-		<connection>scm:svn:http://chianti.ucsd.edu/svn/core3/gui-distribution/trunk</connection>
-		<developerConnection>scm:svn:svn+ssh://grenache.ucsd.edu/cellar/common/svn/core3/gui-distribution/trunk</developerConnection>
-		<url>http://chianti.ucsd.edu/svn/core3/gui-distribution/trunk</url>
-	</scm>
+	</parent>
+	
+	<groupId>org.cytoscape.distribution</groupId>
+	<artifactId>parent</artifactId>
+	<version>3.0.0-M4-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	
+	<name>Cytoscape Distribution</name>
 
 	<properties>
 		<cytoscape.api.version>3.0.0-alpha8-SNAPSHOT</cytoscape.api.version>
 		<cytoscape.impl.version>3.0.0-alpha8-SNAPSHOT</cytoscape.impl.version>
 		<cytoscape.support.version>3.0.0-alpha7-SNAPSHOT</cytoscape.support.version>
+		<karaf.version>2.2.3</karaf.version>
 	</properties>
 
-    <repositories>
-        <repository>
-            <id>cytoscape_snapshots</id>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-            <name>Cytoscape Snapshots</name>
-            <url>http://cytoscape.wodaklab.org/nexus/content/repositories/snapshots/</url>
-        </repository>
-        <repository>
-            <id>cytoscape_releases</id>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <name>Cytoscape Releases</name>
-            <url>http://cytoscape.wodaklab.org/nexus/content/repositories/releases/</url>
-        </repository>
-    </repositories>
+	<repositories>
+		<repository>
+			<id>cytoscape_snapshots</id>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<name>Cytoscape Snapshots</name>
+			<url>http://code.cytoscape.org/nexus/content/repositories/snapshots/</url>
+		</repository>
+		<repository>
+			<id>cytoscape_releases</id>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<name>Cytoscape Releases</name>
+			<url>http://code.cytoscape.org/nexus/content/repositories/releases/</url>
+		</repository>
+	</repositories>
 
-  <build>
-        <plugins>
-            <plugin>
-                <inherited>false</inherited>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-release-plugin</artifactId>
-                <version>${maven-release-plugin.version}</version>
-                <configuration>
-                    <autoVersionSubmodules>true</autoVersionSubmodules>
-                    <goals>deploy</goals>
-                    <!-- so that impl bundles with modules will build correctly -->
-                    <preparationGoals>clean install</preparationGoals>
-                </configuration>
-            </plugin>
-        </plugins>
-   <pluginManagement>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-dependency-plugin</artifactId>
-        <version>2.2</version>
-        <executions>
-          <execution>
-            <id>copy-dependencies</id>
-            <phase>package</phase>
-            <goals>
-              <goal>copy-dependencies</goal>
-            </goals>
-            <configuration>
-              <outputDirectory>${project.build.directory}/bundles</outputDirectory>
-              <overWriteReleases>false</overWriteReleases>
-              <overWriteSnapshots>true</overWriteSnapshots>
-              <overWriteIfNewer>true</overWriteIfNewer>
-              <excludeTransitive>true</excludeTransitive>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
-   </pluginManagement>
-  </build>
-
-  <profiles>
-    <profile>
-      <id>work</id>
-      <activation>
-        <activeByDefault>true</activeByDefault>
-      </activation>
-      <modules>
-        <module>startlevel-1</module>
-        <module>startlevel-2</module>
-        <module>startlevel-3</module>
-        <module>startlevel-10</module>
-        <module>startlevel-15</module>
-        <module>startlevel-20</module>
-        <module>startlevel-25</module>
-        <module>startlevel-30</module>
-        <module>startlevel-35</module>
-        <module>startlevel-40</module>
-        <module>startlevel-45</module>
-        <module>startlevel-50</module>
-        <module>startlevel-55</module>
-        <module>startlevel-60</module>
-        <module>startlevel-65</module>
-        <module>startlevel-70</module>
-        <module>startlevel-75</module>
-        <module>distribution</module>
-      </modules>
-    </profile>
-    <profile>
-      <id>all</id>
-      <modules>
-        <module>splash-launcher</module>
-        <module>startlevel-1</module>
-        <module>startlevel-2</module>
-        <module>startlevel-3</module>
-        <module>startlevel-10</module>
-        <module>startlevel-15</module>
-        <module>startlevel-20</module>
-        <module>startlevel-25</module>
-        <module>startlevel-30</module>
-        <module>startlevel-35</module>
-        <module>startlevel-40</module>
-        <module>startlevel-45</module>
-        <module>startlevel-50</module>
-        <module>startlevel-55</module>
-        <module>startlevel-60</module>
-        <module>startlevel-65</module>
-        <module>startlevel-70</module>
-        <module>startlevel-75</module>
-        <module>distribution</module>
-      </modules>
-    </profile>
-  </profiles>
+	<build>
+		<plugins>
+			<plugin>
+				<inherited>false</inherited>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>${maven-release-plugin.version}</version>
+				<configuration>
+					<autoVersionSubmodules>true</autoVersionSubmodules>
+					<goals>deploy</goals>
+					<!-- so that impl bundles with modules will build correctly -->
+					<preparationGoals>clean install</preparationGoals>
+				</configuration>
+			</plugin>
+		</plugins>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-dependency-plugin</artifactId>
+					<version>${maven-dependency-plugin.version}</version>
+					<executions>
+						<execution>
+							<id>copy-dependencies</id>
+							<phase>package</phase>
+							<goals>
+							<goal>copy-dependencies</goal>
+							</goals>
+							<configuration>
+							<outputDirectory>${project.build.directory}/bundles</outputDirectory>
+							<overWriteReleases>false</overWriteReleases>
+							<overWriteSnapshots>true</overWriteSnapshots>
+							<overWriteIfNewer>true</overWriteIfNewer>
+							<excludeTransitive>true</excludeTransitive>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+	
+	<profiles>
+		<profile>
+			<id>work</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<modules>
+				<module>launcher</module>
+				<module>cmdline-impl</module>
+				<module>branding</module>
+				<module>features</module>
+			</modules>
+		</profile>
+		<profile>
+			<id>all</id>
+			<modules>
+				<module>launcher</module>
+				<module>cmdline-impl</module>
+				<module>branding</module>
+				<module>features</module>
+				<module>assembly</module>
+			</modules>
+		</profile>
+	</profiles>
 </project>

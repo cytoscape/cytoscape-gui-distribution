@@ -1,0 +1,19 @@
+<config>
+    <id>windows</id>
+    <output-format>zip</output-format>
+    <line-ending>dos</line-ending>
+    <karaf>
+        <feature-repository>target/features-repo</feature-repository>
+        <distribution base="target/dependencies/windows/apache-karaf-${karaf.version}">
+            <scripts>
+                <script>bin/karaf.bat</script>
+            </scripts>
+        </distribution>
+    </karaf>
+    <cytoscape>
+        <scripts>
+            <script>cytoscape.sh</script>
+            <script>cytoscape.bat</script>
+        </scripts>
+    </cytoscape>
+</config>

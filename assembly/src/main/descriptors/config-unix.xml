@@ -1,0 +1,18 @@
+<config>
+    <id>unix</id>
+    <output-format>tar.gz</output-format>
+    <line-ending>unix</line-ending>
+    <karaf>
+        <feature-repository>target/features-repo</feature-repository>
+        <distribution base="target/dependencies/unix/apache-karaf-${karaf.version}">
+            <scripts>
+                <script>bin/karaf</script>
+            </scripts>
+        </distribution>
+    </karaf>
+    <cytoscape>
+        <scripts>
+            <script>cytoscape.sh</script>
+        </scripts>
+    </cytoscape>
+</config>
