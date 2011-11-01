@@ -93,9 +93,6 @@
 	<profiles>
 		<profile>
 			<id>work</id>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
 			<modules>
 				<module>launcher</module>
 				<module>cmdline-impl</module>
@@ -105,6 +102,9 @@
 		</profile>
 		<profile>
 			<id>all</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
 			<modules>
 				<module>launcher</module>
 				<module>cmdline-impl</module>
