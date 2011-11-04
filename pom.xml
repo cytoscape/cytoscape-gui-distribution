@@ -94,6 +94,7 @@
 		<profile>
 			<id>work</id>
 			<modules>
+				<module>splash-launcher</module>
 				<module>launcher</module>
 				<module>cmdline-impl</module>
 				<module>branding</module>
@@ -106,6 +107,7 @@
 				<activeByDefault>true</activeByDefault>
 			</activation>
 			<modules>
+				<module>splash-launcher</module>
 				<module>launcher</module>
 				<module>cmdline-impl</module>
 				<module>branding</module>
