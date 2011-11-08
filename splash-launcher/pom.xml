@@ -4,7 +4,7 @@
     <groupId>org.cytoscape.distribution</groupId>
     <artifactId>parent</artifactId>
     <version>3.0.0-M4-SNAPSHOT</version>
-    <relativePath>../parent</relativePath>
+    <relativePath>..</relativePath>
   </parent>
 
   <modelVersion>4.0.0</modelVersion>
