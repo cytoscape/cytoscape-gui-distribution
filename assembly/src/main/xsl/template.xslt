@@ -92,6 +92,14 @@
         </fileSet>
 
         <fileSet>
+            <directory>src/main/resources</directory>
+            <includes>
+                <include>*.png</include>
+            </includes>
+            <outputDirectory>/framework</outputDirectory>
+        </fileSet>
+        
+        <fileSet>
             <directory>src/main/distribution</directory>
             <outputDirectory>/framework</outputDirectory>
             <fileMode>0644</fileMode>
