@@ -5,7 +5,7 @@ set DEBUG_PORT=12345
 
 set JAVA_MAX_MEM=1550M
 
-set JAVA_DEBUG_OPTS=-Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=%DEBUG_PORT%
+set JAVA_DEBUG_OPTS=-Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=%DEBUG_PORT%
 set KARAF_OPTS=-Xss10M -splash:CytoscapeSplashScreen.png
 
 goto :TryJRE
