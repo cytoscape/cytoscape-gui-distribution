@@ -89,4 +89,4 @@ goto :EOF
     set JAVA=%JAVA_HOME%\bin\java
 :END
 
-framework/bin/karaf client %1 %2 %3 %4 %5 %6 %7 %8
+framework/bin/karaf %1 %2 %3 %4 %5 %6 %7 %8
