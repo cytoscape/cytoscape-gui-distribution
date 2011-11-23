@@ -50,7 +50,6 @@
     
     <bundle start-level="110">mvn:org.cytoscape/cmdline/${cytoscape.support.version}</bundle>
     <bundle start-level="110">mvn:org.cytoscape/equations-api/${cytoscape.api.version}</bundle>
-    <bundle start-level="110">mvn:org.cytoscape/di-util-api/${cytoscape.api.version}</bundle>
     <bundle start-level="110">mvn:org.cytoscape/model-api/${cytoscape.api.version}</bundle>
     <bundle start-level="110">mvn:org.cytoscape/viewmodel-api/${cytoscape.api.version}</bundle>
     <bundle start-level="110">mvn:org.cytoscape/vizmap-api/${cytoscape.api.version}</bundle>
