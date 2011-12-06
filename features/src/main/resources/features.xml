@@ -116,13 +116,14 @@
     <bundle start-level="170">mvn:org.cytoscape/psi-mi-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="170">mvn:org.cytoscape/network-analyzer-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="170">mvn:org.cytoscape/table-import-impl/${cytoscape.impl.version}</bundle>
+    <bundle start-level="170">mvn:org.cytoscape/webservice-psicquic-client-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="170">mvn:org.cytoscape/webservice-biomart-client-impl/${cytoscape.impl.version}</bundle>
-    <bundle start-level="170">mvn:org.cytoscape/webservice-ncbi-client-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="170">mvn:org.cytoscape/filter-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="170">mvn:org.cytoscape/sbml-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="170">mvn:org.cytoscape/cpath2-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="170">mvn:org.cytoscape/network-merge-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="170">mvn:org.cytoscape/graphml-impl/${cytoscape.impl.version}</bundle>
+
     
     <bundle start-level="175">mvn:org.cytoscape/plugin-impl/${cytoscape.impl.version}</bundle>
 
