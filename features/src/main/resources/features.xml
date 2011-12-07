@@ -58,7 +58,7 @@
     <bundle start-level="110">mvn:org.cytoscape/work-swing-api/${cytoscape.api.version}</bundle>
     <bundle start-level="110">mvn:org.cytoscape/swing-application-api/${cytoscape.api.version}</bundle>
     <bundle start-level="110">mvn:org.cytoscape/event-api/${cytoscape.api.version}</bundle>
-    <bundle start-level="110">mvn:org.cytoscape/plugin-api/${cytoscape.api.version}</bundle>
+    <bundle start-level="110">mvn:org.cytoscape/app-api/${cytoscape.api.version}</bundle>
     <bundle start-level="110">mvn:org.cytoscape/dnd-api/${cytoscape.api.version}</bundle>
     <bundle start-level="110">mvn:org.cytoscape/io-api/${cytoscape.api.version}</bundle>
     <bundle start-level="110">mvn:org.cytoscape/session-api/${cytoscape.api.version}</bundle>
@@ -125,7 +125,7 @@
     <bundle start-level="170">mvn:org.cytoscape/graphml-impl/${cytoscape.impl.version}</bundle>
 
     
-    <bundle start-level="175">mvn:org.cytoscape/plugin-impl/${cytoscape.impl.version}</bundle>
+    <bundle start-level="175">mvn:org.cytoscape/app-impl/${cytoscape.impl.version}</bundle>
 
   </feature>
 </features>
