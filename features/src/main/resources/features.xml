@@ -40,12 +40,10 @@
     <bundle start-level="103">mvn:cytoscape-temp/staxmate/2.0.0</bundle>
     <bundle start-level="103">mvn:cytoscape-temp/woodstox-core-lgpl/4.0.5</bundle>
     <bundle start-level="103">mvn:cytoscape-temp/xstream/1.3.1</bundle>
-    <bundle start-level="103">mvn:cytoscape-temp/paxtools-core/4.0.1</bundle>
-    <bundle start-level="103">mvn:cytoscape-temp/biopax-converter/4.0.1</bundle>
-    <bundle start-level="103">mvn:cytoscape-temp/commons-codec/1.3</bundle>
+    <bundle start-level="103">mvn:org.apache.commons/com.springsource.org.apache.commons.codec/1.3.0</bundle>
     <bundle start-level="103">mvn:cytoscape-temp/collections-generic/4.01</bundle>
     <bundle start-level="103">mvn:org.apache.commons/com.springsource.org.apache.commons.lang/2.4.0</bundle>
-    <bundle start-level="103">mvn:cytoscape-temp/commons-httpclient/3.1</bundle>
+    <bundle start-level="103">mvn:org.apache.commons/com.springsource.org.apache.commons.httpclient/3.1.0</bundle>
     <bundle start-level="103">mvn:com.googlecode.guava-osgi/guava-osgi/9.0.0</bundle>
     
     <bundle start-level="110">mvn:org.cytoscape/cmdline/${cytoscape.support.version}</bundle>
@@ -68,6 +66,7 @@
     <bundle start-level="110">mvn:org.cytoscape/property-api/${cytoscape.api.version}</bundle>
     <bundle start-level="110">mvn:org.cytoscape/webservice-api/${cytoscape.api.version}</bundle>
     <bundle start-level="110">mvn:org.cytoscape/application-api/${cytoscape.api.version}</bundle>
+    <bundle start-level="110">mvn:org.cytoscape/biopax-api/${cytoscape.api.version}</bundle>
     
     <bundle start-level="115">mvn:org.cytoscape.distribution/cmdline-impl/${project.version}</bundle>
     <bundle start-level="115">mvn:org.cytoscape/property-impl/${cytoscape.impl.version}</bundle>
