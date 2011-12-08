@@ -67,6 +67,7 @@
     <bundle start-level="110">mvn:org.cytoscape/webservice-api/${cytoscape.api.version}</bundle>
     <bundle start-level="110">mvn:org.cytoscape/application-api/${cytoscape.api.version}</bundle>
     <bundle start-level="110">mvn:org.cytoscape/biopax-api/${cytoscape.api.version}</bundle>
+    <bundle start-level="110">mvn:org.cytoscape/datasource-api/${cytoscape.api.version}</bundle>
     
     <bundle start-level="115">mvn:org.cytoscape.distribution/cmdline-impl/${project.version}</bundle>
     <bundle start-level="115">mvn:org.cytoscape/property-impl/${cytoscape.impl.version}</bundle>
@@ -74,6 +75,7 @@
     <bundle start-level="115">mvn:org.cytoscape/util-intr/${cytoscape.impl.version}</bundle>
     <bundle start-level="115">mvn:org.cytoscape/spacial/${cytoscape.impl.version}</bundle>
     
+    <bundle start-level="120">mvn:org.cytoscape/datasource-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="120">mvn:org.cytoscape/equations-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="120">mvn:org.cytoscape/event-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="120">mvn:org.cytoscape/swing-util-api/${cytoscape.api.version}</bundle>
@@ -89,6 +91,7 @@
     
     <bundle start-level="135">mvn:org.cytoscape/application-impl/${cytoscape.impl.version}</bundle>
     
+    <bundle start-level="140">mvn:org.cytoscape/datasource-biogrid-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="140">mvn:org.cytoscape/session-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="140">mvn:org.cytoscape/ding-customgraphics-manager-impl/${cytoscape.impl.version}</bundle>
     
