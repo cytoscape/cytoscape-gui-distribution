@@ -44,6 +44,8 @@
     <bundle start-level="103">mvn:cytoscape-temp/collections-generic/4.01</bundle>
     <bundle start-level="103">mvn:org.apache.commons/com.springsource.org.apache.commons.lang/2.4.0</bundle>
     <bundle start-level="103">mvn:org.apache.commons/com.springsource.org.apache.commons.httpclient/3.1.0</bundle>
+    <bundle start-level="103">mvn:cytoscape-temp/paxtools-core/4.0.1</bundle>
+    <bundle start-level="103">mvn:cytoscape-temp/biopax-converter/4.0.1</bundle>
     <bundle start-level="103">mvn:com.googlecode.guava-osgi/guava-osgi/9.0.0</bundle>
     
     <bundle start-level="110">mvn:org.cytoscape/cmdline/${cytoscape.support.version}</bundle>
