@@ -79,7 +79,6 @@
     <bundle start-level="110">mvn:org.cytoscape/property-api/${cytoscape.api.version}</bundle>
     <bundle start-level="110">mvn:org.cytoscape/webservice-api/${cytoscape.api.version}</bundle>
     <bundle start-level="110">mvn:org.cytoscape/application-api/${cytoscape.api.version}</bundle>
-    <bundle start-level="110">mvn:org.cytoscape/biopax-api/${cytoscape.api.version}</bundle>
     <bundle start-level="110">mvn:org.cytoscape/datasource-api/${cytoscape.api.version}</bundle>
     
     <bundle start-level="115">mvn:org.cytoscape.distribution/cmdline-impl/${project.version}</bundle>
