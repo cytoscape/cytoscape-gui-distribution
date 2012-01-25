@@ -62,6 +62,7 @@
     <bundle start-level="110">mvn:org.cytoscape/cmdline/${cytoscape.support.version}</bundle>
     <bundle start-level="110">mvn:org.cytoscape/equations-api/${cytoscape.api.version}</bundle>
     <bundle start-level="110">mvn:org.cytoscape/model-api/${cytoscape.api.version}</bundle>
+    <bundle start-level="110">mvn:org.cytoscape/group-api/${cytoscape.api.version}</bundle>
     <bundle start-level="110">mvn:org.cytoscape/viewmodel-api/${cytoscape.api.version}</bundle>
     <bundle start-level="110">mvn:org.cytoscape/vizmap-api/${cytoscape.api.version}</bundle>
     <bundle start-level="110">mvn:org.cytoscape/vizmap-gui-api/${cytoscape.api.version}</bundle>
@@ -94,6 +95,7 @@
     <bundle start-level="120">mvn:org.cytoscape/service-api/${cytoscape.api.version}</bundle>
     
     <bundle start-level="125">mvn:org.cytoscape/model-impl/${cytoscape.impl.version}</bundle>
+    <bundle start-level="125">mvn:org.cytoscape/group-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="125">mvn:org.cytoscape/work-swing-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="125">mvn:org.cytoscape/presentation-impl/${cytoscape.impl.version}</bundle>
     
