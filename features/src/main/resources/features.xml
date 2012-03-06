@@ -32,6 +32,7 @@
     <bundle start-level="103">mvn:cytoscape-temp/jfree-jcommon/1.0.15</bundle>
     <bundle start-level="103">mvn:org.apache.xmlbeans/com.springsource.org.apache.xmlbeans/2.4.0</bundle>
     <bundle start-level="103">mvn:cytoscape-temp/org.apache.poi-all/3.6</bundle>
+    <bundle start-level="103">mvn:org.dom4j/com.springsource.org.dom4j/1.6.1</bundle>
     <bundle start-level="103">mvn:cytoscape-temp/violinstrings/1.0.2</bundle>
     <bundle start-level="103">mvn:cytoscape-temp/jsbml/0.8-b1</bundle>
     
