@@ -12,7 +12,6 @@
     </karaf>
     <cytoscape>
         <scripts>
-            <script>cytoscape.sh</script>
             <script>cytoscape.bat</script>
         </scripts>
     </cytoscape>

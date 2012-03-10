@@ -241,7 +241,7 @@
 						</goals>
 						<configuration>
 							<descriptors>
-								<descriptor>target/generated-resources/xml/xslt/config-windows.xml</descriptor>
+								<descriptor>target/generated-resources/xml/xslt/config-unix.xml</descriptor>
 							</descriptors>
 							<finalName>${project.artifactId}-${project.version}</finalName>
 							<tarLongFileMode>gnu</tarLongFileMode>
@@ -255,7 +255,7 @@
 						</goals>
 						<configuration>
 							<descriptors>
-								<descriptor>target/generated-resources/xml/xslt/config-unix.xml</descriptor>
+								<descriptor>target/generated-resources/xml/xslt/config-windows.xml</descriptor>
 							</descriptors>
 							<finalName>${project.artifactId}-${project.version}</finalName>
 						</configuration>
