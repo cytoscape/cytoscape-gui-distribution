@@ -7,12 +7,14 @@
         <distribution base="target/dependencies/windows/apache-karaf-${karaf.version}">
             <scripts>
                 <script>bin/karaf.bat</script>
+                <script>bin/karaf</script>
             </scripts>
         </distribution>
     </karaf>
     <cytoscape>
         <scripts>
             <script>cytoscape.bat</script>
+            <script>cytoscape.sh</script>
         </scripts>
     </cytoscape>
 </config>

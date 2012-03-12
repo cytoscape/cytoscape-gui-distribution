@@ -243,7 +243,7 @@
 							<descriptors>
 								<descriptor>target/generated-resources/xml/xslt/config-unix.xml</descriptor>
 							</descriptors>
-							<finalName>${project.artifactId}-${project.version}</finalName>
+							<finalName>${project.artifactId}-unix-${project.version}</finalName>
 							<tarLongFileMode>gnu</tarLongFileMode>
 						</configuration>
 					</execution>
@@ -257,7 +257,7 @@
 							<descriptors>
 								<descriptor>target/generated-resources/xml/xslt/config-windows.xml</descriptor>
 							</descriptors>
-							<finalName>${project.artifactId}-${project.version}</finalName>
+							<finalName>${project.artifactId}-windows-${project.version}</finalName>
 						</configuration>
 					</execution>
 				</executions>
