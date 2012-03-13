@@ -8,6 +8,10 @@ import org.osgi.framework.BundleContext;
 
 public class CyActivator extends AbstractCyActivator {
 
+	public CyActivator() {
+		super();
+	}
+
 	@Override
 	public void start(BundleContext context) throws Exception {
 		Properties properties = new Properties();
