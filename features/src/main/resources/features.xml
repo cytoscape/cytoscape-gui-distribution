@@ -107,6 +107,7 @@
     <bundle start-level="135">mvn:org.cytoscape/application-impl/${cytoscape.impl.version}</bundle>
     
     <bundle start-level="140">mvn:org.cytoscape/datasource-biogrid-impl/${cytoscape.impl.version}</bundle>
+    <bundle start-level="140">mvn:org.cytoscape/command-executor-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="140">mvn:org.cytoscape/session-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="140">mvn:org.cytoscape/ding-customgraphics-manager-impl/${cytoscape.impl.version}</bundle>
     
