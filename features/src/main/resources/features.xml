@@ -72,7 +72,6 @@
     <bundle start-level="110">mvn:org.cytoscape/swing-application-api/${cytoscape.api.version}</bundle>
     <bundle start-level="110">mvn:org.cytoscape/event-api/${cytoscape.api.version}</bundle>
     <bundle start-level="110">mvn:org.cytoscape/app-api/${cytoscape.api.version}</bundle>
-    <bundle start-level="110">mvn:org.cytoscape/dnd-api/${cytoscape.api.version}</bundle>
     <bundle start-level="110">mvn:org.cytoscape/io-api/${cytoscape.api.version}</bundle>
     <bundle start-level="110">mvn:org.cytoscape/session-api/${cytoscape.api.version}</bundle>
     <bundle start-level="110">mvn:org.cytoscape/core-task-api/${cytoscape.api.version}</bundle>
@@ -119,7 +118,7 @@
     <bundle start-level="155">mvn:org.cytoscape/core-task-impl/${cytoscape.impl.version}</bundle>
     
     <bundle start-level="160">mvn:org.cytoscape/swing-application-impl/${cytoscape.impl.version}</bundle>
-    <bundle start-level="160">mvn:org.cytoscape/group-data-impl/${cytoscape.impl.version}</bundle>
+     <bundle start-level="160">mvn:org.cytoscape/group-data-impl/${cytoscape.impl.version}</bundle> 
     <bundle start-level="160">mvn:org.cytoscape/group-view-impl/${cytoscape.impl.version}</bundle>
     
     <bundle start-level="165">mvn:org.cytoscape/biopax-impl/${cytoscape.impl.version}</bundle>
