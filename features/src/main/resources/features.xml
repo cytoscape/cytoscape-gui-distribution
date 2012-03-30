@@ -44,20 +44,16 @@
     <bundle start-level="103">mvn:cytoscape-temp/collections-generic/4.01</bundle>
     <bundle start-level="103">mvn:org.apache.commons/com.springsource.org.apache.commons.lang/2.4.0</bundle>
     <bundle start-level="103">mvn:org.apache.commons/com.springsource.org.apache.commons.httpclient/3.1.0</bundle>
-    <bundle start-level="103">mvn:cytoscape-temp/paxtools-core/4.1.1</bundle>
-    <bundle start-level="103">mvn:cytoscape-temp/biopax-converter/4.1.1</bundle>
     <bundle start-level="103">mvn:com.googlecode.guava-osgi/guava-osgi/9.0.0</bundle>
-    <bundle start-level="103">mvn:org.cytoscape/cy-commons-cli/${cytoscape.support.version}</bundle>
-    
+    <bundle start-level="103">mvn:org.cytoscape/cy-commons-cli/${cytoscape.support.version}</bundle>   
     <bundle start-level="103">mvn:org.apache.commons/com.springsource.org.apache.commons.io/1.4.0</bundle>
-    <bundle start-level="103">mvn:psidev.psi.tools/xxindex/0.11</bundle>
-    
+    <bundle start-level="103">mvn:psidev.psi.tools/xxindex/0.11</bundle> 
     <bundle start-level="103">mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.jaxb-api-2.1/1.2.0</bundle>
     <bundle start-level="103">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.jaxb-impl/2.1.6_1</bundle>
     <bundle start-level="103">mvn:javax.activation/com.springsource.javax.activation/1.1.1</bundle>
     <bundle start-level="103">mvn:javax.xml.stream/com.springsource.javax.xml.stream/1.0.1</bundle>
     
-    <bundle start-level="103">mvn:psidev.psi.mi/psi25-xml/1.7.10-SNAPSHOT</bundle>
+    <bundle start-level="104">mvn:psidev.psi.mi/psi25-xml/1.7.10-SNAPSHOT</bundle>
     
     <bundle start-level="110">mvn:org.cytoscape/cmdline/${cytoscape.support.version}</bundle>
     <bundle start-level="110">mvn:org.cytoscape/equations-api/${cytoscape.api.version}</bundle>
@@ -118,7 +114,7 @@
     <bundle start-level="155">mvn:org.cytoscape/core-task-impl/${cytoscape.impl.version}</bundle>
     
     <bundle start-level="160">mvn:org.cytoscape/swing-application-impl/${cytoscape.impl.version}</bundle>
-     <bundle start-level="160">mvn:org.cytoscape/group-data-impl/${cytoscape.impl.version}</bundle> 
+    <bundle start-level="160">mvn:org.cytoscape/group-data-impl/${cytoscape.impl.version}</bundle> 
     <bundle start-level="160">mvn:org.cytoscape/group-view-impl/${cytoscape.impl.version}</bundle>
     
     <bundle start-level="165">mvn:org.cytoscape/biopax-impl/${cytoscape.impl.version}</bundle>
