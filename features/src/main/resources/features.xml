@@ -18,6 +18,7 @@
     <bundle start-level="103">mvn:cytoscape-sun/jhall/1.0</bundle>
     <bundle start-level="103">mvn:org.apache.commons/com.springsource.org.apache.commons.collections/3.2.1</bundle>
     <bundle start-level="103">mvn:cytoscape-temp/colt/1.2.0</bundle>
+    <bundle start-level="103">mvn:cytoscape-temp/parallelcolt/0.9.4</bundle>
     <bundle start-level="103">mvn:cytoscape-temp/prefuse/20071021</bundle>
     <bundle start-level="103">mvn:cytoscape-temp/org.apache.lucene/3.0.2</bundle>
     <bundle start-level="103">mvn:org.jdom/com.springsource.org.jdom/1.1.0</bundle>
