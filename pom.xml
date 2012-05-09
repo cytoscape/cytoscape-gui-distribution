@@ -11,7 +11,7 @@
 	
 	<groupId>org.cytoscape.distribution</groupId>
 	<artifactId>parent</artifactId>
-	<version>3.0.0-M4-SNAPSHOT</version>
+	<version>3.0.0-M4</version>
 	<packaging>pom</packaging>
 	
 	<name>Cytoscape Distribution</name>
@@ -116,4 +116,10 @@
 			</modules>
 		</profile>
 	</profiles>
+
+  <scm>
+    <connection>scm:svn:http://chianti.ucsd.edu/svn/core3/parent/tags/parent-3.0.0-M4</connection>
+    <developerConnection>scm:svn:svn+ssh://grenache.ucsd.edu/cellar/common/svn/core3/parent/tags/parent-3.0.0-M4</developerConnection>
+    <url>http://chianti.ucsd.edu/svn/core3/parent/tags/parent-3.0.0-M4</url>
+  </scm>
 </project>
