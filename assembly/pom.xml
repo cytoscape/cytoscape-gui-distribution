@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.cytoscape.distribution</groupId>
 		<artifactId>parent</artifactId>
-		<version>3.0.0-M4-SNAPSHOT</version>
+		<version>3.0.0-M4</version>
 		<relativePath>..</relativePath>
 	</parent>
 	
@@ -124,7 +124,7 @@
 								<descriptors>
 									<descriptor>mvn:org.cytoscape.distribution/features/${project.version}/xml/features</descriptor>
 								</descriptors>
-								<features/>
+								<features />
 								<includeMvnBasedDescriptors>true</includeMvnBasedDescriptors>
 								<repository>target/features-repo-dev</repository>
 						</configuration>
