@@ -20,7 +20,7 @@
 		<cytoscape.api.version>3.0.0-beta2-SNAPSHOT</cytoscape.api.version>
 		<cytoscape.impl.version>3.0.0-alpha9-SNAPSHOT</cytoscape.impl.version>
 		<cytoscape.support.version>3.0.0-alpha8-SNAPSHOT</cytoscape.support.version>
-		<karaf.version>2.2.3</karaf.version>
+		<karaf.version>2.2.7</karaf.version>
 	</properties>
 
 	<repositories>
