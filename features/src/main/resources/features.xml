@@ -91,6 +91,7 @@
     
     <bundle start-level="125">mvn:org.cytoscape/model-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="125">mvn:org.cytoscape/group-impl/${cytoscape.impl.version}</bundle>
+    <bundle start-level="125">mvn:org.cytoscape/work-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="125">mvn:org.cytoscape/work-swing-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="125">mvn:org.cytoscape/presentation-impl/${cytoscape.impl.version}</bundle>
     
