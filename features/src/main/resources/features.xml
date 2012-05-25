@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <features>
   <feature name="cytoscape-gui" version="${project.version}">
-<!--
-    <bundle start-level="100">mvn:org.slf4j/slf4j-api/1.5.8</bundle>
-    <bundle start-level="100">mvn:org.slf4j/slf4j-simple/1.5.8</bundle>
-    <bundle start-level="100">mvn:org.osgi/org.osgi.core/4.2.0</bundle>
-	-->
+
     <bundle start-level="100">mvn:org.cytoscape/splash-updater-impl/${cytoscape.support.version}</bundle>
     
     <bundle start-level="102">mvn:cytoscape-temp/l2fprod-common-sheet/7.3</bundle>
@@ -54,7 +50,7 @@
     <bundle start-level="103">mvn:javax.activation/com.springsource.javax.activation/1.1.1</bundle>
     <bundle start-level="103">mvn:javax.xml.stream/com.springsource.javax.xml.stream/1.0.1</bundle>
     
-    <bundle start-level="104">mvn:psidev.psi.mi/psi25-xml/1.7.10-SNAPSHOT</bundle>
+    <bundle start-level="104">mvn:psidev.psi.mi/psi25-xml/1.7.10</bundle>
     
     <bundle start-level="110">mvn:org.cytoscape/cmdline/${cytoscape.support.version}</bundle>
     <bundle start-level="110">mvn:org.cytoscape/equations-api/${cytoscape.api.version}</bundle>
