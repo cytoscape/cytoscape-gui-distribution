@@ -43,12 +43,18 @@
     <bundle start-level="103">mvn:org.apache.commons/com.springsource.org.apache.commons.httpclient/3.1.0</bundle>
     <bundle start-level="103">mvn:com.googlecode.guava-osgi/guava-osgi/9.0.0</bundle>
     <bundle start-level="103">mvn:org.cytoscape/cy-commons-cli/${cytoscape.support.version}</bundle>   
+    <!--
     <bundle start-level="103">mvn:org.apache.commons/com.springsource.org.apache.commons.io/1.4.0</bundle>
+    -->
     <bundle start-level="103">mvn:psidev.psi.tools/xxindex/0.11</bundle> 
     <bundle start-level="103">mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.jaxb-api-2.1/1.2.0</bundle>
     <bundle start-level="103">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.jaxb-impl/2.1.6_1</bundle>
     <bundle start-level="103">mvn:javax.activation/com.springsource.javax.activation/1.1.1</bundle>
     <bundle start-level="103">mvn:javax.xml.stream/com.springsource.javax.xml.stream/1.0.1</bundle>
+    
+    <bundle start-level="103">mvn:commons-io/commons-io/2.1</bundle>
+    <bundle start-level="103">wrap:mvn:org.json/org.json/chargebee-1.0</bundle>
+    <bundle start-level="103">mvn:org.apache.httpcomponents/httpcore-osgi/4.2</bundle>    
     
     <bundle start-level="104">mvn:psidev.psi.mi/psi25-xml/1.7.10</bundle>
     <bundle start-level="104">mvn:cytoscape-temp/uk.ac.ebi.enfin.mi.cluster.micluster/1.6</bundle>
@@ -141,10 +147,12 @@
     
     <bundle start-level="175">mvn:org.cytoscape/app-impl/${cytoscape.impl.version}</bundle>
     
+    
     <bundle start-level="180">mvn:org.cytoscape/scripting-impl/${cytoscape.impl.version}</bundle>
 
     <bundle start-level="185">mvn:org.cytoscape/gui-cmdline-parser-impl/${cytoscape.impl.version}</bundle>
+    
     <bundle start-level="190">mvn:org.cytoscape/welcome-impl/${cytoscape.impl.version}</bundle>
-
+	
   </feature>
 </features>
