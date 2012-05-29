@@ -51,6 +51,7 @@
     <bundle start-level="103">mvn:javax.xml.stream/com.springsource.javax.xml.stream/1.0.1</bundle>
     
     <bundle start-level="104">mvn:psidev.psi.mi/psi25-xml/1.7.10</bundle>
+    <bundle start-level="104">mvn:cytoscape-temp/uk.ac.ebi.enfin.mi.cluster.micluster/1.6</bundle>
     
     <bundle start-level="110">mvn:org.cytoscape/cmdline/${cytoscape.support.version}</bundle>
     <bundle start-level="110">mvn:org.cytoscape/equations-api/${cytoscape.api.version}</bundle>
@@ -89,6 +90,8 @@
     <bundle start-level="125">mvn:org.cytoscape/group-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="125">mvn:org.cytoscape/work-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="125">mvn:org.cytoscape/work-swing-impl/${cytoscape.impl.version}</bundle>
+    <bundle start-level="125">mvn:org.cytoscape/work-impl/${cytoscape.impl.version}</bundle>
+
     <bundle start-level="125">mvn:org.cytoscape/presentation-impl/${cytoscape.impl.version}</bundle>
     
     <bundle start-level="130">mvn:org.cytoscape/layout-impl/${cytoscape.impl.version}</bundle>
