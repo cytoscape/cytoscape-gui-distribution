@@ -83,6 +83,8 @@
     <bundle start-level="110">mvn:org.cytoscape/application-api/${cytoscape.api.version}</bundle>
     <bundle start-level="110">mvn:org.cytoscape/datasource-api/${cytoscape.api.version}</bundle>
     <bundle start-level="110">mvn:org.cytoscape/command-executor-api/${cytoscape.api.version}</bundle>
+    <bundle start-level="110">mvn:org.cytoscape/swing-util-api/${cytoscape.api.version}</bundle>
+    <bundle start-level="110">mvn:org.cytoscape/service-api/${cytoscape.api.version}</bundle>
     
     <bundle start-level="115">mvn:org.cytoscape.distribution/cmdline-impl/${project.version}</bundle>
     <bundle start-level="115">mvn:org.cytoscape/property-impl/${cytoscape.impl.version}</bundle>
@@ -90,15 +92,13 @@
     <bundle start-level="120">mvn:org.cytoscape/datasource-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="120">mvn:org.cytoscape/equations-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="120">mvn:org.cytoscape/event-impl/${cytoscape.impl.version}</bundle>
-    <bundle start-level="120">mvn:org.cytoscape/swing-util-api/${cytoscape.api.version}</bundle>
-    <bundle start-level="120">mvn:org.cytoscape/service-api/${cytoscape.api.version}</bundle>
+    <bundle start-level="120">mvn:org.cytoscape/swing-util-impl/${cytoscape.impl.version}</bundle>
     
     <bundle start-level="125">mvn:org.cytoscape/model-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="125">mvn:org.cytoscape/group-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="125">mvn:org.cytoscape/work-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="125">mvn:org.cytoscape/work-swing-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="125">mvn:org.cytoscape/work-impl/${cytoscape.impl.version}</bundle>
-
     <bundle start-level="125">mvn:org.cytoscape/presentation-impl/${cytoscape.impl.version}</bundle>
     
     <bundle start-level="130">mvn:org.cytoscape/layout-impl/${cytoscape.impl.version}</bundle>
@@ -147,7 +147,6 @@
     <bundle start-level="170">mvn:org.cytoscape/edge-bundler-impl/${cytoscape.impl.version}</bundle>
     
     <bundle start-level="175">mvn:org.cytoscape/app-impl/${cytoscape.impl.version}</bundle>
-    
     
     <bundle start-level="180">mvn:org.cytoscape/scripting-impl/${cytoscape.impl.version}</bundle>
 
