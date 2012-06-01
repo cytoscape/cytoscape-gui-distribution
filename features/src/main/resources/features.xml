@@ -82,6 +82,7 @@
     <bundle start-level="110">mvn:org.cytoscape/webservice-swing-api/${cytoscape.api.version}</bundle>
     <bundle start-level="110">mvn:org.cytoscape/application-api/${cytoscape.api.version}</bundle>
     <bundle start-level="110">mvn:org.cytoscape/datasource-api/${cytoscape.api.version}</bundle>
+    <bundle start-level="110">mvn:org.cytoscape/command-executor-api/${cytoscape.api.version}</bundle>
     
     <bundle start-level="115">mvn:org.cytoscape.distribution/cmdline-impl/${project.version}</bundle>
     <bundle start-level="115">mvn:org.cytoscape/property-impl/${cytoscape.impl.version}</bundle>
