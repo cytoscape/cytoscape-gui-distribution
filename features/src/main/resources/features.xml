@@ -54,8 +54,6 @@
     <bundle start-level="103">mvn:commons-io/commons-io/2.1</bundle>
     <bundle start-level="103">wrap:mvn:org.json/org.json/chargebee-1.0</bundle>
     <bundle start-level="103">mvn:org.apache.httpcomponents/httpcore-osgi/4.2</bundle>    
-    <bundle start-level="103">mvn:cytoscape-temp/protostuff-core-json-osgi/1.0.7</bundle>    
-    <bundle start-level="103">mvn:org.codehaus.jackson/jackson-core-lgpl/1.9.7</bundle>    
     
     <bundle start-level="104">mvn:psidev.psi.mi/psi25-xml/1.7.10</bundle>
     <bundle start-level="104">mvn:cytoscape-temp/uk.ac.ebi.enfin.mi.cluster.micluster/1.6</bundle>
