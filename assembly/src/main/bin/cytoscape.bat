@@ -7,7 +7,7 @@ set JAVA_MAX_MEM=1550M
 
 set JAVA_DEBUG_OPTS=-Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=%DEBUG_PORT%
 set PWD=%~dp0
-set KARAF_OPTS=-Xss10M -Duser.dir=%PWD% -splash:CytoscapeSplashScreen.png
+set KARAF_OPTS=-Xss10M -Duser.dir="%PWD:\=\\%" -splash:CytoscapeSplashScreen.png
 
 if not "X%JAVA_HOME%"==X goto TryJDKEnd
 goto :TryJRE
