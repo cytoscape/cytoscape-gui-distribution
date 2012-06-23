@@ -143,6 +143,7 @@
     <bundle start-level="170">mvn:org.cytoscape/network-merge-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="170">mvn:org.cytoscape/graphml-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="170">mvn:org.cytoscape/edge-bundler-impl/${cytoscape.impl.version}</bundle>
+    <bundle start-level="170">mvn:org.cytoscape/group-session-restore-shim-impl/${cytoscape.impl.version}</bundle>
     
     <bundle start-level="175">mvn:org.cytoscape/app-impl/${cytoscape.impl.version}</bundle>
     
