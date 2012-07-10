@@ -15,6 +15,9 @@
         <scripts>
             <script>cytoscape.sh</script>
             <script>cytoscape.bat</script>
+            <script>gen_vmoptions.sh</script>
+            <script>gen_vmoptions.bat</script>
+            <script>Cytoscape.vmoptions</script>
         </scripts>
     </cytoscape>
 </config>

@@ -13,6 +13,8 @@
     <cytoscape>
         <scripts>
             <script>cytoscape.sh</script>
+            <script>gen_vmoptions.sh</script>
+            <script>Cytoscape.vmoptions</script>
         </scripts>
     </cytoscape>
 </config>
