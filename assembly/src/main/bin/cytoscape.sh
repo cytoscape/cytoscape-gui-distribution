@@ -32,11 +32,16 @@ else # Just use sensible defaults.
 		export JAVA_MAX_MEM=1550M
 fi
 
+# The Cytoscape home directory contains the "framework" directory
+# and this script.
+CYTOSCAPE_HOME_REL=`dirname "$0"`
+CYTOSCAPE_HOME_ABS=`cd "$CYTOSCAPE_HOME_REL"; pwd`
+
 PWD=$(pwd) 
 # The user working directory needs to be explecitly set in -Duser.dir to current
 # working directory since KARAF changes it to the framework directory. There
 # might unforeseeable problems with this since the reason for KARAF setting the 
 # working directory to framework is not known.
-export KARAF_OPTS="-Xss10M -Duser.dir=$PWD -splash:CytoscapeSplashScreen.png $CYTOSCAPE_MAC_OPTS"
+export KARAF_OPTS=-Xss10M\ -Duser.dir="$PWD"\ -Dcytoscape.home="$CYTOSCAPE_HOME_ABS"\ -splash:CytoscapeSplashScreen.png\ "$CYTOSCAPE_MAC_OPTS"
 
 $script_path/framework/bin/karaf "$@"
