@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #
 # Run cytoscape from a jar file
 # This script is a UNIX-only (i.e. Linux, Mac OS, etc.) version
@@ -8,7 +8,8 @@ DEBUG_PORT=12345
 
 script_path="$(dirname -- $0)"
 if [ -h $script_path ]; then
-	script_path="$(readlink $script_path)"
+	link="$(readlink $0)"
+	script_path="$(dirname -- $link)"
 fi
 
 export JAVA_DEBUG_OPTS="-Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=${DEBUG_PORT}"
@@ -34,7 +35,7 @@ fi
 
 # The Cytoscape home directory contains the "framework" directory
 # and this script.
-CYTOSCAPE_HOME_REL=`dirname "$0"`
+CYTOSCAPE_HOME_REL=$script_path
 CYTOSCAPE_HOME_ABS=`cd "$CYTOSCAPE_HOME_REL"; pwd`
 
 PWD=$(pwd) 
