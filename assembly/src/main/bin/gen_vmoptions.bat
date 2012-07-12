@@ -30,14 +30,14 @@ REM if %physmem% GTR 9216 set mem=4096
 
 :64bit
 	REM echo "64 bit %mem% MB"
-	echo %mem%M  >>Cytoscape.vmoptions
+	echo %mem%M  >Cytoscape.vmoptions
 	goto End
 
 :32bit
 	REM echo "32 bit %mem% MB"
 	REM Some java versions can only support 1400MB
 	if %mem% GTR 1400 set mem=1400
-	echo %mem%M >>Cytoscape.vmoptions
+	echo %mem%M >Cytoscape.vmoptions
 
 :Nojava
 	echo ERROR: Can't find java executable
