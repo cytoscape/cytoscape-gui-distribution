@@ -7,7 +7,7 @@
 DEBUG_PORT=12345
 
 script_path="$(dirname -- $0)"
-if [ -h $script_path ]; then
+if [ -h $0 ]; then
 	link="$(readlink $0)"
 	script_path="$(dirname -- $link)"
 fi
