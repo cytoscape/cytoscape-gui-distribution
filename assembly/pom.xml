@@ -279,6 +279,14 @@
 						<configuration>
 							<file>target/dependencies/unix/apache-karaf-${karaf.version}/bin/karaf</file>
 							<outputFile>target/dependencies/launcher/bin/karaf</outputFile>
+							<regex>false</regex>
+							<unescape>false</unescape>
+							<replacements>
+								<replacement>
+									<token>MAIN=org.apache.karaf.main.Main</token>
+									<value>MAIN=org.cytoscape.launcher.internal.Launcher</value>
+								</replacement>
+							</replacements>							
 						</configuration>
 					</execution>
 					<execution>
@@ -290,19 +298,30 @@
 						<configuration>
 							<file>target/dependencies/windows/apache-karaf-${karaf.version}/bin/karaf.bat</file>
 							<outputFile>target/dependencies/launcher/bin/karaf.bat</outputFile>
+							<regex>false</regex>
+							<unescape>false</unescape>
+							<replacements>
+								<replacement>
+									<token>MAIN=org.apache.karaf.main.Main</token>
+									<value>MAIN=org.cytoscape.launcher.internal.Launcher</value>
+								</replacement>
+							</replacements>
+						</configuration>
+					</execution>
+					<execution>
+						<id>move-deploy-directory</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>replace</goal>
+						</goals>
+						<configuration>
+							<file>target/cytoscape/framework/etc/org.apache.felix.fileinstall-deploy.cfg</file>
+							<unescape>false</unescape>
+							<token>felix.fileinstall.dir.*</token>
+							<value>felix.fileinstall.dir = \$\{user.home\}/.cytoscape/3.0/apps/installed</value>
 						</configuration>
 					</execution>
 				</executions>
-				<configuration>
-					<regex>false</regex>
-					<unescape>false</unescape>
-					<replacements>
-						<replacement>
-							<token>MAIN=org.apache.karaf.main.Main</token>
-							<value>MAIN=org.cytoscape.launcher.internal.Launcher</value>
-						</replacement>
-					</replacements>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>
