@@ -92,13 +92,15 @@
 	
 	<profiles>
 		<profile>
-			<id>work</id>
+			<id>release</id>
 			<modules>
 				<module>splash-launcher</module>
 				<module>launcher</module>
 				<module>cmdline-impl</module>
 				<module>branding</module>
 				<module>features</module>
+				<module>assembly</module>
+				<module>packaging</module>
 			</modules>
 		</profile>
 		<profile>
