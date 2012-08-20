@@ -318,7 +318,7 @@
 							<file>target/cytoscape/framework/etc/org.apache.felix.fileinstall-deploy.cfg</file>
 							<unescape>false</unescape>
 							<token>felix.fileinstall.dir.*</token>
-							<value>felix.fileinstall.dir = \$\{user.home\}/.cytoscape/3.0/apps/installed</value>
+							<value>felix.fileinstall.dir = \$\{user.home\}/CytoscapeConfiguration/3/apps/installed</value>
 						</configuration>
 					</execution>
 				</executions>
