@@ -5,7 +5,7 @@ set DEBUG_PORT=12345
 
 :: Create the Cytoscape.vmoptions file, if it doesn't exist.
 IF EXIST "Cytoscape.vmoptions" GOTO vmoptionsFileExists
-CALL gen_vmoptions.bat
+CMD /C gen_vmoptions.bat
 :vmoptionsFileExists
 
 
@@ -30,6 +30,9 @@ set JAVA_DEBUG_OPTS=-Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=d
 set PWD=%~dp0
 set KARAF_OPTS=-Xss10M -Dcytoscape.home="%PWD:\=\\%" -Duser.dir="%PWD:\=\\%" -splash:CytoscapeSplashScreen.png
 
+set KARAF_DATA="%USERPROFILE%\CytoscapeConfiguration\3\karaf_data"
+mkdir "%KARAF_DATA%\tmp"
+
 if not "X%JAVA_HOME%"=="X" goto TryJDKEnd
 goto :TryJRE
 
@@ -38,11 +41,11 @@ goto :TryJRE
 goto :EOF
 
 :TryJRE
-    reg export "HKEY_LOCAL_MACHINE\SOFTWARE\JavaSoft\Java Runtime Environment" __reg1.txt
-    if not exist __reg1.txt goto :TryJDK
-    type __reg1.txt | find "CurrentVersion" > __reg2.txt
+    reg export "HKEY_LOCAL_MACHINE\SOFTWARE\JavaSoft\Java Runtime Environment" %TEMP%\__reg1.txt
+    if not exist %TEMP%\__reg1.txt goto :TryJDK
+    type "%TEMP%\__reg1.txt" | find "CurrentVersion" > "%TEMP%\__reg2.txt"
     if errorlevel 1 goto :TryJDK
-    for /f "tokens=2 delims==" %%x in (__reg2.txt) do set JavaTemp=%%~x
+    for /f "tokens=2 delims==" %%x in ("%TEMP%\__reg2.txt") do set JavaTemp=%%~x
     if errorlevel 1 goto :TryJDK
     set JavaTemp=%JavaTemp%##
     set JavaTemp=%JavaTemp:                ##=##%
@@ -51,29 +54,29 @@ goto :EOF
     set JavaTemp=%JavaTemp:  ##=##%
     set JavaTemp=%JavaTemp: ##=##%
     set JavaTemp=%JavaTemp:##=%
-    del __reg1.txt
-    del __reg2.txt
-    reg export "HKEY_LOCAL_MACHINE\SOFTWARE\JavaSoft\Java Runtime Environment\%JavaTemp%" __reg1.txt
-    if not exist __reg1.txt goto :TryJDK
-    type __reg1.txt | find "JavaHome" > __reg2.txt
+    del "%TEMP%\__reg1.txt"
+    del "%TEMP%\__reg2.txt"
+    reg export "HKEY_LOCAL_MACHINE\SOFTWARE\JavaSoft\Java Runtime Environment\%JavaTemp%" "%TEMP%\__reg1.txt"
+    if not exist "%TEMP%\__reg1.txt" goto :TryJDK
+    type "%TEMP%\__reg1.txt" | find "JavaHome" > "%TEMP%\__reg2.txt"
     if errorlevel 1 goto :TryJDK
-    for /f "tokens=2 delims==" %%x in (__reg2.txt) do set JAVA_HOME=%%~x
+    for /f "tokens=2 delims==" %%x in ("%TEMP%\__reg2.txt") do set JAVA_HOME=%%~x
     if errorlevel 1 goto :TryJDK
-    del __reg1.txt
-    del __reg2.txt
+    del "%TEMP%\__reg1.txt"
+    del "%TEMP%\__reg2.txt"
     goto TryJDKEnd
 :TryJDK
-    reg export "HKEY_LOCAL_MACHINE\SOFTWARE\JavaSoft\Java Development Kit" __reg1.txt
-    if not exist __reg1.txt (
+    reg export "HKEY_LOCAL_MACHINE\SOFTWARE\JavaSoft\Java Development Kit" "%TEMP%\__reg1.txt"
+    if not exist "%TEMP%\__reg1.txt" (
         call :warn Unable to retrieve JAVA_HOME
         goto END
     )
-    type __reg1.txt | find "CurrentVersion" > __reg2.txt
+    type "%TEMP%\__reg1.txt" | find "CurrentVersion" > "%TEMP%\__reg2.txt"
     if errorlevel 1 (
         call :warn Unable to retrieve JAVA_HOME
         goto END
     )
-    for /f "tokens=2 delims==" %%x in (__reg2.txt) do set JavaTemp=%%~x
+    for /f "tokens=2 delims==" %%x in ("%TEMP%\__reg2.txt") do set JavaTemp=%%~x
     if errorlevel 1 (
         call :warn Unable to retrieve JAVA_HOME
         goto END
@@ -85,25 +88,25 @@ goto :EOF
     set JavaTemp=%JavaTemp:  ##=##%
     set JavaTemp=%JavaTemp: ##=##%
     set JavaTemp=%JavaTemp:##=%
-    del __reg1.txt
-    del __reg2.txt
-    reg export "HKEY_LOCAL_MACHINE\SOFTWARE\JavaSoft\Java Development Kit\%JavaTemp%" __reg1.txt
-    if not exist __reg1.txt (
+    del "%TEMP%\__reg1.txt"
+    del "%TEMP%\__reg2.txt"
+    reg export "HKEY_LOCAL_MACHINE\SOFTWARE\JavaSoft\Java Development Kit\%JavaTemp%" "%TEMP%\__reg1.txt"
+    if not exist "%TEMP%\__reg1.txt" (
         call :warn Unable to retrieve JAVA_HOME from JDK
         goto END
     )
-    type __reg1.txt | find "JavaHome" > __reg2.txt
+    type "%TEMP%\__reg1.txt" | find "JavaHome" > "%TEMP%\__reg2.txt"
     if errorlevel 1 (
         call :warn Unable to retrieve JAVA_HOME
         goto END
     )
-    for /f "tokens=2 delims==" %%x in (__reg2.txt) do set JAVA_HOME=%%~x
+    for /f "tokens=2 delims==" %%x in ("%TEMP%\__reg2.txt") do set JAVA_HOME=%%~x
     if errorlevel 1 (
         call :warn Unable to retrieve JAVA_HOME
         goto END
     )
-    del __reg1.txt
-    del __reg2.txt
+    del "%TEMP%\__reg1.txt"
+    del "%TEMP%\__reg2.txt"
 :TryJDKEnd
     if not exist "%JAVA_HOME%" (
         call :warn JAVA_HOME is not valid: "%JAVA_HOME%"

@@ -14,6 +14,10 @@
 	<packaging>pom</packaging>
 	<name>Cytoscape Karaf Distribution</name>
 
+	<properties>
+		<maven.resources.escapeString>\</maven.resources.escapeString>
+	</properties>
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.apache.karaf</groupId>
@@ -286,7 +290,11 @@
 									<token>MAIN=org.apache.karaf.main.Main</token>
 									<value>MAIN=org.cytoscape.launcher.internal.Launcher</value>
 								</replacement>
-							</replacements>							
+								<replacement>
+									<token>-Dkaraf.instances="${KARAF_BASE}/instances"</token>
+									<value>-Dkaraf.instances="${KARAF_DATA}/instances"</value>
+								</replacement>
+							</replacements>
 						</configuration>
 					</execution>
 					<execution>
@@ -304,6 +312,23 @@
 								<replacement>
 									<token>MAIN=org.apache.karaf.main.Main</token>
 									<value>MAIN=org.cytoscape.launcher.internal.Launcher</value>
+								</replacement>
+								<replacement>
+									<token>-Dkaraf.instances="%KARAF_HOME%\instances"</token>
+									<value>-Dkaraf.instances="%KARAF_DATA%\instances"</value>
+								</replacement>
+								<replacement>
+									<token>(__reg2.txt)</token>
+									<!-- Dirty hack: "%CD:~0,0%" expands to the empty string.  That way, the replacements below won't affect this one -->
+									<value>(%TEMP%\_%CD:~0,0%_reg2.txt)</value>
+								</replacement>
+								<replacement>
+									<token>__reg1.txt</token>
+									<value>"%TEMP%\__reg1.txt"</value>
+								</replacement>
+								<replacement>
+									<token>__reg2.txt</token>
+									<value>"%TEMP%\__reg2.txt"</value>
 								</replacement>
 							</replacements>
 						</configuration>
