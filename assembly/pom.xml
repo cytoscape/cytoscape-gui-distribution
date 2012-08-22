@@ -308,19 +308,6 @@
 							</replacements>
 						</configuration>
 					</execution>
-					<execution>
-						<id>move-deploy-directory</id>
-						<phase>compile</phase>
-						<goals>
-							<goal>replace</goal>
-						</goals>
-						<configuration>
-							<file>target/cytoscape/framework/etc/org.apache.felix.fileinstall-deploy.cfg</file>
-							<unescape>false</unescape>
-							<token>felix.fileinstall.dir.*</token>
-							<value>felix.fileinstall.dir = \$\{user.home\}/CytoscapeConfiguration/3/apps/installed</value>
-						</configuration>
-					</execution>
 				</executions>
 			</plugin>
 		</plugins>
