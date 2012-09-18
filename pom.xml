@@ -17,9 +17,6 @@
 	<name>Cytoscape Distribution</name>
 
 	<properties>
-		<cytoscape.api.version>3.0.0-beta3-SNAPSHOT</cytoscape.api.version>
-		<cytoscape.impl.version>3.0.0-alpha10-SNAPSHOT</cytoscape.impl.version>
-		<cytoscape.support.version>3.0.0-alpha9-SNAPSHOT</cytoscape.support.version>
 		<karaf.version>2.2.9</karaf.version>
 	</properties>
 
