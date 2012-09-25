@@ -108,6 +108,7 @@
     
     <bundle start-level="140">mvn:org.cytoscape/datasource-biogrid-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="140">mvn:org.cytoscape/session-impl/${cytoscape.impl.version}</bundle>
+    <bundle start-level="140">mvn:org.cytoscape/vizmap-gui-core-impl/${cytoscape.impl.version}</bundle>
     
     <bundle start-level="145">mvn:org.cytoscape/ding-presentation-impl/${cytoscape.impl.version}</bundle>
     
