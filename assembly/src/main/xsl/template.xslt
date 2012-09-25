@@ -120,6 +120,14 @@
             <directory><xsl:value-of select="/config/karaf/feature-repository"/></directory>
             <outputDirectory>/framework/system</outputDirectory>
         </fileSet>
+        
+        <fileSet>
+            <directory>src/main/resources/sampleData</directory>
+            <includes>
+                <include>**/*</include>
+            </includes>
+            <outputDirectory>/sampleData</outputDirectory>
+        </fileSet>
 
     </fileSets>
 </assembly>
