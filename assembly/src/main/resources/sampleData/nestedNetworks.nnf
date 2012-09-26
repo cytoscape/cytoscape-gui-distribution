@@ -1,0 +1,142 @@
+# A simple 3-level nested network example file.
+#
+# The top-level network is called "Overview", below that are "Level1.x" and below that "Level2.x".
+
+# Top-level network
+Overview Level1.1 interact Level1.2
+Overview Level1.2 interact Level1.3
+Overview Level1.4
+Overview Level1.5 interact Level1.1
+
+# First level-1 network
+Level1.1 SimpleNode1 interact Level2.1 # Note that "SimpleNode1" does not have a nested network because there is
+Level1.1 SimpleNode2 interact Level2.2 # no network named "SimpleNode1", i.e. "SimpleNode1" does not appear in the
+Level1.1 Level2.1 interact Level2.8    # first column anywhere in this file.
+
+# Second level-1 network
+Level1.2 Level2.7 interact Level2.2
+Level1.2 Level2.5 interact SimpleNode3
+Level1.2 Level2.4 interact Level2.2
+Level1.2 Level2.2 interact SimpleNode4
+Level1.2 Level2.2 interact Level2.4
+Level1.2 Level2.1 interact Level2.7
+Level1.2 Level2.5 interact Level2.4
+
+# Third level-1 network
+Level1.3 Level2.4 interact Level2.5
+Level1.3 Level2.6 interact Level2.4
+Level1.3 Level2.6 interact Level2.5
+
+# Fourth level-1 network
+Level1.4 Level2.1 interact Level2.8
+Level1.4 SimpleNode2 interact Level2.
+Level1.4 Level2.5 interact Level2.3
+Level1.4 Level2.2 interact SimpleNode5
+Level1.4 Level2.5 interact Level2.2
+Level1.4 SimpleNode6 interact Level2.7
+
+# Fifth level-1 network
+Level1.5 Level2.4 interact Level2.2
+Level1.5 SimpleNode7 interact Level2.1
+Level1.5 Level2.9 interact Level2.
+Level1.5 Level2.3 interact Level2.5
+Level1.5 Level2.2 interact Level2.2
+
+# First level-2 network
+Level2.1 Node1 interact Node2
+Level2.1 Node2 interact Node1
+Level2.1 Node4 interact Node4
+Level2.1 Node5 interact Node6
+Level2.1 Node3 interact Node8
+Level2.1 Node5 interact Node2
+Level2.1 Node8 interact Node5
+Level2.1 Node2 interact Node6
+Level2.1 Node5 interact Node7
+
+# Second level-2 network
+Level2.2 Node6 interact Node9
+Level2.2 Node8 interact Node11
+Level2.2 Node3 interact Node12
+Level2.2 Node6 interact Node3
+Level2.2 Node20 interact Node4
+Level2.2 Node11 interact Node7
+Level2.2 Node4 interact Node13
+Level2.2 Node8 interact Node20
+Level2.2 Node12 interact Node3
+
+# Third level-2 network
+Level2.3 Node5 interact Node4
+Level2.3 Node4 interact Node1
+Level2.3 Node8 interact Node2
+Level2.3 Node12 interact Node8
+Level2.3 Node11 interact Node13
+Level2.3 Node9 interact Node12
+Level2.3 Node7 interact Node4
+Level2.3 Node3 interact Node20
+Level2.3 Node12 interact Node7
+
+# Fourth level-2 network
+Level2.3 Node11 interact Node13
+Level2.4 Node1 interact Node2
+Level2.4 Node3 interact Node8
+Level2.4 Node2 interact Node10
+Level2.4 Node14 interact Node19
+Level2.4 Node9 interact Node7
+Level2.4 Node8 interact Node6
+Level2.4 Node10 interact Node5
+Level2.4 Node11 interact Node1
+
+# Fifth level-2 network
+Level2.5 Node16 interact Node15
+Level2.5 Node15 interact Node10
+Level2.5 Node2 interact Node8
+Level2.5 Node9 interact Node9
+Level2.5 Node8 interact Node2
+Level2.5 Node12 interact Node3
+Level2.5 Node15 interact Node11
+Level2.5 Node16 interact Node10
+Level2.5 Node7 interact Node8
+
+# Sixth level-2 network
+Level2.6 Node10 interact Node4
+Level2.6 Node20 interact Node2
+Level2.6 Node4 interact Node8
+Level2.6 Node8 interact Node17
+Level2.6 Node16 interact Node20
+Level2.6 Node20 interact Node8
+Level2.6 Node8 interact Node6
+Level2.6 Node6 interact Node4
+Level2.6 Node5 interact Node17
+
+# Seventh level-2 network
+Level2.7 Node2 interact Node5
+Level2.7 Node4 interact Node7
+Level2.7 Node6 interact Node4
+Level2.7 Node4 interact Node3
+Level2.7 Node3 interact Node2
+Level2.7 Node13 interact Node18
+Level2.7 Node6 interact Node13
+Level2.7 Node5 interact Node20
+Level2.7 Node4 interact Node5
+
+# Eighth level-2 network
+Level2.8 Node4 interact Node6
+Level2.8 Node15 interact Node16
+Level2.8 Node6 interact Node15
+Level2.8 Node12 interact Node4
+Level2.8 Node4 interact Node6
+Level2.8 Node2 interact Node7
+Level2.8 Node11 interact Node9
+Level2.8 Node9 interact Node10
+Level2.8 Node8 interact Node12
+
+# Ninth level-2 network
+Level2.9 Node3 interact Node6
+Level2.9 Node4 interact Node6
+Level2.9 Node9 interact Node12
+Level2.9 Node17 interact Node12
+Level2.9 Node8 interact Node9
+Level2.9 Node4 interact Node16
+Level2.9 Node17 interact Node8
+Level2.9 Node2 interact Node4
+Level2.9 Node17 interact Node2
