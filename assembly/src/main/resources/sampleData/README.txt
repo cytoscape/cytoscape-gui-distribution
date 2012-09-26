@@ -87,12 +87,21 @@ with nested nodes (nodes contain reference to other network).
  
 ----------------------------------------------------------------------------
 
-PSI-MI
+BIOGRID-ORGANISM-Rattus_norvegicus-3.1.92.mitab
+
+PSI-MI Tab 2.5 file format is a standard text representation of interaction data.
+Cytoscape 3 recognizes files end with '.mitab' as PSI-MI Tab file.  The sample 
+data is a rat interactome compiled by BioGRID project: 
+
+Stark C, Breitkreutz BJ, Reguly T, Boucher L, Breitkreutz A, Tyers M. 
+Biogrid: A General Repository for Interaction Datasets. 
+Nucleic Acids Res. Jan1; 34:D535-9
 
 ----------------------------------------------------------------------------
 
-BioPAX
+DNA_Damage_Bypass_Reactome_73893.owl
 
-----------------------------------------------------------------------------
+BioPAX Level 2 and 3 files are supported by Cytoscape.  This sample file is 
+created by Reactome project:
 
-Sample Style
+http://www.reactome.org/
