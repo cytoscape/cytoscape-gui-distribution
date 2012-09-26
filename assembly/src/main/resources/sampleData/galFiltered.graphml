@@ -1,5 +1,50 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <graphml>
+    <key attr.name="Family Description" attr.type="string" for="node" id="Family Description"/>
+    <key attr.name="annotation.DB_Object_ID" attr.type="string" for="node" id="annotation.DB_Object_ID"/>
+    <key attr.name="annotation.DB_Object_Type" attr.type="string" for="node" id="annotation.DB_Object_Type"/>
+    <key attr.name="annotation.DB" attr.type="string" for="node" id="annotation.DB"/>
+    <key attr.name="annotation.Qualifier" attr.type="string" for="node" id="annotation.Qualifier"/>
+    <key attr.name="gal1RGexp" attr.type="double" for="node" id="gal1RGexp"/>
+    <key attr.name="Pathway Link" attr.type="string" for="node" id="Pathway Link"/>
+    <key attr.name="annotation.Taxon" attr.type="string" for="node" id="annotation.Taxon"/>
+    <key attr.name="Unified UniProt Accession" attr.type="string" for="node" id="Unified UniProt Accession"/>
+    <key attr.name="annotation.Assigned_by" attr.type="string" for="node" id="annotation.Assigned_by"/>
+    <key attr.name="gal80Rsig" attr.type="double" for="node" id="gal80Rsig"/>
+    <key attr.name="Locus Tag" attr.type="string" for="node" id="Locus Tag"/>
+    <key attr.name="GeneRIF ID" attr.type="string" for="node" id="GeneRIF ID"/>
+    <key attr.name="gal1RGsig" attr.type="double" for="node" id="gal1RGsig"/>
+    <key attr.name="SGD ID" attr.type="string" for="node" id="SGD ID"/>
+    <key attr.name="annotation.GO MOLECULAR_FUNCTION" attr.type="string" for="node" id="annotation.GO MOLECULAR_FUNCTION"/>
+    <key attr.name="GeneRIF" attr.type="string" for="node" id="GeneRIF"/>
+    <key attr.name="annotation.DB:Reference" attr.type="string" for="node" id="annotation.DB:Reference"/>
+    <key attr.name="Pathway" attr.type="string" for="node" id="Pathway"/>
+    <key attr.name="Speices" attr.type="string" for="node" id="Speices"/>
+    <key attr.name="EntrezGene ID" attr.type="string" for="node" id="EntrezGene ID"/>
+    <key attr.name="gal80Rexp" attr.type="double" for="node" id="gal80Rexp"/>
+    <key attr.name="annotation.DB_Object_Name" attr.type="string" for="node" id="annotation.DB_Object_Name"/>
+    <key attr.name="Official Symbol" attr.type="string" for="node" id="Official Symbol"/>
+    <key attr.name="PubMed ID" attr.type="string" for="node" id="PubMed ID"/>
+    <key attr.name="annotation.GO CELLULAR_COMPONENT" attr.type="string" for="node" id="annotation.GO CELLULAR_COMPONENT"/>
+    <key attr.name="annotation.Date" attr.type="string" for="node" id="annotation.Date"/>
+    <key attr.name="PDB ID" attr.type="string" for="node" id="PDB ID"/>
+    <key attr.name="Source Database ID" attr.type="string" for="node" id="Source Database ID"/>
+    <key attr.name="Gene Type" attr.type="string" for="node" id="Gene Type"/>
+    <key attr.name="Source Database" attr.type="string" for="node" id="Source Database"/>
+    <key attr.name="Additional Links" attr.type="string" for="node" id="Additional Links"/>
+    <key attr.name="canonicalName" attr.type="string" for="node" id="canonicalName"/>
+    <key attr.name="gal4RGexp" attr.type="double" for="node" id="gal4RGexp"/>
+    <key attr.name="Ensembl Family ID" attr.type="string" for="node" id="Ensembl Family ID"/>
+    <key attr.name="annotation.With (or) From" attr.type="string" for="node" id="annotation.With (or) From"/>
+    <key attr.name="gal4RGsig" attr.type="double" for="node" id="gal4RGsig"/>
+    <key attr.name="annotation.Evidence" attr.type="string" for="node" id="annotation.Evidence"/>
+    <key attr.name="Degree" attr.type="int" for="node" id="Degree"/>
+    <key attr.name="annotation.GO BIOLOGICAL_PROCESS" attr.type="string" for="node" id="annotation.GO BIOLOGICAL_PROCESS"/>
+    <key attr.name="SGD symbol" attr.type="string" for="node" id="SGD symbol"/>
+    <key attr.name="Unified UniProt ID" attr.type="string" for="node" id="Unified UniProt ID"/>
+    <key attr.name="canonicalName" attr.type="string" for="node" id="canonicalName"/>
+    <key attr.name="interaction" attr.type="string" for="node" id="interaction"/>
+	
     <graph edgedefault="directed" id="galFiltered.sif">
         <node id="YNL116W">
             <data key="Family Description">[AMBIGUOUS]</data>
@@ -15804,48 +15849,4 @@
             <data key="interaction">pp</data>
         </edge>
     </graph>
-    <key attr.name="Family Description" attr.type="string" for="node" id="Family Description"/>
-    <key attr.name="annotation.DB_Object_ID" attr.type="string" for="node" id="annotation.DB_Object_ID"/>
-    <key attr.name="annotation.DB_Object_Type" attr.type="string" for="node" id="annotation.DB_Object_Type"/>
-    <key attr.name="annotation.DB" attr.type="string" for="node" id="annotation.DB"/>
-    <key attr.name="annotation.Qualifier" attr.type="string" for="node" id="annotation.Qualifier"/>
-    <key attr.name="gal1RGexp" attr.type="double" for="node" id="gal1RGexp"/>
-    <key attr.name="Pathway Link" attr.type="string" for="node" id="Pathway Link"/>
-    <key attr.name="annotation.Taxon" attr.type="string" for="node" id="annotation.Taxon"/>
-    <key attr.name="Unified UniProt Accession" attr.type="string" for="node" id="Unified UniProt Accession"/>
-    <key attr.name="annotation.Assigned_by" attr.type="string" for="node" id="annotation.Assigned_by"/>
-    <key attr.name="gal80Rsig" attr.type="double" for="node" id="gal80Rsig"/>
-    <key attr.name="Locus Tag" attr.type="string" for="node" id="Locus Tag"/>
-    <key attr.name="GeneRIF ID" attr.type="string" for="node" id="GeneRIF ID"/>
-    <key attr.name="gal1RGsig" attr.type="double" for="node" id="gal1RGsig"/>
-    <key attr.name="SGD ID" attr.type="string" for="node" id="SGD ID"/>
-    <key attr.name="annotation.GO MOLECULAR_FUNCTION" attr.type="string" for="node" id="annotation.GO MOLECULAR_FUNCTION"/>
-    <key attr.name="GeneRIF" attr.type="string" for="node" id="GeneRIF"/>
-    <key attr.name="annotation.DB:Reference" attr.type="string" for="node" id="annotation.DB:Reference"/>
-    <key attr.name="Pathway" attr.type="string" for="node" id="Pathway"/>
-    <key attr.name="Speices" attr.type="string" for="node" id="Speices"/>
-    <key attr.name="EntrezGene ID" attr.type="string" for="node" id="EntrezGene ID"/>
-    <key attr.name="gal80Rexp" attr.type="double" for="node" id="gal80Rexp"/>
-    <key attr.name="annotation.DB_Object_Name" attr.type="string" for="node" id="annotation.DB_Object_Name"/>
-    <key attr.name="Official Symbol" attr.type="string" for="node" id="Official Symbol"/>
-    <key attr.name="PubMed ID" attr.type="string" for="node" id="PubMed ID"/>
-    <key attr.name="annotation.GO CELLULAR_COMPONENT" attr.type="string" for="node" id="annotation.GO CELLULAR_COMPONENT"/>
-    <key attr.name="annotation.Date" attr.type="string" for="node" id="annotation.Date"/>
-    <key attr.name="PDB ID" attr.type="string" for="node" id="PDB ID"/>
-    <key attr.name="Source Database ID" attr.type="string" for="node" id="Source Database ID"/>
-    <key attr.name="Gene Type" attr.type="string" for="node" id="Gene Type"/>
-    <key attr.name="Source Database" attr.type="string" for="node" id="Source Database"/>
-    <key attr.name="Additional Links" attr.type="string" for="node" id="Additional Links"/>
-    <key attr.name="canonicalName" attr.type="string" for="node" id="canonicalName"/>
-    <key attr.name="gal4RGexp" attr.type="double" for="node" id="gal4RGexp"/>
-    <key attr.name="Ensembl Family ID" attr.type="string" for="node" id="Ensembl Family ID"/>
-    <key attr.name="annotation.With (or) From" attr.type="string" for="node" id="annotation.With (or) From"/>
-    <key attr.name="gal4RGsig" attr.type="double" for="node" id="gal4RGsig"/>
-    <key attr.name="annotation.Evidence" attr.type="string" for="node" id="annotation.Evidence"/>
-    <key attr.name="Degree" attr.type="int" for="node" id="Degree"/>
-    <key attr.name="annotation.GO BIOLOGICAL_PROCESS" attr.type="string" for="node" id="annotation.GO BIOLOGICAL_PROCESS"/>
-    <key attr.name="SGD symbol" attr.type="string" for="node" id="SGD symbol"/>
-    <key attr.name="Unified UniProt ID" attr.type="string" for="node" id="Unified UniProt ID"/>
-    <key attr.name="canonicalName" attr.type="string" for="node" id="canonicalName"/>
-    <key attr.name="interaction" attr.type="string" for="node" id="interaction"/>
 </graphml>
