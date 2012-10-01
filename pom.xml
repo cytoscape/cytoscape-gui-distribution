@@ -5,13 +5,13 @@
 	<parent>
 		<groupId>org.cytoscape</groupId>
 		<artifactId>parent</artifactId>
-		<version>3.0.0-beta3-SNAPSHOT</version>
+		<version>3.0.0-beta3</version>
 		<relativePath>../parent</relativePath>
 	</parent>
 	
 	<groupId>org.cytoscape.distribution</groupId>
 	<artifactId>parent</artifactId>
-	<version>3.0.0-M6-SNAPSHOT</version>
+	<version>3.0.0-beta1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	
 	<name>Cytoscape Desktop Application Distribution</name>
