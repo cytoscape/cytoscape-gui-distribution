@@ -11,7 +11,7 @@
 	
 	<groupId>org.cytoscape.distribution</groupId>
 	<artifactId>parent</artifactId>
-	<version>3.0.0-beta1</version>
+	<version>3.0.0-beta2-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	
 	<name>Cytoscape Desktop Application Distribution</name>
@@ -88,9 +88,9 @@
 	</profiles>
 
 	<scm>
-		<connection>scm:svn:http://chianti.ucsd.edu/svn/core3/gui-distribution/tags/parent-3.0.0-beta1</connection>
-		<developerConnection>scm:svn:svn+ssh://grenache.ucsd.edu/cellar/common/svn/core3/gui-distribution/tags/parent-3.0.0-beta1</developerConnection>
-		<url>http://chianti.ucsd.edu/svn/core3/gui-distribution/tags/parent-3.0.0-beta1</url>
+		<connection>scm:svn:http://chianti.ucsd.edu/svn/core3/gui-distribution/trunk</connection>
+		<developerConnection>scm:svn:svn+ssh://grenache.ucsd.edu/cellar/common/svn/core3/gui-distribution/trunk</developerConnection>
+		<url>http://chianti.ucsd.edu/svn/core3/gui-distribution/trunk</url>
 	</scm>
 
 </project>
