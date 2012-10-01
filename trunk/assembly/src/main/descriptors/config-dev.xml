@@ -1,0 +1,22 @@
+<config>
+    <id>dev</id>
+    <output-format>dir</output-format>
+    <line-ending>keep</line-ending>
+    <karaf>
+        <feature-repository>target/features-repo-dev</feature-repository>
+        <distribution base="target/dependencies/unix/apache-karaf-${karaf.version}">
+            <scripts>
+                <script>bin/karaf.bat</script>
+                <script>bin/karaf</script>
+            </scripts>
+        </distribution>
+    </karaf>
+    <cytoscape>
+        <scripts>
+            <script>cytoscape.sh</script>
+            <script>cytoscape.bat</script>
+            <script>gen_vmoptions.sh</script>
+            <script>gen_vmoptions.bat</script>
+        </scripts>
+    </cytoscape>
+</config>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <parent>
+    <groupId>org.cytoscape.distribution</groupId>
+    <artifactId>parent</artifactId>
+    <version>3.0.0-beta1</version>
+    <relativePath>..</relativePath>
+  </parent>
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.cytoscape.gui-distribution</groupId>
+  <artifactId>splash-launcher</artifactId>
+
+  <packaging>jar</packaging>
+
+  <name>SplashScreen Launcher</name>
+
+  <build>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <filtering>true</filtering>
+      </resource>
+    </resources>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>batik-maven-plugin</artifactId>
+        <version>1.0-beta-1</version>
+        <configuration>
+          <srcDir>${project.build.directory}/classes/images/versioned-svg</srcDir>
+          <destDir>${project.build.directory}/classes/images</destDir>
+        </configuration>
+        <executions>
+          <execution>
+            <!-- just needs to happen after resources are copied -->
+            <phase>compile</phase>
+            <goals>
+              <goal>rasterize</goal>
+            </goals>
+          </execution>
+        </executions>
+        <!-- We need to specify this plugin dependency ONLY to exclude the 
+             FOP library, which pulls in a duplicate copy of some XML libs. -->
+        <dependencies>
+          <dependency>
+            <groupId>batik</groupId>
+            <artifactId>batik-rasterizer-ext</artifactId>
+            <version>1.6-1</version>
+            <scope>compile</scope>
+            <exclusions>
+               <exclusion>
+                 <artifactId>fop</artifactId>
+                 <groupId>fop</groupId>
+               </exclusion>
+            </exclusions>
+          </dependency>
+        </dependencies>
+      </plugin>
+      <plugin>
+	    <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <version>${maven-assembly-plugin.version}</version>
+        <configuration>
+          <descriptorRefs>
+            <descriptorRef>jar-with-dependencies</descriptorRef>
+          </descriptorRefs>
+          <archive>
+            <manifest>
+              <mainClass>org.cytoscape.launcher.internal.Launcher</mainClass>
+            </manifest>
+            <manifestEntries>
+              <SplashScreen-Image>images/CytoscapeSplashScreen.png</SplashScreen-Image>
+            </manifestEntries>
+          </archive>
+        </configuration>
+        <executions>
+          <execution>
+            <id>splash-assembly</id>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.cytoscape</groupId>
+      <artifactId>launcher</artifactId>
+      <version>${cytoscape.support.version}</version>
+    </dependency>
+  </dependencies>
+</project>

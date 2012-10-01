@@ -1,0 +1,1076 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns="http://www.reactome.org/biopax/73893#" xml:base="http://www.reactome.org/biopax/73893">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://www.biopax.org/release/biopax-level3.owl" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BioPAX pathway converted from "DNA Damage Bypass" in the Reactome database.</rdfs:comment>
+  </owl:Ontology>
+  <bp:Pathway rdf:ID="Pathway1">
+    <bp:pathwayComponent rdf:resource="#Pathway2" />
+    <bp:pathwayOrder rdf:resource="#PathwayStep13" />
+    <bp:organism rdf:resource="#BioSource1" />
+    <bp:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DNA Damage Bypass</bp:displayName>
+    <bp:xref rdf:resource="#UnificationXref69" />
+    <bp:xref rdf:resource="#UnificationXref70" />
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In addition to various processes for removing damaging lesions from the DNA, cells have developed specific mechanisms for tolerating unexcised damages during the replication of the genome. Such processes are collectively called DNA damage bypass pathways. Several  proteins including novel Y-family polymerases that have been recently identified in multitude of organisms are involved in this process.&lt;BR&gt;  Translesion synthesis (TLS) or replicative bypass of damaged bases that are known to arrest high fidelity, highly processive polymerases involved in DNA replication is carried out by error-prone polymerases Pol zeta, Pol eta and Rev3 protein among others.  TLS is implicated in UV and chemical induced mutagenesis of normal human cells where lesions in the replicating genome are carried over to the newly formed daughter cells.&lt;BR&gt; All these 3 enzymes are found to lack  3Ã¢â¬â¢-&gt;5Ã¢â¬â¢ exonuclease activity, while exhibiting low fidelity, weak processivity and sufficient polymerase activities. An outline of the bypass synthesis by these 3 enzymes is annotated here. Complete details of damage recognition and discrimination, initiation of specific polymerase activity and the finer mechanisms are yet to be elucidated.</bp:comment>
+    <bp:xref rdf:resource="#PublicationXref8" />
+    <bp:xref rdf:resource="#PublicationXref9" />
+    <bp:xref rdf:resource="#PublicationXref10" />
+    <bp:dataSource rdf:resource="#Provenance1" />
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Authored: Gopinathrao, G, 2004-02-02 17:30:34</bp:comment>
+  </bp:Pathway>
+  <bp:Pathway rdf:ID="Pathway2">
+    <bp:pathwayComponent rdf:resource="#Pathway3" />
+    <bp:pathwayComponent rdf:resource="#Pathway4" />
+    <bp:pathwayComponent rdf:resource="#Pathway5" />
+    <bp:pathwayOrder rdf:resource="#PathwayStep4" />
+    <bp:pathwayOrder rdf:resource="#PathwayStep8" />
+    <bp:pathwayOrder rdf:resource="#PathwayStep12" />
+    <bp:organism rdf:resource="#BioSource1" />
+    <bp:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Translesion synthesis by DNA polymerases bypassing lesion on DNA template</bp:displayName>
+    <bp:xref rdf:resource="#UnificationXref67" />
+    <bp:xref rdf:resource="#UnificationXref68" />
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ubiquitous environmental and endogenous genotoxic agents cause lesions that can interfere with normal DNA metabolism including DNA replication, eventually resulting in mutations that lead to carcinogenesis and/or cell death. While cells posses repair mechanisms like nucleotide excision and base excision repair pathways to maintain the integrity of the genome,  not all lesions on the genome can be repaired efficiently by these processes in time for DNA replication, and some types of lesion are repaired very inefficiently. To prevent acute cell death through arrested DNA replication at unrepaired lesions, cells have a mechanism, referred to as translesion synthesis, which allows DNA synthesis to proceed past lesions (Masutani et al., 2000).</bp:comment>
+    <bp:xref rdf:resource="#PublicationXref3" />
+    <bp:xref rdf:resource="#PublicationXref7" />
+    <bp:dataSource rdf:resource="#Provenance1" />
+  </bp:Pathway>
+  <bp:Pathway rdf:ID="Pathway3">
+    <bp:pathwayComponent rdf:resource="#BiochemicalReaction1" />
+    <bp:pathwayComponent rdf:resource="#BiochemicalReaction2" />
+    <bp:pathwayComponent rdf:resource="#BiochemicalReaction3" />
+    <bp:pathwayOrder rdf:resource="#PathwayStep3" />
+    <bp:pathwayOrder rdf:resource="#PathwayStep1" />
+    <bp:pathwayOrder rdf:resource="#PathwayStep2" />
+    <bp:organism rdf:resource="#BioSource1" />
+    <bp:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Translesion synthesis by HREV1</bp:displayName>
+    <bp:xref rdf:resource="#UnificationXref28" />
+    <bp:xref rdf:resource="#UnificationXref29" />
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HREV1 encodes a template dependent dCMP transferase activity that can insert a C residue opposite an abasic site.&lt;BR&gt;</bp:comment>
+    <bp:xref rdf:resource="#PublicationXref1" />
+    <bp:xref rdf:resource="#PublicationXref2" />
+    <bp:dataSource rdf:resource="#Provenance1" />
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Authored: Gopinathrao, G, 2004-02-02 17:30:34</bp:comment>
+  </bp:Pathway>
+  <bp:BiochemicalReaction rdf:ID="BiochemicalReaction1">
+    <bp:left rdf:resource="#PhysicalEntity1" />
+    <bp:left rdf:resource="#Protein1" />
+    <bp:right rdf:resource="#Complex1" />
+    <bp:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Binding of HREV1 to lesioned DNA template</bp:displayName>
+    <bp:xref rdf:resource="#UnificationXref15" />
+    <bp:xref rdf:resource="#UnificationXref16" />
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">At the beginning of this reaction, 1 molecule of 'damaged DNA substrate ', and 1 molecule of 'HREV1 protein' are present. At the end of this reaction, 1 molecule of 'HREV1:damaged DNA template complex' is present.&lt;br&gt;&lt;br&gt; This reaction takes place in the 'nucleus'.&lt;br&gt;</bp:comment>
+    <bp:dataSource rdf:resource="#Provenance1" />
+  </bp:BiochemicalReaction>
+  <bp:PhysicalEntity rdf:ID="PhysicalEntity1">
+    <bp:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">damaged DNA substrate</bp:displayName>
+    <bp:cellularLocation rdf:resource="#CellularLocationVocabulary1" />
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome DB_ID: 109939</bp:comment>
+    <bp:xref rdf:resource="#UnificationXref2" />
+    <bp:xref rdf:resource="#UnificationXref3" />
+    <bp:dataSource rdf:resource="#Provenance1" />
+  </bp:PhysicalEntity>
+  <bp:CellularLocationVocabulary rdf:ID="CellularLocationVocabulary1">
+    <bp:term rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nucleoplasm</bp:term>
+    <bp:xref rdf:resource="#UnificationXref1" />
+  </bp:CellularLocationVocabulary>
+  <bp:UnificationXref rdf:ID="UnificationXref1">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GENE ONTOLOGY</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0005654</bp:id>
+  </bp:UnificationXref>
+  <bp:UnificationXref rdf:ID="UnificationXref2">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome Database ID</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">109939</bp:id>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser?DB=gk_current&amp;ID=109939</bp:comment>
+  </bp:UnificationXref>
+  <bp:UnificationXref rdf:ID="UnificationXref3">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REACT_2765</bp:id>
+    <bp:idVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</bp:idVersion>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome stable identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser_st_id?ST_ID=REACT_2765.1</bp:comment>
+  </bp:UnificationXref>
+  <bp:Provenance rdf:ID="Provenance1">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome</bp:name>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.reactome.org</bp:comment>
+  </bp:Provenance>
+  <bp:Protein rdf:ID="Protein1">
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Converted from EntitySet in Reactome</bp:comment>
+    <bp:memberPhysicalEntity rdf:resource="#Protein2" />
+    <bp:memberPhysicalEntity rdf:resource="#Protein3" />
+    <bp:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HREV1</bp:displayName>
+    <bp:cellularLocation rdf:resource="#CellularLocationVocabulary1" />
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome DB_ID: 350783</bp:comment>
+    <bp:xref rdf:resource="#UnificationXref11" />
+    <bp:xref rdf:resource="#UnificationXref12" />
+    <bp:dataSource rdf:resource="#Provenance1" />
+  </bp:Protein>
+  <bp:Protein rdf:ID="Protein2">
+    <bp:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rev1S</bp:displayName>
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HREV1 isoform-1</bp:name>
+    <bp:cellularLocation rdf:resource="#CellularLocationVocabulary1" />
+    <bp:entityReference rdf:resource="#ProteinReference1" />
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome DB_ID: 110282</bp:comment>
+    <bp:xref rdf:resource="#UnificationXref6" />
+    <bp:xref rdf:resource="#UnificationXref7" />
+    <bp:dataSource rdf:resource="#Provenance1" />
+  </bp:Protein>
+  <bp:ProteinReference rdf:ID="ProteinReference1">
+    <bp:organism rdf:resource="#BioSource1" />
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UniProt:Q9UBZ9-1 REV1</bp:name>
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REV1</bp:name>
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REV1L</bp:name>
+    <bp:xref rdf:resource="#UnificationXref5" />
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FUNCTION Deoxycytidyl transferase involved in DNA repair. Transfers a dCMP residue from dCTP to the 3'-end of a DNA primer in a template-dependent reaction. May assist in the first step in the bypass of abasic lesions by the insertion of a nucleotide opposite the lesion. Required for normal induction of mutations by physical and chemical agents.SUBUNIT Monomer. Interacts with the DNA polymerase zeta which is composed of REV3L and MAD2L2; the interaction with MAD2L2 is direct and requires that REV3L is in its closed conformation. Interacts with POLH, POLI and POLK. May bind ITGA3.TISSUE SPECIFICITY Ubiquitous.DOMAIN The C-terminal domain is necessary for protein interactions.SIMILARITY Belongs to the DNA polymerase type-Y family.SIMILARITY Contains 1 BRCT domain.SIMILARITY Contains 1 umuC domain.</bp:comment>
+  </bp:ProteinReference>
+  <bp:BioSource rdf:ID="BioSource1">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Homo sapiens</bp:name>
+    <bp:xref rdf:resource="#UnificationXref4" />
+  </bp:BioSource>
+  <bp:UnificationXref rdf:ID="UnificationXref4">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBI_taxonomy</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9606</bp:id>
+  </bp:UnificationXref>
+  <bp:UnificationXref rdf:ID="UnificationXref5">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UniProt</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Q9UBZ9-1</bp:id>
+  </bp:UnificationXref>
+  <bp:UnificationXref rdf:ID="UnificationXref6">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome Database ID</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">110282</bp:id>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser?DB=gk_current&amp;ID=110282</bp:comment>
+  </bp:UnificationXref>
+  <bp:UnificationXref rdf:ID="UnificationXref7">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REACT_4760</bp:id>
+    <bp:idVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</bp:idVersion>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome stable identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser_st_id?ST_ID=REACT_4760.3</bp:comment>
+  </bp:UnificationXref>
+  <bp:Protein rdf:ID="Protein3">
+    <bp:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rev1S</bp:displayName>
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HREV1 isoform-2</bp:name>
+    <bp:cellularLocation rdf:resource="#CellularLocationVocabulary1" />
+    <bp:entityReference rdf:resource="#ProteinReference2" />
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome DB_ID: 350784</bp:comment>
+    <bp:xref rdf:resource="#UnificationXref9" />
+    <bp:xref rdf:resource="#UnificationXref10" />
+    <bp:dataSource rdf:resource="#Provenance1" />
+  </bp:Protein>
+  <bp:ProteinReference rdf:ID="ProteinReference2">
+    <bp:organism rdf:resource="#BioSource1" />
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UniProt:Q9UBZ9-2 REV1</bp:name>
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REV1</bp:name>
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REV1L</bp:name>
+    <bp:xref rdf:resource="#UnificationXref8" />
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FUNCTION Deoxycytidyl transferase involved in DNA repair. Transfers a dCMP residue from dCTP to the 3'-end of a DNA primer in a template-dependent reaction. May assist in the first step in the bypass of abasic lesions by the insertion of a nucleotide opposite the lesion. Required for normal induction of mutations by physical and chemical agents.SUBUNIT Monomer. Interacts with the DNA polymerase zeta which is composed of REV3L and MAD2L2; the interaction with MAD2L2 is direct and requires that REV3L is in its closed conformation. Interacts with POLH, POLI and POLK. May bind ITGA3.TISSUE SPECIFICITY Ubiquitous.DOMAIN The C-terminal domain is necessary for protein interactions.SIMILARITY Belongs to the DNA polymerase type-Y family.SIMILARITY Contains 1 BRCT domain.SIMILARITY Contains 1 umuC domain.</bp:comment>
+  </bp:ProteinReference>
+  <bp:UnificationXref rdf:ID="UnificationXref8">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UniProt</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Q9UBZ9-2</bp:id>
+  </bp:UnificationXref>
+  <bp:UnificationXref rdf:ID="UnificationXref9">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome Database ID</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">350784</bp:id>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser?DB=gk_current&amp;ID=350784</bp:comment>
+  </bp:UnificationXref>
+  <bp:UnificationXref rdf:ID="UnificationXref10">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REACT_14509</bp:id>
+    <bp:idVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</bp:idVersion>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome stable identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser_st_id?ST_ID=REACT_14509.1</bp:comment>
+  </bp:UnificationXref>
+  <bp:UnificationXref rdf:ID="UnificationXref11">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome Database ID</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">350783</bp:id>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser?DB=gk_current&amp;ID=350783</bp:comment>
+  </bp:UnificationXref>
+  <bp:UnificationXref rdf:ID="UnificationXref12">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REACT_14374</bp:id>
+    <bp:idVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</bp:idVersion>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome stable identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser_st_id?ST_ID=REACT_14374.1</bp:comment>
+  </bp:UnificationXref>
+  <bp:Complex rdf:ID="Complex1">
+    <bp:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HREV1:damaged DNA template complex</bp:displayName>
+    <bp:cellularLocation rdf:resource="#CellularLocationVocabulary1" />
+    <bp:componentStoichiometry rdf:resource="#Stoichiometry1" />
+    <bp:component rdf:resource="#PhysicalEntity1" />
+    <bp:componentStoichiometry rdf:resource="#Stoichiometry2" />
+    <bp:component rdf:resource="#Protein1" />
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome DB_ID: 110283</bp:comment>
+    <bp:xref rdf:resource="#UnificationXref13" />
+    <bp:xref rdf:resource="#UnificationXref14" />
+    <bp:dataSource rdf:resource="#Provenance1" />
+  </bp:Complex>
+  <bp:Stoichiometry rdf:ID="Stoichiometry1">
+    <bp:stoichiometricCoefficient rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1</bp:stoichiometricCoefficient>
+    <bp:physicalEntity rdf:resource="#PhysicalEntity1" />
+  </bp:Stoichiometry>
+  <bp:Stoichiometry rdf:ID="Stoichiometry2">
+    <bp:stoichiometricCoefficient rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1</bp:stoichiometricCoefficient>
+    <bp:physicalEntity rdf:resource="#Protein1" />
+  </bp:Stoichiometry>
+  <bp:UnificationXref rdf:ID="UnificationXref13">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome Database ID</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">110283</bp:id>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser?DB=gk_current&amp;ID=110283</bp:comment>
+  </bp:UnificationXref>
+  <bp:UnificationXref rdf:ID="UnificationXref14">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REACT_3664</bp:id>
+    <bp:idVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</bp:idVersion>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome stable identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser_st_id?ST_ID=REACT_3664.2</bp:comment>
+  </bp:UnificationXref>
+  <bp:UnificationXref rdf:ID="UnificationXref15">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome Database ID</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">110307</bp:id>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser?DB=gk_current&amp;ID=110307</bp:comment>
+  </bp:UnificationXref>
+  <bp:UnificationXref rdf:ID="UnificationXref16">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REACT_1502</bp:id>
+    <bp:idVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</bp:idVersion>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome stable identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser_st_id?ST_ID=REACT_1502.4</bp:comment>
+  </bp:UnificationXref>
+  <bp:PathwayStep rdf:ID="PathwayStep1">
+    <bp:stepProcess rdf:resource="#BiochemicalReaction1" />
+    <bp:nextStep rdf:resource="#PathwayStep2" />
+  </bp:PathwayStep>
+  <bp:BiochemicalReaction rdf:ID="BiochemicalReaction2">
+    <bp:left rdf:resource="#Complex1" />
+    <bp:right rdf:resource="#Complex2" />
+    <bp:eCNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.7.7.7</bp:eCNumber>
+    <bp:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Misinsertion of  bases opposite to the lesion by HREV1</bp:displayName>
+    <bp:xref rdf:resource="#UnificationXref22" />
+    <bp:xref rdf:resource="#UnificationXref23" />
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">At the beginning of this reaction, 1 molecule of 'HREV1:damaged DNA template complex' is present. At the end of this reaction, 1 molecule of 'HREV1:lesioned DNA template with misinserted bases' is present.&lt;br&gt;&lt;br&gt; This reaction takes place in the 'nucleus' and  is mediated by the 'DNA-directed DNA polymerase activity' of 'HREV1:damaged DNA template complex'.&lt;br&gt;</bp:comment>
+    <bp:dataSource rdf:resource="#Provenance1" />
+  </bp:BiochemicalReaction>
+  <bp:Complex rdf:ID="Complex2">
+    <bp:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HREV1:lesioned DNA template with misinserted bases</bp:displayName>
+    <bp:cellularLocation rdf:resource="#CellularLocationVocabulary1" />
+    <bp:componentStoichiometry rdf:resource="#Stoichiometry3" />
+    <bp:component rdf:resource="#PhysicalEntity2" />
+    <bp:componentStoichiometry rdf:resource="#Stoichiometry4" />
+    <bp:component rdf:resource="#Protein1" />
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome DB_ID: 110285</bp:comment>
+    <bp:xref rdf:resource="#UnificationXref19" />
+    <bp:xref rdf:resource="#UnificationXref20" />
+    <bp:dataSource rdf:resource="#Provenance1" />
+  </bp:Complex>
+  <bp:PhysicalEntity rdf:ID="PhysicalEntity2">
+    <bp:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">damaged DNA substrate  with misinserted bases</bp:displayName>
+    <bp:cellularLocation rdf:resource="#CellularLocationVocabulary1" />
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome DB_ID: 110284</bp:comment>
+    <bp:xref rdf:resource="#UnificationXref17" />
+    <bp:xref rdf:resource="#UnificationXref18" />
+    <bp:dataSource rdf:resource="#Provenance1" />
+  </bp:PhysicalEntity>
+  <bp:UnificationXref rdf:ID="UnificationXref17">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome Database ID</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">110284</bp:id>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser?DB=gk_current&amp;ID=110284</bp:comment>
+  </bp:UnificationXref>
+  <bp:UnificationXref rdf:ID="UnificationXref18">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REACT_3020</bp:id>
+    <bp:idVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</bp:idVersion>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome stable identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser_st_id?ST_ID=REACT_3020.2</bp:comment>
+  </bp:UnificationXref>
+  <bp:Stoichiometry rdf:ID="Stoichiometry3">
+    <bp:stoichiometricCoefficient rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1</bp:stoichiometricCoefficient>
+    <bp:physicalEntity rdf:resource="#PhysicalEntity2" />
+  </bp:Stoichiometry>
+  <bp:Stoichiometry rdf:ID="Stoichiometry4">
+    <bp:stoichiometricCoefficient rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1</bp:stoichiometricCoefficient>
+    <bp:physicalEntity rdf:resource="#Protein1" />
+  </bp:Stoichiometry>
+  <bp:UnificationXref rdf:ID="UnificationXref19">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome Database ID</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">110285</bp:id>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser?DB=gk_current&amp;ID=110285</bp:comment>
+  </bp:UnificationXref>
+  <bp:UnificationXref rdf:ID="UnificationXref20">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REACT_5530</bp:id>
+    <bp:idVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</bp:idVersion>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome stable identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser_st_id?ST_ID=REACT_5530.2</bp:comment>
+  </bp:UnificationXref>
+  <bp:Catalysis rdf:ID="Catalysis1">
+    <bp:controller rdf:resource="#Complex1" />
+    <bp:controlled rdf:resource="#BiochemicalReaction2" />
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+    <bp:xref rdf:resource="#RelationshipXref1" />
+    <bp:xref rdf:resource="#RelationshipXref2" />
+    <bp:dataSource rdf:resource="#Provenance1" />
+  </bp:Catalysis>
+  <bp:RelationshipXref rdf:ID="RelationshipXref1">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GENE ONTOLOGY</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0003887</bp:id>
+    <bp:relationshipType rdf:resource="#RelationshipTypeVocabulary1" />
+  </bp:RelationshipXref>
+  <bp:RelationshipTypeVocabulary rdf:ID="RelationshipTypeVocabulary1">
+    <bp:term rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gene ontology term for cellular function</bp:term>
+    <bp:xref rdf:resource="#UnificationXref21" />
+  </bp:RelationshipTypeVocabulary>
+  <bp:UnificationXref rdf:ID="UnificationXref21">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MI</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MI:0355</bp:id>
+  </bp:UnificationXref>
+  <bp:RelationshipTypeVocabulary rdf:ID="RelationshipTypeVocabulary2">
+    <bp:term rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Same Catalyst Activity</bp:term>
+  </bp:RelationshipTypeVocabulary>
+  <bp:RelationshipXref rdf:ID="RelationshipXref2">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome Database ID</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">110309</bp:id>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser?DB=gk_current&amp;ID=110309</bp:comment>
+    <bp:relationshipType rdf:resource="#RelationshipTypeVocabulary2" />
+  </bp:RelationshipXref>
+  <bp:UnificationXref rdf:ID="UnificationXref22">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome Database ID</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">110308</bp:id>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser?DB=gk_current&amp;ID=110308</bp:comment>
+  </bp:UnificationXref>
+  <bp:UnificationXref rdf:ID="UnificationXref23">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REACT_2214</bp:id>
+    <bp:idVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</bp:idVersion>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome stable identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser_st_id?ST_ID=REACT_2214.3</bp:comment>
+  </bp:UnificationXref>
+  <bp:PathwayStep rdf:ID="PathwayStep2">
+    <bp:stepProcess rdf:resource="#BiochemicalReaction2" />
+    <bp:nextStep rdf:resource="#PathwayStep3" />
+    <bp:stepProcess rdf:resource="#Catalysis1" />
+  </bp:PathwayStep>
+  <bp:BiochemicalReaction rdf:ID="BiochemicalReaction3">
+    <bp:left rdf:resource="#Complex2" />
+    <bp:right rdf:resource="#Protein1" />
+    <bp:right rdf:resource="#PhysicalEntity3" />
+    <bp:eCNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.7.7.7</bp:eCNumber>
+    <bp:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elongation by HREV1 protein</bp:displayName>
+    <bp:xref rdf:resource="#UnificationXref26" />
+    <bp:xref rdf:resource="#UnificationXref27" />
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">At the beginning of this reaction, 1 molecule of 'HREV1:lesioned DNA template with misinserted bases' is present. At the end of this reaction, 1 molecule of 'HREV1 protein', and 1 molecule of 'Elongated DNA template with bypassed lesion' are present.&lt;br&gt;&lt;br&gt; This reaction takes place in the 'nucleus' and  is mediated by the 'DNA-directed DNA polymerase activity' of 'HREV1:lesioned DNA template with misinserted bases'.&lt;br&gt;</bp:comment>
+    <bp:dataSource rdf:resource="#Provenance1" />
+  </bp:BiochemicalReaction>
+  <bp:PhysicalEntity rdf:ID="PhysicalEntity3">
+    <bp:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elongated DNA template with bypassed lesion</bp:displayName>
+    <bp:cellularLocation rdf:resource="#CellularLocationVocabulary1" />
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome DB_ID: 110310</bp:comment>
+    <bp:xref rdf:resource="#UnificationXref24" />
+    <bp:xref rdf:resource="#UnificationXref25" />
+    <bp:dataSource rdf:resource="#Provenance1" />
+  </bp:PhysicalEntity>
+  <bp:UnificationXref rdf:ID="UnificationXref24">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome Database ID</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">110310</bp:id>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser?DB=gk_current&amp;ID=110310</bp:comment>
+  </bp:UnificationXref>
+  <bp:UnificationXref rdf:ID="UnificationXref25">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REACT_3182</bp:id>
+    <bp:idVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</bp:idVersion>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome stable identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser_st_id?ST_ID=REACT_3182.2</bp:comment>
+  </bp:UnificationXref>
+  <bp:Catalysis rdf:ID="Catalysis2">
+    <bp:controller rdf:resource="#Complex2" />
+    <bp:controlled rdf:resource="#BiochemicalReaction3" />
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+    <bp:xref rdf:resource="#RelationshipXref1" />
+    <bp:xref rdf:resource="#RelationshipXref3" />
+    <bp:dataSource rdf:resource="#Provenance1" />
+  </bp:Catalysis>
+  <bp:RelationshipXref rdf:ID="RelationshipXref3">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome Database ID</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">111299</bp:id>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser?DB=gk_current&amp;ID=111299</bp:comment>
+    <bp:relationshipType rdf:resource="#RelationshipTypeVocabulary2" />
+  </bp:RelationshipXref>
+  <bp:UnificationXref rdf:ID="UnificationXref26">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome Database ID</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">110311</bp:id>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser?DB=gk_current&amp;ID=110311</bp:comment>
+  </bp:UnificationXref>
+  <bp:UnificationXref rdf:ID="UnificationXref27">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REACT_867</bp:id>
+    <bp:idVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</bp:idVersion>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome stable identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser_st_id?ST_ID=REACT_867.3</bp:comment>
+  </bp:UnificationXref>
+  <bp:PathwayStep rdf:ID="PathwayStep3">
+    <bp:stepProcess rdf:resource="#BiochemicalReaction3" />
+    <bp:stepProcess rdf:resource="#Catalysis2" />
+  </bp:PathwayStep>
+  <bp:UnificationXref rdf:ID="UnificationXref28">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome Database ID</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">110312</bp:id>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser?DB=gk_current&amp;ID=110312</bp:comment>
+  </bp:UnificationXref>
+  <bp:UnificationXref rdf:ID="UnificationXref29">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REACT_8</bp:id>
+    <bp:idVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</bp:idVersion>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome stable identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser_st_id?ST_ID=REACT_8.2</bp:comment>
+  </bp:UnificationXref>
+  <bp:PublicationXref rdf:ID="PublicationXref1">
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10760286</bp:id>
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pubmed</bp:db>
+    <bp:year rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2000</bp:year>
+    <bp:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The function of the human homolog of Saccharomyces cerevisiae REV1 is required for mutagenesis induced by UV light.</bp:title>
+    <bp:author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gibbs, PE</bp:author>
+    <bp:author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang, XD</bp:author>
+    <bp:author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Li, Z</bp:author>
+    <bp:author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">McManus, TP</bp:author>
+    <bp:author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">McGregor, WG</bp:author>
+    <bp:author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lawrence, CW</bp:author>
+    <bp:author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maher, VM</bp:author>
+    <bp:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proc Natl Acad Sci U S A 97:4186-91</bp:source>
+  </bp:PublicationXref>
+  <bp:PublicationXref rdf:ID="PublicationXref2">
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10536157</bp:id>
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pubmed</bp:db>
+    <bp:year rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1999</bp:year>
+    <bp:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The human REV1 gene codes for a DNA template-dependent dCMP transferase.</bp:title>
+    <bp:author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lin, W</bp:author>
+    <bp:author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xin, H</bp:author>
+    <bp:author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhang, Y</bp:author>
+    <bp:author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wu, X</bp:author>
+    <bp:author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yuan, F</bp:author>
+    <bp:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nucleic Acids Res 27:4468-75</bp:source>
+  </bp:PublicationXref>
+  <bp:PathwayStep rdf:ID="PathwayStep4">
+    <bp:stepProcess rdf:resource="#Pathway3" />
+  </bp:PathwayStep>
+  <bp:Pathway rdf:ID="Pathway4">
+    <bp:pathwayComponent rdf:resource="#BiochemicalReaction4" />
+    <bp:pathwayComponent rdf:resource="#BiochemicalReaction5" />
+    <bp:pathwayComponent rdf:resource="#BiochemicalReaction6" />
+    <bp:pathwayOrder rdf:resource="#PathwayStep6" />
+    <bp:pathwayOrder rdf:resource="#PathwayStep5" />
+    <bp:pathwayOrder rdf:resource="#PathwayStep7" />
+    <bp:organism rdf:resource="#BioSource1" />
+    <bp:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Translesion synthesis by Pol eta</bp:displayName>
+    <bp:xref rdf:resource="#UnificationXref45" />
+    <bp:xref rdf:resource="#UnificationXref46" />
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pol eta consists of 713 amino acids and can bypass thymidine-thymidine dimers adding two AÃ¢â¬â¢s correctly opposite to the lesion.  Mutations in Pol eta gene result in the loss of this bypass activity in accounting for the XP variant phenotype (XPV) among human xeroderma pigmentosum disorder patients.  Pol eta can carry out TLS past various UV and chemical induced lesions via two steps:  a. preferential incorporation of correct bases opposite to the lesion&lt;BR&gt;b. conditional elongation  only at the sites where such correct bases are inserted.&lt;BR&gt;</bp:comment>
+    <bp:xref rdf:resource="#PublicationXref3" />
+    <bp:xref rdf:resource="#PublicationXref4" />
+    <bp:dataSource rdf:resource="#Provenance1" />
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Authored: Gopinathrao, G, 2004-02-02 17:30:34</bp:comment>
+  </bp:Pathway>
+  <bp:BiochemicalReaction rdf:ID="BiochemicalReaction4">
+    <bp:left rdf:resource="#PhysicalEntity1" />
+    <bp:left rdf:resource="#Protein4" />
+    <bp:right rdf:resource="#Complex3" />
+    <bp:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Binding of Pol eta to lesioned DNA template</bp:displayName>
+    <bp:xref rdf:resource="#UnificationXref35" />
+    <bp:xref rdf:resource="#UnificationXref36" />
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">At the beginning of this reaction, 1 molecule of 'damaged DNA substrate ', and 1 molecule of 'Pol eta protein' are present. At the end of this reaction, 1 molecule of 'Pol eta:damaged DNA template complex' is present.&lt;br&gt;&lt;br&gt; This reaction takes place in the 'nucleus'.&lt;br&gt;</bp:comment>
+    <bp:dataSource rdf:resource="#Provenance1" />
+  </bp:BiochemicalReaction>
+  <bp:Protein rdf:ID="Protein4">
+    <bp:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pol eta protein</bp:displayName>
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DNA polymerase eta</bp:name>
+    <bp:cellularLocation rdf:resource="#CellularLocationVocabulary1" />
+    <bp:entityReference rdf:resource="#ProteinReference3" />
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome DB_ID: 110287</bp:comment>
+    <bp:xref rdf:resource="#UnificationXref31" />
+    <bp:xref rdf:resource="#UnificationXref32" />
+    <bp:dataSource rdf:resource="#Provenance1" />
+  </bp:Protein>
+  <bp:ProteinReference rdf:ID="ProteinReference3">
+    <bp:organism rdf:resource="#BioSource1" />
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UniProt:Q9Y253 POLH</bp:name>
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">POLH</bp:name>
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RAD30</bp:name>
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RAD30A</bp:name>
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">XPV</bp:name>
+    <bp:xref rdf:resource="#UnificationXref30" />
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FUNCTION DNA polymerase specifically involved in DNA repair. Plays an important role in translesion synthesis, where the normal high fidelity DNA polymerases cannot proceed and DNA synthesis stalls. Plays an important role in the repair of UV-induced pyrimidine dimers. Depending on the context, it inserts the correct base, but causes frequent base transitions and transversions. May play a role in hypermutation at immunoglobulin genes. Forms a Schiff base with 5'-deoxyribose phosphate at abasic sites, but does not have lyase activity. Targets POLI to replication foci.CATALYTIC ACTIVITY Deoxynucleoside triphosphate + DNA(n) = diphosphate + DNA(n+1).COFACTOR Divalent metal cations. Prefers magnesium, but can also use manganese.SUBUNIT Interacts with REV1 (By similarity). Interacts with monoubiquitinated PCNA, but not unmodified PCNA. Interacts with POLI.DOMAIN The catalytic core consists of fingers, palm and thumb subdomains, but the fingers and thumb subdomains are much smaller than in high-fidelity polymerases; residues from five sequence motifs of the Y-family cluster around an active site cleft that can accommodate DNA and nucleotide substrates with relaxed geometric constraints, with consequently higher rates of misincorporation and low processivity.DISEASE Defects in POLH are the cause of xeroderma pigmentosum variant type (XPV) [MIM:278750]; also designated as XP-V. Xeroderma pigmentosum (XP) is an autosomal recessive disease due to deficient nucleotide excision repair. It is characterized by hypersensitivity of the skin to sunlight, followed by high incidence of skin cancer and frequent neurologic abnormalities. XPV shows normal nucleotide excision repair, but an exaggerated delay in recovery of replicative DNA synthesis. Most XPV patients do not develop clinical symptoms and skin neoplasias until a later age. Clinical manifestations are limited to photo-induced deterioration of the skin and eyes.SIMILARITY Belongs to the DNA polymerase type-Y family.SIMILARITY Contains 1 umuC domain.</bp:comment>
+  </bp:ProteinReference>
+  <bp:UnificationXref rdf:ID="UnificationXref30">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UniProt</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Q9Y253</bp:id>
+  </bp:UnificationXref>
+  <bp:UnificationXref rdf:ID="UnificationXref31">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome Database ID</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">110287</bp:id>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser?DB=gk_current&amp;ID=110287</bp:comment>
+  </bp:UnificationXref>
+  <bp:UnificationXref rdf:ID="UnificationXref32">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REACT_3221</bp:id>
+    <bp:idVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</bp:idVersion>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome stable identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser_st_id?ST_ID=REACT_3221.2</bp:comment>
+  </bp:UnificationXref>
+  <bp:Complex rdf:ID="Complex3">
+    <bp:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pol eta:damaged DNA template complex</bp:displayName>
+    <bp:cellularLocation rdf:resource="#CellularLocationVocabulary1" />
+    <bp:componentStoichiometry rdf:resource="#Stoichiometry5" />
+    <bp:component rdf:resource="#PhysicalEntity1" />
+    <bp:componentStoichiometry rdf:resource="#Stoichiometry6" />
+    <bp:component rdf:resource="#Protein4" />
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome DB_ID: 110288</bp:comment>
+    <bp:xref rdf:resource="#UnificationXref33" />
+    <bp:xref rdf:resource="#UnificationXref34" />
+    <bp:dataSource rdf:resource="#Provenance1" />
+  </bp:Complex>
+  <bp:Stoichiometry rdf:ID="Stoichiometry5">
+    <bp:stoichiometricCoefficient rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1</bp:stoichiometricCoefficient>
+    <bp:physicalEntity rdf:resource="#PhysicalEntity1" />
+  </bp:Stoichiometry>
+  <bp:Stoichiometry rdf:ID="Stoichiometry6">
+    <bp:stoichiometricCoefficient rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1</bp:stoichiometricCoefficient>
+    <bp:physicalEntity rdf:resource="#Protein4" />
+  </bp:Stoichiometry>
+  <bp:UnificationXref rdf:ID="UnificationXref33">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome Database ID</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">110288</bp:id>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser?DB=gk_current&amp;ID=110288</bp:comment>
+  </bp:UnificationXref>
+  <bp:UnificationXref rdf:ID="UnificationXref34">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REACT_2831</bp:id>
+    <bp:idVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</bp:idVersion>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome stable identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser_st_id?ST_ID=REACT_2831.2</bp:comment>
+  </bp:UnificationXref>
+  <bp:UnificationXref rdf:ID="UnificationXref35">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome Database ID</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">110316</bp:id>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser?DB=gk_current&amp;ID=110316</bp:comment>
+  </bp:UnificationXref>
+  <bp:UnificationXref rdf:ID="UnificationXref36">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REACT_504</bp:id>
+    <bp:idVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</bp:idVersion>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome stable identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser_st_id?ST_ID=REACT_504.4</bp:comment>
+  </bp:UnificationXref>
+  <bp:PathwayStep rdf:ID="PathwayStep5">
+    <bp:stepProcess rdf:resource="#BiochemicalReaction4" />
+    <bp:nextStep rdf:resource="#PathwayStep6" />
+  </bp:PathwayStep>
+  <bp:BiochemicalReaction rdf:ID="BiochemicalReaction5">
+    <bp:left rdf:resource="#Complex3" />
+    <bp:right rdf:resource="#Complex4" />
+    <bp:eCNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.7.7.7</bp:eCNumber>
+    <bp:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Insertion of correct bases opposite to the lesion by Pol eta</bp:displayName>
+    <bp:xref rdf:resource="#UnificationXref41" />
+    <bp:xref rdf:resource="#UnificationXref42" />
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">At the beginning of this reaction, 1 molecule of 'Pol eta:damaged DNA template complex' is present. At the end of this reaction, 1 molecule of 'Pol eta:lesioned DNA template inserted with correct base complement' is present.&lt;br&gt;&lt;br&gt; This reaction takes place in the 'nucleus' and  is mediated by the 'eta DNA polymerase activity' of 'Pol eta:damaged DNA template complex'.&lt;br&gt;</bp:comment>
+    <bp:dataSource rdf:resource="#Provenance1" />
+  </bp:BiochemicalReaction>
+  <bp:Complex rdf:ID="Complex4">
+    <bp:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pol eta:lesioned DNA template inserted with correct base complement</bp:displayName>
+    <bp:cellularLocation rdf:resource="#CellularLocationVocabulary1" />
+    <bp:componentStoichiometry rdf:resource="#Stoichiometry7" />
+    <bp:component rdf:resource="#Protein4" />
+    <bp:componentStoichiometry rdf:resource="#Stoichiometry8" />
+    <bp:component rdf:resource="#PhysicalEntity4" />
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome DB_ID: 110290</bp:comment>
+    <bp:xref rdf:resource="#UnificationXref39" />
+    <bp:xref rdf:resource="#UnificationXref40" />
+    <bp:dataSource rdf:resource="#Provenance1" />
+  </bp:Complex>
+  <bp:Stoichiometry rdf:ID="Stoichiometry7">
+    <bp:stoichiometricCoefficient rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1</bp:stoichiometricCoefficient>
+    <bp:physicalEntity rdf:resource="#Protein4" />
+  </bp:Stoichiometry>
+  <bp:PhysicalEntity rdf:ID="PhysicalEntity4">
+    <bp:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">damaged DNA substrate inserted with correct base complement</bp:displayName>
+    <bp:cellularLocation rdf:resource="#CellularLocationVocabulary1" />
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome DB_ID: 110289</bp:comment>
+    <bp:xref rdf:resource="#UnificationXref37" />
+    <bp:xref rdf:resource="#UnificationXref38" />
+    <bp:dataSource rdf:resource="#Provenance1" />
+  </bp:PhysicalEntity>
+  <bp:UnificationXref rdf:ID="UnificationXref37">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome Database ID</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">110289</bp:id>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser?DB=gk_current&amp;ID=110289</bp:comment>
+  </bp:UnificationXref>
+  <bp:UnificationXref rdf:ID="UnificationXref38">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REACT_5776</bp:id>
+    <bp:idVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</bp:idVersion>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome stable identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser_st_id?ST_ID=REACT_5776.2</bp:comment>
+  </bp:UnificationXref>
+  <bp:Stoichiometry rdf:ID="Stoichiometry8">
+    <bp:stoichiometricCoefficient rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1</bp:stoichiometricCoefficient>
+    <bp:physicalEntity rdf:resource="#PhysicalEntity4" />
+  </bp:Stoichiometry>
+  <bp:UnificationXref rdf:ID="UnificationXref39">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome Database ID</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">110290</bp:id>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser?DB=gk_current&amp;ID=110290</bp:comment>
+  </bp:UnificationXref>
+  <bp:UnificationXref rdf:ID="UnificationXref40">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REACT_3971</bp:id>
+    <bp:idVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</bp:idVersion>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome stable identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser_st_id?ST_ID=REACT_3971.2</bp:comment>
+  </bp:UnificationXref>
+  <bp:Catalysis rdf:ID="Catalysis3">
+    <bp:controller rdf:resource="#Complex3" />
+    <bp:controlled rdf:resource="#BiochemicalReaction5" />
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+    <bp:xref rdf:resource="#RelationshipXref1" />
+    <bp:xref rdf:resource="#RelationshipXref4" />
+    <bp:dataSource rdf:resource="#Provenance1" />
+  </bp:Catalysis>
+  <bp:RelationshipXref rdf:ID="RelationshipXref4">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome Database ID</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">110318</bp:id>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser?DB=gk_current&amp;ID=110318</bp:comment>
+    <bp:relationshipType rdf:resource="#RelationshipTypeVocabulary2" />
+  </bp:RelationshipXref>
+  <bp:UnificationXref rdf:ID="UnificationXref41">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome Database ID</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">110317</bp:id>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser?DB=gk_current&amp;ID=110317</bp:comment>
+  </bp:UnificationXref>
+  <bp:UnificationXref rdf:ID="UnificationXref42">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REACT_2016</bp:id>
+    <bp:idVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</bp:idVersion>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome stable identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser_st_id?ST_ID=REACT_2016.4</bp:comment>
+  </bp:UnificationXref>
+  <bp:PathwayStep rdf:ID="PathwayStep6">
+    <bp:stepProcess rdf:resource="#BiochemicalReaction5" />
+    <bp:nextStep rdf:resource="#PathwayStep7" />
+    <bp:stepProcess rdf:resource="#Catalysis3" />
+  </bp:PathwayStep>
+  <bp:BiochemicalReaction rdf:ID="BiochemicalReaction6">
+    <bp:left rdf:resource="#Complex4" />
+    <bp:right rdf:resource="#Protein4" />
+    <bp:right rdf:resource="#PhysicalEntity3" />
+    <bp:eCNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.7.7.7</bp:eCNumber>
+    <bp:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elongation by Pol eta</bp:displayName>
+    <bp:xref rdf:resource="#UnificationXref43" />
+    <bp:xref rdf:resource="#UnificationXref44" />
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">At the beginning of this reaction, 1 molecule of 'Pol eta:lesioned DNA template inserted with correct base complement' is present. At the end of this reaction, 1 molecule of 'Pol eta protein', and 1 molecule of 'Elongated DNA template with bypassed lesion' are present.&lt;br&gt;&lt;br&gt; This reaction takes place in the 'nucleus' and  is mediated by the 'eta DNA polymerase activity' of 'Pol eta:lesioned DNA template inserted with correct base complement'.&lt;br&gt;</bp:comment>
+    <bp:dataSource rdf:resource="#Provenance1" />
+  </bp:BiochemicalReaction>
+  <bp:Catalysis rdf:ID="Catalysis4">
+    <bp:controller rdf:resource="#Complex4" />
+    <bp:controlled rdf:resource="#BiochemicalReaction6" />
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+    <bp:xref rdf:resource="#RelationshipXref1" />
+    <bp:xref rdf:resource="#RelationshipXref5" />
+    <bp:dataSource rdf:resource="#Provenance1" />
+  </bp:Catalysis>
+  <bp:RelationshipXref rdf:ID="RelationshipXref5">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome Database ID</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">111300</bp:id>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser?DB=gk_current&amp;ID=111300</bp:comment>
+    <bp:relationshipType rdf:resource="#RelationshipTypeVocabulary2" />
+  </bp:RelationshipXref>
+  <bp:UnificationXref rdf:ID="UnificationXref43">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome Database ID</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">110319</bp:id>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser?DB=gk_current&amp;ID=110319</bp:comment>
+  </bp:UnificationXref>
+  <bp:UnificationXref rdf:ID="UnificationXref44">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REACT_1479</bp:id>
+    <bp:idVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</bp:idVersion>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome stable identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser_st_id?ST_ID=REACT_1479.3</bp:comment>
+  </bp:UnificationXref>
+  <bp:PathwayStep rdf:ID="PathwayStep7">
+    <bp:stepProcess rdf:resource="#BiochemicalReaction6" />
+    <bp:stepProcess rdf:resource="#Catalysis4" />
+  </bp:PathwayStep>
+  <bp:UnificationXref rdf:ID="UnificationXref45">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome Database ID</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">110320</bp:id>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser?DB=gk_current&amp;ID=110320</bp:comment>
+  </bp:UnificationXref>
+  <bp:UnificationXref rdf:ID="UnificationXref46">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REACT_1287</bp:id>
+    <bp:idVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</bp:idVersion>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome stable identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser_st_id?ST_ID=REACT_1287.2</bp:comment>
+  </bp:UnificationXref>
+  <bp:PublicationXref rdf:ID="PublicationXref3">
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10856253</bp:id>
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pubmed</bp:db>
+    <bp:year rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2000</bp:year>
+    <bp:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mechanisms of accurate translesion synthesis by human DNA polymerase eta.</bp:title>
+    <bp:author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Masutani, C</bp:author>
+    <bp:author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kusumoto, R</bp:author>
+    <bp:author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Iwai, S</bp:author>
+    <bp:author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hanaoka, F</bp:author>
+    <bp:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EMBO J 19:3100-9</bp:source>
+  </bp:PublicationXref>
+  <bp:PublicationXref rdf:ID="PublicationXref4">
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10369688</bp:id>
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pubmed</bp:db>
+    <bp:year rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1999</bp:year>
+    <bp:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xeroderma pigmentosum variant (XP-V) correcting protein from HeLa cells has a thymine dimer bypass DNA polymerase activity.</bp:title>
+    <bp:author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Masutani, C</bp:author>
+    <bp:author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Araki, M</bp:author>
+    <bp:author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yamada, A</bp:author>
+    <bp:author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kusumoto, R</bp:author>
+    <bp:author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nogimori, T</bp:author>
+    <bp:author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maekawa, T</bp:author>
+    <bp:author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Iwai, S</bp:author>
+    <bp:author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hanaoka, F</bp:author>
+    <bp:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EMBO J 18:3491-501</bp:source>
+  </bp:PublicationXref>
+  <bp:PathwayStep rdf:ID="PathwayStep8">
+    <bp:stepProcess rdf:resource="#Pathway4" />
+  </bp:PathwayStep>
+  <bp:Pathway rdf:ID="Pathway5">
+    <bp:pathwayComponent rdf:resource="#BiochemicalReaction7" />
+    <bp:pathwayComponent rdf:resource="#BiochemicalReaction8" />
+    <bp:pathwayComponent rdf:resource="#BiochemicalReaction9" />
+    <bp:pathwayOrder rdf:resource="#PathwayStep11" />
+    <bp:pathwayOrder rdf:resource="#PathwayStep9" />
+    <bp:pathwayOrder rdf:resource="#PathwayStep10" />
+    <bp:organism rdf:resource="#BioSource1" />
+    <bp:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Translesion synthesis by Pol zeta</bp:displayName>
+    <bp:xref rdf:resource="#UnificationXref65" />
+    <bp:xref rdf:resource="#UnificationXref66" />
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pol zeta consists of  two proteins: HREV3 with polymerase activity and HREV7, an accessory factor with unidentified activity. It has the ability to bypass pyrimidine dimers and other adducts in DNA.&lt;BR&gt;</bp:comment>
+    <bp:xref rdf:resource="#PublicationXref5" />
+    <bp:xref rdf:resource="#PublicationXref6" />
+    <bp:dataSource rdf:resource="#Provenance1" />
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Authored: Gopinathrao, G, 2004-02-02 17:30:34</bp:comment>
+  </bp:Pathway>
+  <bp:BiochemicalReaction rdf:ID="BiochemicalReaction7">
+    <bp:left rdf:resource="#PhysicalEntity1" />
+    <bp:left rdf:resource="#Complex5" />
+    <bp:right rdf:resource="#Complex6" />
+    <bp:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Binding of Pol zeta to lesioned DNA template</bp:displayName>
+    <bp:xref rdf:resource="#UnificationXref57" />
+    <bp:xref rdf:resource="#UnificationXref58" />
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">At the beginning of this reaction, 1 molecule of 'damaged DNA substrate ', and 1 molecule of 'Pol zeta complex' are present. At the end of this reaction, 1 molecule of 'Pol zeta:damaged DNA template complex' is present.&lt;br&gt;&lt;br&gt; This reaction takes place in the 'nucleus'.&lt;br&gt;</bp:comment>
+    <bp:dataSource rdf:resource="#Provenance1" />
+  </bp:BiochemicalReaction>
+  <bp:Complex rdf:ID="Complex5">
+    <bp:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pol zeta complex</bp:displayName>
+    <bp:cellularLocation rdf:resource="#CellularLocationVocabulary1" />
+    <bp:componentStoichiometry rdf:resource="#Stoichiometry9" />
+    <bp:component rdf:resource="#Protein5" />
+    <bp:componentStoichiometry rdf:resource="#Stoichiometry10" />
+    <bp:component rdf:resource="#Protein6" />
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome DB_ID: 110279</bp:comment>
+    <bp:xref rdf:resource="#UnificationXref53" />
+    <bp:xref rdf:resource="#UnificationXref54" />
+    <bp:dataSource rdf:resource="#Provenance1" />
+  </bp:Complex>
+  <bp:Protein rdf:ID="Protein5">
+    <bp:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HREV7</bp:displayName>
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mitotic spindle assembly checkpoint protein MAD2B (MAD2-like 2) (hREV7)</bp:name>
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mitotic spindle assembly checkpoint protein MAD2B</bp:name>
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MAD2-like 2</bp:name>
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hREV7</bp:name>
+    <bp:cellularLocation rdf:resource="#CellularLocationVocabulary1" />
+    <bp:entityReference rdf:resource="#ProteinReference4" />
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome DB_ID: 59092</bp:comment>
+    <bp:xref rdf:resource="#UnificationXref48" />
+    <bp:xref rdf:resource="#UnificationXref49" />
+    <bp:dataSource rdf:resource="#Provenance1" />
+  </bp:Protein>
+  <bp:ProteinReference rdf:ID="ProteinReference4">
+    <bp:organism rdf:resource="#BioSource1" />
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UniProt:Q9UI95 MAD2L2</bp:name>
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MAD2L2</bp:name>
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MAD2B</bp:name>
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REV7</bp:name>
+    <bp:xref rdf:resource="#UnificationXref47" />
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FUNCTION Adapter protein able to interact with different proteins and involved in different biological processes. Mediates the interaction between the error-prone DNA polymerase zeta catalytic subunit REV3L and the inserter polymerase REV1, thereby mediating the second polymerase switching in translesion DNA synthesis. Translesion DNA synthesis releases the replication blockade of replicative polymerases, stalled in presence of DNA lesions. May also regulate another aspect of cellular response to DNA damage through regulation of the JNK-mediated phosphorylation and activation of the transcriptional activator ELK1. Inhibits the FZR1- and probably CDC20-mediated activation of the anaphase promoting complex APC thereby regulating progression through the cell cycle. Regulates TCF7L2-mediated gene transcription and may play a role in epithelial-mesenchymal transdifferentiation.SUBUNIT Homooligomer (Probable). Interacts with REV1. Interacts with ADAM9. Interacts with CHAMP1. Interacts with REV3L. Interacts with FZR1 (in complex with the anaphase promoting complex APC). Interacts with CDC20; PubMed:11459825 could not detect the interaction. Interacts with RAN. Interacts with ELK1; the interaction is direct and recruits MAD2L2 to ELK1-specific promoters. May interact with the JNK kinases MAPK8 and/or MAPK9 to stimulate ELK1 phosphorylation and transcriptional activity upon DNA damage. Interacts with TCF7L2; prevents its binding to promoters and negatively modulates its transcriptional activity. Interacts with YY1AP1. Interacts with S. flexneri protein ipaB; prevents the interaction of MAD2L2 with FZR1 and CDC20 resulting in an activation of the anaphase-promoting complex APC and a cell cycle arrest. Interacts with PRCC; the interaction is direct. Interacts with POGZ.TISSUE SPECIFICITY Ubiquitously expressed.SIMILARITY Contains 1 HORMA domain.</bp:comment>
+  </bp:ProteinReference>
+  <bp:UnificationXref rdf:ID="UnificationXref47">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UniProt</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Q9UI95</bp:id>
+  </bp:UnificationXref>
+  <bp:UnificationXref rdf:ID="UnificationXref48">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome Database ID</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">59092</bp:id>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser?DB=gk_current&amp;ID=59092</bp:comment>
+  </bp:UnificationXref>
+  <bp:UnificationXref rdf:ID="UnificationXref49">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REACT_5213</bp:id>
+    <bp:idVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</bp:idVersion>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome stable identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser_st_id?ST_ID=REACT_5213.1</bp:comment>
+  </bp:UnificationXref>
+  <bp:Stoichiometry rdf:ID="Stoichiometry9">
+    <bp:stoichiometricCoefficient rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1</bp:stoichiometricCoefficient>
+    <bp:physicalEntity rdf:resource="#Protein5" />
+  </bp:Stoichiometry>
+  <bp:Protein rdf:ID="Protein6">
+    <bp:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HREV3</bp:displayName>
+    <bp:cellularLocation rdf:resource="#CellularLocationVocabulary1" />
+    <bp:entityReference rdf:resource="#ProteinReference5" />
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome DB_ID: 110278</bp:comment>
+    <bp:xref rdf:resource="#UnificationXref51" />
+    <bp:xref rdf:resource="#UnificationXref52" />
+    <bp:dataSource rdf:resource="#Provenance1" />
+  </bp:Protein>
+  <bp:ProteinReference rdf:ID="ProteinReference5">
+    <bp:organism rdf:resource="#BioSource1" />
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UniProt:Q9UID5 hREV3</bp:name>
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hREV3</bp:name>
+    <bp:xref rdf:resource="#UnificationXref50" />
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;submittedName&gt;
+&lt;fullName&gt;DNA-dependent DNA polymerase&lt;/fullName&gt;
+&lt;/submittedName&gt;</bp:comment>
+  </bp:ProteinReference>
+  <bp:UnificationXref rdf:ID="UnificationXref50">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UniProt</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Q9UID5</bp:id>
+  </bp:UnificationXref>
+  <bp:UnificationXref rdf:ID="UnificationXref51">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome Database ID</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">110278</bp:id>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser?DB=gk_current&amp;ID=110278</bp:comment>
+  </bp:UnificationXref>
+  <bp:UnificationXref rdf:ID="UnificationXref52">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REACT_5324</bp:id>
+    <bp:idVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</bp:idVersion>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome stable identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser_st_id?ST_ID=REACT_5324.2</bp:comment>
+  </bp:UnificationXref>
+  <bp:Stoichiometry rdf:ID="Stoichiometry10">
+    <bp:stoichiometricCoefficient rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1</bp:stoichiometricCoefficient>
+    <bp:physicalEntity rdf:resource="#Protein6" />
+  </bp:Stoichiometry>
+  <bp:UnificationXref rdf:ID="UnificationXref53">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome Database ID</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">110279</bp:id>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser?DB=gk_current&amp;ID=110279</bp:comment>
+  </bp:UnificationXref>
+  <bp:UnificationXref rdf:ID="UnificationXref54">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REACT_5310</bp:id>
+    <bp:idVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</bp:idVersion>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome stable identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser_st_id?ST_ID=REACT_5310.2</bp:comment>
+  </bp:UnificationXref>
+  <bp:Complex rdf:ID="Complex6">
+    <bp:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pol zeta:damaged DNA template complex</bp:displayName>
+    <bp:cellularLocation rdf:resource="#CellularLocationVocabulary1" />
+    <bp:componentStoichiometry rdf:resource="#Stoichiometry11" />
+    <bp:component rdf:resource="#PhysicalEntity1" />
+    <bp:componentStoichiometry rdf:resource="#Stoichiometry12" />
+    <bp:component rdf:resource="#Complex5" />
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome DB_ID: 110280</bp:comment>
+    <bp:xref rdf:resource="#UnificationXref55" />
+    <bp:xref rdf:resource="#UnificationXref56" />
+    <bp:dataSource rdf:resource="#Provenance1" />
+  </bp:Complex>
+  <bp:Stoichiometry rdf:ID="Stoichiometry11">
+    <bp:stoichiometricCoefficient rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1</bp:stoichiometricCoefficient>
+    <bp:physicalEntity rdf:resource="#PhysicalEntity1" />
+  </bp:Stoichiometry>
+  <bp:Stoichiometry rdf:ID="Stoichiometry12">
+    <bp:stoichiometricCoefficient rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1</bp:stoichiometricCoefficient>
+    <bp:physicalEntity rdf:resource="#Complex5" />
+  </bp:Stoichiometry>
+  <bp:UnificationXref rdf:ID="UnificationXref55">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome Database ID</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">110280</bp:id>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser?DB=gk_current&amp;ID=110280</bp:comment>
+  </bp:UnificationXref>
+  <bp:UnificationXref rdf:ID="UnificationXref56">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REACT_5394</bp:id>
+    <bp:idVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</bp:idVersion>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome stable identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser_st_id?ST_ID=REACT_5394.2</bp:comment>
+  </bp:UnificationXref>
+  <bp:UnificationXref rdf:ID="UnificationXref57">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome Database ID</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">110321</bp:id>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser?DB=gk_current&amp;ID=110321</bp:comment>
+  </bp:UnificationXref>
+  <bp:UnificationXref rdf:ID="UnificationXref58">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REACT_1918</bp:id>
+    <bp:idVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</bp:idVersion>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome stable identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser_st_id?ST_ID=REACT_1918.4</bp:comment>
+  </bp:UnificationXref>
+  <bp:PathwayStep rdf:ID="PathwayStep9">
+    <bp:stepProcess rdf:resource="#BiochemicalReaction7" />
+    <bp:nextStep rdf:resource="#PathwayStep11" />
+  </bp:PathwayStep>
+  <bp:BiochemicalReaction rdf:ID="BiochemicalReaction8">
+    <bp:left rdf:resource="#Protein5" />
+    <bp:left rdf:resource="#Protein6" />
+    <bp:right rdf:resource="#Complex5" />
+    <bp:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Formation of Pol zeta complex</bp:displayName>
+    <bp:xref rdf:resource="#UnificationXref59" />
+    <bp:xref rdf:resource="#UnificationXref60" />
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">At the beginning of this reaction, 1 molecule of 'HREV7', and 1 molecule of 'HREV3' are present. At the end of this reaction, 1 molecule of 'Pol zeta complex' is present.&lt;br&gt;&lt;br&gt; This reaction takes place in the 'nucleus'.&lt;br&gt;</bp:comment>
+    <bp:dataSource rdf:resource="#Provenance1" />
+  </bp:BiochemicalReaction>
+  <bp:UnificationXref rdf:ID="UnificationXref59">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome Database ID</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">110322</bp:id>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser?DB=gk_current&amp;ID=110322</bp:comment>
+  </bp:UnificationXref>
+  <bp:UnificationXref rdf:ID="UnificationXref60">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REACT_1544</bp:id>
+    <bp:idVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</bp:idVersion>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome stable identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser_st_id?ST_ID=REACT_1544.3</bp:comment>
+  </bp:UnificationXref>
+  <bp:PathwayStep rdf:ID="PathwayStep10">
+    <bp:stepProcess rdf:resource="#BiochemicalReaction8" />
+    <bp:nextStep rdf:resource="#PathwayStep9" />
+  </bp:PathwayStep>
+  <bp:BiochemicalReaction rdf:ID="BiochemicalReaction9">
+    <bp:left rdf:resource="#PhysicalEntity5" />
+    <bp:left rdf:resource="#Complex6" />
+    <bp:right rdf:resource="#PhysicalEntity3" />
+    <bp:right rdf:resource="#Complex5" />
+    <bp:eCNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.7.7.7</bp:eCNumber>
+    <bp:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elongation by Pol zeta complex</bp:displayName>
+    <bp:xref rdf:resource="#UnificationXref63" />
+    <bp:xref rdf:resource="#UnificationXref64" />
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">At the beginning of this reaction, 1 molecule of 'dNTP', and 1 molecule of 'Pol zeta:damaged DNA template complex' are present. At the end of this reaction, 1 molecule of 'Pol zeta complex', and 1 molecule of 'Elongated DNA template with bypassed lesion' are present.&lt;br&gt;&lt;br&gt; This reaction takes place in the 'nucleus' and  is mediated by the 'DNA-directed DNA polymerase activity' of 'Pol zeta:damaged DNA template complex'.&lt;br&gt;</bp:comment>
+    <bp:dataSource rdf:resource="#Provenance1" />
+  </bp:BiochemicalReaction>
+  <bp:PhysicalEntity rdf:ID="PhysicalEntity5">
+    <bp:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dNTP</bp:displayName>
+    <bp:cellularLocation rdf:resource="#CellularLocationVocabulary1" />
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome DB_ID: 110300</bp:comment>
+    <bp:xref rdf:resource="#UnificationXref61" />
+    <bp:xref rdf:resource="#UnificationXref62" />
+    <bp:dataSource rdf:resource="#Provenance1" />
+  </bp:PhysicalEntity>
+  <bp:UnificationXref rdf:ID="UnificationXref61">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome Database ID</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">110300</bp:id>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser?DB=gk_current&amp;ID=110300</bp:comment>
+  </bp:UnificationXref>
+  <bp:UnificationXref rdf:ID="UnificationXref62">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REACT_2960</bp:id>
+    <bp:idVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</bp:idVersion>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome stable identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser_st_id?ST_ID=REACT_2960.2</bp:comment>
+  </bp:UnificationXref>
+  <bp:Catalysis rdf:ID="Catalysis5">
+    <bp:controller rdf:resource="#Complex6" />
+    <bp:controlled rdf:resource="#BiochemicalReaction9" />
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+    <bp:xref rdf:resource="#RelationshipXref1" />
+    <bp:xref rdf:resource="#RelationshipXref6" />
+    <bp:dataSource rdf:resource="#Provenance1" />
+  </bp:Catalysis>
+  <bp:RelationshipXref rdf:ID="RelationshipXref6">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome Database ID</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">110323</bp:id>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser?DB=gk_current&amp;ID=110323</bp:comment>
+    <bp:relationshipType rdf:resource="#RelationshipTypeVocabulary2" />
+  </bp:RelationshipXref>
+  <bp:UnificationXref rdf:ID="UnificationXref63">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome Database ID</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">110324</bp:id>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser?DB=gk_current&amp;ID=110324</bp:comment>
+  </bp:UnificationXref>
+  <bp:UnificationXref rdf:ID="UnificationXref64">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REACT_1324</bp:id>
+    <bp:idVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</bp:idVersion>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome stable identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser_st_id?ST_ID=REACT_1324.4</bp:comment>
+  </bp:UnificationXref>
+  <bp:PathwayStep rdf:ID="PathwayStep11">
+    <bp:stepProcess rdf:resource="#BiochemicalReaction9" />
+    <bp:stepProcess rdf:resource="#Catalysis5" />
+  </bp:PathwayStep>
+  <bp:UnificationXref rdf:ID="UnificationXref65">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome Database ID</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">110325</bp:id>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser?DB=gk_current&amp;ID=110325</bp:comment>
+  </bp:UnificationXref>
+  <bp:UnificationXref rdf:ID="UnificationXref66">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REACT_822</bp:id>
+    <bp:idVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</bp:idVersion>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome stable identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser_st_id?ST_ID=REACT_822.2</bp:comment>
+  </bp:UnificationXref>
+  <bp:PublicationXref rdf:ID="PublicationXref5">
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9618506</bp:id>
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pubmed</bp:db>
+    <bp:year rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1998</bp:year>
+    <bp:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A human homolog of the Saccharomyces cerevisiae REV3 gene, which encodes the catalytic subunit of DNA polymerase zeta.</bp:title>
+    <bp:author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gibbs, PE</bp:author>
+    <bp:author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">McGregor, WG</bp:author>
+    <bp:author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maher, VM</bp:author>
+    <bp:author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nisson, P</bp:author>
+    <bp:author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lawrence, CW</bp:author>
+    <bp:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proc Natl Acad Sci U S A 95:6876-80</bp:source>
+  </bp:PublicationXref>
+  <bp:PublicationXref rdf:ID="PublicationXref6">
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10102035</bp:id>
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pubmed</bp:db>
+    <bp:year rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1999</bp:year>
+    <bp:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A full-length cDNA of hREV3 is predicted to encode DNA polymerase zeta for damage-induced mutagenesis in humans.</bp:title>
+    <bp:author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lin, W</bp:author>
+    <bp:author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wu, X</bp:author>
+    <bp:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mutat Res 433:89-98</bp:source>
+  </bp:PublicationXref>
+  <bp:PathwayStep rdf:ID="PathwayStep12">
+    <bp:stepProcess rdf:resource="#Pathway5" />
+  </bp:PathwayStep>
+  <bp:UnificationXref rdf:ID="UnificationXref67">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome Database ID</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">110313</bp:id>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser?DB=gk_current&amp;ID=110313</bp:comment>
+  </bp:UnificationXref>
+  <bp:UnificationXref rdf:ID="UnificationXref68">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REACT_2198</bp:id>
+    <bp:idVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</bp:idVersion>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome stable identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser_st_id?ST_ID=REACT_2198.3</bp:comment>
+  </bp:UnificationXref>
+  <bp:PublicationXref rdf:ID="PublicationXref7">
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10583946</bp:id>
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pubmed</bp:db>
+    <bp:year rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1999</bp:year>
+    <bp:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quality control by DNA repair</bp:title>
+    <bp:author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lindahl, T</bp:author>
+    <bp:author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wood, RD</bp:author>
+    <bp:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Science 286:1897-905</bp:source>
+  </bp:PublicationXref>
+  <bp:PathwayStep rdf:ID="PathwayStep13">
+    <bp:stepProcess rdf:resource="#Pathway2" />
+  </bp:PathwayStep>
+  <bp:UnificationXref rdf:ID="UnificationXref69">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome Database ID</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">73893</bp:id>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser?DB=gk_current&amp;ID=73893</bp:comment>
+  </bp:UnificationXref>
+  <bp:UnificationXref rdf:ID="UnificationXref70">
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome</bp:db>
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REACT_2174</bp:id>
+    <bp:idVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</bp:idVersion>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome stable identifier. Use this URL to connect to the web page of this instance in Reactome: http://www.reactome.org/cgi-bin/eventbrowser_st_id?ST_ID=REACT_2174.2</bp:comment>
+  </bp:UnificationXref>
+  <bp:PublicationXref rdf:ID="PublicationXref8">
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12800216</bp:id>
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pubmed</bp:db>
+    <bp:year rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2003</bp:year>
+    <bp:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DNA polymerase zeta: new insight into eukaryotic mutagenesis and mammalian embryonic development.</bp:title>
+    <bp:author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhu, F</bp:author>
+    <bp:author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhang, M</bp:author>
+    <bp:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">World J Gastroenterol 9:1165-9</bp:source>
+  </bp:PublicationXref>
+  <bp:PublicationXref rdf:ID="PublicationXref9">
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11595180</bp:id>
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pubmed</bp:db>
+    <bp:year rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2001</bp:year>
+    <bp:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Error-prone DNA polymerases: novel structures and the benefits of infidelity.</bp:title>
+    <bp:author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Friedberg, EC</bp:author>
+    <bp:author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fischhaber, PL</bp:author>
+    <bp:author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kisker, C</bp:author>
+    <bp:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell 107:9-12</bp:source>
+  </bp:PublicationXref>
+  <bp:PublicationXref rdf:ID="PublicationXref10">
+    <bp:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10925197</bp:id>
+    <bp:db rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pubmed</bp:db>
+    <bp:year rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2000</bp:year>
+    <bp:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Replication of UV-damaged DNA: new insights into links between DNA polymerases, mutagenesis and human disease.</bp:title>
+    <bp:author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lehmann, AR</bp:author>
+    <bp:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gene 253:1-12</bp:source>
+  </bp:PublicationXref>
+</rdf:RDF>
+
