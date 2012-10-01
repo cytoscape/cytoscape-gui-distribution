@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.cytoscape.distribution</groupId>
 		<artifactId>parent</artifactId>
-		<version>3.0.0-beta1-SNAPSHOT</version>
+		<version>3.0.0-beta2-SNAPSHOT</version>
 		<relativePath>..</relativePath>
 	</parent>
 
@@ -93,11 +93,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
-
-  <scm>
-    <connection>scm:svn:http://chianti.ucsd.edu/svn/core3/gui-distribution/branches/user-beta1/branding</connection>
-    <developerConnection>scm:svn:svn+ssh://grenache.ucsd.edu/cellar/common/svn/core3/gui-distribution/branches/user-beta1/branding</developerConnection>
-    <url>http://chianti.ucsd.edu/svn/core3/gui-distribution/branches/user-beta1/branding</url>
-  </scm>
 </project>
