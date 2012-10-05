@@ -66,7 +66,7 @@
           <versionLine x="20" y="40" text="version ${compiler:sys.version}" font="Arial" fontSize="8" fontColor="0,0,0" fontWeight="500" />
         </text>
       </splashScreen>
-      <java mainClass="org.cytoscape.launcher.internal.Launcher" vmParameters="-server  -Xss10M  -Xms128M -Xmx1G  -Dcom.sun.management.jmxremote &quot;-Dkaraf.instances=${launcher:sys.launcherDirectory}/framework/instances&quot;  &quot; -Dkaraf.home=${launcher:sys.launcherDirectory}/framework&quot; &quot;-Dkaraf.base=${launcher:sys.launcherDirectory}/framework&quot;   &quot; -Dkaraf.data=${launcher:sys.launcherDirectory}/framework/data&quot;  &quot; -Djava.io.tmpdir=${launcher:sys.launcherDirectory}/framework/data/tmp&quot;  &quot; -Djava.util.logging.config.file=${launcher:sys.launcherDirectory}/framework/etc/java.util.logging.properties&quot;  -Dkaraf.startLocalConsole=false  -Dkaraf.startRemoteShell=false" arguments="" allowVMPassthroughParameters="true" preferredVM="" bundleRuntime="true">
+      <java mainClass="org.cytoscape.launcher.internal.Launcher" vmParameters="-Xss10M  -Xms128M -Xmx1G  -Dcom.sun.management.jmxremote &quot;-Dkaraf.instances=${launcher:sys.launcherDirectory}/framework/instances&quot;  &quot; -Dkaraf.home=${launcher:sys.launcherDirectory}/framework&quot; &quot;-Dkaraf.base=${launcher:sys.launcherDirectory}/framework&quot; &quot; -Djava.util.logging.config.file=${launcher:sys.launcherDirectory}/framework/etc/java.util.logging.properties&quot;  -Dkaraf.startLocalConsole=false  -Dkaraf.startRemoteShell=false" arguments="" allowVMPassthroughParameters="true" preferredVM="" bundleRuntime="true">
         <classPath>
           <scanDirectory location="." failOnError="false" />
           <directory location="lib" failOnError="false" />
