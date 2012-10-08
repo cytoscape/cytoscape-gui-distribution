@@ -30,14 +30,14 @@ elif [ $phys_mem -gt 1535 ]; then
 fi
 
 if `java -version 2>&1 | grep -- 64-Bit > /dev/null`; then # We have a 64 bit JVM.
-    echo ${mem}M      > "$vm_options_path/Cytoscape.vmoptions"
+    echo "-Xmx"${mem}M      > "$vm_options_path/Cytoscape.vmoptions"
 else # Assume a 32 bit JVM.
     # Truncate memory setting at 1550 MiB:
     if [ $mem -gt 1550 ]; then
         mem=1550
     fi
 
-    echo ${mem}M      > "$vm_options_path/Cytoscape.vmoptions"
+    echo "-Xmx"${mem}M      > "$vm_options_path/Cytoscape.vmoptions"
 fi
 
 exit 0
