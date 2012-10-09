@@ -333,6 +333,27 @@
 							</replacements>
 						</configuration>
 					</execution>
+					<execution>
+						<id>patch-karaf-wrap-deployer-windows</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>replace</goal>
+						</goals>
+						<configuration>
+							<includes>
+								<include>target/dependencies/windows/apache-karaf-${karaf.version}/etc/startup.properties</include>
+								<include>target/dependencies/unix/apache-karaf-${karaf.version}/etc/startup.properties</include>
+							</includes>
+							<regex>true</regex>
+							<unescape>false</unescape>
+							<replacements>
+								<replacement>
+<token>.*org[.]apache[.]karaf[.]deployer[.]wrap.*</token>
+									<value></value>
+								</replacement>
+							</replacements>
+						</configuration>
+					</execution>
 				</executions>
 			</plugin>
 		</plugins>
