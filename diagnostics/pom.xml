@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<parent>
+		<groupId>org.cytoscape.distribution</groupId>
+		<artifactId>parent</artifactId>
+		<version>3.0.0-beta2-SNAPSHOT</version>
+		<relativePath>..</relativePath>
+	</parent>
+
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>diagnostics-impl</artifactId>
+
+	<name>Cytoscape Diagnostics</name>
+
+	<properties>
+		<bundle.symbolicName>org.cytoscape.diagnostics-impl</bundle.symbolicName>
+		<bundle.namespace>org.cytoscape.diagnostics</bundle.namespace>
+	</properties>
+
+	<packaging>bundle</packaging>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.osgi</groupId>
+			<artifactId>org.osgi.core</artifactId>
+			<version>${osgi.api.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.cytoscape.distribution</groupId>
+			<artifactId>karaf-launcher</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<version>${maven-bundle-plugin.version}</version>
+				<extensions>true</extensions>
+				<configuration>
+					<instructions>
+						<Bundle-Activator>${bundle.namespace}.internal.Activator</Bundle-Activator>
+						<Bundle-SymbolicName>${bundle.symbolicName}</Bundle-SymbolicName>
+						<Bundle-Version>${project.version}</Bundle-Version>
+						<Export-Package>!${bundle.namespace}.internal.*,*</Export-Package>
+						<Private-Package>${bundle.namespace}.internal.*</Private-Package>
+						<_include>-osgi.bnd</_include>
+					</instructions>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

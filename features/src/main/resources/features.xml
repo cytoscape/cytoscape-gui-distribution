@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <features>
   <feature name="cytoscape-gui" version="${project.version}">
+    <bundle start-level="1">mvn:org.cytoscape.distribution/diagnostics-impl/${project.version}</bundle>
 
     <bundle start-level="100">mvn:org.cytoscape/splash-updater-impl/${cytoscape.support.version}</bundle>
     

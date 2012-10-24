@@ -6,8 +6,10 @@ import org.apache.karaf.main.Main;
 
 public class Launcher {
 	private static String[] startupArguments;
+	private static long startTime;
 
 	public static void main(String[] args) throws Exception {
+		startTime = System.currentTimeMillis();
 		startupArguments = args;
 		setDefaultSystemProperties();
 		createConfigurationDirectory();
@@ -45,5 +47,9 @@ public class Launcher {
 		String[] result = new String[startupArguments.length];
 		System.arraycopy(startupArguments, 0, result, 0, startupArguments.length);
 		return result;
+	}
+	
+	public static long getStartTime() {
+		return startTime;
 	}
 }

@@ -71,6 +71,7 @@
 				<module>splash-launcher</module>
 				<module>launcher</module>
 				<module>cmdline-impl</module>
+				<module>diagnostics</module>
 				<module>branding</module>
 				<module>features</module>
 				<module>assembly</module>
@@ -86,6 +87,7 @@
 				<module>splash-launcher</module>
 				<module>launcher</module>
 				<module>cmdline-impl</module>
+				<module>diagnostics</module>
 				<module>branding</module>
 				<module>features</module>
 				<module>assembly</module>
