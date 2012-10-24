@@ -29,22 +29,12 @@ public class PerformanceTracker implements FrameworkListener, SynchronousBundleL
 	    	StartLevel level = (StartLevel) context.getService(reference);
 	    	if ( level.getStartLevel() == Activator.INITIAL_START_LEVEL ) {
 	    		performanceDetails.setSystemLaunchEndTime(System.currentTimeMillis());
-	    		dump();
 	    		finishedStarting = true;
 	    	}
 	    	context.ungetService(reference);
 		}
 	}
 	
-	private void dump() {
-		for (Long id : performanceDetails.getObservedBundleIds()) {
-			String description = performanceDetails.getBundleDescription(id);
-			long latency = performanceDetails.getBundleLaunchLatency(id);
-			long duration = performanceDetails.getBundleLaunchDuration(id);
-			System.out.printf("%s\t%d\t%d\n", description, latency, duration);
-		}
-	}
-
 	@Override
 	public void bundleChanged(BundleEvent event) {
 		switch (event.getType()) {
