@@ -3,6 +3,7 @@ package org.cytoscape.diagnostics.internal;
 import java.util.Properties;
 
 import org.cytoscape.diagnostics.PerformanceDetails;
+import org.cytoscape.diagnostics.SystemDetails;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceReference;
@@ -16,12 +17,15 @@ public class Activator implements BundleActivator {
 	public void start(BundleContext context) throws Exception {
 		applyStartLevelHack(context);
 		
-		PerformanceDetailsBuilder details = new PerformanceDetailsBuilder();
-		context.registerService(PerformanceDetails.class.getName(), details, new Properties());
+		PerformanceDetailsBuilder performanceDetails = new PerformanceDetailsBuilder();
+		context.registerService(PerformanceDetails.class.getName(), performanceDetails, new Properties());
 		
-		PerformanceTracker performanceTracker = new PerformanceTracker(context, details);
+		PerformanceTracker performanceTracker = new PerformanceTracker(context, performanceDetails);
 		context.addFrameworkListener(performanceTracker);
 		context.addBundleListener(performanceTracker);
+		
+		SystemDetailsImpl systemDetails = new SystemDetailsImpl();
+		context.registerService(SystemDetails.class.getName(), systemDetails, new Properties());
 	}
 	
     private void applyStartLevelHack(BundleContext context) {
