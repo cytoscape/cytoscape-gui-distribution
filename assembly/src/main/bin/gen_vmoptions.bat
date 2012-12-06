@@ -25,8 +25,10 @@ REM if %physmem% GTR 9216 set mem=4096
 :Javatest
 	if exist findstr.out del findstr.out
 	java -version 2>&1 | findstr /I 64-Bit > findstr.out
-	if %ERRORLEVEL% NEQ 0 GOTO Nojava
-	for /f %%i in ('dir /b findstr.out') do if %%~zi equ 0 goto 32bit
+	if %ERRORLEVEL% EQU 0 GOTO 64bit
+	java -version 2>&1 | findstr /i Java > findstr.out
+	IF %ERRORLEVEL% EQU 0 GOTO 32bit
+	goto Nojava
 
 :64bit
 	REM echo "64 bit %mem% MB"
@@ -35,9 +37,10 @@ REM if %physmem% GTR 9216 set mem=4096
 
 :32bit
 	REM echo "32 bit %mem% MB"
-	REM Some java versions can only support 1400MB
-	if %mem% GTR 1400 set mem=1400
+	REM Some java versions can only support 1100MB
+	if %mem% GTR 1100 set mem=1100
 	echo %mem%M >Cytoscape.vmoptions
+	goto End
 
 :Nojava
 	echo ERROR: Can't find java executable

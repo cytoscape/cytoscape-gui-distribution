@@ -30,7 +30,7 @@ set JAVA_DEBUG_OPTS=-Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=d
 set PWD=%~dp0
 set KARAF_OPTS=-Xss10M -Dcytoscape.home="%PWD:\=\\%" -Duser.dir="%PWD:\=\\%" -splash:CytoscapeSplashScreen.png
 
-set KARAF_DATA="%USERPROFILE%\CytoscapeConfiguration\3\karaf_data"
+set KARAF_DATA=%USERPROFILE%\CytoscapeConfiguration\3\karaf_data
 if not exist "%KARAF_DATA%" (
     mkdir "%KARAF_DATA%\tmp"
 )
