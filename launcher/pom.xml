@@ -13,7 +13,7 @@
 	<!-- Artifact id *must* start with "karaf-*" so startup scripts add this 
 		JAR to the boot classpath -->
 	<artifactId>karaf-launcher</artifactId>
-  <version>3.0.0-beta2-SNAPSHOT</version>
+  <version>3.0.1-SNAPSHOT</version>
 
 	<name>Cytoscape Launcher</name>
 
@@ -51,10 +51,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
-  <scm>
-    <connection>scm:svn:http://chianti.ucsd.edu/svn/core3/gui-distribution/branches/3.0.0-release/karaf-launcher</connection>
-    <developerConnection>scm:svn:svn+ssh://grenache.ucsd.edu/cellar/common/svn/core3/gui-distribution/branches/3.0.0-release/karaf-launcher</developerConnection>
-    <url>http://chianti.ucsd.edu/svn/core3/gui-distribution/branches/3.0.0-release/karaf-launcher</url>
-  </scm>
 </project>
