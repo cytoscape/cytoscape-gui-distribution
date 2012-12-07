@@ -9,7 +9,7 @@
 	</parent>
 
 	<artifactId>features</artifactId>
-  <version>3.0.0-beta2-SNAPSHOT</version>
+  <version>3.0.0</version>
 	<packaging>pom</packaging>
 	<name>Cytoscape Feature Repository</name>
 
