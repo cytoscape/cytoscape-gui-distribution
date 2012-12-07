@@ -10,7 +10,7 @@
 	</parent>
 
 	<artifactId>branding</artifactId>
-  <version>3.0.1-SNAPSHOT</version>
+  <version>3.0.0</version>
 	<packaging>bundle</packaging>
 	<name>Cytoscape Branding</name>
 

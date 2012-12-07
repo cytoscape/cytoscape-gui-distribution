@@ -96,9 +96,9 @@
 	</profiles>
 
 	<scm>
-		<connection>scm:svn:http://chianti.ucsd.edu/svn/core3/gui-distribution/trunk</connection>
-		<developerConnection>scm:svn:svn+ssh://grenache.ucsd.edu/cellar/common/svn/core3/gui-distribution/trunk</developerConnection>
-		<url>http://chianti.ucsd.edu/svn/core3/gui-distribution/trunk</url>
+		<connection>scm:svn:http://chianti.ucsd.edu/svn/core3/gui-distribution/tags/parent-3.0.0</connection>
+		<developerConnection>scm:svn:svn+ssh://grenache.ucsd.edu/cellar/common/svn/core3/gui-distribution/tags/parent-3.0.0</developerConnection>
+		<url>http://chianti.ucsd.edu/svn/core3/gui-distribution/tags/parent-3.0.0</url>
 	</scm>
 
 </project>
