@@ -3,13 +3,14 @@
   <parent>
     <groupId>org.cytoscape.distribution</groupId>
     <artifactId>parent</artifactId>
-    <version>3.0.0-beta2-SNAPSHOT</version>
+    <version>3.0.0</version>
     <relativePath>..</relativePath>
   </parent>
 
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.cytoscape.gui-distribution</groupId>
   <artifactId>splash-launcher</artifactId>
+  <version>3.0.0-beta2-SNAPSHOT</version>
 
   <packaging>jar</packaging>
 
@@ -94,4 +95,10 @@
       <version>${cytoscape.support.version}</version>
     </dependency>
   </dependencies>
+
+  <scm>
+    <connection>scm:svn:http://chianti.ucsd.edu/svn/core3/gui-distribution/branches/3.0.0-release/splash-launcher</connection>
+    <developerConnection>scm:svn:svn+ssh://grenache.ucsd.edu/cellar/common/svn/core3/gui-distribution/branches/3.0.0-release/splash-launcher</developerConnection>
+    <url>http://chianti.ucsd.edu/svn/core3/gui-distribution/branches/3.0.0-release/splash-launcher</url>
+  </scm>
 </project>

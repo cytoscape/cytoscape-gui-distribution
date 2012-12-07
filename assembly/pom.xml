@@ -5,12 +5,13 @@
 	<parent>
 		<groupId>org.cytoscape.distribution</groupId>
 		<artifactId>parent</artifactId>
-		<version>3.0.0-beta2-SNAPSHOT</version>
+		<version>3.0.0</version>
 		<relativePath>..</relativePath>
 	</parent>
 	
 	<groupId>org.cytoscape.distribution</groupId>
 	<artifactId>cytoscape</artifactId>
+  <version>3.0.0-beta2-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Cytoscape Karaf Distribution</name>
 
@@ -349,7 +350,7 @@
 							<replacements>
 								<replacement>
 <token>.*org[.]apache[.]karaf[.]deployer[.]wrap.*</token>
-									<value></value>
+									<value />
 								</replacement>
 							</replacements>
 						</configuration>
@@ -358,4 +359,10 @@
 			</plugin>
 		</plugins>
 	</build>
+
+  <scm>
+    <connection>scm:svn:http://chianti.ucsd.edu/svn/core3/gui-distribution/branches/3.0.0-release/cytoscape</connection>
+    <developerConnection>scm:svn:svn+ssh://grenache.ucsd.edu/cellar/common/svn/core3/gui-distribution/branches/3.0.0-release/cytoscape</developerConnection>
+    <url>http://chianti.ucsd.edu/svn/core3/gui-distribution/branches/3.0.0-release/cytoscape</url>
+  </scm>
 </project>
