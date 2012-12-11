@@ -32,14 +32,14 @@ REM if %physmem% GTR 9216 set mem=4096
 
 :64bit
 	REM echo "64 bit %mem% MB"
-	echo %mem%M  >Cytoscape.vmoptions
+	echo -Xmx%mem%M  >Cytoscape.vmoptions
 	goto End
 
 :32bit
 	REM echo "32 bit %mem% MB"
 	REM Some java versions can only support 1100MB
 	if %mem% GTR 1100 set mem=1100
-	echo %mem%M >Cytoscape.vmoptions
+	echo -Xmx%mem%M >Cytoscape.vmoptions
 	goto End
 
 :Nojava
