@@ -12,7 +12,7 @@ CMD /C gen_vmoptions.bat
 IF EXIST "Cytoscape.vmoptions" GOTO itIsThere
 :: Run with defaults:
 echo "*** Missing Cytoscape.vmoptions, falling back to using defaults!"
-set JAVA_MAX_MEM=-Xmx1550M
+set JAVA_MAX_MEM=-Xmx800M
 GOTO setDebugOpts
 
 :: We end up here if we have a Cytoscape.vmoptions file:
