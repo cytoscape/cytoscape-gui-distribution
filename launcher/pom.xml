@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>org.cytoscape.distribution</groupId>
 		<artifactId>parent</artifactId>
-		<version>3.0.1-SNAPSHOT</version>
+		<version>3.1.0-SNAPSHOT</version>
 		<relativePath>..</relativePath>
 	</parent>
 
@@ -13,7 +13,7 @@
 	<!-- Artifact id *must* start with "karaf-*" so startup scripts add this 
 		JAR to the boot classpath -->
 	<artifactId>karaf-launcher</artifactId>
-  <version>3.0.1-SNAPSHOT</version>
+  <version>3.1.0-SNAPSHOT</version>
 
 	<name>Cytoscape Launcher</name>
 
