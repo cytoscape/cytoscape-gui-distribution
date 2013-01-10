@@ -123,6 +123,7 @@
     <bundle start-level="160">mvn:org.cytoscape/group-view-impl/${cytoscape.impl.version}</bundle>
     
     <bundle start-level="165">mvn:org.cytoscape/biopax-impl/${cytoscape.impl.version}</bundle>
+    <bundle start-level="165">mvn:org.cytoscape/equations-functions-impl/${cytoscape.impl.version}</bundle>
     
     <bundle start-level="170">mvn:org.cytoscape/search-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="170">mvn:org.cytoscape/table-browser-impl/${cytoscape.impl.version}</bundle>
