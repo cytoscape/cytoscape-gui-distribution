@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<vizmap documentVersion="3.0" id="VizMap-2013_01_28-13_53">
+    <visualStyle name="Aqua">
+        <network>
+            <visualProperty name="NETWORK_BACKGROUND_PAINT" default="#ffffff"/>
+            <visualProperty name="NETWORK_CENTER_Z_LOCATION" default="0.0"/>
+            <visualProperty name="NETWORK_CENTER_Y_LOCATION" default="0.0"/>
+            <visualProperty name="NETWORK_SCALE_FACTOR" default="1.0"/>
+            <visualProperty name="NETWORK_CENTER_X_LOCATION" default="0.0"/>
+            <visualProperty name="NETWORK_NODE_SELECTION" default="true"/>
+            <visualProperty name="NETWORK_DEPTH" default="0.0"/>
+            <visualProperty name="NETWORK_WIDTH" default="550.0"/>
+            <visualProperty name="NETWORK_EDGE_SELECTION" default="true"/>
+            <visualProperty name="NETWORK_HEIGHT" default="400.0"/>
+            <visualProperty name="NETWORK_TITLE" default=""/>
+        </network>
+        <node>
+            <dependency name="nodeCustomGraphicsSizeSync" value="true"/>
+            <dependency name="nodeSizeLocked" value="false"/>
+            <visualProperty name="NODE_LABEL_FONT_FACE" default="Dialog,plain,12"/>
+            <visualProperty name="NODE_SHAPE" default="ELLIPSE"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_3" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_BORDER_PAINT" default="#000000"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_6" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_4" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_3" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_6" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_8" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_X_LOCATION" default="0.0"/>
+            <visualProperty name="NODE_Z_LOCATION" default="0.0"/>
+            <visualProperty name="NODE_LABEL_WIDTH" default="100.0"/>
+            <visualProperty name="NODE_SELECTED_PAINT" default="#ffff00"/>
+            <visualProperty name="NODE_BORDER_STROKE" default="SOLID"/>
+            <visualProperty name="NODE_TOOLTIP" default=""/>
+            <visualProperty name="NODE_BORDER_TRANSPARENCY" default="255"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_1" default="50.0"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_2" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_8" default="50.0"/>
+            <visualProperty name="NODE_SIZE" default="35.0"/>
+            <visualProperty name="NODE_VISIBLE" default="true"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_4" default="50.0"/>
+            <visualProperty name="NODE_SELECTED" default="false"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_4" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_5" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_3" default="50.0"/>
+            <visualProperty name="NODE_Y_LOCATION" default="0.0"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_1" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_7" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_NESTED_NETWORK_IMAGE_VISIBLE" default="true"/>
+            <visualProperty name="NODE_LABEL_COLOR" default="#ffffff"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_9" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_LABEL_TRANSPARENCY" default="200"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_2" default="50.0"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_7" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_5" default="50.0"/>
+            <visualProperty name="NODE_LABEL_POSITION" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_WIDTH" default="75.0"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_5" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_8" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_6" default="50.0"/>
+            <visualProperty name="NODE_FILL_COLOR" default="#66ccff"/>
+            <visualProperty name="NODE_LABEL_FONT_SIZE" default="12"/>
+            <visualProperty name="NODE_TRANSPARENCY" default="170"/>
+            <visualProperty name="NODE_HEIGHT" default="40.0"/>
+            <visualProperty name="NODE_BORDER_WIDTH" default="0.0"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_1" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_9" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_7" default="50.0"/>
+            <visualProperty name="NODE_LABEL" default="">
+                <passthroughMapping attributeType="string" attributeName="name"/>
+            </visualProperty>
+            <visualProperty name="NODE_DEPTH" default="0.0"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_2" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_9" default="50.0"/>
+        </node>
+        <edge>
+            <dependency name="arrowColorMatchesEdge" value="false"/>
+            <visualProperty name="EDGE_SOURCE_ARROW_SELECTED_PAINT" default="#ffff00"/>
+            <visualProperty name="EDGE_LINE_TYPE" default="SOLID"/>
+            <visualProperty name="EDGE_LABEL" default=""/>
+            <visualProperty name="EDGE_BEND"/>
+            <visualProperty name="EDGE_TARGET_ARROW_UNSELECTED_PAINT" default="#000000"/>
+            <visualProperty name="EDGE_LABEL_FONT_SIZE" default="10"/>
+            <visualProperty name="EDGE_LABEL_FONT_FACE" default="Dialog,plain,10"/>
+            <visualProperty name="EDGE_SELECTED" default="false"/>
+            <visualProperty name="EDGE_TOOLTIP" default=""/>
+            <visualProperty name="EDGE_LABEL_TRANSPARENCY" default="255"/>
+            <visualProperty name="EDGE_TARGET_ARROW_SELECTED_PAINT" default="#ffff00"/>
+            <visualProperty name="EDGE_SOURCE_ARROW_SHAPE" default="NONE"/>
+            <visualProperty name="EDGE_STROKE_UNSELECTED_PAINT" default="#000000"/>
+            <visualProperty name="EDGE_WIDTH" default="4.0"/>
+            <visualProperty name="EDGE_TRANSPARENCY" default="100"/>
+            <visualProperty name="EDGE_TARGET_ARROW_SHAPE" default="NONE"/>
+            <visualProperty name="EDGE_CURVED" default="true"/>
+            <visualProperty name="EDGE_VISIBLE" default="true"/>
+            <visualProperty name="EDGE_SOURCE_ARROW_UNSELECTED_PAINT" default="#000000"/>
+            <visualProperty name="EDGE_LABEL_COLOR" default="#000000"/>
+            <visualProperty name="EDGE_STROKE_SELECTED_PAINT" default="#ff0000"/>
+        </edge>
+    </visualStyle>
+    <visualStyle name="Skeleton">
+        <network>
+            <visualProperty name="NETWORK_BACKGROUND_PAINT" default="#000000"/>
+            <visualProperty name="NETWORK_CENTER_Z_LOCATION" default="0.0"/>
+            <visualProperty name="NETWORK_CENTER_Y_LOCATION" default="0.0"/>
+            <visualProperty name="NETWORK_SCALE_FACTOR" default="1.0"/>
+            <visualProperty name="NETWORK_CENTER_X_LOCATION" default="0.0"/>
+            <visualProperty name="NETWORK_NODE_SELECTION" default="true"/>
+            <visualProperty name="NETWORK_DEPTH" default="0.0"/>
+            <visualProperty name="NETWORK_WIDTH" default="550.0"/>
+            <visualProperty name="NETWORK_EDGE_SELECTION" default="true"/>
+            <visualProperty name="NETWORK_HEIGHT" default="400.0"/>
+            <visualProperty name="NETWORK_TITLE" default=""/>
+        </network>
+        <node>
+            <dependency name="nodeSizeLocked" value="false"/>
+            <dependency name="nodeCustomGraphicsSizeSync" value="true"/>
+            <visualProperty name="NODE_LABEL_FONT_FACE" default="Dialog,plain,12"/>
+            <visualProperty name="NODE_SHAPE" default="ELLIPSE"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_3" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_BORDER_PAINT" default="#ffffff"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_6" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_4" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_3" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_6" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_8" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_X_LOCATION" default="0.0"/>
+            <visualProperty name="NODE_Z_LOCATION" default="0.0"/>
+            <visualProperty name="NODE_LABEL_WIDTH" default="100.0"/>
+            <visualProperty name="NODE_SELECTED_PAINT" default="#ffff00"/>
+            <visualProperty name="NODE_BORDER_STROKE" default="SOLID"/>
+            <visualProperty name="NODE_TOOLTIP" default=""/>
+            <visualProperty name="NODE_BORDER_TRANSPARENCY" default="255"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_1" default="50.0"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_2" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_8" default="50.0"/>
+            <visualProperty name="NODE_SIZE" default="35.0"/>
+            <visualProperty name="NODE_VISIBLE" default="true"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_4" default="50.0"/>
+            <visualProperty name="NODE_SELECTED" default="false"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_4" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_5" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_3" default="50.0"/>
+            <visualProperty name="NODE_Y_LOCATION" default="0.0"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_1" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_7" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_NESTED_NETWORK_IMAGE_VISIBLE" default="true"/>
+            <visualProperty name="NODE_LABEL_COLOR" default="#ffffff"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_9" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_LABEL_TRANSPARENCY" default="255"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_2" default="50.0"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_7" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_5" default="50.0"/>
+            <visualProperty name="NODE_LABEL_POSITION" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_WIDTH" default="90.0"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_5" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_8" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_6" default="50.0"/>
+            <visualProperty name="NODE_FILL_COLOR" default="#ffffff"/>
+            <visualProperty name="NODE_LABEL_FONT_SIZE" default="15"/>
+            <visualProperty name="NODE_TRANSPARENCY" default="0"/>
+            <visualProperty name="NODE_HEIGHT" default="40.0"/>
+            <visualProperty name="NODE_BORDER_WIDTH" default="3.0"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_1" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_9" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_7" default="50.0"/>
+            <visualProperty name="NODE_LABEL" default="">
+                <passthroughMapping attributeType="string" attributeName="name"/>
+            </visualProperty>
+            <visualProperty name="NODE_DEPTH" default="0.0"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_2" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_9" default="50.0"/>
+        </node>
+        <edge>
+            <dependency name="arrowColorMatchesEdge" value="false"/>
+            <visualProperty name="EDGE_SOURCE_ARROW_SELECTED_PAINT" default="#ffff00"/>
+            <visualProperty name="EDGE_LINE_TYPE" default="SOLID"/>
+            <visualProperty name="EDGE_LABEL" default=""/>
+            <visualProperty name="EDGE_BEND"/>
+            <visualProperty name="EDGE_TARGET_ARROW_UNSELECTED_PAINT" default="#000000"/>
+            <visualProperty name="EDGE_LABEL_FONT_SIZE" default="10"/>
+            <visualProperty name="EDGE_LABEL_FONT_FACE" default="Dialog,plain,10"/>
+            <visualProperty name="EDGE_SELECTED" default="false"/>
+            <visualProperty name="EDGE_TOOLTIP" default=""/>
+            <visualProperty name="EDGE_LABEL_TRANSPARENCY" default="255"/>
+            <visualProperty name="EDGE_TARGET_ARROW_SELECTED_PAINT" default="#ffff00"/>
+            <visualProperty name="EDGE_SOURCE_ARROW_SHAPE" default="NONE"/>
+            <visualProperty name="EDGE_STROKE_UNSELECTED_PAINT" default="#ffffff"/>
+            <visualProperty name="EDGE_WIDTH" default="3.0"/>
+            <visualProperty name="EDGE_TRANSPARENCY" default="255"/>
+            <visualProperty name="EDGE_TARGET_ARROW_SHAPE" default="NONE"/>
+            <visualProperty name="EDGE_CURVED" default="true"/>
+            <visualProperty name="EDGE_VISIBLE" default="true"/>
+            <visualProperty name="EDGE_SOURCE_ARROW_UNSELECTED_PAINT" default="#000000"/>
+            <visualProperty name="EDGE_LABEL_COLOR" default="#000000"/>
+            <visualProperty name="EDGE_STROKE_SELECTED_PAINT" default="#ff0000"/>
+        </edge>
+    </visualStyle>
+    <visualStyle name="Cloud">
+        <network>
+            <visualProperty name="NETWORK_BACKGROUND_PAINT" default="#ffffff"/>
+            <visualProperty name="NETWORK_CENTER_Z_LOCATION" default="0.0"/>
+            <visualProperty name="NETWORK_CENTER_Y_LOCATION" default="0.0"/>
+            <visualProperty name="NETWORK_SCALE_FACTOR" default="1.0"/>
+            <visualProperty name="NETWORK_CENTER_X_LOCATION" default="0.0"/>
+            <visualProperty name="NETWORK_NODE_SELECTION" default="true"/>
+            <visualProperty name="NETWORK_DEPTH" default="0.0"/>
+            <visualProperty name="NETWORK_WIDTH" default="550.0"/>
+            <visualProperty name="NETWORK_EDGE_SELECTION" default="true"/>
+            <visualProperty name="NETWORK_HEIGHT" default="400.0"/>
+            <visualProperty name="NETWORK_TITLE" default=""/>
+        </network>
+        <node>
+            <dependency name="nodeCustomGraphicsSizeSync" value="true"/>
+            <dependency name="nodeSizeLocked" value="true"/>
+            <visualProperty name="NODE_LABEL_FONT_FACE" default="Dialog,plain,12"/>
+            <visualProperty name="NODE_SHAPE" default="RECTANGLE"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_3" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_BORDER_PAINT" default="#ffffff"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_6" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_4" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_3" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_6" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_8" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_X_LOCATION" default="0.0"/>
+            <visualProperty name="NODE_Z_LOCATION" default="0.0"/>
+            <visualProperty name="NODE_LABEL_WIDTH" default="100.0"/>
+            <visualProperty name="NODE_SELECTED_PAINT" default="#ffff00"/>
+            <visualProperty name="NODE_BORDER_STROKE" default="SOLID"/>
+            <visualProperty name="NODE_TOOLTIP" default=""/>
+            <visualProperty name="NODE_BORDER_TRANSPARENCY" default="0"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_1" default="50.0"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_2" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_8" default="50.0"/>
+            <visualProperty name="NODE_SIZE" default="25.0"/>
+            <visualProperty name="NODE_VISIBLE" default="true"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_4" default="50.0"/>
+            <visualProperty name="NODE_SELECTED" default="false"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_4" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_5" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_3" default="50.0"/>
+            <visualProperty name="NODE_Y_LOCATION" default="0.0"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_1" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_7" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_NESTED_NETWORK_IMAGE_VISIBLE" default="true"/>
+            <visualProperty name="NODE_LABEL_COLOR" default="#000000"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_9" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_LABEL_TRANSPARENCY" default="200"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_2" default="50.0"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_7" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_5" default="50.0"/>
+            <visualProperty name="NODE_LABEL_POSITION" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_WIDTH" default="70.0"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_5" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_8" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_6" default="50.0"/>
+            <visualProperty name="NODE_FILL_COLOR" default="#ffffff"/>
+            <visualProperty name="NODE_LABEL_FONT_SIZE" default="12">
+                <continuousMapping attributeType="float" attributeName="Degree">
+                    <continuousMappingPoint lesserValue="1" greaterValue="12" equalValue="12" attrValue="1.0"/>
+                    <continuousMappingPoint lesserValue="300" greaterValue="1" equalValue="300" attrValue="64.0"/>
+                </continuousMapping>
+            </visualProperty>
+            <visualProperty name="NODE_TRANSPARENCY" default="0"/>
+            <visualProperty name="NODE_HEIGHT" default="30.0"/>
+            <visualProperty name="NODE_BORDER_WIDTH" default="1.0"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_1" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_9" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_7" default="50.0"/>
+            <visualProperty name="NODE_LABEL" default="">
+                <passthroughMapping attributeType="string" attributeName="name"/>
+            </visualProperty>
+            <visualProperty name="NODE_DEPTH" default="0.0"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_2" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_9" default="50.0"/>
+        </node>
+        <edge>
+            <dependency name="arrowColorMatchesEdge" value="false"/>
+            <visualProperty name="EDGE_SOURCE_ARROW_SELECTED_PAINT" default="#ffff00"/>
+            <visualProperty name="EDGE_LINE_TYPE" default="SOLID"/>
+            <visualProperty name="EDGE_LABEL" default=""/>
+            <visualProperty name="EDGE_BEND"/>
+            <visualProperty name="EDGE_TARGET_ARROW_UNSELECTED_PAINT" default="#000000"/>
+            <visualProperty name="EDGE_LABEL_FONT_SIZE" default="10"/>
+            <visualProperty name="EDGE_LABEL_FONT_FACE" default="Dialog,plain,10"/>
+            <visualProperty name="EDGE_SELECTED" default="false"/>
+            <visualProperty name="EDGE_TOOLTIP" default=""/>
+            <visualProperty name="EDGE_LABEL_TRANSPARENCY" default="255"/>
+            <visualProperty name="EDGE_TARGET_ARROW_SELECTED_PAINT" default="#ffff00"/>
+            <visualProperty name="EDGE_SOURCE_ARROW_SHAPE" default="NONE"/>
+            <visualProperty name="EDGE_STROKE_UNSELECTED_PAINT" default="#000000"/>
+            <visualProperty name="EDGE_WIDTH" default="2.0"/>
+            <visualProperty name="EDGE_TRANSPARENCY" default="190"/>
+            <visualProperty name="EDGE_TARGET_ARROW_SHAPE" default="NONE"/>
+            <visualProperty name="EDGE_CURVED" default="true"/>
+            <visualProperty name="EDGE_VISIBLE" default="true"/>
+            <visualProperty name="EDGE_SOURCE_ARROW_UNSELECTED_PAINT" default="#000000"/>
+            <visualProperty name="EDGE_LABEL_COLOR" default="#000000"/>
+            <visualProperty name="EDGE_STROKE_SELECTED_PAINT" default="#ff0000"/>
+        </edge>
+    </visualStyle>
+    <visualStyle name="default">
+        <network>
+            <visualProperty name="NETWORK_BACKGROUND_PAINT" default="#ccccff"/>
+            <visualProperty name="NETWORK_CENTER_Z_LOCATION" default="0.0"/>
+            <visualProperty name="NETWORK_CENTER_Y_LOCATION" default="0.0"/>
+            <visualProperty name="NETWORK_SIZE" default="550.0"/>
+            <visualProperty name="NETWORK_SCALE_FACTOR" default="1.0"/>
+            <visualProperty name="NETWORK_CENTER_X_LOCATION" default="0.0"/>
+            <visualProperty name="NETWORK_NODE_SELECTION" default="true"/>
+            <visualProperty name="NETWORK_DEPTH" default="0.0"/>
+            <visualProperty name="NETWORK_WIDTH" default="550.0"/>
+            <visualProperty name="NETWORK_EDGE_SELECTION" default="true"/>
+            <visualProperty name="NETWORK_HEIGHT" default="400.0"/>
+            <visualProperty name="NETWORK_TITLE" default=""/>
+        </network>
+        <node>
+            <dependency name="nodeSizeLocked" value="true"/>
+            <dependency name="nodeCustomGraphicsSizeSync" value="true"/>
+            <visualProperty name="NODE_LABEL_FONT_FACE" default="SansSerif,bold,12"/>
+            <visualProperty name="NODE_SHAPE" default="ELLIPSE"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_3" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_BORDER_PAINT" default="#cccccc"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_6" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_4" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_3" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_6" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_8" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_X_LOCATION" default="0.0"/>
+            <visualProperty name="NODE_Z_LOCATION" default="0.0"/>
+            <visualProperty name="NODE_LABEL_WIDTH" default="100.0"/>
+            <visualProperty name="NODE_SELECTED_PAINT" default="#ffff00"/>
+            <visualProperty name="NODE_BORDER_STROKE" default="SOLID"/>
+            <visualProperty name="NODE_TOOLTIP" default=""/>
+            <visualProperty name="NODE_BORDER_TRANSPARENCY" default="255"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_1" default="50.0"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_2" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_8" default="50.0"/>
+            <visualProperty name="NODE_SIZE" default="40.0"/>
+            <visualProperty name="NODE_VISIBLE" default="true"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_4" default="50.0"/>
+            <visualProperty name="NODE_SELECTED" default="false"/>
+            <visualProperty name="NODE_CUSTOMPAINT_6" default="DefaultVisualizableVisualProperty(id=NODE_CUSTOMPAINT_6, name=Node Custom Paint 6)"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_4" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_5" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_3" default="50.0"/>
+            <visualProperty name="NODE_Y_LOCATION" default="0.0"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_1" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_CUSTOMPAINT_5" default="DefaultVisualizableVisualProperty(id=NODE_CUSTOMPAINT_5, name=Node Custom Paint 5)"/>
+            <visualProperty name="NODE_CUSTOMPAINT_1" default="DefaultVisualizableVisualProperty(id=NODE_CUSTOMPAINT_1, name=Node Custom Paint 1)"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_7" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_PAINT" default="#1e90ff"/>
+            <visualProperty name="NODE_NESTED_NETWORK_IMAGE_VISIBLE" default="true"/>
+            <visualProperty name="NODE_LABEL_COLOR" default="#000000"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_9" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_LABEL_TRANSPARENCY" default="255"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_2" default="50.0"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_7" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMPAINT_9" default="DefaultVisualizableVisualProperty(id=NODE_CUSTOMPAINT_9, name=Node Custom Paint 9)"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_5" default="50.0"/>
+            <visualProperty name="NODE_LABEL_POSITION" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_CUSTOMPAINT_3" default="DefaultVisualizableVisualProperty(id=NODE_CUSTOMPAINT_3, name=Node Custom Paint 3)"/>
+            <visualProperty name="NODE_WIDTH" default="70.0"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_5" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMPAINT_4" default="DefaultVisualizableVisualProperty(id=NODE_CUSTOMPAINT_4, name=Node Custom Paint 4)"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_8" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMPAINT_8" default="DefaultVisualizableVisualProperty(id=NODE_CUSTOMPAINT_8, name=Node Custom Paint 8)"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_6" default="50.0"/>
+            <visualProperty name="NODE_FILL_COLOR" default="#cccccc"/>
+            <visualProperty name="NODE_LABEL_FONT_SIZE" default="12"/>
+            <visualProperty name="NODE_TRANSPARENCY" default="255"/>
+            <visualProperty name="NODE_HEIGHT" default="30.0"/>
+            <visualProperty name="NODE_BORDER_WIDTH" default="0.0"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_1" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMPAINT_7" default="DefaultVisualizableVisualProperty(id=NODE_CUSTOMPAINT_7, name=Node Custom Paint 7)"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_9" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_7" default="50.0"/>
+            <visualProperty name="NODE_LABEL" default="">
+                <passthroughMapping attributeType="string" attributeName="name"/>
+            </visualProperty>
+            <visualProperty name="NODE_DEPTH" default="0.0"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_2" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_9" default="50.0"/>
+            <visualProperty name="NODE_CUSTOMPAINT_2" default="DefaultVisualizableVisualProperty(id=NODE_CUSTOMPAINT_2, name=Node Custom Paint 2)"/>
+        </node>
+        <edge>
+            <dependency name="arrowColorMatchesEdge" value="false"/>
+            <visualProperty name="EDGE_SOURCE_ARROW_SELECTED_PAINT" default="#ffff00"/>
+            <visualProperty name="EDGE_LINE_TYPE" default="SOLID"/>
+            <visualProperty name="EDGE_LABEL" default="">
+                <passthroughMapping attributeType="string" attributeName="interaction"/>
+            </visualProperty>
+            <visualProperty name="EDGE_UNSELECTED_PAINT" default="#404040"/>
+            <visualProperty name="EDGE_BEND" default=""/>
+            <visualProperty name="EDGE_TARGET_ARROW_UNSELECTED_PAINT" default="#000000"/>
+            <visualProperty name="EDGE_LABEL_FONT_SIZE" default="10"/>
+            <visualProperty name="EDGE_LABEL_FONT_FACE" default="Dialog,plain,10"/>
+            <visualProperty name="EDGE_SELECTED" default="false"/>
+            <visualProperty name="EDGE_TOOLTIP" default=""/>
+            <visualProperty name="EDGE_LABEL_TRANSPARENCY" default="255"/>
+            <visualProperty name="EDGE_TARGET_ARROW_SELECTED_PAINT" default="#ffff00"/>
+            <visualProperty name="EDGE_SOURCE_ARROW_SHAPE" default="NONE"/>
+            <visualProperty name="EDGE_STROKE_UNSELECTED_PAINT" default="#000000"/>
+            <visualProperty name="EDGE_PAINT" default="#323232"/>
+            <visualProperty name="EDGE_WIDTH" default="1.5"/>
+            <visualProperty name="EDGE_SELECTED_PAINT" default="#ff0000"/>
+            <visualProperty name="EDGE_TRANSPARENCY" default="255"/>
+            <visualProperty name="EDGE_TARGET_ARROW_SHAPE" default="NONE"/>
+            <visualProperty name="EDGE_CURVED" default="true"/>
+            <visualProperty name="EDGE_VISIBLE" default="true"/>
+            <visualProperty name="EDGE_SOURCE_ARROW_UNSELECTED_PAINT" default="#000000"/>
+            <visualProperty name="EDGE_LABEL_COLOR" default="#000000"/>
+            <visualProperty name="EDGE_STROKE_SELECTED_PAINT" default="#ff0000"/>
+        </edge>
+    </visualStyle>
+    <visualStyle name="Metro">
+        <network>
+            <visualProperty name="NETWORK_BACKGROUND_PAINT" default="#ffffff"/>
+            <visualProperty name="NETWORK_CENTER_Z_LOCATION" default="0.0"/>
+            <visualProperty name="NETWORK_CENTER_Y_LOCATION" default="0.0"/>
+            <visualProperty name="NETWORK_SCALE_FACTOR" default="1.0"/>
+            <visualProperty name="NETWORK_CENTER_X_LOCATION" default="0.0"/>
+            <visualProperty name="NETWORK_NODE_SELECTION" default="true"/>
+            <visualProperty name="NETWORK_DEPTH" default="0.0"/>
+            <visualProperty name="NETWORK_WIDTH" default="550.0"/>
+            <visualProperty name="NETWORK_EDGE_SELECTION" default="true"/>
+            <visualProperty name="NETWORK_HEIGHT" default="400.0"/>
+            <visualProperty name="NETWORK_TITLE" default=""/>
+        </network>
+        <node>
+            <dependency name="nodeSizeLocked" value="false"/>
+            <dependency name="nodeCustomGraphicsSizeSync" value="true"/>
+            <visualProperty name="NODE_LABEL_FONT_FACE" default="SansSerif,bold,12"/>
+            <visualProperty name="NODE_SHAPE" default="RECTANGLE"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_3" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_BORDER_PAINT" default="#0000ff"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_6" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_4" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_3" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_6" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_8" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_X_LOCATION" default="0.0"/>
+            <visualProperty name="NODE_Z_LOCATION" default="0.0"/>
+            <visualProperty name="NODE_LABEL_WIDTH" default="100.0"/>
+            <visualProperty name="NODE_SELECTED_PAINT" default="#ffff00"/>
+            <visualProperty name="NODE_BORDER_STROKE" default="SOLID"/>
+            <visualProperty name="NODE_TOOLTIP" default=""/>
+            <visualProperty name="NODE_BORDER_TRANSPARENCY" default="150"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_1" default="50.0"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_2" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_8" default="50.0"/>
+            <visualProperty name="NODE_SIZE" default="35.0"/>
+            <visualProperty name="NODE_VISIBLE" default="true"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_4" default="50.0"/>
+            <visualProperty name="NODE_SELECTED" default="false"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_4" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_5" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_3" default="50.0"/>
+            <visualProperty name="NODE_Y_LOCATION" default="0.0"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_1" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_7" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_NESTED_NETWORK_IMAGE_VISIBLE" default="true"/>
+            <visualProperty name="NODE_LABEL_COLOR" default="#000000"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_9" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_LABEL_TRANSPARENCY" default="255"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_2" default="50.0"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_7" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_5" default="50.0"/>
+            <visualProperty name="NODE_LABEL_POSITION" default="E,NW,c,6.00,0.00"/>
+            <visualProperty name="NODE_WIDTH" default="80.0"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_5" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_8" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_6" default="50.0"/>
+            <visualProperty name="NODE_FILL_COLOR" default="#ffffff"/>
+            <visualProperty name="NODE_LABEL_FONT_SIZE" default="25"/>
+            <visualProperty name="NODE_TRANSPARENCY" default="0"/>
+            <visualProperty name="NODE_HEIGHT" default="55.0"/>
+            <visualProperty name="NODE_BORDER_WIDTH" default="11.0"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_1" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_9" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_7" default="50.0"/>
+            <visualProperty name="NODE_LABEL" default="">
+                <passthroughMapping attributeType="string" attributeName="name"/>
+            </visualProperty>
+            <visualProperty name="NODE_DEPTH" default="0.0"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_2" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_9" default="50.0"/>
+        </node>
+        <edge>
+            <dependency name="arrowColorMatchesEdge" value="false"/>
+            <visualProperty name="EDGE_SOURCE_ARROW_SELECTED_PAINT" default="#ffff00"/>
+            <visualProperty name="EDGE_LINE_TYPE" default="SOLID"/>
+            <visualProperty name="EDGE_LABEL" default=""/>
+            <visualProperty name="EDGE_BEND"/>
+            <visualProperty name="EDGE_TARGET_ARROW_UNSELECTED_PAINT" default="#000000"/>
+            <visualProperty name="EDGE_LABEL_FONT_SIZE" default="10"/>
+            <visualProperty name="EDGE_LABEL_FONT_FACE" default="Dialog,plain,10"/>
+            <visualProperty name="EDGE_SELECTED" default="false"/>
+            <visualProperty name="EDGE_TOOLTIP" default=""/>
+            <visualProperty name="EDGE_LABEL_TRANSPARENCY" default="255"/>
+            <visualProperty name="EDGE_TARGET_ARROW_SELECTED_PAINT" default="#ffff00"/>
+            <visualProperty name="EDGE_SOURCE_ARROW_SHAPE" default="NONE"/>
+            <visualProperty name="EDGE_STROKE_UNSELECTED_PAINT" default="#ccccff"/>
+            <visualProperty name="EDGE_WIDTH" default="35.0"/>
+            <visualProperty name="EDGE_TRANSPARENCY" default="255"/>
+            <visualProperty name="EDGE_TARGET_ARROW_SHAPE" default="NONE"/>
+            <visualProperty name="EDGE_CURVED" default="true"/>
+            <visualProperty name="EDGE_VISIBLE" default="true"/>
+            <visualProperty name="EDGE_SOURCE_ARROW_UNSELECTED_PAINT" default="#000000"/>
+            <visualProperty name="EDGE_LABEL_COLOR" default="#000000"/>
+            <visualProperty name="EDGE_STROKE_SELECTED_PAINT" default="#ff0000"/>
+        </edge>
+    </visualStyle>
+    <visualStyle name="Tube">
+        <network>
+            <visualProperty name="NETWORK_BACKGROUND_PAINT" default="#ffffff"/>
+            <visualProperty name="NETWORK_CENTER_Z_LOCATION" default="0.0"/>
+            <visualProperty name="NETWORK_CENTER_Y_LOCATION" default="0.0"/>
+            <visualProperty name="NETWORK_SCALE_FACTOR" default="1.0"/>
+            <visualProperty name="NETWORK_CENTER_X_LOCATION" default="0.0"/>
+            <visualProperty name="NETWORK_NODE_SELECTION" default="true"/>
+            <visualProperty name="NETWORK_DEPTH" default="0.0"/>
+            <visualProperty name="NETWORK_WIDTH" default="550.0"/>
+            <visualProperty name="NETWORK_EDGE_SELECTION" default="true"/>
+            <visualProperty name="NETWORK_HEIGHT" default="400.0"/>
+            <visualProperty name="NETWORK_TITLE" default=""/>
+        </network>
+        <node>
+            <dependency name="nodeCustomGraphicsSizeSync" value="true"/>
+            <dependency name="nodeSizeLocked" value="true"/>
+            <visualProperty name="NODE_LABEL_FONT_FACE" default="Monospaced,bold,12"/>
+            <visualProperty name="NODE_SHAPE" default="RECTANGLE"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_3" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_BORDER_PAINT" default="#000000"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_6" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_4" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_3" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_6" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_8" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_X_LOCATION" default="0.0"/>
+            <visualProperty name="NODE_Z_LOCATION" default="0.0"/>
+            <visualProperty name="NODE_LABEL_WIDTH" default="100.0"/>
+            <visualProperty name="NODE_SELECTED_PAINT" default="#ffff00"/>
+            <visualProperty name="NODE_BORDER_STROKE" default="SOLID"/>
+            <visualProperty name="NODE_TOOLTIP" default=""/>
+            <visualProperty name="NODE_BORDER_TRANSPARENCY" default="255"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_1" default="50.0"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_2" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_8" default="50.0"/>
+            <visualProperty name="NODE_SIZE" default="20.0"/>
+            <visualProperty name="NODE_VISIBLE" default="true"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_4" default="50.0"/>
+            <visualProperty name="NODE_SELECTED" default="false"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_4" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_5" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_3" default="50.0"/>
+            <visualProperty name="NODE_Y_LOCATION" default="0.0"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_1" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_7" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_NESTED_NETWORK_IMAGE_VISIBLE" default="true"/>
+            <visualProperty name="NODE_LABEL_COLOR" default="#ccccff"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_POSITION_9" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_LABEL_TRANSPARENCY" default="255"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_2" default="50.0"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_7" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_5" default="50.0"/>
+            <visualProperty name="NODE_LABEL_POSITION" default="C,C,c,0.00,0.00"/>
+            <visualProperty name="NODE_WIDTH" default="70.0"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_5" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_8" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_6" default="50.0"/>
+            <visualProperty name="NODE_FILL_COLOR" default="#000000"/>
+            <visualProperty name="NODE_LABEL_FONT_SIZE" default="12"/>
+            <visualProperty name="NODE_TRANSPARENCY" default="0"/>
+            <visualProperty name="NODE_HEIGHT" default="30.0"/>
+            <visualProperty name="NODE_BORDER_WIDTH" default="0.0"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_1" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_9" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_7" default="50.0"/>
+            <visualProperty name="NODE_LABEL" default="">
+                <passthroughMapping attributeType="string" attributeName="name"/>
+            </visualProperty>
+            <visualProperty name="NODE_DEPTH" default="0.0"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_2" default="org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],"/>
+            <visualProperty name="NODE_CUSTOMGRAPHICS_SIZE_9" default="50.0"/>
+        </node>
+        <edge>
+            <dependency name="arrowColorMatchesEdge" value="false"/>
+            <visualProperty name="EDGE_SOURCE_ARROW_SELECTED_PAINT" default="#ffff00"/>
+            <visualProperty name="EDGE_LINE_TYPE" default="SOLID"/>
+            <visualProperty name="EDGE_LABEL" default=""/>
+            <visualProperty name="EDGE_BEND"/>
+            <visualProperty name="EDGE_TARGET_ARROW_UNSELECTED_PAINT" default="#000000"/>
+            <visualProperty name="EDGE_LABEL_FONT_SIZE" default="10"/>
+            <visualProperty name="EDGE_LABEL_FONT_FACE" default="Dialog,plain,10"/>
+            <visualProperty name="EDGE_SELECTED" default="false"/>
+            <visualProperty name="EDGE_TOOLTIP" default=""/>
+            <visualProperty name="EDGE_LABEL_TRANSPARENCY" default="255"/>
+            <visualProperty name="EDGE_TARGET_ARROW_SELECTED_PAINT" default="#ffff00"/>
+            <visualProperty name="EDGE_SOURCE_ARROW_SHAPE" default="NONE"/>
+            <visualProperty name="EDGE_STROKE_UNSELECTED_PAINT" default="#000000"/>
+            <visualProperty name="EDGE_WIDTH" default="70.0"/>
+            <visualProperty name="EDGE_TRANSPARENCY" default="190"/>
+            <visualProperty name="EDGE_TARGET_ARROW_SHAPE" default="NONE"/>
+            <visualProperty name="EDGE_CURVED" default="true"/>
+            <visualProperty name="EDGE_VISIBLE" default="true"/>
+            <visualProperty name="EDGE_SOURCE_ARROW_UNSELECTED_PAINT" default="#000000"/>
+            <visualProperty name="EDGE_LABEL_COLOR" default="#000000"/>
+            <visualProperty name="EDGE_STROKE_SELECTED_PAINT" default="#ff0000"/>
+        </edge>
+    </visualStyle>
+</vizmap>
