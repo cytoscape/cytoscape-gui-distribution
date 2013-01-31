@@ -25,6 +25,7 @@
             <excludes>
                 <exclude>**/demos/**</exclude>
                 <exclude>bin/**</exclude>
+                <exclude>deploy/**</exclude>
                 <exclude>etc/custom.properties</exclude>
                 <exclude>etc/system.properties</exclude>
                 <exclude>etc/users.properties</exclude>
