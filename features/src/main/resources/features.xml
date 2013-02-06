@@ -87,73 +87,73 @@
     <bundle start-level="110">mvn:org.cytoscape/service-api/${cytoscape.api.version}</bundle>
     
     <bundle start-level="115">mvn:org.cytoscape.distribution/cmdline-impl/${project.version}</bundle>
-    <bundle start-level="115">mvn:org.cytoscape/property-impl/${cytoscape.impl.version}</bundle>
+    <bundle start-level="115">mvn:org.cytoscape/property-impl/3.0.0</bundle>
     
-    <bundle start-level="120">mvn:org.cytoscape/datasource-impl/${cytoscape.impl.version}</bundle>
-    <bundle start-level="120">mvn:org.cytoscape/equations-impl/${cytoscape.impl.version}</bundle>
-    <bundle start-level="120">mvn:org.cytoscape/event-impl/${cytoscape.impl.version}</bundle>
-    <bundle start-level="120">mvn:org.cytoscape/swing-util-impl/${cytoscape.impl.version}</bundle>
+    <bundle start-level="120">mvn:org.cytoscape/datasource-impl/3.0.0</bundle>
+    <bundle start-level="120">mvn:org.cytoscape/equations-impl/3.0.0</bundle>
+    <bundle start-level="120">mvn:org.cytoscape/event-impl/3.0.0</bundle>
+    <bundle start-level="120">mvn:org.cytoscape/swing-util-impl/3.0.0</bundle>
     
-    <bundle start-level="125">mvn:org.cytoscape/model-impl/${cytoscape.impl.version}</bundle>
-    <bundle start-level="125">mvn:org.cytoscape/group-impl/${cytoscape.impl.version}</bundle>
-    <bundle start-level="125">mvn:org.cytoscape/work-impl/${cytoscape.impl.version}</bundle>
-    <bundle start-level="125">mvn:org.cytoscape/work-swing-impl/${cytoscape.impl.version}</bundle>
-    <bundle start-level="125">mvn:org.cytoscape/work-impl/${cytoscape.impl.version}</bundle>
-    <bundle start-level="125">mvn:org.cytoscape/presentation-impl/${cytoscape.impl.version}</bundle>
+    <bundle start-level="125">mvn:org.cytoscape/model-impl/3.0.0</bundle>
+    <bundle start-level="125">mvn:org.cytoscape/group-impl/3.0.0</bundle>
+    <bundle start-level="125">mvn:org.cytoscape/work-impl/3.0.0</bundle>
+    <bundle start-level="125">mvn:org.cytoscape/work-swing-impl/3.0.0</bundle>
+    <bundle start-level="125">mvn:org.cytoscape/work-impl/3.0.0</bundle>
+    <bundle start-level="125">mvn:org.cytoscape/presentation-impl/3.0.0</bundle>
     
-    <bundle start-level="130">mvn:org.cytoscape/layout-impl/${cytoscape.impl.version}</bundle>
-    <bundle start-level="130">mvn:org.cytoscape/viewmodel-impl/${cytoscape.impl.version}</bundle>
-    <bundle start-level="130">mvn:org.cytoscape/vizmap-impl/${cytoscape.impl.version}</bundle>
+    <bundle start-level="130">mvn:org.cytoscape/layout-impl/3.0.0</bundle>
+    <bundle start-level="130">mvn:org.cytoscape/viewmodel-impl/3.0.0</bundle>
+    <bundle start-level="130">mvn:org.cytoscape/vizmap-impl/3.0.0</bundle>
     
-    <bundle start-level="135">mvn:org.cytoscape/application-impl/${cytoscape.impl.version}</bundle>
+    <bundle start-level="135">mvn:org.cytoscape/application-impl/3.0.0</bundle>
     
-    <bundle start-level="140">mvn:org.cytoscape/datasource-biogrid-impl/${cytoscape.impl.version}</bundle>
-    <bundle start-level="140">mvn:org.cytoscape/session-impl/${cytoscape.impl.version}</bundle>
-    <bundle start-level="140">mvn:org.cytoscape/vizmap-gui-core-impl/${cytoscape.impl.version}</bundle>
+    <bundle start-level="140">mvn:org.cytoscape/datasource-biogrid-impl/3.0.0</bundle>
+    <bundle start-level="140">mvn:org.cytoscape/session-impl/3.0.0</bundle>
+    <bundle start-level="140">mvn:org.cytoscape/vizmap-gui-core-impl/3.0.0</bundle>
     
-    <bundle start-level="145">mvn:org.cytoscape/ding-presentation-impl/${cytoscape.impl.version}</bundle>
+    <bundle start-level="145">mvn:org.cytoscape/ding-presentation-impl/3.0.0</bundle>
     
-    <bundle start-level="150">mvn:org.cytoscape/io-impl/${cytoscape.impl.version}</bundle>
+    <bundle start-level="150">mvn:org.cytoscape/io-impl/3.0.0</bundle>
     
-    <bundle start-level="155">mvn:org.cytoscape/core-task-impl/${cytoscape.impl.version}</bundle>
-    <bundle start-level="157">mvn:org.cytoscape/command-executor-impl/${cytoscape.impl.version}</bundle>
+    <bundle start-level="155">mvn:org.cytoscape/core-task-impl/3.0.0</bundle>
+    <bundle start-level="157">mvn:org.cytoscape/command-executor-impl/3.0.0</bundle>
     
-    <bundle start-level="160">mvn:org.cytoscape/swing-application-impl/${cytoscape.impl.version}</bundle>
-    <bundle start-level="160">mvn:org.cytoscape/group-data-impl/${cytoscape.impl.version}</bundle> 
-    <bundle start-level="160">mvn:org.cytoscape/group-view-impl/${cytoscape.impl.version}</bundle>
+    <bundle start-level="160">mvn:org.cytoscape/swing-application-impl/3.0.0</bundle>
+    <bundle start-level="160">mvn:org.cytoscape/group-data-impl/3.0.0</bundle> 
+    <bundle start-level="160">mvn:org.cytoscape/group-view-impl/3.0.0</bundle>
     
-    <bundle start-level="165">mvn:org.cytoscape/biopax-impl/${cytoscape.impl.version}</bundle>
+    <bundle start-level="165">mvn:org.cytoscape/biopax-impl/3.0.0</bundle>
     
-    <bundle start-level="170">mvn:org.cytoscape/search-impl/${cytoscape.impl.version}</bundle>
-    <bundle start-level="170">mvn:org.cytoscape/table-browser-impl/${cytoscape.impl.version}</bundle>
-    <bundle start-level="170">mvn:org.cytoscape/vizmap-gui-impl/${cytoscape.impl.version}</bundle>
-    <bundle start-level="170">mvn:org.cytoscape/log-swing-impl/${cytoscape.impl.version}</bundle>
-    <bundle start-level="170">mvn:org.cytoscape/manual-layout-impl/${cytoscape.impl.version}</bundle>
-    <bundle start-level="170">mvn:org.cytoscape/layout-cytoscape-impl/${cytoscape.impl.version}</bundle>
-    <bundle start-level="170">mvn:org.cytoscape/webservice-impl/${cytoscape.impl.version}</bundle>
-    <bundle start-level="170">mvn:org.cytoscape/editor-impl/${cytoscape.impl.version}</bundle>
-    <bundle start-level="170">mvn:org.cytoscape/layout-prefuse-impl/${cytoscape.impl.version}</bundle>
+    <bundle start-level="170">mvn:org.cytoscape/search-impl/3.0.0</bundle>
+    <bundle start-level="170">mvn:org.cytoscape/table-browser-impl/3.0.0</bundle>
+    <bundle start-level="170">mvn:org.cytoscape/vizmap-gui-impl/3.0.0</bundle>
+    <bundle start-level="170">mvn:org.cytoscape/log-swing-impl/3.0.0</bundle>
+    <bundle start-level="170">mvn:org.cytoscape/manual-layout-impl/3.0.0</bundle>
+    <bundle start-level="170">mvn:org.cytoscape/layout-cytoscape-impl/3.0.0</bundle>
+    <bundle start-level="170">mvn:org.cytoscape/webservice-impl/3.0.0</bundle>
+    <bundle start-level="170">mvn:org.cytoscape/editor-impl/3.0.0</bundle>
+    <bundle start-level="170">mvn:org.cytoscape/layout-prefuse-impl/3.0.0</bundle>
     <bundle start-level="170">mvn:cytoscape-temp/y-layouts/3.0.4</bundle>
-    <bundle start-level="170">mvn:org.cytoscape/linkout-impl/${cytoscape.impl.version}</bundle>
-    <bundle start-level="170">mvn:org.cytoscape/psi-mi-impl/${cytoscape.impl.version}</bundle>
-    <bundle start-level="170">mvn:org.cytoscape/network-analyzer-impl/${cytoscape.impl.version}</bundle>
-    <bundle start-level="170">mvn:org.cytoscape/table-import-impl/${cytoscape.impl.version}</bundle>
-    <bundle start-level="170">mvn:org.cytoscape/webservice-psicquic-client-impl/${cytoscape.impl.version}</bundle>
-    <bundle start-level="170">mvn:org.cytoscape/webservice-biomart-client-impl/${cytoscape.impl.version}</bundle>
-    <bundle start-level="170">mvn:org.cytoscape/filter-impl/${cytoscape.impl.version}</bundle>
-    <bundle start-level="170">mvn:org.cytoscape/sbml-impl/${cytoscape.impl.version}</bundle>
-    <bundle start-level="170">mvn:org.cytoscape/cpath2-impl/${cytoscape.impl.version}</bundle>
-    <bundle start-level="170">mvn:org.cytoscape/network-merge-impl/${cytoscape.impl.version}</bundle>
-    <bundle start-level="170">mvn:org.cytoscape/graphml-impl/${cytoscape.impl.version}</bundle>
-    <bundle start-level="170">mvn:org.cytoscape/edge-bundler-impl/${cytoscape.impl.version}</bundle>
+    <bundle start-level="170">mvn:org.cytoscape/linkout-impl/3.0.0</bundle>
+    <bundle start-level="170">mvn:org.cytoscape/psi-mi-impl/3.0.0</bundle>
+    <bundle start-level="170">mvn:org.cytoscape/network-analyzer-impl/3.0.0</bundle>
+    <bundle start-level="170">mvn:org.cytoscape/table-import-impl/3.0.0</bundle>
+    <bundle start-level="170">mvn:org.cytoscape/webservice-psicquic-client-impl/3.0.0</bundle>
+    <bundle start-level="170">mvn:org.cytoscape/webservice-biomart-client-impl/3.0.0</bundle>
+    <bundle start-level="170">mvn:org.cytoscape/filter-impl/3.0.0</bundle>
+    <bundle start-level="170">mvn:org.cytoscape/sbml-impl/3.0.0</bundle>
+    <bundle start-level="170">mvn:org.cytoscape/cpath2-impl/3.0.0</bundle>
+    <bundle start-level="170">mvn:org.cytoscape/network-merge-impl/3.0.0</bundle>
+    <bundle start-level="170">mvn:org.cytoscape/graphml-impl/3.0.0</bundle>
+    <bundle start-level="170">mvn:org.cytoscape/edge-bundler-impl/3.0.0</bundle>
     
-    <bundle start-level="175">mvn:org.cytoscape/app-impl/${cytoscape.impl.version}</bundle>
+    <bundle start-level="175">mvn:org.cytoscape/app-impl/3.0.0</bundle>
     
-    <bundle start-level="180">mvn:org.cytoscape/scripting-impl/${cytoscape.impl.version}</bundle>
+    <bundle start-level="180">mvn:org.cytoscape/scripting-impl/3.0.0</bundle>
 
-    <bundle start-level="185">mvn:org.cytoscape/gui-cmdline-parser-impl/${cytoscape.impl.version}</bundle>
+    <bundle start-level="185">mvn:org.cytoscape/gui-cmdline-parser-impl/3.0.0</bundle>
     
-    <bundle start-level="190">mvn:org.cytoscape/welcome-impl/${cytoscape.impl.version}</bundle>
+    <bundle start-level="190">mvn:org.cytoscape/welcome-impl/3.0.0</bundle>
 	
   </feature>
 </features>

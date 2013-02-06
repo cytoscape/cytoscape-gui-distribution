@@ -11,7 +11,7 @@
 	
 	<groupId>org.cytoscape.distribution</groupId>
 	<artifactId>parent</artifactId>
-	<version>3.0.0</version>
+	<version>3.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	
 	<name>Cytoscape Desktop Application Distribution</name>
@@ -19,7 +19,6 @@
 	<properties>
 		<cytoscape.api.version>3.0.0</cytoscape.api.version>
 		<cytoscape.support.version>3.0.0</cytoscape.support.version>
-		<cytoscape.impl.version>3.0.0</cytoscape.impl.version>
 	</properties>
 
 	<build>
@@ -96,9 +95,9 @@
 	</profiles>
 
 	<scm>
-		<connection>scm:svn:http://chianti.ucsd.edu/svn/core3/gui-distribution/branches/3.0.0-release</connection>
-		<developerConnection>scm:svn:svn+ssh://grenache.ucsd.edu/cellar/common/svn/core3/gui-distribution/branches/3.0.0-release</developerConnection>
-		<url>http://chianti.ucsd.edu/svn/core3/gui-distribution/branches/3.0.0-release</url>
+		<connection>scm:git:git://github.com/cytoscape/cytoscape-gui-distribution.git</connection>
+		<developerConnection>scm:git:git@github.com:cytoscape/cytoscape-gui-distribution.git</developerConnection>
+		<url>https://github.com/cytoscape/cytoscape-gui-distribution.git</url>
 	</scm>
 
 </project>

@@ -4,12 +4,12 @@
 	<parent>
 		<groupId>org.cytoscape.distribution</groupId>
 		<artifactId>parent</artifactId>
-		<version>3.0.0</version>
+		<version>3.0.1-SNAPSHOT</version>
 		<relativePath>..</relativePath>
 	</parent>
 
 	<artifactId>features</artifactId>
-  <version>3.0.0</version>
+  <version>3.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Cytoscape Feature Repository</name>
 
@@ -62,10 +62,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
-  <scm>
-    <connection>scm:svn:http://chianti.ucsd.edu/svn/core3/gui-distribution/branches/3.0.0-release/features</connection>
-    <developerConnection>scm:svn:svn+ssh://grenache.ucsd.edu/cellar/common/svn/core3/gui-distribution/branches/3.0.0-release/features</developerConnection>
-    <url>http://chianti.ucsd.edu/svn/core3/gui-distribution/branches/3.0.0-release/features</url>
-  </scm>
 </project>
