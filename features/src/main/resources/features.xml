@@ -147,7 +147,7 @@
     <bundle start-level="170">mvn:org.cytoscape/graphml-impl/3.0.0</bundle>
     <bundle start-level="170">mvn:org.cytoscape/edge-bundler-impl/3.0.0</bundle>
     
-    <bundle start-level="175">mvn:org.cytoscape/app-impl/3.0.0</bundle>
+    <bundle start-level="175">mvn:org.cytoscape/app-impl/3.0.1-SNAPSHOT</bundle>
     
     <bundle start-level="180">mvn:org.cytoscape/scripting-impl/3.0.0</bundle>
 
