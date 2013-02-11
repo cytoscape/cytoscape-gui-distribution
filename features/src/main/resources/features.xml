@@ -126,7 +126,7 @@
     
     <bundle start-level="170">mvn:org.cytoscape/search-impl/3.0.0</bundle>
     <bundle start-level="170">mvn:org.cytoscape/table-browser-impl/3.0.0</bundle>
-    <bundle start-level="170">mvn:org.cytoscape/vizmap-gui-impl/3.0.0</bundle>
+    <bundle start-level="170">mvn:org.cytoscape/vizmap-gui-impl/3.0.1-SNAPSHOT</bundle>
     <bundle start-level="170">mvn:org.cytoscape/log-swing-impl/3.0.0</bundle>
     <bundle start-level="170">mvn:org.cytoscape/manual-layout-impl/3.0.0</bundle>
     <bundle start-level="170">mvn:org.cytoscape/layout-cytoscape-impl/3.0.0</bundle>
