@@ -94,7 +94,7 @@
     <bundle start-level="120">mvn:org.cytoscape/event-impl/3.0.0</bundle>
     <bundle start-level="120">mvn:org.cytoscape/swing-util-impl/3.0.0</bundle>
     
-    <bundle start-level="125">mvn:org.cytoscape/model-impl/3.0.0</bundle>
+    <bundle start-level="125">mvn:org.cytoscape/model-impl/3.0.1-SNAPSHOT</bundle>
     <bundle start-level="125">mvn:org.cytoscape/group-impl/3.0.0</bundle>
     <bundle start-level="125">mvn:org.cytoscape/work-impl/3.0.0</bundle>
     <bundle start-level="125">mvn:org.cytoscape/work-swing-impl/3.0.0</bundle>
