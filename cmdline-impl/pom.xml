@@ -66,9 +66,4 @@
 		</plugins>
 	</build>
 
-  <scm>
-    <connection>scm:svn:http://chianti.ucsd.edu/svn/core3/gui-distribution/branches/3.0.0-release/cmdline-impl</connection>
-    <developerConnection>scm:svn:svn+ssh://grenache.ucsd.edu/cellar/common/svn/core3/gui-distribution/branches/3.0.0-release/cmdline-impl</developerConnection>
-    <url>http://chianti.ucsd.edu/svn/core3/gui-distribution/branches/3.0.0-release/cmdline-impl</url>
-  </scm>
 </project>

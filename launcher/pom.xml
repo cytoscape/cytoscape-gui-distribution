@@ -52,9 +52,4 @@
 		</plugins>
 	</build>
 
-  <scm>
-    <connection>scm:svn:http://chianti.ucsd.edu/svn/core3/gui-distribution/branches/3.0.0-release/karaf-launcher</connection>
-    <developerConnection>scm:svn:svn+ssh://grenache.ucsd.edu/cellar/common/svn/core3/gui-distribution/branches/3.0.0-release/karaf-launcher</developerConnection>
-    <url>http://chianti.ucsd.edu/svn/core3/gui-distribution/branches/3.0.0-release/karaf-launcher</url>
-  </scm>
 </project>
