@@ -25,13 +25,13 @@ if [ ! -e "$vm_options_path/Cytoscape.vmoptions"  -a  -x "$script_path/gen_vmopt
     "$script_path/gen_vmoptions.sh"
 fi
 
-JAVA_MAX_MEM=-Xmx1550M
+export JAVA_OPTS=-Xmx1550M
 if [ -r $vm_options_path/Cytoscape.vmoptions ]; then
-		JAVA_MAX_MEM=`cat $vm_options_path/Cytoscape.vmoptions`
+		JAVA_OPTS=`cat $vm_options_path/Cytoscape.vmoptions`
 else # Just use sensible defaults.
     echo '*** Missing Cytoscape.vmoptions, falling back to using defaults!'
 		# Initialize MAX_MEM to something reasonable
-		JAVA_MAX_MEM=-Xmx1550M
+		JAVA_OPTS=-Xmx1550M
 fi
 
 # The Cytoscape home directory contains the "framework" directory
@@ -44,7 +44,7 @@ PWD=$(pwd)
 # working directory since KARAF changes it to the framework directory. There
 # might unforeseeable problems with this since the reason for KARAF setting the 
 # working directory to framework is not known.
-export KARAF_OPTS=-Xss10M\ $JAVA_MAX_MEM\ -Duser.dir="$PWD"\ -Dcytoscape.home="$CYTOSCAPE_HOME_ABS"\ -splash:CytoscapeSplashScreen.png\ "$CYTOSCAPE_MAC_OPTS"
+export KARAF_OPTS=-Xms128M\ -Dcom.sun.management.jmxremote\ -Duser.dir="$PWD"\ -Dcytoscape.home="$CYTOSCAPE_HOME_ABS"\ -splash:CytoscapeSplashScreen.png\ "$CYTOSCAPE_MAC_OPTS"
 
 export KARAF_DATA="${HOME}/CytoscapeConfiguration/3/karaf_data"
 mkdir -p "${KARAF_DATA}/tmp"
