@@ -12,23 +12,22 @@ CMD /C gen_vmoptions.bat
 IF EXIST "Cytoscape.vmoptions" GOTO itIsThere
 :: Run with defaults:
 echo "*** Missing Cytoscape.vmoptions, falling back to using defaults!"
-set JAVA_MAX_MEM=-Xmx800M
+set JAVA_OPTS=-Xmx1250M
 GOTO setDebugOpts
 
 :: We end up here if we have a Cytoscape.vmoptions file:
 :itIsThere
-:: Read max memory
 setLocal EnableDelayedExpansion
+set JAVA_OPTS=
 for /f "tokens=* delims= " %%a in (Cytoscape.vmoptions) do (
-set /a N+=1
-set opt!N!=%%a
+set JAVA_OPTS=!JAVA_OPTS! %%a
 )
-set JAVA_MAX_MEM=!opt1!
+set JAVA_OPTS=%JAVA_OPTS:~1%
 
 :setDebugOpts
 set JAVA_DEBUG_OPTS=-Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=%DEBUG_PORT%
 set PWD=%~dp0
-set KARAF_OPTS=-Xss10M %JAVA_MAX_MEM% -Dcytoscape.home="%PWD:\=\\%" -Duser.dir="%PWD:\=\\%" -splash:CytoscapeSplashScreen.png
+set KARAF_OPTS=-Xms128M -Dcom.sun.management.jmxremote -Dcytoscape.home="%PWD:\=\\%" -Duser.dir="%PWD:\=\\%" -splash:CytoscapeSplashScreen.png
 
 set KARAF_DATA=%USERPROFILE%\CytoscapeConfiguration\3\karaf_data
 if not exist "%KARAF_DATA%" (
@@ -59,10 +58,6 @@ goto :EOF
     )
     set JAVA=%JAVA_HOME%\bin\java
 :END
-
-rem Karaf uses JAVA_MAX_MEM, so strip off the -Xmx and leave memory size
-set JAVA_MAX_MEM=%JAVA_MAX_MEM:-Xmx=%
-
 
 :: This is probably wrong.  We don't really want the user to be in this directory, do we?
 framework/bin/karaf %1 %2 %3 %4 %5 %6 %7 %8
