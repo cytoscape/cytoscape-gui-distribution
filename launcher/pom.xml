@@ -13,7 +13,7 @@
 	<!-- Artifact id *must* start with "karaf-*" so startup scripts add this 
 		JAR to the boot classpath -->
 	<artifactId>karaf-launcher</artifactId>
-  <version>3.0.0</version>
+  	<version>3.0.1-SNAPSHOT</version>
 
 	<name>Cytoscape Launcher</name>
 
