@@ -25,6 +25,8 @@ package org.cytoscape.launcher.internal;
  */
 
 import java.io.File;
+import java.io.RandomAccessFile;
+import java.nio.channels.FileLock;
 
 import org.apache.karaf.main.Main;
 
@@ -37,9 +39,31 @@ public class Launcher {
 		startupArguments = args;
 		setDefaultSystemProperties();
 		createConfigurationDirectory();
+		if (isLocked()) {
+			System.err.println("Cannot start Cytoscape: Another instance of Cytoscape is already running.");
+			System.exit(1);
+		}
 		Main.main(args);
 	}
 	
+	private static boolean isLocked() throws Exception {
+		// Warning: This only works when Karaf is configured to use
+		// SimpleFileLock (default).
+		String lockPath = join(File.separator, System.getProperty("user.home"), "CytoscapeConfiguration", "3", "lock");
+
+        RandomAccessFile lockFile = new RandomAccessFile(new File(lockPath), "rw");
+        try {
+	        FileLock lock = lockFile.getChannel().tryLock();
+	    	if (lock != null) {
+	    		lock.release();
+	    		return false;
+	    	}
+	    	return true;
+        } finally {
+        	lockFile.close();
+        }
+	}
+
 	private static void setDefaultSystemProperties() {
 		String userHome = System.getProperty("user.home");
 		if (System.getProperty("karaf.data") == null) {
