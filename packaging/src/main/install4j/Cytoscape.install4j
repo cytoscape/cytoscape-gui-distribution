@@ -753,7 +753,7 @@ if(!System.getProperty("os.arch").contains("64")) { //not 64-bit
 	else
 		xmxValue = Math.min(xmxValue, 1550);
 }
-String xmxString = "-Xmx" + xmxValue  + "m";
+String xmxString = " -Xmx" + xmxValue  + "m";
 
 // You can set the -Xmx parameter to a variable
 context.setVariable("xmx", xmxString);
