@@ -72,6 +72,7 @@
 				<module>cmdline-impl</module>
 				<module>diagnostics</module>
 				<module>branding</module>
+				<module>application-metadata-impl</module>
 				<module>features</module>
 				<module>assembly</module>
 				<module>packaging</module>
@@ -88,6 +89,7 @@
 				<module>cmdline-impl</module>
 				<module>diagnostics</module>
 				<module>branding</module>
+				<module>application-metadata-impl</module>
 				<module>features</module>
 				<module>assembly</module>
 			</modules>

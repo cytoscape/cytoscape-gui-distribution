@@ -4,34 +4,29 @@
 	<parent>
 		<groupId>org.cytoscape.distribution</groupId>
 		<artifactId>parent</artifactId>
-		<version>3.0.1-SNAPSHOT</version>
+		<version>3.0.2-SNAPSHOT</version>
 		<relativePath>..</relativePath>
 	</parent>
 
 	<modelVersion>4.0.0</modelVersion>
+	<artifactId>application-metadata-impl</artifactId>
 
-	<!-- Artifact id *must* start with "karaf-*" so startup scripts add this 
-		JAR to the boot classpath -->
-	<artifactId>karaf-launcher</artifactId>
-
-	<name>Cytoscape Launcher</name>
+	<name>Cytoscape Application Implementation Metadata</name>
 
 	<properties>
-		<bundle.symbolicName>org.cytoscape.launcher</bundle.symbolicName>
-		<bundle.namespace>org.cytoscape.launcher</bundle.namespace>
+		<bundle.symbolicName>org.cytoscape.application-metadata-impl</bundle.symbolicName>
+		<bundle.namespace>org.cytoscape.application</bundle.namespace>
 	</properties>
 
-	<packaging>jar</packaging>
-
-	<dependencies>
-		<dependency>
-			<groupId>org.apache.karaf</groupId>
-			<artifactId>org.apache.karaf.main</artifactId>
-			<version>${karaf.version}</version>
-		</dependency>
-	</dependencies>
+	<packaging>bundle</packaging>
 
 	<build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.felix</groupId>
@@ -42,9 +37,7 @@
 					<instructions>
 						<Bundle-SymbolicName>${bundle.symbolicName}</Bundle-SymbolicName>
 						<Bundle-Version>${project.version}</Bundle-Version>
-						<Export-Package>!${bundle.namespace}.internal.*,${bundle.namespace}.*;version="${project.version}"</Export-Package>
-						<Private-Package>${bundle.namespace}.internal.*</Private-Package>
-						<_include>-osgi.bnd</_include>
+						<Fragment-Host>org.cytoscape.application-impl</Fragment-Host>
 					</instructions>
 				</configuration>
 			</plugin>
