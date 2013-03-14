@@ -104,6 +104,7 @@
     <bundle start-level="130">mvn:org.cytoscape/layout-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="130">mvn:org.cytoscape/viewmodel-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="130">mvn:org.cytoscape/vizmap-impl/${cytoscape.impl.version}</bundle>
+    <bundle start-level="135">mvn:org.cytoscape.distribution/application-metadata-impl/${project.version}</bundle>
     
     <bundle start-level="135">mvn:org.cytoscape/application-impl/${cytoscape.impl.version}</bundle>
     
