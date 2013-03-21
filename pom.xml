@@ -23,20 +23,6 @@
 	</properties>
 
 	<build>
-		<plugins>
-			<plugin>
-				<inherited>false</inherited>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-release-plugin</artifactId>
-				<version>${maven-release-plugin.version}</version>
-				<configuration>
-					<autoVersionSubmodules>true</autoVersionSubmodules>
-					<goals>deploy</goals>
-					<!-- so that impl bundles with modules will build correctly -->
-					<preparationGoals>clean install</preparationGoals>
-				</configuration>
-			</plugin>
-		</plugins>
 		<pluginManagement>
 			<plugins>
 				<plugin>
@@ -66,24 +52,12 @@
 	
 	<profiles>
 		<profile>
-			<id>release</id>
-			<modules>
-				<module>splash-launcher</module>
-				<module>launcher</module>
-				<module>cmdline-impl</module>
-				<module>diagnostics</module>
-				<module>branding</module>
-				<module>features</module>
-				<module>assembly</module>
-				<module>packaging</module>
-			</modules>
-		</profile>
-		<profile>
 			<id>all</id>
 			<activation>
 				<activeByDefault>true</activeByDefault>
 			</activation>
 			<modules>
+				<module>integration-test</module>
 				<module>splash-launcher</module>
 				<module>launcher</module>
 				<module>cmdline-impl</module>
