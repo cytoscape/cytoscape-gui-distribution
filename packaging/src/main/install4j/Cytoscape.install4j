@@ -802,7 +802,7 @@ return true;
                   <java class="java.beans.XMLDecoder">
                     <object class="com.install4j.runtime.beans.actions.desktop.CreateProgramGroupAction">
                       <void property="programGroupName">
-                        <string>${compiler:sys.fullName}</string>
+                        <string>${compiler:sys.fullName}_${compiler:sys.version}</string>
                       </void>
                     </object>
                   </java>
@@ -842,6 +842,30 @@ return true;
                       <void property="windowsIconFile">
                         <object class="com.install4j.api.beans.ExternalFile">
                           <string>${basedir}/src/main/images/cytoscape3-file-icon-trans-128x128.icns</string>
+                        </object>
+                      </void>
+                    </object>
+                  </java>
+                </serializedBean>
+                <condition />
+              </action>
+              <action name="" id="342" beanClass="com.install4j.runtime.beans.actions.xml.XsltAction" enabled="true" commentSet="false" comment="" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.actions.xml.XsltAction">
+                      <void property="file">
+                        <object class="java.io.File">
+                          <string>Cytoscape.app/Contents/Info.plist</string>
+                        </object>
+                      </void>
+                      <void property="sourceFile">
+                        <object class="java.io.File">
+                          <string>Cytoscape.app/Contents/Info.plist</string>
+                        </object>
+                      </void>
+                      <void property="xlstFile">
+                        <object class="com.install4j.api.beans.ExternalFile">
+                          <string>Info.plist.xsl</string>
                         </object>
                       </void>
                     </object>
@@ -926,6 +950,23 @@ return true;
             <preActivation />
             <postActivation />
             <actions>
+              <action name="" id="315" beanClass="com.install4j.runtime.beans.actions.files.DeleteFileAction" enabled="true" commentSet="false" comment="" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.actions.files.DeleteFileAction">
+                      <void property="file">
+                        <object class="java.io.File">
+                          <string>framework</string>
+                        </object>
+                      </void>
+                      <void property="recurse">
+                        <boolean>true</boolean>
+                      </void>
+                    </object>
+                  </java>
+                </serializedBean>
+                <condition />
+              </action>
               <action name="" id="20" beanClass="com.install4j.runtime.beans.actions.UninstallFilesAction" enabled="true" commentSet="false" comment="" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
                 <serializedBean>
                   <java class="java.beans.XMLDecoder">
