@@ -841,7 +841,7 @@ return true;
                       </void>
                       <void property="windowsIconFile">
                         <object class="com.install4j.api.beans.ExternalFile">
-                          <string>${basedir}/src/main/images/cytoscape3-icon-trans-16x16.png</string>
+                          <string>${basedir}/src/main/images/cytoscape3_logo.ico</string>
                         </object>
                       </void>
                     </object>
