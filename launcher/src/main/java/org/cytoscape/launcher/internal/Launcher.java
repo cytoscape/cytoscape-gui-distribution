@@ -27,16 +27,24 @@ package org.cytoscape.launcher.internal;
 import java.io.File;
 import java.io.RandomAccessFile;
 import java.nio.channels.FileLock;
-
+import com.apple.eawt.Application;
+import com.apple.eawt.OpenFilesHandler;
+import com.apple.eawt.AppEvent.OpenFilesEvent;
 import org.apache.karaf.main.Main;
 
 public class Launcher {
-	private static String[] startupArguments;
+	public static String[] startupArguments;
 	private static long startTime;
 
 	public static void main(String[] args) throws Exception {
 		startTime = System.currentTimeMillis();
 		startupArguments = args;
+		
+		// Intercept session file double-clicked on Mac OS, passed by file association set by install4j
+		if (isMac()) {
+		    MacHelper.handleStartupArguments();
+		}
+				
 		setDefaultSystemProperties();
 		createConfigurationDirectory();
 		if (isLocked()) {
@@ -99,5 +107,9 @@ public class Launcher {
 	
 	public static long getStartTime() {
 		return startTime;
+	}
+	
+	private static boolean isMac(){
+		return System.getProperty("os.name").startsWith("Mac OS X");
 	}
 }
