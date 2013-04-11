@@ -135,7 +135,7 @@
 		<dependency>
 			<groupId>org.cytoscape</groupId>
 			<artifactId>group-impl</artifactId>
-			<version>${project.version}</version>
+			<version>[3.0.0,${project.version})</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
@@ -165,7 +165,7 @@
 		<dependency>
 			<groupId>org.cytoscape</groupId>
 			<artifactId>vizmap-impl</artifactId>
-			<version>${project.version}</version>
+			<version>[3.0.0,${project.version})</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
@@ -217,7 +217,7 @@
 		<dependency>
 			<groupId>org.cytoscape</groupId>
 			<artifactId>work-impl</artifactId>
-			<version>${project.version}</version>
+			<version>[3.0.0,${project.version})</version>
 			<scope>test</scope>
 		</dependency>
 
