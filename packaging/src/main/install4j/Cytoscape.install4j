@@ -1057,7 +1057,9 @@ return true;
       <excludedComponents>
         <component id="235" />
       </excludedComponents>
-      <excludedBeans />
+      <excludedBeans>
+        <bean refId="50" />
+      </excludedBeans>
       <overriddenPrincipalLanguage id="en" customLocalizationFile="" />
       <exclude>
         <entry location=".i4j_fileset_227" fileType="regular" />
