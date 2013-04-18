@@ -68,6 +68,26 @@
 				<module>assembly</module>
 			</modules>
 		</profile>
+
+		<!-- For releasing -->
+		<profile>
+			<id>release</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+			<modules>
+				<module>splash-launcher</module>
+				<module>launcher</module>
+				<module>cmdline-impl</module>
+				<module>diagnostics</module>
+				<module>branding</module>
+				<module>application-metadata-impl</module>
+				<module>integration-test</module>
+				<module>features</module>
+				<module>assembly</module>
+				<module>packaging</module>
+			</modules>
+		</profile>
 	</profiles>
 
 	<scm>
