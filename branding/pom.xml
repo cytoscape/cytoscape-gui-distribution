@@ -5,12 +5,11 @@
 	<parent>
 		<groupId>org.cytoscape.distribution</groupId>
 		<artifactId>parent</artifactId>
-		<version>3.0.0</version>
+		<version>3.0.1</version>
 		<relativePath>..</relativePath>
 	</parent>
 
 	<artifactId>branding</artifactId>
-  <version>3.0.0</version>
 	<packaging>bundle</packaging>
 	<name>Cytoscape Branding</name>
 
@@ -95,9 +94,4 @@
 		</plugins>
 	</build>
 
-  <scm>
-    <connection>scm:svn:http://chianti.ucsd.edu/svn/core3/gui-distribution/branches/3.0.0-release/branding</connection>
-    <developerConnection>scm:svn:svn+ssh://grenache.ucsd.edu/cellar/common/svn/core3/gui-distribution/branches/3.0.0-release/branding</developerConnection>
-    <url>http://chianti.ucsd.edu/svn/core3/gui-distribution/branches/3.0.0-release/branding</url>
-  </scm>
 </project>

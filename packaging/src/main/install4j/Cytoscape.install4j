@@ -57,7 +57,7 @@
   </files>
   <launchers>
     <launcher name="Cytoscape" id="3" external="false" excludeFromMenu="false" menuName="" icnsFile="${basedir}/src/main/images/cytoscape3-icon-trans-128x128.icns" pngIcon16File="${basedir}/src/main/images/cytoscape3-icon-trans-16x16.png" pngIcon32File="${basedir}/src/main/images/cytoscape3-icon-trans-32x32.png" macServiceDependencies="" swtApp="false" fileset="">
-      <executable name="Cytoscape" type="1" iconSet="true" iconFile="" executableDir="." redirectStderr="true" stderrFile="output.log" stderrMode="overwrite" redirectStdout="true" stdoutFile="output.log" stdoutMode="overwrite" failOnStderrOutput="true" executableMode="1" changeWorkingDirectory="true" workingDirectory="." singleInstance="false" serviceStartType="2" serviceDependencies="" serviceDescription="" jreLocation="" executionLevel="asInvoker" checkConsoleParameter="false" globalSingleInstance="false">
+      <executable name="Cytoscape" type="1" iconSet="true" iconFile="${basedir}/src/main/images/cytoscape3-icon-trans-128x128.ico" executableDir="." redirectStderr="true" stderrFile="output.log" stderrMode="overwrite" redirectStdout="true" stdoutFile="output.log" stdoutMode="overwrite" failOnStderrOutput="true" executableMode="1" changeWorkingDirectory="true" workingDirectory="." singleInstance="false" serviceStartType="2" serviceDependencies="" serviceDescription="" jreLocation="" executionLevel="asInvoker" checkConsoleParameter="false" globalSingleInstance="false">
         <versionInfo include="false" fileVersion="${compiler:WINDOWS_VERSION}" fileDescription="Cytoscape" legalCopyright="Cytoscape Consortium" internalName="${compiler:sys.shortName}" productName="" />
       </executable>
       <splashScreen show="true" autoOff="true" alwaysOnTop="true" width="0" height="0" bitmapFile="CytoscapeSplashScreen.png" java6SplashScreen="true">
@@ -66,7 +66,7 @@
           <versionLine x="20" y="40" text="version ${compiler:sys.version}" font="Arial" fontSize="8" fontColor="0,0,0" fontWeight="500" />
         </text>
       </splashScreen>
-      <java mainClass="org.cytoscape.launcher.internal.Launcher" vmParameters="-Xss10M  -Xms128M  -Dcom.sun.management.jmxremote &quot;-Dkaraf.instances=${launcher:sys.launcherDirectory}/framework/instances&quot;  &quot;-Dkaraf.home=${launcher:sys.launcherDirectory}/framework&quot; &quot;-Dkaraf.base=${launcher:sys.launcherDirectory}/framework&quot; &quot;-Djava.util.logging.config.file=${launcher:sys.launcherDirectory}/framework/etc/java.util.logging.properties&quot;  -Dkaraf.startLocalConsole=false  -Dkaraf.startRemoteShell=false" arguments="" allowVMPassthroughParameters="true" preferredVM="" bundleRuntime="true">
+      <java mainClass="org.cytoscape.launcher.internal.Launcher" vmParameters="-Xms128M -Dcom.sun.management.jmxremote &quot;-Dkaraf.instances=${launcher:sys.launcherDirectory}/framework/instances&quot;  &quot;-Dkaraf.home=${launcher:sys.launcherDirectory}/framework&quot; &quot;-Dkaraf.base=${launcher:sys.launcherDirectory}/framework&quot; &quot;-Djava.util.logging.config.file=${launcher:sys.launcherDirectory}/framework/etc/java.util.logging.properties&quot;  -Dkaraf.startLocalConsole=false  -Dkaraf.startRemoteShell=false" arguments="" allowVMPassthroughParameters="true" preferredVM="" bundleRuntime="true">
         <classPath>
           <scanDirectory location="." failOnError="false" />
           <directory location="lib" failOnError="false" />
@@ -746,10 +746,17 @@ Ty Coon, President of Vice&lt;/tt&gt;&lt;/p&gt;
 
 // The SystemInfo class has a method to determine the physical memory.
 // In this case we want to use 50% of the physical memory for our application.
-String xmxValue = " -Xmx" + Math.round(SystemInfo.getPhysicalMemory() * 0.95 / 1024 / 1024) + "m";
+Long xmxValue = Math.round(SystemInfo.getPhysicalMemory() * 0.95 / 1024 / 1024);
+if(!System.getProperty("os.arch").contains("64")) { //not 64-bit
+	if(Util.isWindows())
+		xmxValue = Math.min(xmxValue, 1250);
+	else
+		xmxValue = Math.min(xmxValue, 1550);
+}
+String xmxString = " -Xmx" + xmxValue  + "m";
 
 // You can set the -Xmx parameter to a variable
-context.setVariable("xmx", xmxValue);
+context.setVariable("xmx", xmxString);
 
 return true;
 
@@ -795,7 +802,7 @@ return true;
                   <java class="java.beans.XMLDecoder">
                     <object class="com.install4j.runtime.beans.actions.desktop.CreateProgramGroupAction">
                       <void property="programGroupName">
-                        <string>${compiler:sys.fullName}</string>
+                        <string>${compiler:sys.fullName}_${compiler:sys.version}</string>
                       </void>
                     </object>
                   </java>
@@ -834,7 +841,31 @@ return true;
                       </void>
                       <void property="windowsIconFile">
                         <object class="com.install4j.api.beans.ExternalFile">
-                          <string>${basedir}/src/main/images/cytoscape3-file-icon-trans-128x128.icns</string>
+                          <string>${basedir}/src/main/images/cytoscape3-icon-trans-128x128.ico</string>
+                        </object>
+                      </void>
+                    </object>
+                  </java>
+                </serializedBean>
+                <condition />
+              </action>
+              <action name="" id="342" beanClass="com.install4j.runtime.beans.actions.xml.XsltAction" enabled="true" commentSet="false" comment="" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.actions.xml.XsltAction">
+                      <void property="file">
+                        <object class="java.io.File">
+                          <string>Cytoscape.app/Contents/Info.plist</string>
+                        </object>
+                      </void>
+                      <void property="sourceFile">
+                        <object class="java.io.File">
+                          <string>Cytoscape.app/Contents/Info.plist</string>
+                        </object>
+                      </void>
+                      <void property="xlstFile">
+                        <object class="com.install4j.api.beans.ExternalFile">
+                          <string>Info.plist.xsl</string>
                         </object>
                       </void>
                     </object>
@@ -919,6 +950,23 @@ return true;
             <preActivation />
             <postActivation />
             <actions>
+              <action name="" id="315" beanClass="com.install4j.runtime.beans.actions.files.DeleteFileAction" enabled="true" commentSet="false" comment="" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.actions.files.DeleteFileAction">
+                      <void property="file">
+                        <object class="java.io.File">
+                          <string>framework</string>
+                        </object>
+                      </void>
+                      <void property="recurse">
+                        <boolean>true</boolean>
+                      </void>
+                    </object>
+                  </java>
+                </serializedBean>
+                <condition />
+              </action>
               <action name="" id="20" beanClass="com.install4j.runtime.beans.actions.UninstallFilesAction" enabled="true" commentSet="false" comment="" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
                 <serializedBean>
                   <java class="java.beans.XMLDecoder">
@@ -1009,7 +1057,9 @@ return true;
       <excludedComponents>
         <component id="235" />
       </excludedComponents>
-      <excludedBeans />
+      <excludedBeans>
+        <bean refId="50" />
+      </excludedBeans>
       <overriddenPrincipalLanguage id="en" customLocalizationFile="" />
       <exclude>
         <entry location=".i4j_fileset_227" fileType="regular" />

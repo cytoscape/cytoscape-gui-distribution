@@ -11,32 +11,17 @@
 	
 	<groupId>org.cytoscape.distribution</groupId>
 	<artifactId>parent</artifactId>
-	<version>3.0.0</version>
+	<version>3.0.1</version>
 	<packaging>pom</packaging>
 	
 	<name>Cytoscape Desktop Application Distribution</name>
 
 	<properties>
-		<cytoscape.api.version>3.0.0</cytoscape.api.version>
+		<cytoscape.api.version>3.0.1</cytoscape.api.version>
 		<cytoscape.support.version>3.0.0</cytoscape.support.version>
-		<cytoscape.impl.version>3.0.0</cytoscape.impl.version>
 	</properties>
 
 	<build>
-		<plugins>
-			<plugin>
-				<inherited>false</inherited>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-release-plugin</artifactId>
-				<version>${maven-release-plugin.version}</version>
-				<configuration>
-					<autoVersionSubmodules>true</autoVersionSubmodules>
-					<goals>deploy</goals>
-					<!-- so that impl bundles with modules will build correctly -->
-					<preparationGoals>clean install</preparationGoals>
-				</configuration>
-			</plugin>
-		</plugins>
 		<pluginManagement>
 			<plugins>
 				<plugin>
@@ -66,19 +51,6 @@
 	
 	<profiles>
 		<profile>
-			<id>release</id>
-			<modules>
-				<module>splash-launcher</module>
-				<module>launcher</module>
-				<module>cmdline-impl</module>
-				<module>diagnostics</module>
-				<module>branding</module>
-				<module>features</module>
-				<module>assembly</module>
-				<module>packaging</module>
-			</modules>
-		</profile>
-		<profile>
 			<id>all</id>
 			<activation>
 				<activeByDefault>true</activeByDefault>
@@ -89,16 +61,36 @@
 				<module>cmdline-impl</module>
 				<module>diagnostics</module>
 				<module>branding</module>
+				<module>application-metadata-impl</module>
+				<module>integration-test</module>
 				<module>features</module>
 				<module>assembly</module>
 			</modules>
 		</profile>
+
+		<!-- For releasing -->
+		<profile>
+			<id>release</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+			<modules>
+				<module>splash-launcher</module>
+				<module>launcher</module>
+				<module>cmdline-impl</module>
+				<module>diagnostics</module>
+				<module>branding</module>
+				<module>application-metadata-impl</module>
+				<module>integration-test</module>
+				<module>features</module>
+				<module>assembly</module>
+				<module>packaging</module>
+			</modules>
+		</profile>
 	</profiles>
-
 	<scm>
-		<connection>scm:svn:http://chianti.ucsd.edu/svn/core3/gui-distribution/branches/3.0.0-release</connection>
-		<developerConnection>scm:svn:svn+ssh://grenache.ucsd.edu/cellar/common/svn/core3/gui-distribution/branches/3.0.0-release</developerConnection>
-		<url>http://chianti.ucsd.edu/svn/core3/gui-distribution/branches/3.0.0-release</url>
+		<connection>scm:git:git://github.com/cytoscape/cytoscape-gui-distribution.git</connection>
+		<developerConnection>scm:git:git@github.com:cytoscape/cytoscape-gui-distribution.git</developerConnection>
+		<url>https://github.com/cytoscape/cytoscape-gui-distribution.git</url>
 	</scm>
-
 </project>

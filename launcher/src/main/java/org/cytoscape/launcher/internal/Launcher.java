@@ -25,21 +25,53 @@ package org.cytoscape.launcher.internal;
  */
 
 import java.io.File;
-
+import java.io.RandomAccessFile;
+import java.nio.channels.FileLock;
+import com.apple.eawt.Application;
+import com.apple.eawt.OpenFilesHandler;
+import com.apple.eawt.AppEvent.OpenFilesEvent;
 import org.apache.karaf.main.Main;
 
 public class Launcher {
-	private static String[] startupArguments;
+	public static String[] startupArguments;
 	private static long startTime;
 
 	public static void main(String[] args) throws Exception {
 		startTime = System.currentTimeMillis();
 		startupArguments = args;
+		
+		// Intercept session file double-clicked on Mac OS, passed by file association set by install4j
+		if (isMac()) {
+		    MacHelper.handleStartupArguments();
+		}
+				
 		setDefaultSystemProperties();
 		createConfigurationDirectory();
+		if (isLocked()) {
+			System.err.println("Cannot start Cytoscape: Another instance of Cytoscape is already running.");
+			System.exit(1);
+		}
 		Main.main(args);
 	}
 	
+	private static boolean isLocked() throws Exception {
+		// Warning: This only works when Karaf is configured to use
+		// SimpleFileLock (default).
+		String lockPath = join(File.separator, System.getProperty("user.home"), "CytoscapeConfiguration", "3", "lock");
+
+        RandomAccessFile lockFile = new RandomAccessFile(new File(lockPath), "rw");
+        try {
+	        FileLock lock = lockFile.getChannel().tryLock();
+	    	if (lock != null) {
+	    		lock.release();
+	    		return false;
+	    	}
+	    	return true;
+        } finally {
+        	lockFile.close();
+        }
+	}
+
 	private static void setDefaultSystemProperties() {
 		String userHome = System.getProperty("user.home");
 		if (System.getProperty("karaf.data") == null) {
@@ -75,5 +107,9 @@ public class Launcher {
 	
 	public static long getStartTime() {
 		return startTime;
+	}
+	
+	private static boolean isMac(){
+		return System.getProperty("os.name").startsWith("Mac OS X");
 	}
 }
