@@ -11,13 +11,13 @@
 	
 	<groupId>org.cytoscape.distribution</groupId>
 	<artifactId>parent</artifactId>
-	<version>3.0.1-SNAPSHOT</version>
+	<version>3.0.1</version>
 	<packaging>pom</packaging>
 	
 	<name>Cytoscape Desktop Application Distribution</name>
 
 	<properties>
-		<cytoscape.api.version>3.0.1-SNAPSHOT</cytoscape.api.version>
+		<cytoscape.api.version>3.0.1</cytoscape.api.version>
 		<cytoscape.support.version>3.0.0</cytoscape.support.version>
 	</properties>
 
