@@ -14,7 +14,7 @@ fi
 
 export JAVA_DEBUG_OPTS="-Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=${DEBUG_PORT}"
 if [ `uname` = "Darwin" ]; then
-	CYTOSCAPE_MAC_OPTS="-Xdock:icon=cytoscape_logo_512.png"
+	CYTOSCAPE_MAC_OPTS="-Xdock:icon=cytoscape_logo_512.png -Xdock:name=Cytoscape"
 fi
 
 #vm_options_path=$HOME/.cytoscape
