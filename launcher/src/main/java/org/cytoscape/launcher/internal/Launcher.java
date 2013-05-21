@@ -25,11 +25,13 @@ package org.cytoscape.launcher.internal;
  */
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.RandomAccessFile;
 import java.nio.channels.FileLock;
-import com.apple.eawt.Application;
-import com.apple.eawt.OpenFilesHandler;
-import com.apple.eawt.AppEvent.OpenFilesEvent;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.Set;
+
 import org.apache.karaf.main.Main;
 
 public class Launcher {
@@ -48,28 +50,82 @@ public class Launcher {
 		setDefaultSystemProperties();
 		createConfigurationDirectory();
 		if (isLocked()) {
-			System.err.println("Cannot start Cytoscape: Another instance of Cytoscape is already running.");
-			System.exit(1);
+			// The main data directory is locked.  We should create a new one.
+			final String dataPath = String.format("%s.%d", System.getProperty("karaf.data"), System.currentTimeMillis());
+			System.setProperty("karaf.data", dataPath);
+
+			// Delete this on shutdown, otherwise it uses up a lot of space.
+			Runtime.getRuntime().addShutdownHook(new Thread() {
+				@Override
+				public void run() {
+					File root = new File(dataPath);
+					deleteDirectory(root);
+				}
+			});
 		}
 		Main.main(args);
+	}
+	
+	/**
+	 * Recursively deletes a directory.  This method resolves and follows
+	 * symlinks, so use with caution!
+	 */
+	private static void deleteDirectory(File root) {
+		LinkedList<File> pathStack = new LinkedList<File>();
+		pathStack.push(root);
+		
+		// Track directories we've seen so we can detect cycles and
+		// stubborn files.
+		Set<File> seen = new HashSet<File>();
+		
+		while (!pathStack.isEmpty()) {
+			File directory = pathStack.pop();
+			File[] files = directory.listFiles();
+			if (files.length == 0) {
+				seen.add(directory);
+				directory.delete();
+			} else {
+				if (seen.contains(directory)) {
+					System.err.printf("Couldn't delete bundle cache: %s\n", directory.getAbsolutePath());
+					 continue;
+				}
+				seen.add(directory);
+				
+				// Re-add the directory because we want to delete it after we
+				// delete its contents. 
+				pathStack.push(directory);
+				
+				for (File file : files) {
+					if (file.isDirectory()) {
+						pathStack.push(file);
+					} else if (file.isFile()) {
+						file.delete();
+					}
+				}
+			}
+		}
 	}
 	
 	private static boolean isLocked() throws Exception {
 		// Warning: This only works when Karaf is configured to use
 		// SimpleFileLock (default).
-		String lockPath = join(File.separator, System.getProperty("user.home"), "CytoscapeConfiguration", "3", "lock");
+		String lockPath = join(File.separator, System.getProperty("karaf.data"), "lock");
 
-        RandomAccessFile lockFile = new RandomAccessFile(new File(lockPath), "rw");
-        try {
-	        FileLock lock = lockFile.getChannel().tryLock();
-	    	if (lock != null) {
-	    		lock.release();
-	    		return false;
-	    	}
-	    	return true;
-        } finally {
-        	lockFile.close();
-        }
+		try {
+	        RandomAccessFile lockFile = new RandomAccessFile(new File(lockPath), "rw");
+	        try {
+		        FileLock lock = lockFile.getChannel().tryLock();
+		    	if (lock != null) {
+		    		lock.release();
+		    		return false;
+		    	}
+		    	return true;
+	        } finally {
+	        	lockFile.close();
+	        }
+		} catch (FileNotFoundException e) {
+			return false;
+		}
 	}
 
 	private static void setDefaultSystemProperties() {
@@ -97,6 +153,9 @@ public class Launcher {
 		String userHome = System.getProperty("user.home");
 		File karafData = new File(join(File.separator, userHome, "CytoscapeConfiguration", "3"));
 		karafData.mkdirs();
+		
+		File karafTmp = new File(karafData, "tmp");
+		karafTmp.mkdirs();
 	}
 
 	public static String[] getStartupArguments() {

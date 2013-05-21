@@ -294,6 +294,10 @@
 									<token>-Dkaraf.instances="${KARAF_BASE}/instances"</token>
 									<value>-Dkaraf.instances="${KARAF_DATA}/instances"</value>
 								</replacement>
+								<replacement>
+									<token>-Dkaraf.startRemoteShell=true</token>
+									<value>-Dkaraf.startRemoteShell=false</value>
+								</replacement>
 							</replacements>
 						</configuration>
 					</execution>
@@ -317,6 +321,11 @@
 									<token>-Dkaraf.instances="%KARAF_HOME%\instances"</token>
 									<value>-Dkaraf.instances="%KARAF_DATA%\instances"</value>
 								</replacement>
+								<replacement>
+									<token>-Dkaraf.startRemoteShell=true</token>
+									<value>-Dkaraf.startRemoteShell=false</value>
+								</replacement>
+								
 								<replacement>
 									<token>(__reg2.txt)</token>
 									<!-- Dirty hack: "%CD:~0,0%" expands to the empty string.  That way, the replacements below won't affect this one -->
@@ -350,6 +359,43 @@
 								<replacement>
 <token>.*org[.]apache[.]karaf[.]deployer[.]wrap.*</token>
 									<value />
+								</replacement>
+							</replacements>
+						</configuration>
+					</execution>
+					<execution>
+						<id>patch-karaf-disable-jmx</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>replace</goal>
+						</goals>
+						<configuration>
+							<includes>
+								<include>target/dependencies/windows/apache-karaf-${karaf.version}/etc/startup.properties</include>
+								<include>target/dependencies/unix/apache-karaf-${karaf.version}/etc/startup.properties</include>
+							</includes>
+							<regex>true</regex>
+							<unescape>false</unescape>
+							<replacements>
+								<replacement>
+<token>.*org[.]apache[.]karaf[.]deployer[.]wrap.*</token>
+									<value />
+								</replacement>
+								<replacement>
+								    <token>org/apache/karaf/features/org[.]apache[.]karaf[.]features[.]management.*</token>
+								    <value />
+								</replacement>
+								<replacement>
+								    <token>org/apache/karaf/diagnostic/org[.]apache[.]karaf[.]diagnostic[.]management.*</token>
+								    <value />
+								</replacement>
+								<replacement>
+								    <token>org/apache/karaf/management/org[.]apache[.]karaf[.]management[.]server.*</token>
+								    <value />
+								</replacement>
+								<replacement>
+								    <token>org/apache/karaf/admin/org[.]apache[.]karaf[.]admin[.]management.*</token>
+								    <value />
 								</replacement>
 							</replacements>
 						</configuration>
