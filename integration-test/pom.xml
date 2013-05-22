@@ -40,6 +40,50 @@
 					</systemProperties>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>${maven-dependency-plugin.version}</version>
+				<executions>
+					<execution>
+						<id>copy-dependencies</id>
+						<phase>generate-test-resources</phase>
+						<goals>
+							<goal>copy</goal>
+						</goals>
+						<configuration>
+ 							<artifactItems>
+ 								<artifactItem>
+									<groupId>org.cytoscape</groupId>
+									<artifactId>app-impl</artifactId>
+									<version>${cytoscape.impl.version}</version>
+									<type>jar</type>
+									<outputDirectory>target/dependencies</outputDirectory>
+ 								</artifactItem>
+ 							</artifactItems>
+						</configuration>
+					</execution>
+					<execution>
+						<id>unpack-api-docs</id>
+						<phase>generate-test-resources</phase>
+						<goals>
+							<goal>unpack</goal>
+						</goals>
+						<configuration>
+ 							<artifactItems>
+ 								<artifactItem>
+									<groupId>org.cytoscape</groupId>
+									<artifactId>swing-app-api</artifactId>
+									<version>${cytoscape.api.version}</version>
+									<includes>package-list</includes>
+									<type>javadoc</type>
+									<outputDirectory>target/dependencies</outputDirectory>
+ 								</artifactItem>
+ 							</artifactItems>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 
