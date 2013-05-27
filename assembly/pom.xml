@@ -298,6 +298,15 @@
 									<token>-Dkaraf.startRemoteShell=true</token>
 									<value>-Dkaraf.startRemoteShell=false</value>
 								</replacement>
+								
+								<replacement>
+									<token>JAVA=`type java`</token>
+									<value>JAVA=$(which java)</value>
+								</replacement>
+								<replacement>
+									<token>JAVA=`expr "$JAVA" : '.*is \(.*\)$'`</token>
+									<value></value>
+								</replacement>
 							</replacements>
 						</configuration>
 					</execution>
