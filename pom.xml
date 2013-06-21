@@ -17,7 +17,7 @@
 	<name>Cytoscape Desktop Application Distribution</name>
 
 	<properties>
-		<cytoscape.api.version>3.0.1</cytoscape.api.version>
+		<cytoscape.api.version>${project.version}</cytoscape.api.version>
 		<cytoscape.impl.version>${project.version}</cytoscape.impl.version>
 		<cytoscape.support.version>3.0.0</cytoscape.support.version>
 	</properties>
