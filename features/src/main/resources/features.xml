@@ -156,6 +156,8 @@
     <bundle start-level="180">mvn:org.cytoscape/scripting-impl/${cytoscape.impl.version}</bundle>
 
     <bundle start-level="185">mvn:org.cytoscape/gui-cmdline-parser-impl/${cytoscape.impl.version}</bundle>
+
+    <bundle start-level="186">mvn:org.cytoscape/command-dialog-impl/${cytoscape.impl.version}</bundle>
     
     <bundle start-level="190">mvn:org.cytoscape/welcome-impl/${cytoscape.impl.version}</bundle>
 	
