@@ -47,6 +47,6 @@ PWD=$(pwd)
 export KARAF_OPTS=-Xms128M\ -Duser.dir="$PWD"\ -Dcytoscape.home="$CYTOSCAPE_HOME_ABS"\ -splash:CytoscapeSplashScreen.png\ "$CYTOSCAPE_MAC_OPTS"
 
 export KARAF_DATA="${HOME}/CytoscapeConfiguration/3/karaf_data"
-#mkdir -p "${KARAF_DATA}/tmp"
+mkdir -p "${KARAF_DATA}/tmp"
 
 $script_path/framework/bin/karaf "$@"
