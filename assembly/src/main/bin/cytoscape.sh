@@ -4,6 +4,34 @@
 # This script is a UNIX-only (i.e. Linux, Mac OS, etc.) version
 #-------------------------------------------------------------------------------
 
+# First, see if help (-h, --help) or version (-v, --version) command line arguments
+# are specified. If so, display help or the current version and exit.
+# Note: Current version to be implemented after 3.1
+if [ $1 == "-h" -o $1 == "--help" ]; then
+	cat <<-EOF
+	
+	Cytoscape Command-line Arguments
+	================================
+	usage: cytoscape.{sh|bat} [OPTIONS]
+	 -h,--help             Print this message.
+	 -v,--version          Print the version number.
+	 -s,--session <file>   Load a cytoscape session (.cys) file.
+	 -N,--network <file>   Load a network file (any format).
+	 -T,--table <file>     Load a data table file (any table format).
+	 -p,--plugin <file>    Load a SIMPLIFIED plugin jar file/URL.
+	 -b,--bundle <file>    Load a BUNDLE plugin jar file or URL.
+	 -P,--props <file>     Load cytoscape properties file (Java properties
+	                       format) or individual property: -P name=value.
+	 -V,--vizmap <file>    Load vizmap properties file (Cytoscape VizMap
+	                       format).
+	 -S,--command <file>   Execute commands from script file
+	 -R,--rest <port>      Start a rest service
+	 
+EOF
+	exit 0
+fi
+
+
 DEBUG_PORT=12345
 
 script_path="$(dirname -- $0)"

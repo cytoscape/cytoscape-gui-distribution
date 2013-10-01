@@ -1,4 +1,38 @@
 @echo off
+
+:: First, see if help (-h, --help) or version (-v, --version) command line arguments
+:: are specified. If so, display help or the current version and exit.
+:: Note: Current version to be implemented after 3.1
+
+
+
+set help=false
+IF "%1"=="-h" set help=true
+IF "%1"=="--help" set help=true
+
+IF "%help%"=="false" GOTO skipHelp 	
+echo.	
+echo Cytoscape Command-line Arguments
+echo ================================
+echo usage: cytoscape.bat [OPTIONS]
+echo  -h,--help             Print this message.
+echo  -v,--version          Print the version number.
+echo  -s,--session ^<file^>   Load a cytoscape session (.cys) file.
+echo  -N,--network ^<file^>   Load a network file (any format).
+echo  -T,--table ^<file^>     Load a data table file (any table format).
+echo  -p,--plugin ^<file^>    Load a SIMPLIFIED plugin jar file/URL.
+echo  -b,--bundle ^<file^>    Load a BUNDLE plugin jar file or URL.
+echo  -P,--props ^<file^>     Load cytoscape properties file (Java properties
+echo                        format) or individual property: -P name=value.
+echo  -V,--vizmap ^<file^>    Load vizmap properties file (Cytoscape VizMap
+echo                        format).
+echo  -S,--command ^<file^>   Execute commands from script file
+echo  -R,--rest ^<port^>      Start a rest service
+echo.
+
+GOTO END_BATCH
+:skipHelp
+
 setlocal ENABLEEXTENSIONS
 set KARAF_TITLE=Cytoscape
 set DEBUG_PORT=12345
@@ -61,3 +95,5 @@ goto :EOF
 
 :: This is probably wrong.  We don't really want the user to be in this directory, do we?
 framework/bin/karaf %1 %2 %3 %4 %5 %6 %7 %8
+
+:END_BATCH
