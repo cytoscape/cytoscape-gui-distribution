@@ -7,9 +7,10 @@
 # First, see if help (-h, --help) or version (-v, --version) command line arguments
 # are specified. If so, display help or the current version and exit.
 # Note: Current version to be implemented after 3.1
-if [ $1 == "-h" -o $1 == "--help" ]; then
-	cat <<-EOF
-	
+if [[ $# > 0 ]]; then
+	if [ $1 == "-h" -o $1 == "--help" ]; then
+		cat <<-EOF
+		
 	Cytoscape Command-line Arguments
 	================================
 	usage: cytoscape.{sh|bat} [OPTIONS]
@@ -27,10 +28,10 @@ if [ $1 == "-h" -o $1 == "--help" ]; then
 	 -S,--command <file>   Execute commands from script file
 	 -R,--rest <port>      Start a rest service
 	 
-EOF
-	exit 0
+	EOF
+		exit 0
+	fi
 fi
-
 
 DEBUG_PORT=12345
 
