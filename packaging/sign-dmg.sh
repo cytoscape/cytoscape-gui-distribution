@@ -17,7 +17,7 @@ TARGET_DIR=target/install4j/signed
 TARGET_DMG="${TARGET_DIR}/$(basename ${ORIGINAL_DMG})"
 
 # Maximum size of DMG contents in KB
-DMG_SIZE_LIMIT=90000
+DMG_SIZE_LIMIT=120000
 
 mkdir "${MOUNT_DIR}"
 mkdir "${SIGN_DIR}"
