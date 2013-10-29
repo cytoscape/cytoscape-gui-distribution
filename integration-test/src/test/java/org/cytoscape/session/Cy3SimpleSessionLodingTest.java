@@ -100,8 +100,11 @@ public class Cy3SimpleSessionLodingTest extends BasicIntegrationTest {
 		assertEquals(1, viewManager.getNetworkViewSet().size());
 		// Since this test runs in headless mode, this should be zero.
 		assertEquals(0, renderingEngineManager.getAllRenderingEngines().size());
-		// 3 public tables per subnetwork
-		assertEquals(3, tableManager.getAllTables(false).size());
+		// 3 public tables per subnetwork + 2 public custom app tables + 1 public Global table
+		assertEquals(6, tableManager.getAllTables(false).size());
+		// Global table
+		assertEquals(1, tableManager.getGlobalTables().size());
+		
 		// At least root+base-network; there can be other (private) networks
 		final int totalNet = networkTableManager.getNetworkSet().size();
 		assertTrue(totalNet >= 2);
@@ -152,7 +155,7 @@ public class Cy3SimpleSessionLodingTest extends BasicIntegrationTest {
 		
 		checkView(view);
 		
-		// TODO test custom assigned table (e.g. created by a plugin)
+		// Check default tables
 		assertTrue(net.getTable(CyNetwork.class, DEFAULT_ATTRS).isPublic());
 		assertTrue(net.getTable(CyNode.class, DEFAULT_ATTRS).isPublic());
 		assertTrue(net.getTable(CyEdge.class, DEFAULT_ATTRS).isPublic());
@@ -250,7 +253,8 @@ public class Cy3SimpleSessionLodingTest extends BasicIntegrationTest {
 			String namespace = entry.getKey();
 			CyTable tbl = entry.getValue();
 			
-			if (namespace.equals(LOCAL_ATTRS) || namespace.equals(SHARED_ATTRS) || namespace.equals(HIDDEN_ATTRS))
+			if (namespace.equals(LOCAL_ATTRS) || namespace.equals(SHARED_ATTRS) || namespace.equals(HIDDEN_ATTRS)
+					|| namespace.equals("MYAPP"))
 				assertEquals(SavePolicy.SESSION_FILE, tbl.getSavePolicy());
 			else
 				assertEquals(namespace + " should have DO_NOT_SAVE policy", SavePolicy.DO_NOT_SAVE, tbl.getSavePolicy());
@@ -259,6 +263,7 @@ public class Cy3SimpleSessionLodingTest extends BasicIntegrationTest {
 		assertTrue(tables.containsValue(net.getTable(CyNetwork.class, DEFAULT_ATTRS)));
 		assertTrue(tables.containsValue(net.getTable(CyNetwork.class, LOCAL_ATTRS)));
 		assertTrue(tables.containsValue(net.getTable(CyNetwork.class, HIDDEN_ATTRS)));
+		
 		// These tables are always private
 		assertFalse(net.getTable(CyNetwork.class, LOCAL_ATTRS).isPublic());
 		assertFalse(net.getTable(CyNetwork.class, HIDDEN_ATTRS).isPublic());
@@ -278,12 +283,20 @@ public class Cy3SimpleSessionLodingTest extends BasicIntegrationTest {
 			assertEquals(NODE_COUNT, net.getTable(CyNode.class, DEFAULT_ATTRS).getAllRows().size());
 			assertEquals(EDGE_COUNT, net.getTable(CyEdge.class, LOCAL_ATTRS).getAllRows().size());
 			assertEquals(EDGE_COUNT, net.getTable(CyEdge.class, DEFAULT_ATTRS).getAllRows().size());
+			
+			assertTrue(tables.containsValue(net.getTable(CyNetwork.class, "MYAPP"))); // custom app table
+			assertTrue(net.getTable(CyNetwork.class, "MYAPP").isPublic());
+			
+			assertEquals(1, net.getTable(CyNetwork.class, "MYAPP").getAllRows().size());
+			assertEquals(NODE_COUNT, net.getTable(CyNode.class, "MYAPP").getAllRows().size());
+			assertEquals(EDGE_COUNT, net.getTable(CyEdge.class, "MYAPP").getAllRows().size());
 		}
 		
 		Map<String, CyTable> nodeTables = networkTableManager.getTables(net, CyNode.class);
 		assertTrue(nodeTables.containsValue(net.getTable(CyNode.class, DEFAULT_ATTRS)));
 		assertTrue(nodeTables.containsValue(net.getTable(CyNode.class, LOCAL_ATTRS)));
 		assertTrue(nodeTables.containsValue(net.getTable(CyNode.class, HIDDEN_ATTRS)));
+		
 		assertFalse(net.getTable(CyNode.class, LOCAL_ATTRS).isPublic());
 		assertFalse(net.getTable(CyNode.class, HIDDEN_ATTRS).isPublic());
 		
@@ -292,12 +305,16 @@ public class Cy3SimpleSessionLodingTest extends BasicIntegrationTest {
 			assertTrue(nodeTables.containsValue(net.getTable(CyNode.class, SHARED_DEFAULT_ATTRS)));
 			assertFalse(net.getTable(CyNode.class, SHARED_ATTRS).isPublic());
 			assertFalse(net.getTable(CyNode.class, SHARED_DEFAULT_ATTRS).isPublic());
+		} else {
+			assertTrue(nodeTables.containsValue(net.getTable(CyNode.class, "MYAPP")));
+			assertFalse(net.getTable(CyNode.class, "MYAPP").isPublic()); // This app table is private!
 		}
 		
 		Map<String, CyTable> edgeTables = networkTableManager.getTables(net, CyEdge.class);
 		assertTrue(edgeTables.containsValue(net.getTable(CyEdge.class, DEFAULT_ATTRS)));
 		assertTrue(edgeTables.containsValue(net.getTable(CyEdge.class, LOCAL_ATTRS)));
 		assertTrue(edgeTables.containsValue(net.getTable(CyEdge.class, HIDDEN_ATTRS)));
+		
 		assertFalse(net.getTable(CyEdge.class, LOCAL_ATTRS).isPublic());
 		assertFalse(net.getTable(CyEdge.class, HIDDEN_ATTRS).isPublic());
 		
@@ -306,6 +323,9 @@ public class Cy3SimpleSessionLodingTest extends BasicIntegrationTest {
 			assertTrue(edgeTables.containsValue(net.getTable(CyEdge.class, SHARED_DEFAULT_ATTRS)));
 			assertFalse(net.getTable(CyEdge.class, SHARED_ATTRS).isPublic());
 			assertFalse(net.getTable(CyEdge.class, SHARED_DEFAULT_ATTRS).isPublic());
+		} else {
+			assertTrue(edgeTables.containsValue(net.getTable(CyEdge.class, "MYAPP")));
+			assertTrue(net.getTable(CyEdge.class, "MYAPP").isPublic());
 		}
 	}
 }
