@@ -22,8 +22,8 @@ if [[ $# > 0 ]]; then
 	                       format) or individual property: -P name=value.
 	 -V,--vizmap <file>    Load vizmap properties file (Cytoscape VizMap
 	                       format).
-	 -S,--command <file>   Execute commands from script file
-	 -R,--rest <port>      Start a rest service
+	 -S,--script <file>    Execute commands from script file.
+	 -R,--rest <port>      Start a rest service.
 	 
 	EOF
 		exit 0
