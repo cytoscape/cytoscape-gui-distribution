@@ -20,13 +20,12 @@ if [[ $# > 0 ]]; then
 	 -v,--version          Print the version number.
 	 -s,--session <file>   Load a cytoscape session (.cys) file.
 	 -N,--network <file>   Load a network file (any format).
-	 -T,--table <file>     Load a data table file (any table format).
 	 -P,--props <file>     Load cytoscape properties file (Java properties
 	                       format) or individual property: -P name=value.
 	 -V,--vizmap <file>    Load vizmap properties file (Cytoscape VizMap
 	                       format).
-	 -S,--command <file>   Execute commands from script file
-	 -R,--rest <port>      Start a rest service
+	 -S,--script <file>    Execute commands from script file.
+	 -R,--rest <port>      Start a rest service.
 	 
 	EOF
 		exit 0

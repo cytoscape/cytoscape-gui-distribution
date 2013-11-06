@@ -19,13 +19,12 @@ echo  -h,--help             Print this message.
 echo  -v,--version          Print the version number.
 echo  -s,--session ^<file^>   Load a cytoscape session (.cys) file.
 echo  -N,--network ^<file^>   Load a network file (any format).
-echo  -T,--table ^<file^>     Load a data table file (any table format).
 echo  -P,--props ^<file^>     Load cytoscape properties file (Java properties
 echo                        format) or individual property: -P name=value.
 echo  -V,--vizmap ^<file^>    Load vizmap properties file (Cytoscape VizMap
 echo                        format).
-echo  -S,--command ^<file^>   Execute commands from script file
-echo  -R,--rest ^<port^>      Start a rest service
+echo  -S,--script ^<file^>    Execute commands from script file.
+echo  -R,--rest ^<port^>      Start a rest service.
 echo.
 
 GOTO END_BATCH
