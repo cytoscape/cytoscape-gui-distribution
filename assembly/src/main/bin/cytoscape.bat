@@ -4,7 +4,7 @@
 :: are specified. If so, display help or the current version and exit.
 :: Note: Current version to be implemented after 3.1
 
-
+set CYTOSCAPE_VERSION="Cytoscape version: 3.1.0-SNAPSHOT"
 
 set help=false
 IF "%1"=="-h" set help=true
@@ -30,6 +30,18 @@ echo.
 
 GOTO END_BATCH
 :skipHelp
+
+set checkVersion=false
+IF "%1"=="-v" set checkVersion=true
+IF "%1"=="--version" set checkVersion=true
+
+IF "%help%"=="false" GOTO skipCheckVersion 	
+echo.
+echo "%CYTOSCAPE_VERSION%"
+echo.
+
+GOTO END_BATCH
+:skipCheckVersion
 
 setlocal ENABLEEXTENSIONS
 set KARAF_TITLE=Cytoscape
