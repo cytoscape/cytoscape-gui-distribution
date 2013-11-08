@@ -27,6 +27,8 @@ package org.cytoscape.splash.internal;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.swing.SwingUtilities;
+
 import org.cytoscape.application.events.CyStartEvent;
 import org.cytoscape.application.events.CyStartListener;
 import org.cytoscape.launcher.internal.SplashPanel;
@@ -90,6 +92,11 @@ public class SplashManipulator implements
     
     @Override
     public void handleEvent(CyStartEvent e) {
-    	splashPanel.close();
+    	SwingUtilities.invokeLater(new Runnable() {
+    		@Override
+    		public void run() {
+    	    	splashPanel.close();
+    		}
+    	});
     }
 }
