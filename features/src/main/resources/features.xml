@@ -3,7 +3,7 @@
   <feature name="cytoscape-gui" version="${project.version}">
     <bundle start-level="1">mvn:org.cytoscape.distribution/diagnostics-impl/${project.version}</bundle>
 
-    <bundle start-level="100">mvn:org.cytoscape/splash-updater-impl/${cytoscape.support.version}</bundle>
+    <bundle start-level="1">mvn:org.cytoscape.distribution/splash-updater-impl/${project.version}</bundle>
     
     <bundle start-level="102">mvn:cytoscape-temp/l2fprod-common-sheet/7.3</bundle>
 
@@ -144,7 +144,6 @@
     <bundle start-level="170">mvn:org.cytoscape/table-import-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="170">mvn:org.cytoscape/webservice-psicquic-client-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="170">mvn:org.cytoscape/webservice-biomart-client-impl/${cytoscape.impl.version}</bundle>
-    <bundle start-level="170">mvn:org.cytoscape/filter-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="170">mvn:org.cytoscape/filter2-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="170">mvn:org.cytoscape/sbml-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="170">mvn:org.cytoscape/cpath2-impl/${cytoscape.impl.version}</bundle>

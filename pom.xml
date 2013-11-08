@@ -58,6 +58,7 @@
 			</activation>
 			<modules>
 				<module>splash-launcher</module>
+				<module>splash-updater-impl</module>
 				<module>launcher</module>
 				<module>cmdline-impl</module>
 				<module>diagnostics</module>

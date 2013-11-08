@@ -24,23 +24,33 @@ package org.cytoscape.launcher.internal;
  * #L%
  */
 
+import java.awt.Rectangle;
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.nio.channels.FileLock;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Set;
 
+import javax.imageio.ImageIO;
+import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
+
 import org.apache.karaf.main.Main;
 
 public class Launcher {
 	public static String[] startupArguments;
 	private static long startTime;
-
+	private static SplashPanel splashPanel;
+	
 	public static void main(String[] args) throws Exception {
 		startTime = System.currentTimeMillis();
 		startupArguments = args;
+		
+		showSplashPanel();
 		
 		// Intercept session file double-clicked on Mac OS, passed by file association set by install4j
 		if (isMac()) {
@@ -66,6 +76,31 @@ public class Launcher {
 		Main.main(args);
 	}
 	
+	private static void showSplashPanel() throws IOException {
+		File karafBase = new File(System.getProperty("karaf.base"));
+		BufferedImage background = ImageIO.read(new File(karafBase, "CytoscapeSplashScreen.png"));
+		splashPanel = new SplashPanel(background);
+		
+		final JFrame frame = new JFrame();
+		frame.setAlwaysOnTop(true);
+		frame.add(splashPanel);
+		frame.setUndecorated(true);
+		
+		int width = background.getWidth();
+		int height = background.getHeight();
+		frame.setSize(width, height);
+		
+		// Center the frame in the current screen.
+		Rectangle bounds = frame.getGraphicsConfiguration().getBounds();
+		frame.setLocation((bounds.width - width) / 2, (bounds.height - height) / 2);
+		SwingUtilities.invokeLater(new Runnable() {
+			@Override
+			public void run() {
+				frame.setVisible(true);
+			}
+		});
+	}
+
 	/**
 	 * Recursively deletes a directory.  This method resolves and follows
 	 * symlinks, so use with caution!
@@ -170,5 +205,9 @@ public class Launcher {
 	
 	private static boolean isMac(){
 		return System.getProperty("os.name").startsWith("Mac OS X");
+	}
+
+	public static SplashPanel getSplashPanel() {
+		return splashPanel;
 	}
 }
