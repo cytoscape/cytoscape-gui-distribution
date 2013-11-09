@@ -129,6 +129,7 @@
     
     <bundle start-level="165">mvn:org.cytoscape/biopax-impl/${cytoscape.impl.version}</bundle>
     
+    <bundle start-level="170">mvn:org.cytoscape/network-merge-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="170">mvn:org.cytoscape/search-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="170">mvn:org.cytoscape/table-browser-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="170">mvn:org.cytoscape/vizmap-gui-impl/${cytoscape.impl.version}</bundle>
@@ -147,7 +148,6 @@
     <bundle start-level="170">mvn:org.cytoscape/filter2-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="170">mvn:org.cytoscape/sbml-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="170">mvn:org.cytoscape/cpath2-impl/${cytoscape.impl.version}</bundle>
-    <bundle start-level="170">mvn:org.cytoscape/network-merge-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="170">mvn:org.cytoscape/graphml-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="170">mvn:org.cytoscape/json-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="170">mvn:org.cytoscape/edge-bundler-impl/${cytoscape.impl.version}</bundle>
