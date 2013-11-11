@@ -9,10 +9,14 @@ import java.awt.Graphics2D;
 import java.awt.GraphicsConfiguration;
 import java.awt.GraphicsDevice;
 import java.awt.GraphicsEnvironment;
+import java.awt.Rectangle;
 import java.awt.Window;
 import java.awt.image.BufferedImage;
+import java.io.File;
 import java.lang.reflect.InvocationTargetException;
 
+import javax.imageio.ImageIO;
+import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 
 @SuppressWarnings("serial")
@@ -28,6 +32,8 @@ public class SplashPanel extends Component {
 		image = configuration.createCompatibleImage(background.getWidth(), background.getHeight());
 		font = new Font(Font.MONOSPACED,Font.PLAIN,12);
 		context = image.createGraphics();
+		
+		context.fillRect(0, 0, background.getWidth(), background.getHeight());
 		context.drawImage(background, 0, 0, null);
 	}
 	

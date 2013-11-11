@@ -29,20 +29,13 @@ import java.util.Set;
 
 import javax.swing.SwingUtilities;
 
-import org.cytoscape.application.events.CyStartEvent;
-import org.cytoscape.application.events.CyStartListener;
 import org.cytoscape.launcher.internal.SplashPanel;
 import org.osgi.framework.Bundle;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.BundleEvent;
 import org.osgi.framework.BundleListener;
-import org.osgi.framework.FrameworkEvent;
-import org.osgi.framework.FrameworkListener;
 
-public class SplashManipulator implements
-	BundleListener,
-	FrameworkListener,
-	CyStartListener {
+public class SplashManipulator implements BundleListener {
 
 	private Set<Long> resolved;
 	private Set<Long> started;
@@ -65,38 +58,36 @@ public class SplashManipulator implements
 	}
 
 	public void bundleChanged(BundleEvent event) {
+		Bundle bundle = event.getBundle();
 		if ( event.getType() == BundleEvent.RESOLVED )
-			resolved.add(event.getBundle().getBundleId());
+			resolved.add(bundle.getBundleId());
 		
 		if ( event.getType() == BundleEvent.STARTED ) {
-			started.add(event.getBundle().getBundleId());
-			splashPanel.updateMessage(event.getBundle().getSymbolicName() + " started", getProgress());
+			started.add(bundle.getBundleId());
+			String name = bundle.getSymbolicName();
+			splashPanel.updateMessage(name + " started", getProgress());
+			if ("org.cytoscape.welcome-impl".equals(name)) {
+				closeSplashScreen();
+			}
 		}
 	}
 
-    public void frameworkEvent(FrameworkEvent event) {
-		if ( event.getType() == FrameworkEvent.STARTED ) { 
-			splashPanel.updateMessage("OSGi finished.", getProgress());
-			context.removeBundleListener(this);
-			context.removeFrameworkListener(this);
-			resolved.clear();
-			started.clear();
-		}
-	}
-
-    double getProgress() {
-        int totalResolved = resolved.size();
-        int totalStarted = started.size();
-        return totalResolved == 0 ? 0 : totalStarted / (double) totalResolved;
-    }
-    
-    @Override
-    public void handleEvent(CyStartEvent e) {
+    void closeSplashScreen() {
+		context.removeBundleListener(this);
+		resolved.clear();
+		started.clear();
+		
     	SwingUtilities.invokeLater(new Runnable() {
     		@Override
     		public void run() {
     	    	splashPanel.close();
     		}
     	});
+    }
+    
+    double getProgress() {
+        int totalResolved = resolved.size();
+        int totalStarted = started.size();
+        return totalResolved == 0 ? 0 : totalStarted / (double) totalResolved;
     }
 }
