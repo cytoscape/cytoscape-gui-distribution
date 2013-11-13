@@ -55,7 +55,10 @@
     <bundle start-level="103">mvn:org.apache.httpcomponents/httpcore-osgi/4.2</bundle>    
     <bundle start-level="103">mvn:com.lowagie.text/com.springsource.com.lowagie.text/2.0.8</bundle>
     <bundle start-level="103">mvn:org.apache.felix/org.apache.felix.eventadmin/1.2.14</bundle>
-    
+
+    <!--For rest service -->
+    <bundle start-level="103">mvn:javax.ws.rs/javax.ws.rs-api/2.0</bundle>
+
     <bundle start-level="103">wrap:mvn:org.puremvc/PureMVC_Java_MultiCore/1.0.7</bundle>
     
     <bundle start-level="104">mvn:psidev.psi.mi/psi25-xml/1.7.10</bundle>
