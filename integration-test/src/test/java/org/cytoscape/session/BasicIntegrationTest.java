@@ -165,6 +165,7 @@ public abstract class BasicIntegrationTest {
 				mavenBundle().groupId("javax.activation").artifactId("com.springsource.javax.activation").version("1.1.1").startLevel(3),
 				mavenBundle().groupId("javax.xml.stream").artifactId("com.springsource.javax.xml.stream").version("1.0.1").startLevel(3),
 				mavenBundle().groupId("org.apache.felix").artifactId("org.apache.felix.eventadmin").version("1.2.14").startLevel(3),
+				mavenBundle().groupId("com.fasterxml.jackson.core").artifactId("jackson-core").version("2.2.2").startLevel(3),
 				
 				// API bundles
 				mavenBundle().groupId("org.cytoscape").artifactId("event-api").version(apiBundleVersion).startLevel(5),
@@ -188,6 +189,7 @@ public abstract class BasicIntegrationTest {
 				mavenBundle().groupId("org.cytoscape").artifactId("swing-application-api").version(apiBundleVersion).startLevel(5),
 				mavenBundle().groupId("org.cytoscape").artifactId("service-api").version(apiBundleVersion).startLevel(5),
 				mavenBundle().groupId("org.cytoscape").artifactId("command-executor-api").version(apiBundleVersion).startLevel(5),
+				mavenBundle().groupId("org.cytoscape").artifactId("filter-api").version(apiBundleVersion).startLevel(5),
 				
 				// Implementation bundles
 				mavenBundle().groupId("org.cytoscape").artifactId("property-impl").version(implBundleVersion).startLevel(7),
@@ -220,7 +222,9 @@ public abstract class BasicIntegrationTest {
 
 				mavenBundle().groupId("org.cytoscape").artifactId("io-impl").version(implBundleVersion).startLevel(23),
 
-				mavenBundle().groupId("org.cytoscape").artifactId("core-task-impl").version(implBundleVersion).startLevel(25)
+				mavenBundle().groupId("org.cytoscape").artifactId("core-task-impl").version(implBundleVersion).startLevel(25),
+
+				mavenBundle().groupId("org.cytoscape").artifactId("filter2-impl").version(implBundleVersion).startLevel(25)
 
 				//mavenBundle().groupId("org.cytoscape").artifactId("vizmap-gui-impl").version(implBundleVersion).startLevel(27)
 		);
