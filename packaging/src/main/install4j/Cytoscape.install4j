@@ -707,8 +707,7 @@ Ty Coon, President of Vice&lt;/tt&gt;&lt;/p&gt;
                 </object>
               </java>
             </serializedBean>
-            <condition>File[] biogridFiles = new File(context.getVariable("sys.userHome")+"/CytoscapeConfiguration/biogrid").listFiles();
-return (biogridFiles != null &amp;&amp; biogridFiles.length &lt; 8);</condition>
+            <condition>new File(context.getVariable("sys.userHome")+"/CytoscapeConfiguration/biogrid").listFiles().length&lt;8</condition>
             <validation />
             <preActivation />
             <postActivation />
