@@ -1,3 +1,4 @@
+source,target,interaction,directed,symbol,value
 YKR026C,YGL122C,pp,FALSE,abcd12345,1.2344543
 YGR218W,YGL097W,pp,TRUE,abcd12346,1.2344543
 YGL097W,YOR204W,pp,TRUE,abcd12347,1.2344543

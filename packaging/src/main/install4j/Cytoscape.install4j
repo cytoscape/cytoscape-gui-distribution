@@ -60,12 +60,6 @@
       <executable name="Cytoscape" type="1" iconSet="true" iconFile="${basedir}/src/main/images/cytoscape3-icon-trans-128x128.ico" executableDir="." redirectStderr="true" stderrFile="output.log" stderrMode="overwrite" redirectStdout="true" stdoutFile="output.log" stdoutMode="overwrite" failOnStderrOutput="true" executableMode="1" changeWorkingDirectory="true" workingDirectory="." singleInstance="false" serviceStartType="2" serviceDependencies="" serviceDescription="" jreLocation="" executionLevel="asInvoker" checkConsoleParameter="false" globalSingleInstance="false">
         <versionInfo include="false" fileVersion="${compiler:WINDOWS_VERSION}" fileDescription="Cytoscape" legalCopyright="Cytoscape Consortium" internalName="${compiler:sys.shortName}" productName="" />
       </executable>
-      <splashScreen show="true" autoOff="true" alwaysOnTop="true" width="0" height="0" bitmapFile="CytoscapeSplashScreen.png" java6SplashScreen="true">
-        <text>
-          <statusLine x="20" y="20" text="" font="Arial" fontSize="8" fontColor="0,0,0" fontWeight="500" />
-          <versionLine x="20" y="40" text="version ${compiler:sys.version}" font="Arial" fontSize="8" fontColor="0,0,0" fontWeight="500" />
-        </text>
-      </splashScreen>
       <java mainClass="org.cytoscape.launcher.internal.Launcher" vmParameters="-Xms128M -Dcom.sun.management.jmxremote &quot;-Dkaraf.instances=${launcher:sys.launcherDirectory}/framework/instances&quot;  &quot;-Dkaraf.home=${launcher:sys.launcherDirectory}/framework&quot; &quot;-Dkaraf.base=${launcher:sys.launcherDirectory}/framework&quot; &quot;-Djava.util.logging.config.file=${launcher:sys.launcherDirectory}/framework/etc/java.util.logging.properties&quot;  -Dkaraf.startLocalConsole=false  -Dkaraf.startRemoteShell=false" arguments="" allowVMPassthroughParameters="true" preferredVM="" bundleRuntime="true">
         <classPath>
           <scanDirectory location="." failOnError="false" />

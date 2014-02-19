@@ -127,7 +127,6 @@ public abstract class BasicIntegrationTest {
 		// These system properties are set in the surefire configuration in the pom.
 		String apiBundleVersion = System.getProperty("cytoscape.api.version");
 		String implBundleVersion = System.getProperty("cytoscape.impl.version");
-		String olderImplVersion ="3.0.0";
 
 		return options(
 				systemProperty("org.osgi.framework.system.packages.extra").value("com.sun.xml.internal.bind"),
@@ -166,7 +165,9 @@ public abstract class BasicIntegrationTest {
 				mavenBundle().groupId("javax.activation").artifactId("com.springsource.javax.activation").version("1.1.1").startLevel(3),
 				mavenBundle().groupId("javax.xml.stream").artifactId("com.springsource.javax.xml.stream").version("1.0.1").startLevel(3),
 				mavenBundle().groupId("org.apache.felix").artifactId("org.apache.felix.eventadmin").version("1.2.14").startLevel(3),
-				
+				mavenBundle().groupId("com.fasterxml.jackson.core").artifactId("jackson-core").version("2.2.2").startLevel(3),
+				mavenBundle().groupId("commons-io").artifactId("commons-io").version("2.1").startLevel(3),
+
 				// API bundles
 				mavenBundle().groupId("org.cytoscape").artifactId("event-api").version(apiBundleVersion).startLevel(5),
 				mavenBundle().groupId("org.cytoscape").artifactId("model-api").version(apiBundleVersion).startLevel(5),
@@ -188,41 +189,43 @@ public abstract class BasicIntegrationTest {
 				mavenBundle().groupId("org.cytoscape").artifactId("equations-api").version(apiBundleVersion).startLevel(5),
 				mavenBundle().groupId("org.cytoscape").artifactId("swing-application-api").version(apiBundleVersion).startLevel(5),
 				mavenBundle().groupId("org.cytoscape").artifactId("service-api").version(apiBundleVersion).startLevel(5),
+				mavenBundle().groupId("org.cytoscape").artifactId("command-executor-api").version(apiBundleVersion).startLevel(5),
+				mavenBundle().groupId("org.cytoscape").artifactId("filter-api").version(apiBundleVersion).startLevel(5),
 				
 				// Implementation bundles
 				mavenBundle().groupId("org.cytoscape").artifactId("property-impl").version(implBundleVersion).startLevel(7),
 
 				mavenBundle().groupId("org.cytoscape").artifactId("swing-util-api").version(apiBundleVersion).startLevel(8),
 
-				mavenBundle().groupId("org.cytoscape").artifactId("datasource-impl").version(olderImplVersion).startLevel(9),
-				mavenBundle().groupId("org.cytoscape").artifactId("equations-impl").version(olderImplVersion).startLevel(9),
-				mavenBundle().groupId("org.cytoscape").artifactId("event-impl").version(olderImplVersion).startLevel(9),
+				mavenBundle().groupId("org.cytoscape").artifactId("datasource-impl").version(implBundleVersion).startLevel(9),
+				mavenBundle().groupId("org.cytoscape").artifactId("equations-impl").version(implBundleVersion).startLevel(9),
+				mavenBundle().groupId("org.cytoscape").artifactId("event-impl").version(implBundleVersion).startLevel(9),
 
 				mavenBundle().groupId("org.cytoscape").artifactId("model-impl").version(implBundleVersion).startLevel(11),
-				
-				// TODO: how can we automate version number update?
-				mavenBundle().groupId("org.cytoscape").artifactId("group-impl").version(olderImplVersion).startLevel(11),
-				mavenBundle().groupId("org.cytoscape").artifactId("work-impl").version(olderImplVersion).startLevel(11),
+				mavenBundle().groupId("org.cytoscape").artifactId("group-impl").version(implBundleVersion).startLevel(11),
+				mavenBundle().groupId("org.cytoscape").artifactId("work-impl").version(implBundleVersion).startLevel(11),
 
-				mavenBundle().groupId("org.cytoscape").artifactId("work-headless-impl").version(olderImplVersion).startLevel(11),
+				mavenBundle().groupId("org.cytoscape").artifactId("work-headless-impl").version(implBundleVersion).startLevel(11),
 
-				mavenBundle().groupId("org.cytoscape").artifactId("presentation-impl").version(olderImplVersion).startLevel(13),
+				mavenBundle().groupId("org.cytoscape").artifactId("presentation-impl").version(implBundleVersion).startLevel(13),
 
-				mavenBundle().groupId("org.cytoscape").artifactId("layout-impl").version(olderImplVersion).startLevel(15),
-				mavenBundle().groupId("org.cytoscape").artifactId("viewmodel-impl").version(olderImplVersion).startLevel(15),
-				mavenBundle().groupId("org.cytoscape").artifactId("vizmap-impl").version(olderImplVersion).startLevel(15),
+				mavenBundle().groupId("org.cytoscape").artifactId("viewmodel-impl").version(implBundleVersion).startLevel(15),
+				mavenBundle().groupId("org.cytoscape").artifactId("vizmap-impl").version(implBundleVersion).startLevel(15),
 				mavenBundle().groupId("org.cytoscape.distribution").artifactId("application-metadata-impl").version(implBundleVersion).startLevel(15).noStart(),
 
-				mavenBundle().groupId("org.cytoscape").artifactId("application-impl").version(olderImplVersion).startLevel(17),
+				mavenBundle().groupId("org.cytoscape").artifactId("application-impl").version(implBundleVersion).startLevel(17),
+				mavenBundle().groupId("org.cytoscape").artifactId("layout-impl").version(implBundleVersion).startLevel(18),
 
 				mavenBundle().groupId("org.cytoscape").artifactId("session-impl").version(implBundleVersion).startLevel(19),
 
-				mavenBundle().groupId("org.cytoscape").artifactId("vizmap-gui-core-impl").version(olderImplVersion).startLevel(20),
+				mavenBundle().groupId("org.cytoscape").artifactId("vizmap-gui-core-impl").version(implBundleVersion).startLevel(20),
 				mavenBundle().groupId("org.cytoscape").artifactId("ding-presentation-impl").version(implBundleVersion).startLevel(21),
 
 				mavenBundle().groupId("org.cytoscape").artifactId("io-impl").version(implBundleVersion).startLevel(23),
 
-				mavenBundle().groupId("org.cytoscape").artifactId("core-task-impl").version(implBundleVersion).startLevel(25)
+				mavenBundle().groupId("org.cytoscape").artifactId("core-task-impl").version(implBundleVersion).startLevel(25),
+
+				mavenBundle().groupId("org.cytoscape").artifactId("filter2-impl").version(implBundleVersion).startLevel(25)
 
 				//mavenBundle().groupId("org.cytoscape").artifactId("vizmap-gui-impl").version(implBundleVersion).startLevel(27)
 		);
