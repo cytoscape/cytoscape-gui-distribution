@@ -151,7 +151,6 @@
     <bundle start-level="170">mvn:org.cytoscape/webservice-biomart-client-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="170">mvn:org.cytoscape/filter2-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="170">mvn:org.cytoscape/sbml-impl/${cytoscape.impl.version}</bundle>
-    <bundle start-level="170">mvn:org.cytoscape/cpath2-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="170">mvn:org.cytoscape/graphml-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="170">mvn:org.cytoscape/json-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="170">mvn:org.cytoscape/edge-bundler-impl/${cytoscape.impl.version}</bundle>
