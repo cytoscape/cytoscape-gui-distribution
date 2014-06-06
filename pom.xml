@@ -57,6 +57,7 @@
 				<activeByDefault>true</activeByDefault>
 			</activation>
 			<modules>
+				<module>third-party</module>
 				<module>splash-launcher</module>
 				<module>splash-updater-impl</module>
 				<module>launcher</module>
