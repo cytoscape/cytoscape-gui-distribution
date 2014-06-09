@@ -32,7 +32,7 @@
 			<type>zip</type>
 		</dependency>
 		<dependency>
-			<groupId>org.apache.karaf.assemblies.features</groupId>
+			<groupId>org.apache.karaf.features</groupId>
 			<artifactId>standard</artifactId>
 			<version>${karaf.version}</version>
 			<type>xml</type>
@@ -98,22 +98,23 @@
 			</plugin>
 			<plugin>
 				<groupId>org.apache.karaf.tooling</groupId>
-				<artifactId>features-maven-plugin</artifactId>
+				<artifactId>karaf-maven-plugin</artifactId>
 				<version>${karaf.version}</version>
 				<executions>
 					<execution>
 						<id>add-features-to-repo</id>
 						<phase>prepare-package</phase>
 						<goals>
-							<goal>add-features-to-repo</goal>
+							<goal>features-add-to-repository</goal>
 						</goals>
 						<configuration>
 								<descriptors>
 									<descriptor>mvn:org.cytoscape.distribution/features/${project.version}/xml/features</descriptor>
 								</descriptors>
-								<features>
+								<bootFeatures>
+									<feature>standard</feature>
 									<feature>cytoscape-gui</feature>
-								</features>
+								</bootFeatures>
 								<includeMvnBasedDescriptors>true</includeMvnBasedDescriptors>
 								<repository>target/features-repo</repository>
 						</configuration>
@@ -122,13 +123,15 @@
 						<id>add-features-to-repo-dev</id>
 						<phase>process-resources</phase>
 						<goals>
-							<goal>add-features-to-repo</goal>
+							<goal>features-add-to-repository</goal>
 						</goals>
 						<configuration>
 								<descriptors>
 									<descriptor>mvn:org.cytoscape.distribution/features/${project.version}/xml/features</descriptor>
 								</descriptors>
-								<features />
+								<bootFeatures>
+								    <feature>standard</feature>
+								</bootFeatures>
 								<includeMvnBasedDescriptors>true</includeMvnBasedDescriptors>
 								<repository>target/features-repo-dev</repository>
 						</configuration>
