@@ -64,6 +64,8 @@
     <bundle start-level="104">mvn:psidev.psi.mi/psi25-xml/1.7.10</bundle>
     <bundle start-level="104">mvn:cytoscape-temp/uk.ac.ebi.enfin.mi.cluster.micluster/1.6</bundle>
     <bundle start-level="104">mvn:com.fasterxml.jackson.core/jackson-core/2.2.2</bundle>
+    <bundle start-level="104">mvn:com.fasterxml.jackson.core/jackson-databind/2.2.2</bundle>
+    <bundle start-level="104">mvn:com.fasterxml.jackson.core/jackson-annotations/2.2.2</bundle>
     
     <bundle start-level="110">mvn:org.cytoscape/cmdline/${cytoscape.support.version}</bundle>
     <bundle start-level="110">mvn:org.cytoscape/equations-api/${cytoscape.api.version}</bundle>

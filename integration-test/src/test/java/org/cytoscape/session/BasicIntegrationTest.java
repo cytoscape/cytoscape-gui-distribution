@@ -168,6 +168,8 @@ public abstract class BasicIntegrationTest {
 				mavenBundle().groupId("javax.xml.stream").artifactId("com.springsource.javax.xml.stream").version("1.0.1").startLevel(3),
 				mavenBundle().groupId("org.apache.felix").artifactId("org.apache.felix.eventadmin").version("1.2.14").startLevel(3),
 				mavenBundle().groupId("com.fasterxml.jackson.core").artifactId("jackson-core").version("2.2.2").startLevel(3),
+				mavenBundle().groupId("com.fasterxml.jackson.core").artifactId("jackson-databind").version("2.2.2").startLevel(3),
+				mavenBundle().groupId("com.fasterxml.jackson.core").artifactId("jackson-annotations").version("2.2.2").startLevel(3),
 				mavenBundle().groupId("commons-io").artifactId("commons-io").version("2.1").startLevel(3),
 
 				// API bundles
