@@ -36,7 +36,11 @@
 						</property>
 						<property>
 							<name>cytoscape.impl.version</name>
-							<value>${project.version}</value>
+							<value>${cytoscape.impl.version}</value>
+						</property>
+						<property>
+							<name>cytoscape.distribution.version</name>
+							<value>${project.parent.version}</value>
 						</property>
 					</systemProperties>
 				</configuration>

@@ -127,6 +127,7 @@ public abstract class BasicIntegrationTest {
 		// These system properties are set in the surefire configuration in the pom.
 		String apiBundleVersion = System.getProperty("cytoscape.api.version");
 		String implBundleVersion = System.getProperty("cytoscape.impl.version");
+		String distributionBundleVersion = System.getProperty("cytoscape.distribution.version");
 
 		return options(
 				systemProperty("org.osgi.framework.system.packages.extra").value("com.sun.xml.internal.bind"),
@@ -145,57 +146,20 @@ public abstract class BasicIntegrationTest {
 				repository("http://code.cytoscape.org/nexus/content/repositories/thirdparty/"),
 
 				// Misc. bundles required to run minimal Cytoscape
-				mavenBundle().groupId("cytoscape-sun").artifactId("jhall").version("1.0").startLevel(3),
-				mavenBundle().groupId("com.googlecode.guava-osgi").artifactId("guava-osgi").version("9.0.0").startLevel(3),
-				mavenBundle().groupId("cytoscape-temp").artifactId("parallelcolt").version("0.9.4").startLevel(3),
-				mavenBundle().groupId("cytoscape-temp").artifactId("opencsv").version("2.1").startLevel(3),
-				mavenBundle().groupId("com.lowagie.text").artifactId("com.springsource.com.lowagie.text").version("2.0.8").startLevel(3),
-				mavenBundle().groupId("cytoscape-temp").artifactId("freehep-graphicsio").version("2.1.3").startLevel(3),
-				mavenBundle().groupId("cytoscape-temp").artifactId("freehep-graphicsio-svg").version("2.1.3").startLevel(3),
-				mavenBundle().groupId("cytoscape-temp").artifactId("freehep-graphicsio-ps").version("2.1.3").startLevel(3),
-				mavenBundle().groupId("cytoscape-temp").artifactId("freehep-graphics2d").version("2.1.3").startLevel(3),
-				mavenBundle().groupId("cytoscape-temp").artifactId("l2fprod-common-shared").version("7.3").startLevel(3),
-				mavenBundle().groupId("cytoscape-temp").artifactId("l2fprod-common-fontchooser").version("7.3").startLevel(3),
-				mavenBundle().groupId("cytoscape-temp").artifactId("l2fprod-common-sheet").version("7.3").startLevel(3),
-				mavenBundle().groupId("cytoscape-temp").artifactId("org.swinglabs.swingx").version("1.6.1").startLevel(3),
-				mavenBundle().groupId("cytoscape-temp").artifactId("freehep-export").version("2.1.1").startLevel(3),
-				mavenBundle().groupId("cytoscape-temp").artifactId("freehep-util").version("2.0.2").startLevel(3),
 				mavenBundle().groupId("org.apache.servicemix.specs").artifactId("org.apache.servicemix.specs.jaxb-api-2.1").version("1.2.0").startLevel(3),
 				mavenBundle().groupId("org.apache.servicemix.bundles").artifactId("org.apache.servicemix.bundles.jaxb-impl").version("2.1.6_1").startLevel(3),
 				mavenBundle().groupId("javax.activation").artifactId("com.springsource.javax.activation").version("1.1.1").startLevel(3),
 				mavenBundle().groupId("javax.xml.stream").artifactId("com.springsource.javax.xml.stream").version("1.0.1").startLevel(3),
-				mavenBundle().groupId("org.apache.felix").artifactId("org.apache.felix.eventadmin").version("1.2.14").startLevel(3),
-				mavenBundle().groupId("com.fasterxml.jackson.core").artifactId("jackson-core").version("2.2.2").startLevel(3),
 				mavenBundle().groupId("commons-io").artifactId("commons-io").version("2.1").startLevel(3),
+				
+				// Third-party bundle
+				mavenBundle().groupId("org.cytoscape.distribution").artifactId("third-party").version(distributionBundleVersion).startLevel(3),
 
-				// API bundles
-				mavenBundle().groupId("org.cytoscape").artifactId("event-api").version(apiBundleVersion).startLevel(5),
-				mavenBundle().groupId("org.cytoscape").artifactId("model-api").version(apiBundleVersion).startLevel(5),
-				mavenBundle().groupId("org.cytoscape").artifactId("group-api").version(apiBundleVersion).startLevel(5),
-				mavenBundle().groupId("org.cytoscape").artifactId("viewmodel-api").version(apiBundleVersion).startLevel(5),
-				mavenBundle().groupId("org.cytoscape").artifactId("presentation-api").version(apiBundleVersion).startLevel(5),
-				mavenBundle().groupId("org.cytoscape").artifactId("vizmap-api").version(apiBundleVersion).startLevel(5),
-				mavenBundle().groupId("org.cytoscape").artifactId("session-api").version(apiBundleVersion).startLevel(5),
-				mavenBundle().groupId("org.cytoscape").artifactId("io-api").version(apiBundleVersion).startLevel(5),
-				mavenBundle().groupId("org.cytoscape").artifactId("property-api").version(apiBundleVersion).startLevel(5),
-				mavenBundle().groupId("org.cytoscape").artifactId("work-api").version(apiBundleVersion).startLevel(5),
-				mavenBundle().groupId("org.cytoscape").artifactId("core-task-api").version(apiBundleVersion).startLevel(5),
-				mavenBundle().groupId("org.cytoscape").artifactId("application-api").version(apiBundleVersion).startLevel(5),
-				mavenBundle().groupId("org.cytoscape").artifactId("layout-api").version(apiBundleVersion).startLevel(5),
-				mavenBundle().groupId("org.cytoscape").artifactId("datasource-api").version(apiBundleVersion).startLevel(5),
-				mavenBundle().groupId("org.cytoscape").artifactId("vizmap-gui-api").version(apiBundleVersion).startLevel(5),
-				mavenBundle().groupId("org.cytoscape").artifactId("work-swing-api").version(apiBundleVersion).startLevel(5),
-				mavenBundle().groupId("org.cytoscape").artifactId("swing-application-api").version(apiBundleVersion).startLevel(5),
-				mavenBundle().groupId("org.cytoscape").artifactId("equations-api").version(apiBundleVersion).startLevel(5),
-				mavenBundle().groupId("org.cytoscape").artifactId("swing-application-api").version(apiBundleVersion).startLevel(5),
-				mavenBundle().groupId("org.cytoscape").artifactId("service-api").version(apiBundleVersion).startLevel(5),
-				mavenBundle().groupId("org.cytoscape").artifactId("command-executor-api").version(apiBundleVersion).startLevel(5),
-				mavenBundle().groupId("org.cytoscape").artifactId("filter-api").version(apiBundleVersion).startLevel(5),
+				// API bundle
+				mavenBundle().groupId("org.cytoscape").artifactId("api-bundle").version(apiBundleVersion).startLevel(5),
 				
 				// Implementation bundles
 				mavenBundle().groupId("org.cytoscape").artifactId("property-impl").version(implBundleVersion).startLevel(7),
-
-				mavenBundle().groupId("org.cytoscape").artifactId("swing-util-api").version(apiBundleVersion).startLevel(8),
 
 				mavenBundle().groupId("org.cytoscape").artifactId("datasource-impl").version(implBundleVersion).startLevel(9),
 				mavenBundle().groupId("org.cytoscape").artifactId("equations-impl").version(implBundleVersion).startLevel(9),
