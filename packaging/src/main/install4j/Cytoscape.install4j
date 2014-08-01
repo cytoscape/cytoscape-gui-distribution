@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<install4j version="4.2.8" transformSequenceNumber="2">
+<install4j version="5.1.12" transformSequenceNumber="4">
   <directoryPresets config="../../../target" />
-  <application name="Cytoscape" distributionSourceDir="" applicationId="5211-3645-3154-2580" mediaDir="dist" mediaFilePattern="${compiler:sys.shortName}_${compiler:sys.version}_${compiler:sys.platform}" compression="6" lzmaCompression="false" pack200Compression="false" excludeSignedFromPacking="true" keepModificationTimes="false" missingFilesStrategy="warn" shortName="Cytoscape" publisher="Cytoscape Consortium" publisherWeb="http://www.cytoscape.org" version="${version}" allPathsRelative="true" backupOnSave="false" autoSave="false" convertDotsToUnderscores="true" macSignature="????" installerName="" javaMinVersion="1.6" javaMaxVersion="" allowBetaVM="true" jdkMode="runtimeJre" jdkName="">
+  <application name="Cytoscape" distributionSourceDir="" applicationId="5211-3645-3154-2580" mediaDir="dist" mediaFilePattern="${compiler:sys.shortName}_${compiler:sys.version}_${compiler:sys.platform}" compression="6" lzmaCompression="false" pack200Compression="false" excludeSignedFromPacking="true" commonExternalFiles="false" createMd5Sums="true" shrinkRuntime="true" shortName="Cytoscape" publisher="Cytoscape Consortium" publisherWeb="http://www.cytoscape.org" version="${version}" allPathsRelative="true" backupOnSave="false" autoSave="false" convertDotsToUnderscores="true" macSignature="????" installerName="" javaMinVersion="1.7" javaMaxVersion="" allowBetaVM="true" jdkMode="runtimeJre" jdkName="">
     <languages skipLanguageSelection="false" languageSelectionInPrincipalLanguage="false">
       <principalLanguage id="en" customLocalizationFile="" />
       <additionalLanguages />
@@ -12,13 +12,15 @@
       <envVar name="JDK_HOME" />
     </searchSequence>
     <variables>
-      <variable name="WINDOWS_VERSION" value="@windows_version@" />
+      <variable name="WINDOWS_VERSION" value="@windows_version@" description="" category="" />
     </variables>
+    <mergedProjects />
+    <codeSigning macEnabled="false" macPkcs12File="" windowsEnabled="false" windowsKeySource="pkcs12" windowsPvkFile="" windowsSpcFile="" windowsPkcs12File="" />
   </application>
-  <files>
+  <files keepModificationTimes="false" missingFilesStrategy="warn" globalExcludeSuffixes="" defaultOverwriteMode="4" defaultUninstallMode="0" launcherOverwriteMode="3" defaultFileMode="644" defaultDirMode="755">
     <filesets>
-      <fileset name="Windows file set" id="225" />
-      <fileset name="Unix file set" id="227" />
+      <fileset name="Windows file set" id="225" customizedId="" />
+      <fileset name="Unix file set" id="227" customizedId="" />
     </filesets>
     <roots>
       <root id="226" fileset="225" location="" />
@@ -29,15 +31,15 @@
       <mountPoint id="232" root="228" location="" mode="755" />
     </mountPoints>
     <entries>
-      <dirEntry mountPoint="231" file="${project.build.directory}/cytoscape-windows-${version}" overwrite="4" shared="false" mode="755" uninstallMode="0" excludeSuffixes="" dirMode="777">
+      <dirEntry mountPoint="231" file="${project.build.directory}/cytoscape-windows-${version}" overwriteMode="4" shared="false" fileMode="755" uninstallMode="0" overrideFileMode="true" overrideOverwriteMode="true" overrideUninstallMode="true" entryMode="direct" subDirectory="" excludeSuffixes="" dirMode="777" overrideDirMode="true">
         <exclude />
       </dirEntry>
-      <dirEntry mountPoint="232" file="${project.build.directory}/cytoscape-unix-${version}" overwrite="4" shared="false" mode="755" uninstallMode="0" excludeSuffixes="" dirMode="777">
+      <dirEntry mountPoint="232" file="${project.build.directory}/cytoscape-unix-${version}" overwriteMode="4" shared="false" fileMode="755" uninstallMode="0" overrideFileMode="true" overrideOverwriteMode="true" overrideUninstallMode="true" entryMode="direct" subDirectory="" excludeSuffixes="" dirMode="777" overrideDirMode="true">
         <exclude />
       </dirEntry>
     </entries>
     <components>
-      <component name="Windows Installation Component" id="234" displayDescription="false" selected="true" mandatory="false" downloadable="false">
+      <component name="Windows Installation Component" id="234" customizedId="" displayDescription="false" hideHelpButton="false" selected="true" changeable="true" downloadable="false" hidden="false">
         <description />
         <include all="false">
           <entry location=".i4j_fileset_" fileType="regular" />
@@ -45,7 +47,7 @@
         </include>
         <dependencies />
       </component>
-      <component name="Unix Installation Component" id="235" displayDescription="false" selected="true" mandatory="false" downloadable="false">
+      <component name="Unix Installation Component" id="235" customizedId="" displayDescription="false" hideHelpButton="false" selected="true" changeable="true" downloadable="false" hidden="false">
         <description />
         <include all="false">
           <entry location=".i4j_fileset_" fileType="regular" />
@@ -56,11 +58,17 @@
     </components>
   </files>
   <launchers>
-    <launcher name="Cytoscape" id="3" external="false" excludeFromMenu="false" menuName="" icnsFile="${basedir}/src/main/images/cytoscape3-icon-trans-128x128.icns" pngIcon16File="${basedir}/src/main/images/cytoscape3-icon-trans-16x16.png" pngIcon32File="${basedir}/src/main/images/cytoscape3-icon-trans-32x32.png" macServiceDependencies="" swtApp="false" fileset="">
+    <launcher name="Cytoscape" id="3" customizedId="" external="false" excludeFromMenu="false" unixMode="755" menuName="" icnsFile="${basedir}/src/main/images/cytoscape3-icon-trans-128x128.icns" customMacBundleIdentifier="false" macBundleIdentifier="" swtApp="false" fileset="" macBundleBinary="JavaApplicationStub" addMacEntitlements="false" macEntitlementsFile="">
       <executable name="Cytoscape" type="1" iconSet="true" iconFile="${basedir}/src/main/images/cytoscape3-icon-trans-128x128.ico" executableDir="." redirectStderr="true" stderrFile="output.log" stderrMode="overwrite" redirectStdout="true" stdoutFile="output.log" stdoutMode="overwrite" failOnStderrOutput="true" executableMode="1" changeWorkingDirectory="true" workingDirectory="." singleInstance="false" serviceStartType="2" serviceDependencies="" serviceDescription="" jreLocation="" executionLevel="asInvoker" checkConsoleParameter="false" globalSingleInstance="false">
         <versionInfo include="false" fileVersion="${compiler:WINDOWS_VERSION}" fileDescription="Cytoscape" legalCopyright="Cytoscape Consortium" internalName="${compiler:sys.shortName}" productName="" />
       </executable>
-      <java mainClass="org.cytoscape.launcher.internal.Launcher" vmParameters="-Xms128M -Dcom.sun.management.jmxremote &quot;-Dkaraf.instances=${launcher:sys.launcherDirectory}/framework/instances&quot;  &quot;-Dkaraf.home=${launcher:sys.launcherDirectory}/framework&quot; &quot;-Dkaraf.base=${launcher:sys.launcherDirectory}/framework&quot; &quot;-Djava.util.logging.config.file=${launcher:sys.launcherDirectory}/framework/etc/java.util.logging.properties&quot;  -Dkaraf.startLocalConsole=false  -Dkaraf.startRemoteShell=false" arguments="" allowVMPassthroughParameters="true" preferredVM="" bundleRuntime="true">
+      <splashScreen show="false" autoOff="true" alwaysOnTop="true" width="0" height="0" bitmapFile="" java6SplashScreen="false">
+        <text>
+          <statusLine x="20" y="20" text="" font="Arial" fontSize="8" fontColor="0,0,0" fontWeight="500" />
+          <versionLine x="20" y="40" text="version ${compiler:sys.version}" font="Arial" fontSize="8" fontColor="0,0,0" fontWeight="500" />
+        </text>
+      </splashScreen>
+      <java mainClass="org.cytoscape.launcher.internal.Launcher" vmParameters="-Xms128M -Dcom.sun.management.jmxremote &quot;-Djava.endorsed.dirs=${launcher:sys.jvmHome}/jre/lib/endorsed${launcher:sys.pathlistSeparator}${launcher:sys.jvmHome}/lib/endorsed${launcher:sys.pathlistSeparator}${launcher:sys.launcherDirectory}/framework/lib/endorsed&quot; &quot;-Djava.ext.dirs=${launcher:sys.jvmHome}/jre/lib/ext${launcher:sys.pathlistSeparator}${launcher:sys.jvmHome}/lib/ext${launcher:sys.pathlistSeparator}${launcher:sys.launcherDirectory}/framework/lib/ext&quot; &quot;-Dkaraf.instances=${launcher:sys.launcherDirectory}/framework/instances&quot;  &quot;-Dkaraf.home=${launcher:sys.launcherDirectory}/framework&quot; &quot;-Dkaraf.base=${launcher:sys.launcherDirectory}/framework&quot; &quot;-Dkaraf.etc=${launcher:sys.launcherDirectory}/framework/etc&quot; &quot;-Djava.util.logging.config.file=${launcher:sys.launcherDirectory}/framework/etc/java.util.logging.properties&quot;  -Dkaraf.startLocalConsole=false  -Dkaraf.startRemoteShell=false" arguments="" allowVMPassthroughParameters="true" preferredVM="" bundleRuntime="true">
         <classPath>
           <scanDirectory location="." failOnError="false" />
           <directory location="lib" failOnError="false" />
@@ -72,15 +80,29 @@
       </java>
       <includedFiles />
       <unextractableFiles />
+      <vmOptionsFile mode="none" overwriteMode="0" fileMode="644">
+        <content />
+      </vmOptionsFile>
       <customScript mode="1" file="">
-        <scriptLines />
+        <content />
       </customScript>
+      <infoPlist mode="1" file="">
+        <content />
+      </infoPlist>
+      <iconImageFiles>
+        <file path="${basedir}/src/main/images/cytoscape3-icon-trans-16x16.png" />
+        <file path="${basedir}/src/main/images/cytoscape3-icon-trans-32x32.png" />
+      </iconImageFiles>
     </launcher>
   </launchers>
-  <installerGui installerType="1" suggestPreviousProgramGroup="true" addOnAppId="" suggestPreviousLocations="false">
-    <customCode useInstalledFiles="false" />
+  <installerGui installerType="1" addOnAppId="" suggestPreviousLocations="false" autoUpdateDescriptorUrl="" useAutoUpdateBaseUrl="false" autoUpdateBaseUrl="">
+    <customCode />
+    <autoUpdate useMinUpdatableVersion="false" minUpdatableVersion="" useMaxUpdatableVersion="false" maxUpdatableVersion="">
+      <commentFiles />
+      <customAttributes />
+    </autoUpdate>
     <applications>
-      <application name="" id="installer" beanClass="com.install4j.runtime.beans.applications.InstallerApplication" enabled="true" commentSet="false" comment="" customIcnsFile="" customIcoFile="">
+      <application name="" id="installer" customizedId="" beanClass="com.install4j.runtime.beans.applications.InstallerApplication" enabled="true" commentSet="false" comment="" actionElevationType="none" fileset="" customIcnsFile="" customIcoFile="" macEntitlementsFile="" automaticLauncherIntegration="false" launchMode="startupFirstWindow" launchInNewProcess="false" launchSchedule="updateSchedule" allLaunchers="true">
         <serializedBean>
           <java class="java.beans.XMLDecoder">
             <object class="com.install4j.runtime.beans.applications.InstallerApplication">
@@ -88,6 +110,9 @@
                 <boolean>false</boolean>
               </void>
               <void property="allowUnattended">
+                <boolean>false</boolean>
+              </void>
+              <void property="frameSizeClientArea">
                 <boolean>false</boolean>
               </void>
               <void property="resizable">
@@ -99,8 +124,10 @@
             </object>
           </java>
         </serializedBean>
+        <launcherIds />
+        <variables />
         <startup>
-          <screen name="" id="5" beanClass="com.install4j.runtime.beans.screens.StartupScreen" enabled="true" commentSet="false" comment="" rollbackBarrier="false" backButton="2" finishScreen="false">
+          <screen name="" id="5" customizedId="" beanClass="com.install4j.runtime.beans.screens.StartupScreen" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" backButton="2" finishScreen="false" wizardIndexChangeType="unchanged" wizardIndexKey="">
             <serializedBean>
               <java class="java.beans.XMLDecoder">
                 <object class="com.install4j.runtime.beans.screens.StartupScreen" />
@@ -110,12 +137,21 @@
             <validation />
             <preActivation />
             <postActivation />
-            <actions />
+            <actions>
+              <action name="" id="343" customizedId="" beanClass="com.install4j.runtime.beans.actions.misc.RequestPrivilegesAction" enabled="true" commentSet="false" comment="" actionElevationType="none" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.actions.misc.RequestPrivilegesAction" />
+                  </java>
+                </serializedBean>
+                <condition />
+              </action>
+            </actions>
             <formComponents />
           </screen>
         </startup>
         <screens>
-          <screen name="" id="6" beanClass="com.install4j.runtime.beans.screens.WelcomeScreen" enabled="true" commentSet="false" comment="" rollbackBarrier="false" backButton="2" finishScreen="false">
+          <screen name="" id="6" customizedId="" beanClass="com.install4j.runtime.beans.screens.WelcomeScreen" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" backButton="2" finishScreen="false" wizardIndexChangeType="unchanged" wizardIndexKey="">
             <serializedBean>
               <java class="java.beans.XMLDecoder">
                 <object class="com.install4j.runtime.beans.screens.WelcomeScreen" />
@@ -125,10 +161,19 @@
             <validation />
             <preActivation />
             <postActivation />
-            <actions />
+            <actions>
+              <action name="" id="344" customizedId="" beanClass="com.install4j.runtime.beans.actions.misc.LoadResponseFileAction" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" multiExec="true" failureStrategy="1" errorMessage="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.actions.misc.LoadResponseFileAction" />
+                  </java>
+                </serializedBean>
+                <condition>context.getBooleanVariable("sys.confirmedUpdateInstallation")</condition>
+              </action>
+            </actions>
             <formComponents />
           </screen>
-          <screen name="" id="7" beanClass="com.install4j.runtime.beans.screens.LicenseScreen" enabled="true" commentSet="false" comment="" rollbackBarrier="false" backButton="2" finishScreen="false">
+          <screen name="" id="7" customizedId="" beanClass="com.install4j.runtime.beans.screens.LicenseScreen" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" backButton="2" finishScreen="false" wizardIndexChangeType="unchanged" wizardIndexKey="">
             <serializedBean>
               <java class="java.beans.XMLDecoder">
                 <object class="com.install4j.runtime.beans.screens.LicenseScreen">
@@ -665,6 +710,9 @@ Ty Coon, President of Vice&lt;/tt&gt;&lt;/p&gt;
 &lt;/body&gt;&lt;/html&gt;
 </string>
                   </void>
+                  <void property="textSource">
+                    <object class="com.install4j.runtime.beans.screens.components.TextSource" field="DIRECT" />
+                  </void>
                 </object>
               </java>
             </serializedBean>
@@ -675,20 +723,20 @@ Ty Coon, President of Vice&lt;/tt&gt;&lt;/p&gt;
             <actions />
             <formComponents />
           </screen>
-          <screen name="" id="8" beanClass="com.install4j.runtime.beans.screens.InstallationDirectoryScreen" enabled="true" commentSet="false" comment="" rollbackBarrier="false" backButton="2" finishScreen="false">
+          <screen name="" id="8" customizedId="" beanClass="com.install4j.runtime.beans.screens.InstallationDirectoryScreen" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" backButton="2" finishScreen="false" wizardIndexChangeType="unchanged" wizardIndexKey="">
             <serializedBean>
               <java class="java.beans.XMLDecoder">
                 <object class="com.install4j.runtime.beans.screens.InstallationDirectoryScreen" />
               </java>
             </serializedBean>
-            <condition />
+            <condition>!context.getBooleanVariable("sys.confirmedUpdateInstallation")</condition>
             <validation />
             <preActivation />
             <postActivation />
             <actions />
             <formComponents />
           </screen>
-          <screen name="" id="9" beanClass="com.install4j.runtime.beans.screens.FileAssociationsScreen" enabled="true" commentSet="false" comment="" rollbackBarrier="false" backButton="2" finishScreen="false">
+          <screen name="" id="9" customizedId="" beanClass="com.install4j.runtime.beans.screens.FileAssociationsScreen" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" backButton="2" finishScreen="false" wizardIndexChangeType="unchanged" wizardIndexKey="">
             <serializedBean>
               <java class="java.beans.XMLDecoder">
                 <object class="com.install4j.runtime.beans.screens.FileAssociationsScreen" />
@@ -701,12 +749,15 @@ Ty Coon, President of Vice&lt;/tt&gt;&lt;/p&gt;
             <actions />
             <formComponents />
           </screen>
-          <screen name="" id="50" beanClass="com.install4j.runtime.beans.screens.DefaultInfoScreen" enabled="true" commentSet="false" comment="" rollbackBarrier="false" backButton="2" finishScreen="false">
+          <screen name="" id="50" customizedId="" beanClass="com.install4j.runtime.beans.screens.DefaultInfoScreen" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" backButton="2" finishScreen="false" wizardIndexChangeType="unchanged" wizardIndexKey="">
             <serializedBean>
               <java class="java.beans.XMLDecoder">
                 <object class="com.install4j.runtime.beans.screens.DefaultInfoScreen">
                   <void property="displayedText">
                     <string>To automatically open .cys files with this version of Cytoscape, you must manually set 'Open with' in the 'Get Info' panel and select 'Change all'. The file association performed by this installation only sets this version of Cytoscape as one possible application, not necessarily the default, for .cys files. Double-clicking on a .cys file may open an older version of Cytoscape if the new version is not manually set as the default application.</string>
+                  </void>
+                  <void property="textSource">
+                    <object class="com.install4j.runtime.beans.screens.components.TextSource" field="DIRECT" />
                   </void>
                 </object>
               </java>
@@ -718,7 +769,7 @@ Ty Coon, President of Vice&lt;/tt&gt;&lt;/p&gt;
             <actions />
             <formComponents />
           </screen>
-          <screen name="" id="10" beanClass="com.install4j.runtime.beans.screens.InstallationScreen" enabled="true" commentSet="false" comment="" rollbackBarrier="true" backButton="2" finishScreen="false">
+          <screen name="" id="10" customizedId="" beanClass="com.install4j.runtime.beans.screens.InstallationScreen" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="true" backButton="2" finishScreen="false" wizardIndexChangeType="unchanged" wizardIndexKey="">
             <serializedBean>
               <java class="java.beans.XMLDecoder">
                 <object class="com.install4j.runtime.beans.screens.InstallationScreen" />
@@ -729,7 +780,7 @@ Ty Coon, President of Vice&lt;/tt&gt;&lt;/p&gt;
             <preActivation />
             <postActivation />
             <actions>
-              <action name="" id="279" beanClass="com.install4j.runtime.beans.actions.control.RunScriptAction" enabled="true" commentSet="false" comment="" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
+              <action name="" id="279" customizedId="" beanClass="com.install4j.runtime.beans.actions.control.RunScriptAction" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
                 <serializedBean>
                   <java class="java.beans.XMLDecoder">
                     <object class="com.install4j.runtime.beans.actions.control.RunScriptAction">
@@ -741,13 +792,7 @@ Ty Coon, President of Vice&lt;/tt&gt;&lt;/p&gt;
 // The SystemInfo class has a method to determine the physical memory.
 // In this case we want to use 50% of the physical memory for our application.
 Long xmxValue = Math.round(SystemInfo.getPhysicalMemory() * 0.95 / 1024 / 1024);
-if(!System.getProperty("os.arch").contains("64")) { //not 64-bit
-	if(Util.isWindows())
-		xmxValue = Math.min(xmxValue, 1250);
-	else
-		xmxValue = Math.min(xmxValue, 1550);
-}
-String xmxString = " -Xmx" + xmxValue  + "m";
+String xmxString = "-Xmx" + xmxValue  + "m";
 
 // You can set the -Xmx parameter to a variable
 context.setVariable("xmx", xmxString);
@@ -764,7 +809,7 @@ return true;
                 </serializedBean>
                 <condition />
               </action>
-              <action name="" id="11" beanClass="com.install4j.runtime.beans.actions.InstallFilesAction" enabled="true" commentSet="false" comment="" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
+              <action name="" id="11" customizedId="" beanClass="com.install4j.runtime.beans.actions.InstallFilesAction" enabled="true" commentSet="false" comment="" actionElevationType="elevated" rollbackBarrier="false" multiExec="false" failureStrategy="2" errorMessage="${i18n:FileCorrupted}">
                 <serializedBean>
                   <java class="java.beans.XMLDecoder">
                     <object class="com.install4j.runtime.beans.actions.InstallFilesAction" />
@@ -772,7 +817,7 @@ return true;
                 </serializedBean>
                 <condition />
               </action>
-              <action name="" id="280" beanClass="com.install4j.runtime.beans.actions.misc.AddVmOptionsAction" enabled="true" commentSet="false" comment="" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
+              <action name="" id="280" customizedId="" beanClass="com.install4j.runtime.beans.actions.misc.AddVmOptionsAction" enabled="true" commentSet="false" comment="" actionElevationType="elevated" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
                 <serializedBean>
                   <java class="java.beans.XMLDecoder">
                     <object class="com.install4j.runtime.beans.actions.misc.AddVmOptionsAction">
@@ -791,19 +836,22 @@ return true;
                 </serializedBean>
                 <condition />
               </action>
-              <action name="" id="12" beanClass="com.install4j.runtime.beans.actions.desktop.CreateProgramGroupAction" enabled="true" commentSet="false" comment="" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
+              <action name="" id="12" customizedId="" beanClass="com.install4j.runtime.beans.actions.desktop.CreateProgramGroupAction" enabled="true" commentSet="false" comment="" actionElevationType="elevated" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
                 <serializedBean>
                   <java class="java.beans.XMLDecoder">
                     <object class="com.install4j.runtime.beans.actions.desktop.CreateProgramGroupAction">
                       <void property="programGroupName">
                         <string>${compiler:sys.fullName}_${compiler:sys.version}</string>
                       </void>
+                      <void property="uninstallerMenuName">
+                        <string>${i18n:UninstallerMenuEntry(${compiler:sys.fullName})}</string>
+                      </void>
                     </object>
                   </java>
                 </serializedBean>
-                <condition />
+                <condition>!context.getBooleanVariable("sys.programGroupDisabled")</condition>
               </action>
-              <action name="" id="13" beanClass="com.install4j.runtime.beans.actions.desktop.RegisterAddRemoveAction" enabled="true" commentSet="false" comment="" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
+              <action name="" id="13" customizedId="" beanClass="com.install4j.runtime.beans.actions.desktop.RegisterAddRemoveAction" enabled="true" commentSet="false" comment="" actionElevationType="elevated" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
                 <serializedBean>
                   <java class="java.beans.XMLDecoder">
                     <object class="com.install4j.runtime.beans.actions.desktop.RegisterAddRemoveAction">
@@ -815,7 +863,7 @@ return true;
                 </serializedBean>
                 <condition />
               </action>
-              <action name="" id="14" beanClass="com.install4j.runtime.beans.actions.desktop.CreateFileAssociationAction" enabled="true" commentSet="false" comment="" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
+              <action name="" id="14" customizedId="" beanClass="com.install4j.runtime.beans.actions.desktop.CreateFileAssociationAction" enabled="true" commentSet="false" comment="" actionElevationType="elevated" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
                 <serializedBean>
                   <java class="java.beans.XMLDecoder">
                     <object class="com.install4j.runtime.beans.actions.desktop.CreateFileAssociationAction">
@@ -843,7 +891,7 @@ return true;
                 </serializedBean>
                 <condition />
               </action>
-              <action name="" id="342" beanClass="com.install4j.runtime.beans.actions.xml.XsltAction" enabled="true" commentSet="false" comment="" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
+              <action name="" id="342" customizedId="" beanClass="com.install4j.runtime.beans.actions.xml.XsltAction" enabled="true" commentSet="false" comment="" actionElevationType="elevated" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
                 <serializedBean>
                   <java class="java.beans.XMLDecoder">
                     <object class="com.install4j.runtime.beans.actions.xml.XsltAction">
@@ -870,7 +918,7 @@ return true;
             </actions>
             <formComponents />
           </screen>
-          <screen name="" id="15" beanClass="com.install4j.runtime.beans.screens.FinishedScreen" enabled="true" commentSet="false" comment="" rollbackBarrier="false" backButton="2" finishScreen="true">
+          <screen name="" id="15" customizedId="" beanClass="com.install4j.runtime.beans.screens.FinishedScreen" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" backButton="2" finishScreen="true" wizardIndexChangeType="unchanged" wizardIndexKey="">
             <serializedBean>
               <java class="java.beans.XMLDecoder">
                 <object class="com.install4j.runtime.beans.screens.FinishedScreen" />
@@ -885,7 +933,7 @@ return true;
           </screen>
         </screens>
       </application>
-      <application name="" id="uninstaller" beanClass="com.install4j.runtime.beans.applications.UninstallerApplication" enabled="true" commentSet="false" comment="" customIcnsFile="" customIcoFile="">
+      <application name="" id="uninstaller" customizedId="" beanClass="com.install4j.runtime.beans.applications.UninstallerApplication" enabled="true" commentSet="false" comment="" actionElevationType="none" fileset="" customIcnsFile="" customIcoFile="" macEntitlementsFile="" automaticLauncherIntegration="false" launchMode="startupFirstWindow" launchInNewProcess="false" launchSchedule="updateSchedule" allLaunchers="true">
         <serializedBean>
           <java class="java.beans.XMLDecoder">
             <object class="com.install4j.runtime.beans.applications.UninstallerApplication">
@@ -893,6 +941,9 @@ return true;
                 <boolean>false</boolean>
               </void>
               <void property="allowUnattended">
+                <boolean>false</boolean>
+              </void>
+              <void property="frameSizeClientArea">
                 <boolean>false</boolean>
               </void>
               <void property="resizable">
@@ -904,8 +955,10 @@ return true;
             </object>
           </java>
         </serializedBean>
+        <launcherIds />
+        <variables />
         <startup>
-          <screen name="" id="17" beanClass="com.install4j.runtime.beans.screens.StartupScreen" enabled="true" commentSet="false" comment="" rollbackBarrier="false" backButton="2" finishScreen="false">
+          <screen name="" id="17" customizedId="" beanClass="com.install4j.runtime.beans.screens.StartupScreen" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" backButton="2" finishScreen="false" wizardIndexChangeType="unchanged" wizardIndexKey="">
             <serializedBean>
               <java class="java.beans.XMLDecoder">
                 <object class="com.install4j.runtime.beans.screens.StartupScreen" />
@@ -915,12 +968,29 @@ return true;
             <validation />
             <preActivation />
             <postActivation />
-            <actions />
+            <actions>
+              <action name="" id="345" customizedId="" beanClass="com.install4j.runtime.beans.actions.misc.LoadResponseFileAction" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.actions.misc.LoadResponseFileAction" />
+                  </java>
+                </serializedBean>
+                <condition />
+              </action>
+              <action name="" id="346" customizedId="" beanClass="com.install4j.runtime.beans.actions.misc.RequireInstallerPrivilegesAction" enabled="true" commentSet="false" comment="" actionElevationType="none" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.actions.misc.RequireInstallerPrivilegesAction" />
+                  </java>
+                </serializedBean>
+                <condition />
+              </action>
+            </actions>
             <formComponents />
           </screen>
         </startup>
         <screens>
-          <screen name="" id="18" beanClass="com.install4j.runtime.beans.screens.UninstallWelcomeScreen" enabled="true" commentSet="false" comment="" rollbackBarrier="false" backButton="2" finishScreen="false">
+          <screen name="" id="18" customizedId="" beanClass="com.install4j.runtime.beans.screens.UninstallWelcomeScreen" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" backButton="2" finishScreen="false" wizardIndexChangeType="unchanged" wizardIndexKey="">
             <serializedBean>
               <java class="java.beans.XMLDecoder">
                 <object class="com.install4j.runtime.beans.screens.UninstallWelcomeScreen" />
@@ -933,7 +1003,7 @@ return true;
             <actions />
             <formComponents />
           </screen>
-          <screen name="" id="19" beanClass="com.install4j.runtime.beans.screens.UninstallationScreen" enabled="true" commentSet="false" comment="" rollbackBarrier="false" backButton="2" finishScreen="false">
+          <screen name="" id="19" customizedId="" beanClass="com.install4j.runtime.beans.screens.UninstallationScreen" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" backButton="2" finishScreen="false" wizardIndexChangeType="unchanged" wizardIndexKey="">
             <serializedBean>
               <java class="java.beans.XMLDecoder">
                 <object class="com.install4j.runtime.beans.screens.UninstallationScreen" />
@@ -944,16 +1014,20 @@ return true;
             <preActivation />
             <postActivation />
             <actions>
-              <action name="" id="315" beanClass="com.install4j.runtime.beans.actions.files.DeleteFileAction" enabled="true" commentSet="false" comment="" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
+              <action name="" id="315" customizedId="" beanClass="com.install4j.runtime.beans.actions.files.DeleteFileAction" enabled="true" commentSet="false" comment="" actionElevationType="elevated" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
                 <serializedBean>
                   <java class="java.beans.XMLDecoder">
                     <object class="com.install4j.runtime.beans.actions.files.DeleteFileAction">
-                      <void property="file">
-                        <object class="java.io.File">
-                          <string>framework</string>
-                        </object>
+                      <void property="files">
+                        <array class="java.io.File" length="1">
+                          <void index="0">
+                            <object class="java.io.File">
+                              <string>framework</string>
+                            </object>
+                          </void>
+                        </array>
                       </void>
-                      <void property="recurse">
+                      <void property="recursive">
                         <boolean>true</boolean>
                       </void>
                     </object>
@@ -961,7 +1035,7 @@ return true;
                 </serializedBean>
                 <condition />
               </action>
-              <action name="" id="20" beanClass="com.install4j.runtime.beans.actions.UninstallFilesAction" enabled="true" commentSet="false" comment="" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
+              <action name="" id="20" customizedId="" beanClass="com.install4j.runtime.beans.actions.UninstallFilesAction" enabled="true" commentSet="false" comment="" actionElevationType="elevated" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
                 <serializedBean>
                   <java class="java.beans.XMLDecoder">
                     <object class="com.install4j.runtime.beans.actions.UninstallFilesAction" />
@@ -972,7 +1046,7 @@ return true;
             </actions>
             <formComponents />
           </screen>
-          <screen name="" id="21" beanClass="com.install4j.runtime.beans.screens.UninstallFailureScreen" enabled="true" commentSet="false" comment="" rollbackBarrier="false" backButton="2" finishScreen="true">
+          <screen name="" id="21" customizedId="" beanClass="com.install4j.runtime.beans.screens.UninstallFailureScreen" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" backButton="2" finishScreen="true" wizardIndexChangeType="unchanged" wizardIndexKey="">
             <serializedBean>
               <java class="java.beans.XMLDecoder">
                 <object class="com.install4j.runtime.beans.screens.UninstallFailureScreen" />
@@ -985,7 +1059,7 @@ return true;
             <actions />
             <formComponents />
           </screen>
-          <screen name="" id="22" beanClass="com.install4j.runtime.beans.screens.UninstallSuccessScreen" enabled="true" commentSet="false" comment="" rollbackBarrier="false" backButton="2" finishScreen="true">
+          <screen name="" id="22" customizedId="" beanClass="com.install4j.runtime.beans.screens.UninstallSuccessScreen" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" backButton="2" finishScreen="true" wizardIndexChangeType="unchanged" wizardIndexKey="">
             <serializedBean>
               <java class="java.beans.XMLDecoder">
                 <object class="com.install4j.runtime.beans.screens.UninstallSuccessScreen" />
@@ -1003,23 +1077,25 @@ return true;
     </applications>
   </installerGui>
   <mediaSets>
-    <macosFolder name="Mac OS X Folder" id="9" mediaFileName="" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true" requires64bit="false" jreBitType="all" runPostProcessor="false" postProcessor="" failOnPostProcessorError="false" customInstallBaseDir="" createUninstallIcon="true" contentFilesType="1" downloadURL="">
+    <macosFolder name="Mac OS X" id="9" customizedId="" mediaFileName="" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true" jreBitType="all" runPostProcessor="false" postProcessor="" failOnPostProcessorError="false" useLegacyMediaFileIds="false" legacyMediaFileIds="" includedJRE="" manualJREEntry="false" bundleType="1" jreURL="" jreShared="false" directDownload="false" installOnlyIfNecessary="false" appleJre="false" requiredVmIdPrefix="" customInstallBaseDir="" contentFilesType="1" downloadURL="" signLaunchers="false">
       <excludedLaunchers />
-      <excludedComponents>
-        <component id="234" />
-      </excludedComponents>
       <excludedBeans />
       <overriddenPrincipalLanguage id="en" customLocalizationFile="" />
       <exclude>
         <entry location=".i4j_fileset_225" fileType="regular" />
       </exclude>
       <variables />
-    </macosFolder>
-    <unixInstaller name="Unix Installer" id="12" mediaFileName="" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true" requires64bit="false" jreBitType="all" runPostProcessor="false" postProcessor="" failOnPostProcessorError="false" includedJRE="" manualJREEntry="false" bundleType="1" jreURL="" jreFtpURL="" jreShared="false" directDownload="false" customInstallBaseDir="" createUninstallIcon="true" contentFilesType="1" downloadURL="">
-      <excludedLaunchers />
+      <autoUpdate useMinUpdatableVersion="false" minUpdatableVersion="" useMaxUpdatableVersion="false" maxUpdatableVersion="">
+        <commentFiles />
+        <customAttributes />
+      </autoUpdate>
       <excludedComponents>
         <component id="234" />
       </excludedComponents>
+      <includedDownloadableComponents />
+    </macosFolder>
+    <unixInstaller name="Unix" id="12" customizedId="" mediaFileName="" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true" jreBitType="all" runPostProcessor="false" postProcessor="" failOnPostProcessorError="false" useLegacyMediaFileIds="false" legacyMediaFileIds="" includedJRE="" manualJREEntry="false" bundleType="1" jreURL="" jreShared="false" directDownload="false" installOnlyIfNecessary="false" customInstallBaseDir="" contentFilesType="1" downloadURL="">
+      <excludedLaunchers />
       <excludedBeans>
         <bean refId="50" />
       </excludedBeans>
@@ -1028,15 +1104,20 @@ return true;
         <entry location=".i4j_fileset_225" fileType="regular" />
       </exclude>
       <variables />
+      <autoUpdate useMinUpdatableVersion="false" minUpdatableVersion="" useMaxUpdatableVersion="false" maxUpdatableVersion="">
+        <commentFiles />
+        <customAttributes />
+      </autoUpdate>
+      <excludedComponents>
+        <component id="234" />
+      </excludedComponents>
+      <includedDownloadableComponents />
       <installerScript mode="1" file="">
-        <scriptLines />
+        <content />
       </installerScript>
     </unixInstaller>
-    <win32 name="Windows 64 bit" id="11" mediaFileName="Cytoscape_${compiler:sys.version}_windows_64bit" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true" requires64bit="true" jreBitType="64" runPostProcessor="false" postProcessor="" failOnPostProcessorError="false" includedJRE="" manualJREEntry="false" bundleType="1" jreURL="" jreFtpURL="" jreShared="false" directDownload="false" customInstallBaseDir="" createUninstallIcon="true" contentFilesType="1" downloadURL="" runAsAdmin="false">
+    <windows name="Windows" id="11" customizedId="" mediaFileName="${compiler:sys.shortName}_${compiler:sys.version}_windows" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true" jreBitType="64" runPostProcessor="false" postProcessor="" failOnPostProcessorError="false" useLegacyMediaFileIds="false" legacyMediaFileIds="" includedJRE="" manualJREEntry="false" bundleType="1" jreURL="" jreShared="false" directDownload="false" installOnlyIfNecessary="false" customInstallBaseDir="" contentFilesType="1" downloadURL="" verifyIntegrity="true">
       <excludedLaunchers />
-      <excludedComponents>
-        <component id="235" />
-      </excludedComponents>
       <excludedBeans>
         <bean refId="50" />
       </excludedBeans>
@@ -1045,24 +1126,19 @@ return true;
         <entry location=".i4j_fileset_227" fileType="regular" />
       </exclude>
       <variables />
-    </win32>
-    <win32 name="Windows 32 bit" id="166" mediaFileName="Cytoscape_${compiler:sys.version}_windows_32bit" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true" requires64bit="false" jreBitType="32" runPostProcessor="false" postProcessor="" failOnPostProcessorError="false" includedJRE="" manualJREEntry="false" bundleType="1" jreURL="" jreFtpURL="" jreShared="false" directDownload="false" customInstallBaseDir="" createUninstallIcon="true" contentFilesType="1" downloadURL="" runAsAdmin="false">
-      <excludedLaunchers />
+      <autoUpdate useMinUpdatableVersion="false" minUpdatableVersion="" useMaxUpdatableVersion="false" maxUpdatableVersion="">
+        <commentFiles />
+        <customAttributes />
+      </autoUpdate>
       <excludedComponents>
         <component id="235" />
       </excludedComponents>
-      <excludedBeans>
-        <bean refId="50" />
-      </excludedBeans>
-      <overriddenPrincipalLanguage id="en" customLocalizationFile="" />
-      <exclude>
-        <entry location=".i4j_fileset_227" fileType="regular" />
-      </exclude>
-      <variables />
-    </win32>
+      <includedDownloadableComponents />
+    </windows>
   </mediaSets>
   <buildIds buildAll="true">
     <mediaSet refId="11" />
   </buildIds>
+  <buildOptions verbose="false" faster="false" disableSigning="false" debug="false" />
 </install4j>
 

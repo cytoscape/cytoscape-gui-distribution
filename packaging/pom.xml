@@ -12,7 +12,7 @@
   <name>Cytoscape Release Packaging</name>
 
   <properties>
-    <install4j.executable>/Applications/install4j 4/bin/install4jc</install4j.executable>
+    <install4j.executable>/Applications/install4j 5/bin/install4jc</install4j.executable>
   </properties>
 
   <pluginRepositories>

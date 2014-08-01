@@ -12,7 +12,7 @@ set physmem=768
 set mem=768
 if exist findmem.out del findmem.out
 systeminfo | find "Total Physical Memory" > findmem.out
-if %ERRORLEVEL% NEQ 0 GOTO Javatest
+if %ERRORLEVEL% NEQ 0 GOTO setVmoptions
 for /f "tokens=4" %%i in (findmem.out) do set physmem=%%i
 set physmem=%physmem:,=%
 
@@ -22,28 +22,10 @@ if %physmem% GTR 3072 set /a mem=%physmem%-1024
 REM if %physmem% GTR 4096 set mem=3072
 REM if %physmem% GTR 9216 set mem=4096
 
-:Javatest
-	if exist findstr.out del findstr.out
-	java -version 2>&1 | findstr /I 64-Bit > findstr.out
-	if %ERRORLEVEL% EQU 0 GOTO 64bit
-	java -version 2>&1 | findstr /i Java > findstr.out
-	IF %ERRORLEVEL% EQU 0 GOTO 32bit
-	goto Nojava
-
-:64bit
-	REM echo "64 bit %mem% MB"
+:setVmoptions
+	REM echo "%mem% MB"
         echo -Xmx%mem%M  >Cytoscape.vmoptions
 	goto End
-
-:32bit
-	REM echo "32 bit %mem% MB"
-	REM Some java versions can only support 1250MB
-	if %mem% GTR 1250 set mem=1250
-        echo -Xmx%mem%M >Cytoscape.vmoptions
-	goto End
-
-:Nojava
-	echo ERROR: Can't find java executable
 
 :End
 	del findstr.out
