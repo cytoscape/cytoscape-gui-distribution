@@ -68,7 +68,7 @@
           <versionLine x="20" y="40" text="version ${compiler:sys.version}" font="Arial" fontSize="8" fontColor="0,0,0" fontWeight="500" />
         </text>
       </splashScreen>
-      <java mainClass="org.cytoscape.launcher.internal.Launcher" vmParameters="-Xms128M -Dcom.sun.management.jmxremote &quot;-Djava.endorsed.dirs=${launcher:sys.jvmHome}/jre/lib/endorsed${launcher:sys.pathlistSeparator}${launcher:sys.jvmHome}/lib/endorsed${launcher:sys.pathlistSeparator}${launcher:sys.launcherDirectory}/framework/lib/endorsed&quot; &quot;-Djava.ext.dirs=${launcher:sys.jvmHome}/jre/lib/ext${launcher:sys.pathlistSeparator}${launcher:sys.jvmHome}/lib/ext${launcher:sys.pathlistSeparator}${launcher:sys.launcherDirectory}/framework/lib/ext&quot; &quot;-Dkaraf.instances=${launcher:sys.launcherDirectory}/framework/instances&quot;  &quot;-Dkaraf.home=${launcher:sys.launcherDirectory}/framework&quot; &quot;-Dkaraf.base=${launcher:sys.launcherDirectory}/framework&quot; &quot;-Dkaraf.etc=${launcher:sys.launcherDirectory}/framework/etc&quot; &quot;-Djava.util.logging.config.file=${launcher:sys.launcherDirectory}/framework/etc/java.util.logging.properties&quot;  -Dkaraf.startLocalConsole=false  -Dkaraf.startRemoteShell=false" arguments="" allowVMPassthroughParameters="true" preferredVM="" bundleRuntime="true">
+      <java mainClass="org.cytoscape.launcher.internal.Launcher" vmParameters="-Dcom.sun.management.jmxremote &quot;-Djava.endorsed.dirs=${launcher:sys.jvmHome}/jre/lib/endorsed${launcher:sys.pathlistSeparator}${launcher:sys.jvmHome}/lib/endorsed${launcher:sys.pathlistSeparator}${launcher:sys.launcherDirectory}/framework/lib/endorsed&quot; &quot;-Djava.ext.dirs=${launcher:sys.jvmHome}/jre/lib/ext${launcher:sys.pathlistSeparator}${launcher:sys.jvmHome}/lib/ext${launcher:sys.pathlistSeparator}${launcher:sys.launcherDirectory}/framework/lib/ext&quot; &quot;-Dkaraf.instances=${launcher:sys.launcherDirectory}/framework/instances&quot;  &quot;-Dkaraf.home=${launcher:sys.launcherDirectory}/framework&quot; &quot;-Dkaraf.base=${launcher:sys.launcherDirectory}/framework&quot; &quot;-Dkaraf.etc=${launcher:sys.launcherDirectory}/framework/etc&quot; &quot;-Djava.util.logging.config.file=${launcher:sys.launcherDirectory}/framework/etc/java.util.logging.properties&quot;  -Dkaraf.startLocalConsole=false  -Dkaraf.startRemoteShell=false" arguments="" allowVMPassthroughParameters="true" preferredVM="" bundleRuntime="true">
         <classPath>
           <scanDirectory location="." failOnError="false" />
           <directory location="lib" failOnError="false" />
@@ -790,17 +790,22 @@ Ty Coon, President of Vice&lt;/tt&gt;&lt;/p&gt;
                             <string>// Dynamic VM parameters can be added to the .vmoptions file of a launcher
 
 // The SystemInfo class has a method to determine the physical memory.
-// In this case we want to use 50% of the physical memory for our application.
+// In this case we want to use 95% of the physical memory as the maximum heap size,
+// with a minimum size no less than this but no greater than 2GB
 Long xmxValue = Math.round(SystemInfo.getPhysicalMemory() * 0.95 / 1024 / 1024);
-String xmxString = "-Xmx" + xmxValue  + "m";
+Long xmsValue = Math.min(xmxValue, 2048);
+
+String xmxString = "-Xmx" + xmxValue + "M";
+String xmsString = "-Xms" + xmsValue + "M";
+
 
 // You can set the -Xmx parameter to a variable
 context.setVariable("xmx", xmxString);
+context.setVariable("xms", xmsString);
 
 return true;
 
-//and then use an ""Add VM options" action with the "VM options" property set to
-// ${installer:xmx}</string>
+						</string>
                           </void>
                         </object>
                       </void>
@@ -825,8 +830,11 @@ return true;
                         <string>3</string>
                       </void>
                       <void property="vmOptions">
-                        <array class="java.lang.String" length="1">
+                        <array class="java.lang.String" length="2">
                           <void index="0">
+                            <string>${installer:xms}</string>
+                          </void>
+                          <void index="1">
                             <string>${installer:xmx}</string>
                           </void>
                         </array>
