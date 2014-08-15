@@ -24,11 +24,19 @@ package org.cytoscape.session;
  * #L%
  */
 
-import static org.cytoscape.view.presentation.property.BasicVisualLexicon.*;
-import static org.junit.Assert.*;
+import static org.cytoscape.view.presentation.property.BasicVisualLexicon.EDGE_LINE_TYPE;
+import static org.cytoscape.view.presentation.property.BasicVisualLexicon.EDGE_STROKE_UNSELECTED_PAINT;
+import static org.cytoscape.view.presentation.property.BasicVisualLexicon.NODE_SHAPE;
+import static org.cytoscape.view.presentation.property.BasicVisualLexicon.NODE_TRANSPARENCY;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 import java.awt.Color;
 import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
 import java.util.Collection;
 
 import org.cytoscape.group.CyGroup;
@@ -47,17 +55,15 @@ import org.cytoscape.work.TaskIterator;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.ops4j.pax.exam.junit.ExamReactorStrategy;
-import org.ops4j.pax.exam.junit.JUnit4TestRunner;
-import org.ops4j.pax.exam.spi.reactors.AllConfinedStagedReactorFactory;
+import org.ops4j.pax.exam.junit.PaxExam;
 
-@RunWith(JUnit4TestRunner.class)
-@ExamReactorStrategy(AllConfinedStagedReactorFactory.class)
+@RunWith(PaxExam.class)
 public class Cy283GroupsSessionLoadingTest extends BasicIntegrationTest {
 
 	@Before
 	public void setup() throws Exception {
-		sessionFile = new File("./src/test/resources/testData/session2x/", "v283Groups.cys");
+		sessionFile = File.createTempFile("test", ".cys");
+		Files.copy(getClass().getResourceAsStream("/testData/session2x/v283Groups.cys"), sessionFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
 		checkBasicConfiguration();
 	}
 

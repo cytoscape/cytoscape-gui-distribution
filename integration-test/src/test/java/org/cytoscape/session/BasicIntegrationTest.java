@@ -30,8 +30,18 @@ import static org.cytoscape.view.presentation.property.BasicVisualLexicon.NETWOR
 import static org.cytoscape.view.presentation.property.BasicVisualLexicon.NETWORK_SCALE_FACTOR;
 import static org.cytoscape.view.presentation.property.BasicVisualLexicon.NETWORK_TITLE;
 import static org.cytoscape.view.presentation.property.BasicVisualLexicon.NETWORK_WIDTH;
-import static org.junit.Assert.*;
-import static org.ops4j.pax.exam.CoreOptions.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+import static org.ops4j.pax.exam.CoreOptions.frameworkStartLevel;
+import static org.ops4j.pax.exam.CoreOptions.junitBundles;
+import static org.ops4j.pax.exam.CoreOptions.maven;
+import static org.ops4j.pax.exam.CoreOptions.mavenBundle;
+import static org.ops4j.pax.exam.CoreOptions.options;
+import static org.ops4j.pax.exam.CoreOptions.repository;
+import static org.ops4j.pax.exam.CoreOptions.systemProperty;
+import static org.ops4j.pax.exam.CoreOptions.vmOption;
+import static org.ops4j.pax.exam.karaf.options.KarafDistributionOption.karafDistributionConfiguration;
 
 import java.awt.Color;
 import java.io.File;
@@ -62,12 +72,11 @@ import org.cytoscape.view.model.VisualLexicon;
 import org.cytoscape.view.presentation.RenderingEngineManager;
 import org.cytoscape.view.vizmap.VisualMappingManager;
 import org.cytoscape.work.SynchronousTaskManager;
+import org.junit.After;
 import org.junit.runner.RunWith;
+import org.ops4j.pax.exam.Configuration;
 import org.ops4j.pax.exam.Option;
-import org.ops4j.pax.exam.junit.Configuration;
-import org.ops4j.pax.exam.junit.ExamReactorStrategy;
-import org.ops4j.pax.exam.junit.JUnit4TestRunner;
-import org.ops4j.pax.exam.spi.reactors.AllConfinedStagedReactorFactory;
+import org.ops4j.pax.exam.junit.PaxExam;
 import org.ops4j.pax.exam.util.Filter;
 import org.osgi.framework.BundleContext;
 
@@ -75,9 +84,8 @@ import org.osgi.framework.BundleContext;
  * Build minimum set of Cytoscape to test session loading/saving.
  *
  */
-@RunWith(JUnit4TestRunner.class)
+@RunWith(PaxExam.class)
 // Framework will be reset for each test
-@ExamReactorStrategy( AllConfinedStagedReactorFactory.class )
 public abstract class BasicIntegrationTest {
 
 	///////// OSGi Bundle Context ////////////
@@ -130,12 +138,12 @@ public abstract class BasicIntegrationTest {
 		String distributionBundleVersion = System.getProperty("cytoscape.distribution.version");
 
 		return options(
+				karafDistributionConfiguration().frameworkUrl(
+			            maven().groupId("org.apache.karaf").artifactId("apache-karaf").type("zip").versionAsInProject())
+			            .karafVersion("2.3.5").name("Apache Karaf").useDeployFolder(false),
 				systemProperty("org.osgi.framework.system.packages.extra").value("com.sun.xml.internal.bind"),
 				junitBundles(),
 				vmOption("-Xmx512M"),
-
-				// Use Felix as runtime
-				felix(), 
 
 				// So that we actually start all of our bundles!
 				frameworkStartLevel(50),
@@ -187,12 +195,17 @@ public abstract class BasicIntegrationTest {
 
 				mavenBundle().groupId("org.cytoscape").artifactId("io-impl").version(implBundleVersion).startLevel(23),
 
-				mavenBundle().groupId("org.cytoscape").artifactId("core-task-impl").version(implBundleVersion).startLevel(25),
+				mavenBundle().groupId("org.cytoscape").artifactId("core-task-impl").version(implBundleVersion).startLevel(25)
 
-				mavenBundle().groupId("org.cytoscape").artifactId("filter2-impl").version(implBundleVersion).startLevel(25)
+				//mavenBundle().groupId("org.cytoscape").artifactId("filter2-impl").version(implBundleVersion).startLevel(25)
 
 				//mavenBundle().groupId("org.cytoscape").artifactId("vizmap-gui-impl").version(implBundleVersion).startLevel(27)
 		);
+	}
+	
+	@After
+	public void tearDown() throws Exception {
+		sessionFile.delete();
 	}
 	
 	/**
