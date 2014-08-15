@@ -109,9 +109,6 @@
               <void property="allowConsole">
                 <boolean>false</boolean>
               </void>
-              <void property="allowUnattended">
-                <boolean>false</boolean>
-              </void>
               <void property="frameSizeClientArea">
                 <boolean>false</boolean>
               </void>
@@ -946,9 +943,6 @@ return true;
           <java class="java.beans.XMLDecoder">
             <object class="com.install4j.runtime.beans.applications.UninstallerApplication">
               <void property="allowConsole">
-                <boolean>false</boolean>
-              </void>
-              <void property="allowUnattended">
                 <boolean>false</boolean>
               </void>
               <void property="frameSizeClientArea">
