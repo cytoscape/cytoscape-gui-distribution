@@ -7,9 +7,8 @@
       <additionalLanguages />
     </languages>
     <searchSequence>
-      <registry />
       <envVar name="JAVA_HOME" />
-      <envVar name="JDK_HOME" />
+      <registry />
     </searchSequence>
     <variables>
       <variable name="WINDOWS_VERSION" value="@windows_version@" description="" category="" />
