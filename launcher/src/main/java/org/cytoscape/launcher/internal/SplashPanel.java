@@ -35,6 +35,9 @@ public class SplashPanel extends Component {
 		
 		context.fillRect(0, 0, background.getWidth(), background.getHeight());
 		context.drawImage(background, 0, 0, null);
+        context.setColor(Color.BLACK);
+		context.setFont(font);
+		context.drawString("Java version: "+System.getProperty("java.version"),650,20);
 	}
 	
 	@Override
@@ -68,9 +71,7 @@ public class SplashPanel extends Component {
     	
         context.setColor(Color.WHITE);
         context.fillRect(20,300,800,40);
-        context.setPaintMode();
         context.setColor(Color.BLACK);
-		context.setFont(font);
         context.drawString(message, 20, 320);
         
         context.setColor(new Color(computeColor(progress)));
