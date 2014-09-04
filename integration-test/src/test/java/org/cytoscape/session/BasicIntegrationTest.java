@@ -149,9 +149,9 @@ public abstract class BasicIntegrationTest {
 				frameworkStartLevel(50),
 
 				// Specify all of our repositories
-				repository("http://code.cytoscape.org/nexus/content/repositories/snapshots/"),
-				repository("http://code.cytoscape.org/nexus/content/repositories/releases/"),
-				repository("http://code.cytoscape.org/nexus/content/repositories/thirdparty/"),
+//				repository("http://code.cytoscape.org/nexus/content/repositories/snapshots/"),
+//				repository("http://code.cytoscape.org/nexus/content/repositories/releases/"),
+//				repository("http://code.cytoscape.org/nexus/content/repositories/thirdparty/"),
 
 				// Misc. bundles required to run minimal Cytoscape
 				mavenBundle().groupId("org.apache.servicemix.specs").artifactId("org.apache.servicemix.specs.jaxb-api-2.1").version("1.2.0").startLevel(3),
