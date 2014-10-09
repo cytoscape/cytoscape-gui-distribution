@@ -67,8 +67,7 @@ set JAVA_OPTS=%JAVA_OPTS:~1%
 
 :setDebugOpts
 set JAVA_DEBUG_OPTS=-Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=%DEBUG_PORT%
-set PWD=%~dp0
-set KARAF_OPTS=-Dcom.sun.management.jmxremote -Dcytoscape.home="%PWD:\=\\%" -Duser.dir="%PWD:\=\\%"
+set KARAF_OPTS=-Dcom.sun.management.jmxremote -Dcytoscape.home="%~dp0:\=\\%"
 
 set KARAF_DATA=%USERPROFILE%\CytoscapeConfiguration\3\karaf_data
 if not exist "%KARAF_DATA%" (
