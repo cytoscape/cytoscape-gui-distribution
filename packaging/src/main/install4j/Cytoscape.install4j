@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<install4j version="5.1.12" transformSequenceNumber="4">
+<install4j version="5.1.14" transformSequenceNumber="4">
   <directoryPresets config="../../../target" />
   <application name="Cytoscape" distributionSourceDir="" applicationId="5211-3645-3154-2580" mediaDir="dist" mediaFilePattern="${compiler:sys.shortName}_${compiler:sys.version}_${compiler:sys.platform}" compression="6" lzmaCompression="false" pack200Compression="false" excludeSignedFromPacking="true" commonExternalFiles="false" createMd5Sums="true" shrinkRuntime="true" shortName="Cytoscape" publisher="Cytoscape Consortium" publisherWeb="http://www.cytoscape.org" version="${version}" allPathsRelative="true" backupOnSave="false" autoSave="false" convertDotsToUnderscores="true" macSignature="????" installerName="" javaMinVersion="1.7" javaMaxVersion="" allowBetaVM="true" jdkMode="runtimeJre" jdkName="">
     <languages skipLanguageSelection="false" languageSelectionInPrincipalLanguage="false">
@@ -785,20 +785,26 @@ Ty Coon, President of Vice&lt;/tt&gt;&lt;/p&gt;
                           <void property="value">
                             <string>// Dynamic VM parameters can be added to the .vmoptions file of a launcher
 
-// The SystemInfo class has a method to determine the physical memory.
-// In this case we want to use 95% of the physical memory as the maximum heap size,
+// Set the JVM options based on the bitness of the JVM being used
+String[] vmoptions;
+
+if(System.getProperty("os.arch").contains("64")){
+// In the 64-bit case, we want to use 95% of the physical memory as the maximum heap size,
 // with a minimum size no less than this but no greater than 2GB
+vmoptions = new String[2];
 Long xmxValue = Math.round(SystemInfo.getPhysicalMemory() * 0.95 / 1024 / 1024);
 Long xmsValue = Math.min(xmxValue, 2048);
 
-String xmxString = "-Xmx" + xmxValue + "M";
-String xmsString = "-Xms" + xmsValue + "M";
+vmoptions[0] = "-Xms" + xmsValue + "M";
+vmoptions[1] = "-Xmx" + xmxValue + "M";
+}
+else {
+// If the JVM is not 64-bit, use the -XX:+AggressiveHeap option to get the maximum available heap space
+vmoptions = new String[1];
+vmoptions[0] = "-XX:+AggressiveHeap";
+}
 
-
-// You can set the -Xmx parameter to a variable
-context.setVariable("xmx", xmxString);
-context.setVariable("xms", xmsString);
-
+context.setVariable("vmoptions", vmoptions);
 return true;
 
 						</string>
@@ -818,7 +824,7 @@ return true;
                 </serializedBean>
                 <condition />
               </action>
-              <action name="" id="280" customizedId="" beanClass="com.install4j.runtime.beans.actions.misc.AddVmOptionsAction" enabled="true" commentSet="false" comment="" actionElevationType="elevated" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
+              <action name="" id="398" customizedId="" beanClass="com.install4j.runtime.beans.actions.misc.AddVmOptionsAction" enabled="true" commentSet="false" comment="" actionElevationType="elevated" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
                 <serializedBean>
                   <java class="java.beans.XMLDecoder">
                     <object class="com.install4j.runtime.beans.actions.misc.AddVmOptionsAction">
@@ -826,12 +832,9 @@ return true;
                         <string>3</string>
                       </void>
                       <void property="vmOptions">
-                        <array class="java.lang.String" length="2">
+                        <array class="java.lang.String" length="1">
                           <void index="0">
-                            <string>${installer:xms}</string>
-                          </void>
-                          <void index="1">
-                            <string>${installer:xmx}</string>
+                            <string>${installer:vmoptions}</string>
                           </void>
                         </array>
                       </void>
@@ -1078,6 +1081,44 @@ return true;
     </applications>
   </installerGui>
   <mediaSets>
+    <windows name="Windows 64 bit" id="11" customizedId="" mediaFileName="Cytoscape_${compiler:sys.version}_windows_64bit" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true" jreBitType="64" runPostProcessor="false" postProcessor="" failOnPostProcessorError="false" useLegacyMediaFileIds="false" legacyMediaFileIds="" includedJRE="" manualJREEntry="false" bundleType="1" jreURL="" jreShared="false" directDownload="false" installOnlyIfNecessary="false" customInstallBaseDir="" contentFilesType="1" downloadURL="" verifyIntegrity="true">
+      <excludedLaunchers />
+      <excludedBeans>
+        <bean refId="50" />
+      </excludedBeans>
+      <overriddenPrincipalLanguage id="en" customLocalizationFile="" />
+      <exclude>
+        <entry location=".i4j_fileset_227" fileType="regular" />
+      </exclude>
+      <variables />
+      <autoUpdate useMinUpdatableVersion="false" minUpdatableVersion="" useMaxUpdatableVersion="false" maxUpdatableVersion="">
+        <commentFiles />
+        <customAttributes />
+      </autoUpdate>
+      <excludedComponents>
+        <component id="235" />
+      </excludedComponents>
+      <includedDownloadableComponents />
+    </windows>
+    <windows name="Windows 32 bit" id="395" customizedId="" mediaFileName="Cytoscape_${compiler:sys.version}_windows_32bit" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true" jreBitType="32" runPostProcessor="false" postProcessor="" failOnPostProcessorError="false" useLegacyMediaFileIds="false" legacyMediaFileIds="" includedJRE="" manualJREEntry="false" bundleType="1" jreURL="" jreShared="false" directDownload="false" installOnlyIfNecessary="false" customInstallBaseDir="" contentFilesType="1" downloadURL="" verifyIntegrity="true">
+      <excludedLaunchers />
+      <excludedBeans>
+        <bean refId="50" />
+      </excludedBeans>
+      <overriddenPrincipalLanguage id="en" customLocalizationFile="" />
+      <exclude>
+        <entry location=".i4j_fileset_227" fileType="regular" />
+      </exclude>
+      <variables />
+      <autoUpdate useMinUpdatableVersion="false" minUpdatableVersion="" useMaxUpdatableVersion="false" maxUpdatableVersion="">
+        <commentFiles />
+        <customAttributes />
+      </autoUpdate>
+      <excludedComponents>
+        <component id="235" />
+      </excludedComponents>
+      <includedDownloadableComponents />
+    </windows>
     <macosFolder name="Mac OS X" id="9" customizedId="" mediaFileName="" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true" jreBitType="all" runPostProcessor="false" postProcessor="" failOnPostProcessorError="false" useLegacyMediaFileIds="false" legacyMediaFileIds="" includedJRE="" manualJREEntry="false" bundleType="1" jreURL="" jreShared="false" directDownload="false" installOnlyIfNecessary="false" appleJre="false" requiredVmIdPrefix="" customInstallBaseDir="" contentFilesType="1" downloadURL="" signLaunchers="false">
       <excludedLaunchers />
       <excludedBeans />
@@ -1117,25 +1158,6 @@ return true;
         <content />
       </installerScript>
     </unixInstaller>
-    <windows name="Windows" id="11" customizedId="" mediaFileName="${compiler:sys.shortName}_${compiler:sys.version}_windows" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true" jreBitType="64" runPostProcessor="false" postProcessor="" failOnPostProcessorError="false" useLegacyMediaFileIds="false" legacyMediaFileIds="" includedJRE="" manualJREEntry="false" bundleType="1" jreURL="" jreShared="false" directDownload="false" installOnlyIfNecessary="false" customInstallBaseDir="" contentFilesType="1" downloadURL="" verifyIntegrity="true">
-      <excludedLaunchers />
-      <excludedBeans>
-        <bean refId="50" />
-      </excludedBeans>
-      <overriddenPrincipalLanguage id="en" customLocalizationFile="" />
-      <exclude>
-        <entry location=".i4j_fileset_227" fileType="regular" />
-      </exclude>
-      <variables />
-      <autoUpdate useMinUpdatableVersion="false" minUpdatableVersion="" useMaxUpdatableVersion="false" maxUpdatableVersion="">
-        <commentFiles />
-        <customAttributes />
-      </autoUpdate>
-      <excludedComponents>
-        <component id="235" />
-      </excludedComponents>
-      <includedDownloadableComponents />
-    </windows>
   </mediaSets>
   <buildIds buildAll="true">
     <mediaSet refId="11" />
