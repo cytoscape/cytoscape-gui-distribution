@@ -36,6 +36,8 @@ hdiutil detach "${DEVICE}"
 
 echo Signing installer...
 
+rm target/tempsign/Cytoscape\ Installer.app/Contents/vmoptions.txt
+
 codesign -f -s "${SIGNING_IDENTITY}" "${SIGN_DIR}"/Cytoscape\ Installer.app
 codesign -vvv "${SIGN_DIR}"/Cytoscape\ Installer.app || exit 1
 
