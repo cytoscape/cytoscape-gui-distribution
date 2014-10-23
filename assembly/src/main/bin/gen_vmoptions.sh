@@ -13,7 +13,10 @@ fi
 if `java -version 2>&1 | grep -- 64-Bit > /dev/null`; then # We have a 64 bit JVM.
 	# Determine amount of physical memory present:
 	if [ `uname` = "Darwin" ]; then
-	    phys_mem=`sysctl -a | grep 'hw.memsize =' | sed 's/[ ][ ][ ]*/ /g' | cut -f 3 -d ' '`
+	    phys_mem=`sysctl -a | grep 'hw.memsize:' | sed 's/[ ][ ][ ]*/ /g' | cut -f 2 -d ' '`
+	    if [ -z $phys_mem ]; then
+	         phys_mem=`sysctl -a | grep 'hw.memsize =' | sed 's/[ ][ ][ ]*/ /g' | cut -f 3 -d ' '`
+	    fi
 	    phys_mem=$((phys_mem / 1024 / 1024)) # Convert from B to MiB
 	else # We assume Linux
 	    phys_mem=`cat /proc/meminfo | grep 'MemTotal:' | sed 's/[ ][ ][ ]*/ /g' | cut -f 2 -d ' '`
