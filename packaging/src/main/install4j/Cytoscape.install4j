@@ -785,24 +785,22 @@ Ty Coon, President of Vice&lt;/tt&gt;&lt;/p&gt;
                           <void property="value">
                             <string>// Dynamic VM parameters can be added to the .vmoptions file of a launcher
 
-// Set the JVM options based on the bitness of the JVM being used
-String[] vmoptions;
+// Set the JVM options based on the amount of physical memory and the bitness of the JVM being used
 
-if(System.getProperty("os.arch").contains("64")){
-// In the 64-bit case, we want to use 95% of the physical memory as the maximum heap size,
-// with a minimum size no less than this but no greater than 2GB
-vmoptions = new String[2];
+String[] vmoptions = new String[2];
 Long xmxValue = Math.round(SystemInfo.getPhysicalMemory() * 0.95 / 1024 / 1024);
+
+if(!System.getProperty("os.arch").contains("64")){ //not 64-bit
+	if(Util.isWindows())
+		xmxValue = Math.min(xmxValue, 1200);
+	else
+		xmxValue = Math.min(xmxValue, 1550);
+}
+
 Long xmsValue = Math.min(xmxValue, 2048);
 
 vmoptions[0] = "-Xms" + xmsValue + "M";
 vmoptions[1] = "-Xmx" + xmxValue + "M";
-}
-else {
-// If the JVM is not 64-bit, use the -XX:+AggressiveHeap option to get the maximum available heap space
-vmoptions = new String[1];
-vmoptions[0] = "-XX:+AggressiveHeap";
-}
 
 context.setVariable("vmoptions", vmoptions);
 return true;
