@@ -7,7 +7,7 @@
 # First, see if help (-h, --help) or version (-v, --version) command line arguments
 # are specified. If so, display help or the current version and exit.
 
-CYTOSCAPE_VERSION="Cytoscape version: 3.1.1"
+CYTOSCAPE_VERSION="Cytoscape version: 3.2.0"
 
 if [[ $# > 0 ]]; then
 	if [ $1 == "-h" -o $1 == "--help" ]; then
@@ -47,7 +47,7 @@ fi
 
 export JAVA_DEBUG_OPTS="-Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=${DEBUG_PORT}"
 if [ `uname` = "Darwin" ]; then
-	CYTOSCAPE_MAC_OPTS="-Xdock:icon=cytoscape_logo_512.png -Xdock:name=Cytoscape"
+	CYTOSCAPE_MAC_OPTS="-Xdock:icon=$script_path/framework/cytoscape_logo_512.png -Xdock:name=Cytoscape"
 fi
 
 #vm_options_path=$HOME/.cytoscape
@@ -58,13 +58,13 @@ if [ ! -e "$vm_options_path/Cytoscape.vmoptions"  -a  -x "$script_path/gen_vmopt
     "$script_path/gen_vmoptions.sh"
 fi
 
-export JAVA_OPTS=-Xmx1550M
+export JAVA_OPTS=-Xms1550M\ -Xmx1550M
 if [ -r $vm_options_path/Cytoscape.vmoptions ]; then
 		JAVA_OPTS=`cat $vm_options_path/Cytoscape.vmoptions`
 else # Just use sensible defaults.
     echo '*** Missing Cytoscape.vmoptions, falling back to using defaults!'
 		# Initialize MAX_MEM to something reasonable
-		JAVA_OPTS=-Xmx1550M
+		JAVA_OPTS=-Xms1550M\ -Xmx1550M
 fi
 
 # The Cytoscape home directory contains the "framework" directory
@@ -72,12 +72,7 @@ fi
 CYTOSCAPE_HOME_REL=$script_path
 CYTOSCAPE_HOME_ABS=`cd "$CYTOSCAPE_HOME_REL"; pwd`
 
-PWD=$(pwd) 
-# The user working directory needs to be explecitly set in -Duser.dir to current
-# working directory since KARAF changes it to the framework directory. There
-# might unforeseeable problems with this since the reason for KARAF setting the 
-# working directory to framework is not known.
-export KARAF_OPTS=-Xms128M\ -Duser.dir="$PWD"\ -Dcytoscape.home="$CYTOSCAPE_HOME_ABS"\ "$CYTOSCAPE_MAC_OPTS"
+export KARAF_OPTS=-Dcytoscape.home="$CYTOSCAPE_HOME_ABS"\ "$CYTOSCAPE_MAC_OPTS"
 
 export KARAF_DATA="${HOME}/CytoscapeConfiguration/3/karaf_data"
 mkdir -p "${KARAF_DATA}/tmp"

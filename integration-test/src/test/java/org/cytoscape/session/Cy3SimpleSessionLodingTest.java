@@ -31,10 +31,15 @@ import static org.cytoscape.model.CyNetwork.NAME;
 import static org.cytoscape.model.CyNetwork.SELECTED;
 import static org.cytoscape.model.subnetwork.CyRootNetwork.SHARED_ATTRS;
 import static org.cytoscape.model.subnetwork.CyRootNetwork.SHARED_DEFAULT_ATTRS;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 import java.awt.Color;
 import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.Map;
@@ -59,12 +64,9 @@ import org.cytoscape.work.TaskIterator;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.ops4j.pax.exam.junit.ExamReactorStrategy;
-import org.ops4j.pax.exam.junit.JUnit4TestRunner;
-import org.ops4j.pax.exam.spi.reactors.AllConfinedStagedReactorFactory;
+import org.ops4j.pax.exam.junit.PaxExam;
 
-@RunWith(JUnit4TestRunner.class)
-@ExamReactorStrategy(AllConfinedStagedReactorFactory.class)
+@RunWith(PaxExam.class)
 public class Cy3SimpleSessionLodingTest extends BasicIntegrationTest {
 
 	private static final int NODE_COUNT = 3;
@@ -72,7 +74,8 @@ public class Cy3SimpleSessionLodingTest extends BasicIntegrationTest {
 
 	@Before
 	public void setup() throws Exception {
-		sessionFile = new File("./src/test/resources/testData/session3x/", "simpleSession.cys");
+		sessionFile = File.createTempFile("test", ".cys");
+		Files.copy(getClass().getResourceAsStream("/testData/session3x/simpleSession.cys"), sessionFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
 		checkBasicConfiguration();
 	}
 

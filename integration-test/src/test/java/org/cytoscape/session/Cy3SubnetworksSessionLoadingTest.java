@@ -24,9 +24,12 @@ package org.cytoscape.session;
  * #L%
  */
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 
 import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
 import java.util.Set;
 
 import org.cytoscape.model.CyNetwork;
@@ -36,17 +39,15 @@ import org.cytoscape.work.TaskIterator;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.ops4j.pax.exam.junit.ExamReactorStrategy;
-import org.ops4j.pax.exam.junit.JUnit4TestRunner;
-import org.ops4j.pax.exam.spi.reactors.AllConfinedStagedReactorFactory;
+import org.ops4j.pax.exam.junit.PaxExam;
 
-@RunWith(JUnit4TestRunner.class)
-@ExamReactorStrategy(AllConfinedStagedReactorFactory.class)
+@RunWith(PaxExam.class)
 public class Cy3SubnetworksSessionLoadingTest extends BasicIntegrationTest {
 
 	@Before
 	public void setup() throws Exception {
-		sessionFile = new File("./src/test/resources/testData/session3x/", "subnetworks.cys");
+		sessionFile = File.createTempFile("test", ".cys");
+		Files.copy(getClass().getResourceAsStream("/testData/session3x/subnetworks.cys"), sessionFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
 		checkBasicConfiguration();
 	}
 

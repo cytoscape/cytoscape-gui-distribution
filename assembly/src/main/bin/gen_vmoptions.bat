@@ -1,26 +1,15 @@
 @echo off
 
-:: Generates the Cytoscape.vmoptions file based on whether
-:: we're dealing with a 32 bit or 64 bit JVM.
-
-:: Create the .cytoscape directory if it doesn't already exist
-;if exist "%HOMEPATH%\.cytoscape" goto dot_cytoscape_exists
-;mkdir "%HOMEPATH%\.cytoscape"
-;:dot_cytoscape_exists
+:: Generates the Cytoscape.vmoptions file
 
 set physmem=768
-set mem=768
+set minmem=768
+set maxmem=768
 if exist findmem.out del findmem.out
 systeminfo | find "Total Physical Memory" > findmem.out
 if %ERRORLEVEL% NEQ 0 GOTO Javatest
 for /f "tokens=4" %%i in (findmem.out) do set physmem=%%i
 set physmem=%physmem:,=%
-
-if %physmem% GTR 1536 set mem=1024
-if %physmem% GTR 2048 set mem=1536
-if %physmem% GTR 3072 set /a mem=%physmem%-1024
-REM if %physmem% GTR 4096 set mem=3072
-REM if %physmem% GTR 9216 set mem=4096
 
 :Javatest
 	if exist findstr.out del findstr.out
@@ -31,15 +20,25 @@ REM if %physmem% GTR 9216 set mem=4096
 	goto Nojava
 
 :64bit
-	REM echo "64 bit %mem% MB"
-        echo -Xmx%mem%M  >Cytoscape.vmoptions
-	goto End
-
+	if %physmem% GTR 1535 set maxmem=1024
+	if %physmem% GTR 2047 set maxmem=1536
+	if %physmem% GTR 3071 (
+		set /a minmem=2048
+		set /a maxmem=%physmem%-1024
+	) else (
+		set /a minmem=%maxmem%
+	)
+	goto setVmoptions
+ 	
 :32bit
-	REM echo "32 bit %mem% MB"
-	REM Some java versions can only support 1250MB
-	if %mem% GTR 1250 set mem=1250
-        echo -Xmx%mem%M >Cytoscape.vmoptions
+	if %physmem% GTR 1535 set maxmem=1024
+	if %physmem% GTR 2047 set maxmem=1200
+	set /a minmem=%maxmem%
+	goto setVmoptions
+
+:setVmoptions
+	echo -Xms%minmem%M>Cytoscape.vmoptions
+	echo -Xmx%maxmem%M>>Cytoscape.vmoptions
 	goto End
 
 :Nojava

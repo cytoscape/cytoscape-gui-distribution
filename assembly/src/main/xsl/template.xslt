@@ -33,7 +33,6 @@
                 <exclude>etc/org.apache.karaf.features.cfg</exclude>
                 <exclude>etc/org.apache.felix.fileinstall-deploy.cfg</exclude>
                 <exclude>etc/org.ops4j.pax.logging.cfg</exclude>
-                <exclude>etc/jre.properties</exclude>
                 <exclude>LICENSE</exclude>
                 <exclude>NOTICE</exclude>
                 <exclude>README</exclude>

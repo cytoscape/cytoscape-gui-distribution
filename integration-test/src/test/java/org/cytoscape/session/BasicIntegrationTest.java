@@ -30,8 +30,18 @@ import static org.cytoscape.view.presentation.property.BasicVisualLexicon.NETWOR
 import static org.cytoscape.view.presentation.property.BasicVisualLexicon.NETWORK_SCALE_FACTOR;
 import static org.cytoscape.view.presentation.property.BasicVisualLexicon.NETWORK_TITLE;
 import static org.cytoscape.view.presentation.property.BasicVisualLexicon.NETWORK_WIDTH;
-import static org.junit.Assert.*;
-import static org.ops4j.pax.exam.CoreOptions.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+import static org.ops4j.pax.exam.CoreOptions.frameworkStartLevel;
+import static org.ops4j.pax.exam.CoreOptions.junitBundles;
+import static org.ops4j.pax.exam.CoreOptions.maven;
+import static org.ops4j.pax.exam.CoreOptions.mavenBundle;
+import static org.ops4j.pax.exam.CoreOptions.options;
+import static org.ops4j.pax.exam.CoreOptions.repository;
+import static org.ops4j.pax.exam.CoreOptions.systemProperty;
+import static org.ops4j.pax.exam.CoreOptions.vmOption;
+import static org.ops4j.pax.exam.karaf.options.KarafDistributionOption.karafDistributionConfiguration;
 
 import java.awt.Color;
 import java.io.File;
@@ -62,12 +72,11 @@ import org.cytoscape.view.model.VisualLexicon;
 import org.cytoscape.view.presentation.RenderingEngineManager;
 import org.cytoscape.view.vizmap.VisualMappingManager;
 import org.cytoscape.work.SynchronousTaskManager;
+import org.junit.After;
 import org.junit.runner.RunWith;
+import org.ops4j.pax.exam.Configuration;
 import org.ops4j.pax.exam.Option;
-import org.ops4j.pax.exam.junit.Configuration;
-import org.ops4j.pax.exam.junit.ExamReactorStrategy;
-import org.ops4j.pax.exam.junit.JUnit4TestRunner;
-import org.ops4j.pax.exam.spi.reactors.AllConfinedStagedReactorFactory;
+import org.ops4j.pax.exam.junit.PaxExam;
 import org.ops4j.pax.exam.util.Filter;
 import org.osgi.framework.BundleContext;
 
@@ -75,9 +84,8 @@ import org.osgi.framework.BundleContext;
  * Build minimum set of Cytoscape to test session loading/saving.
  *
  */
-@RunWith(JUnit4TestRunner.class)
+@RunWith(PaxExam.class)
 // Framework will be reset for each test
-@ExamReactorStrategy( AllConfinedStagedReactorFactory.class )
 public abstract class BasicIntegrationTest {
 
 	///////// OSGi Bundle Context ////////////
@@ -127,75 +135,39 @@ public abstract class BasicIntegrationTest {
 		// These system properties are set in the surefire configuration in the pom.
 		String apiBundleVersion = System.getProperty("cytoscape.api.version");
 		String implBundleVersion = System.getProperty("cytoscape.impl.version");
+		String distributionBundleVersion = System.getProperty("cytoscape.distribution.version");
 
 		return options(
+				karafDistributionConfiguration().frameworkUrl(
+			            maven().groupId("org.apache.karaf").artifactId("apache-karaf").type("zip").versionAsInProject())
+			            .karafVersion("2.3.5").name("Apache Karaf").useDeployFolder(false),
 				systemProperty("org.osgi.framework.system.packages.extra").value("com.sun.xml.internal.bind"),
 				junitBundles(),
 				vmOption("-Xmx512M"),
-
-				// Use Felix as runtime
-				felix(), 
 
 				// So that we actually start all of our bundles!
 				frameworkStartLevel(50),
 
 				// Specify all of our repositories
-				repository("http://code.cytoscape.org/nexus/content/repositories/snapshots/"),
-				repository("http://code.cytoscape.org/nexus/content/repositories/releases/"),
-				repository("http://code.cytoscape.org/nexus/content/repositories/thirdparty/"),
+//				repository("http://code.cytoscape.org/nexus/content/repositories/snapshots/"),
+//				repository("http://code.cytoscape.org/nexus/content/repositories/releases/"),
+//				repository("http://code.cytoscape.org/nexus/content/repositories/thirdparty/"),
 
 				// Misc. bundles required to run minimal Cytoscape
-				mavenBundle().groupId("cytoscape-sun").artifactId("jhall").version("1.0").startLevel(3),
-				mavenBundle().groupId("com.googlecode.guava-osgi").artifactId("guava-osgi").version("9.0.0").startLevel(3),
-				mavenBundle().groupId("cytoscape-temp").artifactId("parallelcolt").version("0.9.4").startLevel(3),
-				mavenBundle().groupId("cytoscape-temp").artifactId("opencsv").version("2.1").startLevel(3),
-				mavenBundle().groupId("com.lowagie.text").artifactId("com.springsource.com.lowagie.text").version("2.0.8").startLevel(3),
-				mavenBundle().groupId("cytoscape-temp").artifactId("freehep-graphicsio").version("2.1.3").startLevel(3),
-				mavenBundle().groupId("cytoscape-temp").artifactId("freehep-graphicsio-svg").version("2.1.3").startLevel(3),
-				mavenBundle().groupId("cytoscape-temp").artifactId("freehep-graphicsio-ps").version("2.1.3").startLevel(3),
-				mavenBundle().groupId("cytoscape-temp").artifactId("freehep-graphics2d").version("2.1.3").startLevel(3),
-				mavenBundle().groupId("cytoscape-temp").artifactId("l2fprod-common-shared").version("7.3").startLevel(3),
-				mavenBundle().groupId("cytoscape-temp").artifactId("l2fprod-common-fontchooser").version("7.3").startLevel(3),
-				mavenBundle().groupId("cytoscape-temp").artifactId("l2fprod-common-sheet").version("7.3").startLevel(3),
-				mavenBundle().groupId("cytoscape-temp").artifactId("org.swinglabs.swingx").version("1.6.1").startLevel(3),
-				mavenBundle().groupId("cytoscape-temp").artifactId("freehep-export").version("2.1.1").startLevel(3),
-				mavenBundle().groupId("cytoscape-temp").artifactId("freehep-util").version("2.0.2").startLevel(3),
 				mavenBundle().groupId("org.apache.servicemix.specs").artifactId("org.apache.servicemix.specs.jaxb-api-2.1").version("1.2.0").startLevel(3),
 				mavenBundle().groupId("org.apache.servicemix.bundles").artifactId("org.apache.servicemix.bundles.jaxb-impl").version("2.1.6_1").startLevel(3),
 				mavenBundle().groupId("javax.activation").artifactId("com.springsource.javax.activation").version("1.1.1").startLevel(3),
 				mavenBundle().groupId("javax.xml.stream").artifactId("com.springsource.javax.xml.stream").version("1.0.1").startLevel(3),
-				mavenBundle().groupId("org.apache.felix").artifactId("org.apache.felix.eventadmin").version("1.2.14").startLevel(3),
-				mavenBundle().groupId("com.fasterxml.jackson.core").artifactId("jackson-core").version("2.2.2").startLevel(3),
 				mavenBundle().groupId("commons-io").artifactId("commons-io").version("2.1").startLevel(3),
+				
+				// Third-party bundle
+				mavenBundle().groupId("org.cytoscape.distribution").artifactId("third-party").version(distributionBundleVersion).startLevel(3),
 
-				// API bundles
-				mavenBundle().groupId("org.cytoscape").artifactId("event-api").version(apiBundleVersion).startLevel(5),
-				mavenBundle().groupId("org.cytoscape").artifactId("model-api").version(apiBundleVersion).startLevel(5),
-				mavenBundle().groupId("org.cytoscape").artifactId("group-api").version(apiBundleVersion).startLevel(5),
-				mavenBundle().groupId("org.cytoscape").artifactId("viewmodel-api").version(apiBundleVersion).startLevel(5),
-				mavenBundle().groupId("org.cytoscape").artifactId("presentation-api").version(apiBundleVersion).startLevel(5),
-				mavenBundle().groupId("org.cytoscape").artifactId("vizmap-api").version(apiBundleVersion).startLevel(5),
-				mavenBundle().groupId("org.cytoscape").artifactId("session-api").version(apiBundleVersion).startLevel(5),
-				mavenBundle().groupId("org.cytoscape").artifactId("io-api").version(apiBundleVersion).startLevel(5),
-				mavenBundle().groupId("org.cytoscape").artifactId("property-api").version(apiBundleVersion).startLevel(5),
-				mavenBundle().groupId("org.cytoscape").artifactId("work-api").version(apiBundleVersion).startLevel(5),
-				mavenBundle().groupId("org.cytoscape").artifactId("core-task-api").version(apiBundleVersion).startLevel(5),
-				mavenBundle().groupId("org.cytoscape").artifactId("application-api").version(apiBundleVersion).startLevel(5),
-				mavenBundle().groupId("org.cytoscape").artifactId("layout-api").version(apiBundleVersion).startLevel(5),
-				mavenBundle().groupId("org.cytoscape").artifactId("datasource-api").version(apiBundleVersion).startLevel(5),
-				mavenBundle().groupId("org.cytoscape").artifactId("vizmap-gui-api").version(apiBundleVersion).startLevel(5),
-				mavenBundle().groupId("org.cytoscape").artifactId("work-swing-api").version(apiBundleVersion).startLevel(5),
-				mavenBundle().groupId("org.cytoscape").artifactId("swing-application-api").version(apiBundleVersion).startLevel(5),
-				mavenBundle().groupId("org.cytoscape").artifactId("equations-api").version(apiBundleVersion).startLevel(5),
-				mavenBundle().groupId("org.cytoscape").artifactId("swing-application-api").version(apiBundleVersion).startLevel(5),
-				mavenBundle().groupId("org.cytoscape").artifactId("service-api").version(apiBundleVersion).startLevel(5),
-				mavenBundle().groupId("org.cytoscape").artifactId("command-executor-api").version(apiBundleVersion).startLevel(5),
-				mavenBundle().groupId("org.cytoscape").artifactId("filter-api").version(apiBundleVersion).startLevel(5),
+				// API bundle
+				mavenBundle().groupId("org.cytoscape").artifactId("api-bundle").version(apiBundleVersion).startLevel(5),
 				
 				// Implementation bundles
 				mavenBundle().groupId("org.cytoscape").artifactId("property-impl").version(implBundleVersion).startLevel(7),
-
-				mavenBundle().groupId("org.cytoscape").artifactId("swing-util-api").version(apiBundleVersion).startLevel(8),
 
 				mavenBundle().groupId("org.cytoscape").artifactId("datasource-impl").version(implBundleVersion).startLevel(9),
 				mavenBundle().groupId("org.cytoscape").artifactId("equations-impl").version(implBundleVersion).startLevel(9),
@@ -223,12 +195,17 @@ public abstract class BasicIntegrationTest {
 
 				mavenBundle().groupId("org.cytoscape").artifactId("io-impl").version(implBundleVersion).startLevel(23),
 
-				mavenBundle().groupId("org.cytoscape").artifactId("core-task-impl").version(implBundleVersion).startLevel(25),
+				mavenBundle().groupId("org.cytoscape").artifactId("core-task-impl").version(implBundleVersion).startLevel(25)
 
-				mavenBundle().groupId("org.cytoscape").artifactId("filter2-impl").version(implBundleVersion).startLevel(25)
+				//mavenBundle().groupId("org.cytoscape").artifactId("filter2-impl").version(implBundleVersion).startLevel(25)
 
 				//mavenBundle().groupId("org.cytoscape").artifactId("vizmap-gui-impl").version(implBundleVersion).startLevel(27)
 		);
+	}
+	
+	@After
+	public void tearDown() throws Exception {
+		sessionFile.delete();
 	}
 	
 	/**

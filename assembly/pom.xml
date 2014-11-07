@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.cytoscape.distribution</groupId>
 		<artifactId>parent</artifactId>
-		<version>3.1.1</version>
+		<version>3.2.0</version>
 		<relativePath>..</relativePath>
 	</parent>
 	
@@ -298,14 +298,17 @@
 									<token>-Dkaraf.startRemoteShell=true</token>
 									<value>-Dkaraf.startRemoteShell=false</value>
 								</replacement>
-								
 								<replacement>
 									<token>JAVA=`type java`</token>
 									<value>JAVA=$(which java)</value>
 								</replacement>
 								<replacement>
 									<token>JAVA=`expr "$JAVA" : '.*is \(.*\)$'`</token>
-									<value></value>
+									<value/>
+								</replacement>
+								<replacement>
+									<token>cd "$KARAF_BASE"</token>
+									<value/>
 								</replacement>
 							</replacements>
 						</configuration>
@@ -334,7 +337,6 @@
 									<token>-Dkaraf.startRemoteShell=true</token>
 									<value>-Dkaraf.startRemoteShell=false</value>
 								</replacement>
-								
 								<replacement>
 									<token>(__reg2.txt)</token>
 									<!-- Dirty hack: "%CD:~0,0%" expands to the empty string.  That way, the replacements below won't affect this one -->
@@ -347,6 +349,10 @@
 								<replacement>
 									<token>__reg2.txt</token>
 									<value>"%TEMP%\__reg2.txt"</value>
+								</replacement>
+								<replacement>
+									<token>cd "%KARAF_BASE%"</token>
+									<value/>
 								</replacement>
 							</replacements>
 						</configuration>

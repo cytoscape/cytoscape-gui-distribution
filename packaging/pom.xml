@@ -4,7 +4,7 @@
   <parent>
     <groupId>org.cytoscape.distribution</groupId>
     <artifactId>parent</artifactId>
-    <version>3.1.1</version>
+    <version>3.2.0</version>
   </parent>
 
   <artifactId>packaging</artifactId>
@@ -12,7 +12,7 @@
   <name>Cytoscape Release Packaging</name>
 
   <properties>
-    <install4j.executable>/Applications/install4j 4/bin/install4jc</install4j.executable>
+    <install4j.executable>/Applications/install4j 5/bin/install4jc</install4j.executable>
   </properties>
 
   <pluginRepositories>
