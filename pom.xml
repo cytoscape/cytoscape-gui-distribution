@@ -91,9 +91,11 @@
 			</modules>
 		</profile>
 	</profiles>
+
 	<scm>
 		<connection>scm:git:git://github.com/cytoscape/cytoscape-gui-distribution.git</connection>
 		<developerConnection>scm:git:git@github.com:cytoscape/cytoscape-gui-distribution.git</developerConnection>
 		<url>https://github.com/cytoscape/cytoscape-gui-distribution.git</url>
 	</scm>
+
 </project>
