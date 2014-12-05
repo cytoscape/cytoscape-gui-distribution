@@ -4,7 +4,7 @@
     <line-ending>dos</line-ending>
     <karaf>
         <feature-repository>target/features-repo</feature-repository>
-        <distribution base="target/dependencies/windows/apache-karaf-${karaf.version}">
+        <distribution base="target/dependencies/apache-karaf-${karaf.version}">
             <scripts>
                 <script>bin/karaf.bat</script>
                 <script>bin/karaf</script>

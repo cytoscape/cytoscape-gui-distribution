@@ -140,7 +140,7 @@ public abstract class BasicIntegrationTest {
 		return options(
 				karafDistributionConfiguration().frameworkUrl(
 			            maven().groupId("org.apache.karaf").artifactId("apache-karaf").type("zip").versionAsInProject())
-			            .karafVersion("2.3.5").name("Apache Karaf").useDeployFolder(false),
+			            .karafVersion("3.0.2").name("Apache Karaf").useDeployFolder(false),
 				systemProperty("org.osgi.framework.system.packages.extra").value("com.sun.xml.internal.bind"),
 				junitBundles(),
 				vmOption("-Xmx512M"),
