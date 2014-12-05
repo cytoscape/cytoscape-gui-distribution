@@ -32,7 +32,7 @@
 			<type>zip</type>
 		</dependency>
 		<dependency>
-			<groupId>org.apache.karaf.assemblies.features</groupId>
+			<groupId>org.apache.karaf.features</groupId>
 			<artifactId>standard</artifactId>
 			<version>${karaf.version}</version>
 			<type>xml</type>
@@ -98,39 +98,39 @@
 			</plugin>
 			<plugin>
 				<groupId>org.apache.karaf.tooling</groupId>
-				<artifactId>features-maven-plugin</artifactId>
+				<artifactId>karaf-maven-plugin</artifactId>
 				<version>${karaf.version}</version>
 				<executions>
 					<execution>
 						<id>add-features-to-repo</id>
-						<phase>prepare-package</phase>
+						<phase>generate-resources</phase>
 						<goals>
-							<goal>add-features-to-repo</goal>
+							<goal>features-add-to-repository</goal>
 						</goals>
 						<configuration>
-								<descriptors>
-									<descriptor>mvn:org.cytoscape.distribution/features/${project.version}/xml/features</descriptor>
-								</descriptors>
-								<features>
-									<feature>cytoscape-gui</feature>
-								</features>
-								<includeMvnBasedDescriptors>true</includeMvnBasedDescriptors>
-								<repository>target/features-repo</repository>
+							<descriptors>
+								<descriptor>mvn:org.cytoscape.distribution/features/${project.version}/xml/features</descriptor>
+							</descriptors>
+							<features>
+								<feature>cytoscape-gui</feature>
+							</features>
+							<includeMvnBasedDescriptors>true</includeMvnBasedDescriptors>
+							<repository>target/features-repo</repository>
 						</configuration>
 					</execution>
 					<execution>
 						<id>add-features-to-repo-dev</id>
-						<phase>process-resources</phase>
+						<phase>generate-resources</phase>
 						<goals>
-							<goal>add-features-to-repo</goal>
+							<goal>features-add-to-repository</goal>
 						</goals>
 						<configuration>
-								<descriptors>
-									<descriptor>mvn:org.cytoscape.distribution/features/${project.version}/xml/features</descriptor>
-								</descriptors>
-								<features />
-								<includeMvnBasedDescriptors>true</includeMvnBasedDescriptors>
-								<repository>target/features-repo-dev</repository>
+							<descriptors>
+								<descriptor>mvn:org.cytoscape.distribution/features/${project.version}/xml/features</descriptor>
+							</descriptors>
+							<features/>
+							<includeMvnBasedDescriptors>true</includeMvnBasedDescriptors>
+							<repository>target/features-repo-dev</repository>
 						</configuration>
 					</execution>
 				</executions>
@@ -184,7 +184,7 @@
 						</configuration>
 					</execution>
 					<execution>
-						<id>unpack-unix</id>
+						<id>unpack</id>
 						<phase>generate-resources</phase>
 						<goals>
 							<goal>unpack</goal>
@@ -195,24 +195,7 @@
 									<groupId>org.apache.karaf</groupId>
 									<artifactId>apache-karaf</artifactId>
 									<type>tar.gz</type>
-									<outputDirectory>target/dependencies/unix</outputDirectory>
-								</artifactItem>
-							</artifactItems>
-						</configuration>
-					</execution>
-					<execution>
-						<id>unpack-windows</id>
-						<phase>generate-resources</phase>
-						<goals>
-							<goal>unpack</goal>
-						</goals>
-						<configuration>
-							<artifactItems>
-								<artifactItem>
-									<groupId>org.apache.karaf</groupId>
-									<artifactId>apache-karaf</artifactId>
-									<type>zip</type>
-									<outputDirectory>target/dependencies/windows</outputDirectory>
+									<outputDirectory>target/dependencies</outputDirectory>
 								</artifactItem>
 							</artifactItems>
 						</configuration>
@@ -281,7 +264,7 @@
 							<goal>replace</goal>
 						</goals>
 						<configuration>
-							<file>target/dependencies/unix/apache-karaf-${karaf.version}/bin/karaf</file>
+							<file>target/dependencies/apache-karaf-${karaf.version}/bin/karaf</file>
 							<outputFile>target/dependencies/launcher/bin/karaf</outputFile>
 							<regex>false</regex>
 							<unescape>false</unescape>
@@ -320,7 +303,7 @@
 							<goal>replace</goal>
 						</goals>
 						<configuration>
-							<file>target/dependencies/windows/apache-karaf-${karaf.version}/bin/karaf.bat</file>
+							<file>target/dependencies/apache-karaf-${karaf.version}/bin/karaf.bat</file>
 							<outputFile>target/dependencies/launcher/bin/karaf.bat</outputFile>
 							<regex>false</regex>
 							<unescape>false</unescape>
@@ -365,8 +348,7 @@
 						</goals>
 						<configuration>
 							<includes>
-								<include>target/dependencies/windows/apache-karaf-${karaf.version}/etc/startup.properties</include>
-								<include>target/dependencies/unix/apache-karaf-${karaf.version}/etc/startup.properties</include>
+								<include>target/dependencies/apache-karaf-${karaf.version}/etc/startup.properties</include>
 							</includes>
 							<regex>true</regex>
 							<unescape>false</unescape>
@@ -386,8 +368,7 @@
 						</goals>
 						<configuration>
 							<includes>
-								<include>target/dependencies/windows/apache-karaf-${karaf.version}/etc/startup.properties</include>
-								<include>target/dependencies/unix/apache-karaf-${karaf.version}/etc/startup.properties</include>
+								<include>target/dependencies/apache-karaf-${karaf.version}/etc/startup.properties</include>
 							</includes>
 							<regex>true</regex>
 							<unescape>false</unescape>
