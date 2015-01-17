@@ -116,17 +116,7 @@
     </dependency>
     <dependency>
         <groupId>org.freehep</groupId>
-        <artifactId>freehep-graphicsio-svg</artifactId>
-        <version>2.4</version>
-    </dependency>
-    <dependency>
-        <groupId>org.freehep</groupId>
         <artifactId>freehep-graphics2d</artifactId>
-        <version>2.4</version>
-    </dependency>
-    <dependency>
-        <groupId>org.freehep</groupId>
-        <artifactId>freehep-graphicsio-ps</artifactId>
         <version>2.4</version>
     </dependency>
     <dependency>
@@ -136,13 +126,28 @@
     </dependency>
     <dependency>
         <groupId>org.freehep</groupId>
+        <artifactId>freehep-io</artifactId>
+        <version>2.2.2</version>
+    </dependency>
+    <dependency>
+        <groupId>org.freehep</groupId>
+        <artifactId>freehep-graphicsio-ps</artifactId>
+        <version>2.4</version>
+    </dependency>
+    <dependency>
+        <groupId>org.freehep</groupId>
         <artifactId>freehep-graphicsio-pdf</artifactId>
         <version>2.4</version>
     </dependency>
     <dependency>
         <groupId>org.freehep</groupId>
-        <artifactId>freehep-io</artifactId>
-        <version>2.2.2</version>
+        <artifactId>freehep-graphicsio-svg</artifactId>
+        <version>2.4</version>
+    </dependency>
+    <dependency>
+        <groupId>org.freehep</groupId>
+        <artifactId>freehep-graphicsio-java</artifactId>
+        <version>2.4</version>
     </dependency>
     <dependency>
         <groupId>cytoscape-temp</groupId>
