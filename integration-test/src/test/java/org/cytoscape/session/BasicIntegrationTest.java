@@ -178,6 +178,8 @@ public abstract class BasicIntegrationTest {
 				mavenBundle().groupId("org.cytoscape").artifactId("work-impl").version(implBundleVersion).startLevel(11),
 
 				mavenBundle().groupId("org.cytoscape").artifactId("work-headless-impl").version(implBundleVersion).startLevel(11),
+				
+				mavenBundle().groupId("org.cytoscape").artifactId("swing-util-impl").version(implBundleVersion).startLevel(12),
 
 				mavenBundle().groupId("org.cytoscape").artifactId("presentation-impl").version(implBundleVersion).startLevel(13),
 
