@@ -39,7 +39,6 @@
     <bundle start-level="120">mvn:org.cytoscape/swing-util-impl/${cytoscape.impl.version}</bundle>
     
     <bundle start-level="125">mvn:org.cytoscape/model-impl/${cytoscape.impl.version}</bundle>
-    <bundle start-level="125">mvn:org.cytoscape/group-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="125">mvn:org.cytoscape/work-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="125">mvn:org.cytoscape/work-swing-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="125">mvn:org.cytoscape/work-impl/${cytoscape.impl.version}</bundle>
@@ -52,6 +51,7 @@
     <bundle start-level="135">mvn:org.cytoscape/application-impl/${cytoscape.impl.version}</bundle>
 
     <bundle start-level="136">mvn:org.cytoscape/layout-impl/${cytoscape.impl.version}</bundle>
+    <bundle start-level="138">mvn:org.cytoscape/group-impl/${cytoscape.impl.version}</bundle>
     
     <bundle start-level="140">mvn:org.cytoscape/datasource-biogrid-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="140">mvn:org.cytoscape/session-impl/${cytoscape.impl.version}</bundle>
@@ -65,8 +65,8 @@
     <bundle start-level="157">mvn:org.cytoscape/command-executor-impl/${cytoscape.impl.version}</bundle>
     
     <bundle start-level="160">mvn:org.cytoscape/swing-application-impl/${cytoscape.impl.version}</bundle>
-    <bundle start-level="160">mvn:org.cytoscape/group-data-impl/${cytoscape.impl.version}</bundle> 
-    <bundle start-level="160">mvn:org.cytoscape/group-view-impl/${cytoscape.impl.version}</bundle>
+    <!--bundle start-level="160">mvn:org.cytoscape/group-data-impl/${cytoscape.impl.version}</bundle--> 
+    <!--bundle start-level="160">mvn:org.cytoscape/group-view-impl/${cytoscape.impl.version}</bundle-->
     
     <bundle start-level="165">mvn:org.cytoscape/biopax-impl/${cytoscape.impl.version}</bundle>
     
