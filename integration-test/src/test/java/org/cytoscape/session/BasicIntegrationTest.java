@@ -174,7 +174,6 @@ public abstract class BasicIntegrationTest {
 				mavenBundle().groupId("org.cytoscape").artifactId("event-impl").version(implBundleVersion).startLevel(9),
 
 				mavenBundle().groupId("org.cytoscape").artifactId("model-impl").version(implBundleVersion).startLevel(11),
-				mavenBundle().groupId("org.cytoscape").artifactId("group-impl").version(implBundleVersion).startLevel(11),
 				mavenBundle().groupId("org.cytoscape").artifactId("work-impl").version(implBundleVersion).startLevel(11),
 
 				mavenBundle().groupId("org.cytoscape").artifactId("work-headless-impl").version(implBundleVersion).startLevel(11),
@@ -189,6 +188,7 @@ public abstract class BasicIntegrationTest {
 
 				mavenBundle().groupId("org.cytoscape").artifactId("application-impl").version(implBundleVersion).startLevel(17),
 				mavenBundle().groupId("org.cytoscape").artifactId("layout-impl").version(implBundleVersion).startLevel(18),
+				mavenBundle().groupId("org.cytoscape").artifactId("group-impl").version(implBundleVersion).startLevel(18),
 
 				mavenBundle().groupId("org.cytoscape").artifactId("session-impl").version(implBundleVersion).startLevel(19),
 
