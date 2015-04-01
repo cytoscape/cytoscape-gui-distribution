@@ -40,6 +40,7 @@ import java.nio.file.StandardCopyOption;
 import java.util.Collection;
 
 import org.cytoscape.group.CyGroup;
+import org.cytoscape.group.CyGroupSettingsManager.GroupViewType;
 import org.cytoscape.model.CyEdge;
 import org.cytoscape.model.CyNetwork;
 import org.cytoscape.model.CyNode;
@@ -64,6 +65,7 @@ public class Cy283GroupsSessionLoadingTest extends BasicIntegrationTest {
 	public void setup() throws Exception {
 		sessionFile = File.createTempFile("test", ".cys");
 		Files.copy(getClass().getResourceAsStream("/testData/session2x/v283Groups.cys"), sessionFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
+		groupSettingsManager.setGroupViewType(GroupViewType.NONE);
 		checkBasicConfiguration();
 	}
 
