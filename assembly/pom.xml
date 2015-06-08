@@ -286,7 +286,7 @@
 									<value>JAVA=$(which java)</value>
 								</replacement>
 								<replacement>
-									<token>JAVA=`expr "$JAVA" : '.*is \(.*\)$'`</token>
+									<token>JAVA=`expr "$JAVA" : '.* \(/.*\)$'`</token>
 									<value/>
 								</replacement>
 								<replacement>
