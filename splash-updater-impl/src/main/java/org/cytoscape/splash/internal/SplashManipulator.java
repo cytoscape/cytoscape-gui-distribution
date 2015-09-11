@@ -29,13 +29,15 @@ import java.util.Set;
 
 import javax.swing.SwingUtilities;
 
+import org.cytoscape.app.event.AppsFinishedStartingEvent;
+import org.cytoscape.app.event.AppsFinishedStartingListener;
 import org.cytoscape.launcher.internal.SplashPanel;
 import org.osgi.framework.Bundle;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.BundleEvent;
 import org.osgi.framework.BundleListener;
 
-public class SplashManipulator implements BundleListener {
+public class SplashManipulator implements BundleListener, AppsFinishedStartingListener {
 
 	private Set<Long> resolved;
 	private Set<Long> started;
@@ -66,13 +68,17 @@ public class SplashManipulator implements BundleListener {
 			started.add(bundle.getBundleId());
 			String name = bundle.getSymbolicName();
 			splashPanel.updateMessage(name + " started", getProgress());
-			if ("org.cytoscape.welcome-impl".equals(name)) {
-				closeSplashScreen();
-			}
 		}
 	}
+    
+    double getProgress() {
+        int totalResolved = resolved.size();
+        int totalStarted = started.size();
+        return totalResolved == 0 ? 0 : totalStarted / (double) totalResolved;
+    }
 
-    void closeSplashScreen() {
+	@Override
+	public void handleEvent(AppsFinishedStartingEvent e) {
 		context.removeBundleListener(this);
 		resolved.clear();
 		started.clear();
@@ -83,11 +89,5 @@ public class SplashManipulator implements BundleListener {
     	    	splashPanel.close();
     		}
     	});
-    }
-    
-    double getProgress() {
-        int totalResolved = resolved.size();
-        int totalStarted = started.size();
-        return totalResolved == 0 ? 0 : totalStarted / (double) totalResolved;
-    }
+	}
 }

@@ -67,6 +67,14 @@
                 </xsl:for-each>
             </includes>
         </fileSet>
+        
+        <fileSet>
+            <directory>target/dependencies/apps</directory>
+            <includes>
+                <include>*.jar</include>
+            </includes>
+            <outputDirectory>/apps</outputDirectory>
+        </fileSet>
 
         <fileSet>
             <directory>target/dependencies/branding</directory>

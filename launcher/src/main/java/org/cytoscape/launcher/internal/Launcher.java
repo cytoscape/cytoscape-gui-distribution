@@ -84,6 +84,7 @@ public class Launcher {
 		final JFrame frame = new JFrame();
 				frame.add(splashPanel);
 		frame.setUndecorated(true);
+		frame.setAlwaysOnTop(true);
 		
 		int width = background.getWidth();
 		int height = background.getHeight();
