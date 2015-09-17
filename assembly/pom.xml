@@ -210,61 +210,67 @@
 							<artifactItems>
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
-									<artifactId>biopax-impl</artifactId>
+									<artifactId>biopax</artifactId>
 									<version>3.3.0-SNAPSHOT</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
-									<artifactId>command-dialog-impl</artifactId>
+									<artifactId>command-dialog</artifactId>
 									<version>3.3.0-SNAPSHOT</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
-									<artifactId>datasource-biogrid-impl</artifactId>
+									<artifactId>datasource-biogrid</artifactId>
 									<version>3.3.0-SNAPSHOT</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
-									<artifactId>network-analyzer-impl</artifactId>
+									<artifactId>network-analyzer</artifactId>
 									<version>3.3.0-SNAPSHOT</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
-									<artifactId>network-merge-impl</artifactId>
+									<artifactId>network-merge</artifactId>
 									<version>3.3.0-SNAPSHOT</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
-									<artifactId>psi-mi-impl</artifactId>
+									<artifactId>psi-mi</artifactId>
 									<version>3.3.0-SNAPSHOT</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
-									<artifactId>sbml-impl</artifactId>
+									<artifactId>sbml</artifactId>
 									<version>3.3.0-SNAPSHOT</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
-									<artifactId>webservice-biomart-client-impl</artifactId>
+									<artifactId>webservice-biomart-client</artifactId>
 									<version>3.3.0-SNAPSHOT</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
-									<artifactId>webservice-psicquic-client-impl</artifactId>
+									<artifactId>webservice-psicquic-client</artifactId>
 									<version>3.3.0-SNAPSHOT</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
-									<artifactId>welcome-impl</artifactId>
+									<artifactId>cy-rest</artifactId>
+									<version>2.0.2</version>
+									<type>jar</type>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.cytoscape</groupId>
+									<artifactId>welcome</artifactId>
 									<version>3.3.0-SNAPSHOT</version>
 									<type>jar</type>
 								</artifactItem>
