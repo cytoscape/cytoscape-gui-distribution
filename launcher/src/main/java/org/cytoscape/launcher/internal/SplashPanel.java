@@ -9,18 +9,15 @@ import java.awt.Graphics2D;
 import java.awt.GraphicsConfiguration;
 import java.awt.GraphicsDevice;
 import java.awt.GraphicsEnvironment;
-import java.awt.Rectangle;
 import java.awt.Window;
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.lang.reflect.InvocationTargetException;
 
-import javax.imageio.ImageIO;
-import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 
 @SuppressWarnings("serial")
 public class SplashPanel extends Component {
+	
 	BufferedImage image;
 	private Font font;
 	Graphics2D context;
@@ -29,15 +26,19 @@ public class SplashPanel extends Component {
 		GraphicsEnvironment environment = GraphicsEnvironment.getLocalGraphicsEnvironment();
 		GraphicsDevice device = environment.getDefaultScreenDevice();
 		GraphicsConfiguration configuration = device.getDefaultConfiguration();
-		image = configuration.createCompatibleImage(background.getWidth(), background.getHeight());
-		font = new Font(Font.MONOSPACED,Font.PLAIN,12);
-		context = image.createGraphics();
 		
+		image = configuration.createCompatibleImage(background.getWidth(), background.getHeight());
+		font = new Font(Font.MONOSPACED, Font.PLAIN, 12);
+		context = image.createGraphics();
+
 		context.fillRect(0, 0, background.getWidth(), background.getHeight());
 		context.drawImage(background, 0, 0, null);
-        context.setColor(Color.BLACK);
+		context.setColor(Color.LIGHT_GRAY);
+		context.drawRect(0, 0, background.getWidth() - 1, background.getHeight() - 1);
+		
+		context.setColor(Color.BLACK);
 		context.setFont(font);
-		context.drawString("Java version: "+System.getProperty("java.version"),650,20);
+		context.drawString("Java version: " + System.getProperty("java.version"), 650, 20);
 	}
 	
 	@Override
@@ -62,21 +63,21 @@ public class SplashPanel extends Component {
 			} catch (InvocationTargetException e) {
 				e.printStackTrace();
 			}
+    		
     		return;
     	}
 
-    	if (!isDisplayable()) {
+    	if (!isDisplayable())
     		return;
-    	}
     	
-        context.setColor(Color.WHITE);
-        context.fillRect(20,300,800,40);
-        context.setColor(Color.BLACK);
-        context.drawString(message, 20, 320);
-        
-        context.setColor(new Color(computeColor(progress)));
-        int progressWidth = (int) (800.0 * progress);
-        context.fillRect(20, 304, progressWidth, 4);
+		context.setColor(Color.WHITE);
+		context.fillRect(20, 300, 799, 39);
+		context.setColor(Color.BLACK);
+		context.drawString(message, 20, 320);
+
+		context.setColor(new Color(computeColor(progress)));
+		int progressWidth = (int) (800.0 * progress);
+		context.fillRect(20, 304, progressWidth, 4);
         
         repaint();
 	}
@@ -90,11 +91,12 @@ public class SplashPanel extends Component {
 
 	public void close() {
 		Container parent = getParent();
+		
 		while (parent != null) {
 			// Find the enclosing JFrame/JDialog and try to close it.
-			if (parent instanceof Window) {
+			if (parent instanceof Window)
 				parent.setVisible(false);
-			}
+			
 			parent = parent.getParent();
 		}
 	}
