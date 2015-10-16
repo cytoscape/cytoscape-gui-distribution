@@ -133,6 +133,17 @@
             <includes>
                 <include>**/*</include>
             </includes>
+            <excludes>
+                <exclude>biogrid.zip</exclude>
+            </excludes>
+            <outputDirectory>/sampleData</outputDirectory>
+        </fileSet>
+        
+        <fileSet>
+            <directory>target/dependencies/biogrid</directory>
+            <includes>
+                <include>**/*</include>
+            </includes>
             <outputDirectory>/sampleData</outputDirectory>
         </fileSet>
 

@@ -166,13 +166,19 @@
 						</configuration>
 					</execution>
 					<execution>
-						<id>unpack-splash-launcher</id>
+						<id>unpack-dependencies</id>
 						<phase>generate-resources</phase>
 						<goals>
 							<goal>unpack</goal>
 						</goals>
 						<configuration>
  							<artifactItems>
+ 								<artifactItem>
+									<groupId>org.apache.karaf</groupId>
+									<artifactId>apache-karaf</artifactId>
+									<type>tar.gz</type>
+									<outputDirectory>target/dependencies</outputDirectory>
+								</artifactItem>
  								<artifactItem>
 									<groupId>org.cytoscape.gui-distribution</groupId>
 									<artifactId>splash-launcher</artifactId>
@@ -181,23 +187,6 @@
 									<outputDirectory>target/dependencies/splash-launcher</outputDirectory>
  								</artifactItem>
  							</artifactItems>
-						</configuration>
-					</execution>
-					<execution>
-						<id>unpack</id>
-						<phase>generate-resources</phase>
-						<goals>
-							<goal>unpack</goal>
-						</goals>
-						<configuration>
-							<artifactItems>
-								<artifactItem>
-									<groupId>org.apache.karaf</groupId>
-									<artifactId>apache-karaf</artifactId>
-									<type>tar.gz</type>
-									<outputDirectory>target/dependencies</outputDirectory>
-								</artifactItem>
-							</artifactItems>
 						</configuration>
 					</execution>
 					<execution>
@@ -330,6 +319,25 @@
 				<configuration>
 					<appendAssemblyId>false</appendAssemblyId>
 				</configuration>
+			</plugin>
+			<plugin>
+			    <groupId>org.apache.maven.plugins</groupId>
+			    <artifactId>maven-antrun-plugin</artifactId>
+			    <version>1.6</version>
+			    <executions>
+			        <execution>
+			            <id>unzip</id>
+			            <phase>generate-resources</phase>
+			            <configuration>
+			                <target>
+			                    <unzip src="src/main/resources/sampleData/biogrid.zip" dest="target/dependencies/biogrid" />
+			                </target>
+			            </configuration>
+			            <goals>
+			                <goal>run</goal>
+			            </goals>
+			        </execution>
+			    </executions>
 			</plugin>
 			<plugin>
 				<groupId>com.google.code.maven-replacer-plugin</groupId>
