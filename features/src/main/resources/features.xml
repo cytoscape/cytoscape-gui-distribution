@@ -55,7 +55,6 @@
     
     <bundle start-level="140">mvn:org.cytoscape/session-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="140">mvn:org.cytoscape/vizmap-gui-core-impl/${cytoscape.impl.version}</bundle>
-    <bundle start-level="140">mvn:org.cytoscape/opencl-cycl-impl/${cytoscape.impl.version}</bundle>
     
     <bundle start-level="145">mvn:org.cytoscape/ding-presentation-impl/${cytoscape.impl.version}</bundle>
     
@@ -77,7 +76,6 @@
     <bundle start-level="170">mvn:org.cytoscape/editor-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="170">mvn:org.cytoscape/layout-prefuse-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="170">mvn:cytoscape-temp/y-layouts/3.0.5</bundle>
-    <bundle start-level="170">mvn:org.cytoscape/opencl-layout-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="170">mvn:org.cytoscape/linkout-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="170">mvn:org.cytoscape/table-import-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="170">mvn:org.cytoscape/filter2-impl/${cytoscape.impl.version}</bundle>

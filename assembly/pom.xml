@@ -259,6 +259,18 @@
 								</artifactItem>
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
+									<artifactId>opencl-cycl</artifactId>
+									<version>3.3.0-SNAPSHOT</version>
+									<type>jar</type>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.cytoscape</groupId>
+									<artifactId>opencl-layout</artifactId>
+									<version>3.3.0-SNAPSHOT</version>
+									<type>jar</type>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.cytoscape</groupId>
 									<artifactId>welcome</artifactId>
 									<version>3.3.0-SNAPSHOT</version>
 									<type>jar</type>
