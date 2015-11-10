@@ -234,6 +234,11 @@
         <artifactId>PureMVC_Java_MultiCore</artifactId>
         <version>1.0.7</version>
     </dependency>
+    <!--<dependency>-->
+        <!--<groupId>uk.ac.ebi.enfin.mi.cluster</groupId>-->
+        <!--<artifactId>micluster</artifactId>-->
+        <!--<version>1.6</version>-->
+    <!--</dependency>-->
     <dependency>
         <groupId>psidev.psi.mi</groupId>
         <artifactId>psimitab</artifactId>

@@ -23,6 +23,15 @@
     <!-- Not going to inline this either. Because of dependencies... -->
     <bundle start-level="103">mvn:cytoscape-temp/uk.ac.ebi.enfin.mi.cluster.micluster/1.6</bundle>
     
+    <!-- The following bundles have packages that are also provided by some
+         JREs.  We can't inline these because it will create conflicts when
+         the OSGi container needs to choose between the system bundle and the
+         third-party bundle. -->
+    <bundle start-level="103">mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.jaxb-api-2.1/1.2.0</bundle>
+    <bundle start-level="103">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.jaxb-impl/2.1.6_1</bundle>
+    <bundle start-level="103">mvn:javax.activation/com.springsource.javax.activation/1.1.1</bundle>
+    <bundle start-level="103">mvn:javax.xml.stream/com.springsource.javax.xml.stream/1.0.1</bundle>
+    <bundle start-level="103">mvn:javax.ws.rs/javax.ws.rs-api/2.0</bundle>
 
     <bundle start-level="110">mvn:org.cytoscape/cmdline/${cytoscape.support.version}</bundle>
     
