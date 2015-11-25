@@ -4,7 +4,7 @@
 :: are specified. If so, display help or the current version and exit.
 :: Note: Current version to be implemented after 3.1
 
-set CYTOSCAPE_VERSION=Cytoscape version: 3.2.1
+set CYTOSCAPE_VERSION=Cytoscape version: 3.3.0
 
 set help=false
 IF "%1"=="-h" set help=true
@@ -67,7 +67,8 @@ set JAVA_OPTS=%JAVA_OPTS:~1%
 
 :setDebugOpts
 set JAVA_DEBUG_OPTS=-Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=%DEBUG_PORT%
-set KARAF_OPTS=-Dcom.sun.management.jmxremote -Dcytoscape.home="%~dp0:\=\\%"
+set PWD=%~dp0
+set KARAF_OPTS=-Dcom.sun.management.jmxremote -Dcytoscape.home="%PWD:~0,-1%"
 
 set KARAF_DATA=%USERPROFILE%\CytoscapeConfiguration\3\karaf_data
 if not exist "%KARAF_DATA%" (

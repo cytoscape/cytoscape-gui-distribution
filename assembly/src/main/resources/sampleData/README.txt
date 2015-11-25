@@ -1,4 +1,4 @@
-README.txt: Updated on 9/25/2012
+README.txt: Updated on 10/15/2015
 
 	This directory contains sample data for Cytoscape 3. It includes the
 	following data sets:
@@ -84,19 +84,26 @@ nestedNetworks.nnf
 Nested Network File (NNF) format is a simple text format to represent 
 networks with nested structure.  This sample file contains multiple networks 
 with nested nodes (nodes contain reference to other network).
- 
+
 ----------------------------------------------------------------------------
 
-BIOGRID-ORGANISM-Rattus_norvegicus-3.1.92.mitab
+BIOGRID-ORGANISM-Arabidopsis_thaliana_Columbia-3.4.129.mitab
+BIOGRID-ORGANISM-Caenorhabditis_elegans-3.4.129.mitab
+BIOGRID-ORGANISM-Danio_rerio-3.4.129.mitab
+BIOGRID-ORGANISM-Drosophila_melanogaster-3.4.129.mitab
+BIOGRID-ORGANISM-Escherichia_coli_K12_MG1655-3.4.129.mitab
+BIOGRID-ORGANISM-Homo_sapiens-3.4.129.mitab
+BIOGRID-ORGANISM-Mus_musculus-3.4.129.mitab
+BIOGRID-ORGANISM-Saccharomyces_cerevisiae_S288c-3.4.129.mitab
 
 PSI-MI Tab 2.5 file format is a standard text representation of interaction data.
 Cytoscape 3 recognizes files end with '.mitab' as PSI-MI Tab file.  The sample 
-data is a rat interactome compiled by BioGRID project: 
+data is compiled by the BioGRID project: 
 
 Stark C, Breitkreutz BJ, Reguly T, Boucher L, Breitkreutz A, Tyers M. 
 Biogrid: A General Repository for Interaction Datasets. 
 Nucleic Acids Res. Jan1; 34:D535-9
-
+ 
 ----------------------------------------------------------------------------
 
 DNA_Damage_Bypass_Reactome_73893.owl

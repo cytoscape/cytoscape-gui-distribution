@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.cytoscape.distribution</groupId>
 		<artifactId>parent</artifactId>
-		<version>3.2.1</version>
+		<version>3.3.0</version>
 		<relativePath>..</relativePath>
 	</parent>
 	
@@ -166,13 +166,19 @@
 						</configuration>
 					</execution>
 					<execution>
-						<id>unpack-splash-launcher</id>
+						<id>unpack-dependencies</id>
 						<phase>generate-resources</phase>
 						<goals>
 							<goal>unpack</goal>
 						</goals>
 						<configuration>
  							<artifactItems>
+ 								<artifactItem>
+									<groupId>org.apache.karaf</groupId>
+									<artifactId>apache-karaf</artifactId>
+									<type>tar.gz</type>
+									<outputDirectory>target/dependencies</outputDirectory>
+								</artifactItem>
  								<artifactItem>
 									<groupId>org.cytoscape.gui-distribution</groupId>
 									<artifactId>splash-launcher</artifactId>
@@ -184,20 +190,94 @@
 						</configuration>
 					</execution>
 					<execution>
-						<id>unpack</id>
+						<id>copy</id>
 						<phase>generate-resources</phase>
 						<goals>
-							<goal>unpack</goal>
+							<goal>copy</goal>
 						</goals>
 						<configuration>
 							<artifactItems>
 								<artifactItem>
-									<groupId>org.apache.karaf</groupId>
-									<artifactId>apache-karaf</artifactId>
-									<type>tar.gz</type>
-									<outputDirectory>target/dependencies</outputDirectory>
+									<groupId>org.cytoscape</groupId>
+									<artifactId>biopax</artifactId>
+									<version>3.3.0</version>
+									<type>jar</type>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.cytoscape</groupId>
+									<artifactId>command-dialog</artifactId>
+									<version>3.3.0</version>
+									<type>jar</type>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.cytoscape</groupId>
+									<artifactId>datasource-biogrid</artifactId>
+									<version>3.3.0</version>
+									<type>jar</type>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.cytoscape</groupId>
+									<artifactId>network-analyzer</artifactId>
+									<version>3.3.0</version>
+									<type>jar</type>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.cytoscape</groupId>
+									<artifactId>network-merge</artifactId>
+									<version>3.3.0</version>
+									<type>jar</type>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.cytoscape</groupId>
+									<artifactId>psi-mi</artifactId>
+									<version>3.3.0</version>
+									<type>jar</type>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.cytoscape</groupId>
+									<artifactId>sbml</artifactId>
+									<version>3.3.0</version>
+									<type>jar</type>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.cytoscape</groupId>
+									<artifactId>webservice-biomart-client</artifactId>
+									<version>3.3.0</version>
+									<type>jar</type>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.cytoscape</groupId>
+									<artifactId>webservice-psicquic-client</artifactId>
+									<version>3.3.0</version>
+									<type>jar</type>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.cytoscape</groupId>
+									<artifactId>cy-rest</artifactId>
+									<version>3.3.0</version>
+									<type>jar</type>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.cytoscape</groupId>
+									<artifactId>opencl-cycl</artifactId>
+									<version>3.3.0</version>
+									<type>jar</type>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.cytoscape</groupId>
+									<artifactId>opencl-layout</artifactId>
+									<version>3.3.0</version>
+									<type>jar</type>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.cytoscape</groupId>
+									<artifactId>welcome</artifactId>
+									<version>3.3.0</version>
+									<type>jar</type>
 								</artifactItem>
 							</artifactItems>
+							<outputDirectory>target/dependencies/apps</outputDirectory>
+							<useBaseVersion>true</useBaseVersion>
 						</configuration>
 					</execution>
 				</executions>
@@ -253,6 +333,25 @@
 				</configuration>
 			</plugin>
 			<plugin>
+			    <groupId>org.apache.maven.plugins</groupId>
+			    <artifactId>maven-antrun-plugin</artifactId>
+			    <version>1.6</version>
+			    <executions>
+			        <execution>
+			            <id>unzip</id>
+			            <phase>generate-resources</phase>
+			            <configuration>
+			                <target>
+			                    <unzip src="src/main/resources/sampleData/biogrid.zip" dest="target/dependencies/biogrid" />
+			                </target>
+			            </configuration>
+			            <goals>
+			                <goal>run</goal>
+			            </goals>
+			        </execution>
+			    </executions>
+			</plugin>
+			<plugin>
 				<groupId>com.google.code.maven-replacer-plugin</groupId>
 				<artifactId>maven-replacer-plugin</artifactId>
 				<version>1.3.9</version>
@@ -286,7 +385,7 @@
 									<value>JAVA=$(which java)</value>
 								</replacement>
 								<replacement>
-									<token>JAVA=`expr "$JAVA" : '.*is \(.*\)$'`</token>
+									<token>JAVA=`expr "$JAVA" : '.* \(/.*\)$'`</token>
 									<value/>
 								</replacement>
 								<replacement>

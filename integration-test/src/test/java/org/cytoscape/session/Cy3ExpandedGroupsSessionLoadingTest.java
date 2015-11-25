@@ -12,6 +12,7 @@ import java.util.List;
 import java.util.Set;
 
 import org.cytoscape.group.CyGroup;
+import org.cytoscape.group.CyGroupSettingsManager.GroupViewType;
 import org.cytoscape.model.CyEdge;
 import org.cytoscape.model.CyNetwork;
 import org.cytoscape.model.CyNode;
@@ -32,6 +33,7 @@ public class Cy3ExpandedGroupsSessionLoadingTest extends BasicIntegrationTest {
 		sessionFile = File.createTempFile("test", ".cys");
 		Files.copy(getClass().getResourceAsStream("/testData/session3x/nestedGroups_expanded.cys"), sessionFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
 		checkBasicConfiguration();
+		groupSettingsManager.setGroupViewType(GroupViewType.NONE);
 	}
 
 	@Test

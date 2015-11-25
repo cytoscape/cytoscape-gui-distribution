@@ -80,18 +80,20 @@ public class Launcher {
 		File karafBase = new File(System.getProperty("karaf.base"));
 		BufferedImage background = ImageIO.read(new File(karafBase, "CytoscapeSplashScreen.png"));
 		splashPanel = new SplashPanel(background);
-		
+
 		final JFrame frame = new JFrame();
-				frame.add(splashPanel);
+		frame.add(splashPanel);
 		frame.setUndecorated(true);
-		
+		frame.setAlwaysOnTop(true);
+
 		int width = background.getWidth();
 		int height = background.getHeight();
 		frame.setSize(width, height);
-		
+
 		// Center the frame in the current screen.
 		Rectangle bounds = frame.getGraphicsConfiguration().getBounds();
 		frame.setLocation((bounds.width - width) / 2, (bounds.height - height) / 2);
+		
 		SwingUtilities.invokeLater(new Runnable() {
 			@Override
 			public void run() {
