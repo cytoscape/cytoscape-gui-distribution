@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.cytoscape.distribution</groupId>
 		<artifactId>parent</artifactId>
-		<version>3.3.0</version>
+		<version>3.4.0-SNAPSHOT</version>
 		<relativePath>..</relativePath>
 	</parent>
 	
@@ -200,79 +200,79 @@
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>biopax</artifactId>
-									<version>3.3.0</version>
+									<version>3.4.0-SNAPSHOT</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>command-dialog</artifactId>
-									<version>3.3.0</version>
+									<version>3.4.0-SNAPSHOT</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>datasource-biogrid</artifactId>
-									<version>3.3.0</version>
+									<version>3.4.0-SNAPSHOT</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>network-analyzer</artifactId>
-									<version>3.3.0</version>
+									<version>3.4.0-SNAPSHOT</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>network-merge</artifactId>
-									<version>3.3.0</version>
+									<version>3.4.0-SNAPSHOT</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>psi-mi</artifactId>
-									<version>3.3.0</version>
+									<version>3.4.0-SNAPSHOT</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>sbml</artifactId>
-									<version>3.3.0</version>
+									<version>3.4.0-SNAPSHOT</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>webservice-biomart-client</artifactId>
-									<version>3.3.0</version>
+									<version>3.4.0-SNAPSHOT</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>webservice-psicquic-client</artifactId>
-									<version>3.3.0</version>
+									<version>3.4.0-SNAPSHOT</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>cy-rest</artifactId>
-									<version>3.3.0</version>
+									<version>3.4.0-SNAPSHOT</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>opencl-cycl</artifactId>
-									<version>3.3.0</version>
+									<version>3.4.0-SNAPSHOT</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>opencl-layout</artifactId>
-									<version>3.3.0</version>
+									<version>3.4.0-SNAPSHOT</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>welcome</artifactId>
-									<version>3.3.0</version>
+									<version>3.4.0-SNAPSHOT</version>
 									<type>jar</type>
 								</artifactItem>
 							</artifactItems>
