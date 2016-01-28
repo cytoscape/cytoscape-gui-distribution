@@ -260,13 +260,13 @@
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>opencl-cycl</artifactId>
-									<version>3.3.0</version>
+									<version>3.3.1</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>opencl-layout</artifactId>
-									<version>3.3.0</version>
+									<version>3.3.1</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
