@@ -69,6 +69,8 @@
     
     <bundle start-level="150">mvn:org.cytoscape/io-impl/${cytoscape.impl.version}</bundle>
     
+    <bundle start-level="155">mvn:org.cytoscape/jobs-impl/${cytoscape.impl.version}</bundle>
+
     <bundle start-level="155">mvn:org.cytoscape/core-task-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="157">mvn:org.cytoscape/command-executor-impl/${cytoscape.impl.version}</bundle>
     
