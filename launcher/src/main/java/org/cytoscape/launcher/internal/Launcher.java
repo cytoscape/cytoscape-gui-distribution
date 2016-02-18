@@ -88,7 +88,6 @@ public class Launcher {
 		frame.getContentPane().setLayout(new BorderLayout());
 		frame.getContentPane().add(splashPanel);
 		frame.setUndecorated(true);
-		frame.setAlwaysOnTop(true);
 		frame.setResizable(false);
 		frame.pack();
 
