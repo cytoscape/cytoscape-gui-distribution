@@ -26,7 +26,7 @@ package org.cytoscape.splash.internal;
 
 import java.util.Properties;
 
-import org.cytoscape.app.event.AppsFinishedStartingListener;
+import org.cytoscape.application.events.CyStartListener;
 import org.cytoscape.launcher.internal.Launcher;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
@@ -43,7 +43,7 @@ public final class SplashActivator implements BundleActivator {
     public void start( BundleContext bc ) throws Exception {
 		SplashManipulator splash = new SplashManipulator(bc, Launcher.getSplashPanel());
 		bc.addBundleListener(splash);
-		bc.registerService(AppsFinishedStartingListener.class.getName(), splash, new Properties());
+		bc.registerService(CyStartListener.class.getName(), splash, new Properties());
     }
 
     /**

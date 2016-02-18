@@ -29,15 +29,15 @@ import java.util.Set;
 
 import javax.swing.SwingUtilities;
 
-import org.cytoscape.app.event.AppsFinishedStartingEvent;
-import org.cytoscape.app.event.AppsFinishedStartingListener;
+import org.cytoscape.application.events.CyStartEvent;
+import org.cytoscape.application.events.CyStartListener;
 import org.cytoscape.launcher.internal.SplashPanel;
 import org.osgi.framework.Bundle;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.BundleEvent;
 import org.osgi.framework.BundleListener;
 
-public class SplashManipulator implements BundleListener, AppsFinishedStartingListener {
+public class SplashManipulator implements BundleListener, CyStartListener {
 
 	private Set<Long> resolved;
 	private Set<Long> started;
@@ -78,7 +78,7 @@ public class SplashManipulator implements BundleListener, AppsFinishedStartingLi
     }
 
 	@Override
-	public void handleEvent(AppsFinishedStartingEvent e) {
+	public void handleEvent(CyStartEvent e) {
 		context.removeBundleListener(this);
 		resolved.clear();
 		started.clear();
