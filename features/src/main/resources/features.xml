@@ -73,9 +73,7 @@
     <bundle start-level="157">mvn:org.cytoscape/command-executor-impl/${cytoscape.impl.version}</bundle>
     
     <bundle start-level="160">mvn:org.cytoscape/swing-application-impl/${cytoscape.impl.version}</bundle>
-    <!--bundle start-level="160">mvn:org.cytoscape/group-data-impl/${cytoscape.impl.version}</bundle--> 
-    <!--bundle start-level="160">mvn:org.cytoscape/group-view-impl/${cytoscape.impl.version}</bundle-->
-    
+
     <bundle start-level="165">mvn:org.cytoscape/jobs-impl/${cytoscape.impl.version}</bundle>
         
     <bundle start-level="170">mvn:org.cytoscape/search-impl/${cytoscape.impl.version}</bundle>
