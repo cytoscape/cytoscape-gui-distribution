@@ -131,13 +131,10 @@ public class Cy283ComplexSessionLodingTest extends BasicIntegrationTest {
 		assertEquals((9*SUBNET_COUNT) + (15*ROOTNET_COUNT), tableManager.getAllTables(true).size());
 
 		// Current network and view
-		final CyNetwork curNet = getNetworkByName(NET4);
-		assertEquals(curNet, applicationManager.getCurrentNetwork());
-		assertEquals(curNet, applicationManager.getCurrentNetworkView().getModel());
+		// NOTE: Cytoscape 2.x does not save current network/view properties!
 		
 		// Visual Style
-		assertEquals(7, vmm.getAllVisualStyles().size());
-		checkCurrentVisualStyle(vmm.getCurrentVisualStyle());
+		checkVisualStyles();
 	}
 
 	private void checkNetworks() {
@@ -206,7 +203,11 @@ public class Cy283ComplexSessionLodingTest extends BasicIntegrationTest {
 	}
 
 	@SuppressWarnings("unchecked")
-	private void checkCurrentVisualStyle(final VisualStyle style) {
+	private void checkVisualStyles() {
+		assertEquals(7, vmm.getAllVisualStyles().size());
+		assertEquals(vmm.getDefaultVisualStyle(), vmm.getCurrentVisualStyle());
+		
+		final VisualStyle style = vmm.getVisualStyle(viewManager.getNetworkViewSet().iterator().next());
 		assertNotNull(style);
 		assertEquals("Sample1", style.getTitle());
 

@@ -136,18 +136,16 @@ public class Cy263SimpleSessionLodingTest extends BasicIntegrationTest {
 		assertEquals((9*SUBNET_COUNT) + (15*ROOTNET_COUNT), tableManager.getAllTables(true).size());
 		
 		// Current network and view
-		final CyNetwork curNet = getNetworkByName("gene_disease_network4.txt--child--child.4");
-		assertEquals(curNet, applicationManager.getCurrentNetwork());
-		assertEquals(curNet, applicationManager.getCurrentNetworkView().getModel());
+		// NOTE: Cytoscape 2.x does not save current network/view properties!
 		
 		// Visual Styles
 		checkVisualStyles();
-		checkCurrentVisualStyle(vmm.getCurrentVisualStyle());
 	}
 
 	private void checkVisualStyles() {
 		Set<VisualStyle> vsSet = vmm.getAllVisualStyles();
 		assertEquals(8, vsSet.size());
+		assertEquals(vmm.getDefaultVisualStyle(), vmm.getCurrentVisualStyle());
 		
 		VisualStyle gda_geneCentric = null;
 		VisualStyle gda_diseaseCentric = null;
@@ -168,10 +166,8 @@ public class Cy263SimpleSessionLodingTest extends BasicIntegrationTest {
 		assertNotNull(gda_geneCentric);
 		assertNotNull(gda_diseaseCentric);
 		assertNotNull(gda_wholeNetwork);
-	}
 	
-	private void checkCurrentVisualStyle(final VisualStyle style) {
-		assertEquals("gda_wholeNetwork", style.getTitle());
+		VisualStyle style = gda_wholeNetwork;
 		
 		//		Collection<VisualMappingFunction<?, ?>> mappings = style.getAllVisualMappingFunctions();
 		//		assertEquals(4, mappings.size());
