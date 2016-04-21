@@ -31,7 +31,6 @@ import static org.cytoscape.view.presentation.property.BasicVisualLexicon.NODE_T
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
 import java.awt.Color;
@@ -87,29 +86,29 @@ public class Cy283GroupsSessionLoadingTest extends BasicIntegrationTest {
 	private void checkGlobalStatus() {
 		assertEquals(1, networkManager.getNetworkSet().size());
 		assertEquals(1, viewManager.getNetworkViewSet().size());
-		assertEquals(0, applicationManager.getSelectedNetworks().size());
-		assertEquals(0, applicationManager.getSelectedNetworkViews().size());
-		assertNull(applicationManager.getCurrentNetwork()); // Cytoscape 2.x does not save the current network!
-		assertNull(applicationManager.getCurrentNetworkView());
+		assertEquals(1, applicationManager.getSelectedNetworks().size());
+		assertEquals(1, applicationManager.getSelectedNetworkViews().size());
+		assertEquals(getNetworkByName("Network"), applicationManager.getCurrentNetwork());
+		assertNotNull(applicationManager.getCurrentNetworkView());
 		assertEquals("default", vmm.getDefaultVisualStyle().getTitle());
 		assertEquals(9, vmm.getAllVisualStyles().size());
 	}
 	
 	private void checkNetwork() {
-		final CyNetwork net = networkManager.getNetworkSet().iterator().next();
+		final CyNetwork net = applicationManager.getCurrentNetwork();
 		assertEquals(SavePolicy.SESSION_FILE, net.getSavePolicy());
-		checkNodeEdgeCount(net, 4, 2, 0, 0);
+		checkNodeEdgeCount(applicationManager.getCurrentNetwork(), 4, 2, 0, 0);
 		assertEquals("Nested Network Style", vmm.getVisualStyle(viewManager.getNetworkViews(net).iterator().next()).getTitle());
 	}
 	
 	private void checkNetworkView(){
 		// View test
-		final CyNetwork net = networkManager.getNetworkSet().iterator().next();
+		final CyNetwork net = applicationManager.getCurrentNetwork();
 		Collection<CyNetworkView> views = viewManager.getNetworkViews(net);
 		assertEquals(1, views.size());
 
 		// Check updated view
-		final CyNetworkView view = viewManager.getNetworkViews(net).iterator().next();
+		final CyNetworkView view = applicationManager.getCurrentNetworkView();
 		final VisualStyle style = vmm.getVisualStyle(view);
 		style.apply(view);
 		
@@ -130,7 +129,7 @@ public class Cy283GroupsSessionLoadingTest extends BasicIntegrationTest {
 	}
 	
 	private void checkGroups() {
-		final CyNetwork net = networkManager.getNetworkSet().iterator().next();
+		final CyNetwork net = applicationManager.getCurrentNetwork();
 		final CyRootNetwork root = ((CySubNetwork) net).getRootNetwork();
 		
 		// GROUP NODES
