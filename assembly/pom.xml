@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.cytoscape.distribution</groupId>
 		<artifactId>parent</artifactId>
-		<version>3.4.0-SNAPSHOT</version>
+		<version>3.4.0</version>
 		<relativePath>..</relativePath>
 	</parent>
 	
@@ -200,7 +200,7 @@
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>core-apps-meta</artifactId>
-									<version>3.4.0-SNAPSHOT</version>
+									<version>3.4.0</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
@@ -222,11 +222,11 @@
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
-                                                                        <groupId>org.cytoscape</groupId>
-                                                                        <artifactId>json</artifactId>
-                                                                        <version>3.4.0-SNAPSHOT</version>
-                                                                        <type>jar</type>
-                                                                </artifactItem>
+									<groupId>org.cytoscape</groupId>
+									<artifactId>json</artifactId>
+									<version>3.4.0</version>
+									<type>jar</type>
+								</artifactItem>
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>network-analyzer</artifactId>
@@ -266,7 +266,7 @@
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>cy-rest</artifactId>
-									<version>3.3.2-SNAPSHOT</version>
+									<version>3.3.2</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
@@ -284,7 +284,7 @@
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>welcome</artifactId>
-									<version>3.4.0-SNAPSHOT</version>
+									<version>3.4.0</version>
 									<type>jar</type>
 								</artifactItem>
 							</artifactItems>
