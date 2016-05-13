@@ -1,5 +1,7 @@
 package org.cytoscape.launcher.internal;
 
+import java.awt.BorderLayout;
+
 /*
  * #%L
  * Cytoscape Launcher
@@ -42,6 +44,7 @@ import javax.swing.SwingUtilities;
 import org.apache.karaf.main.Main;
 
 public class Launcher {
+	
 	public static String[] startupArguments;
 	private static long startTime;
 	private static SplashPanel splashPanel;
@@ -82,14 +85,15 @@ public class Launcher {
 		splashPanel = new SplashPanel(background);
 
 		final JFrame frame = new JFrame();
-		frame.add(splashPanel);
+		frame.getContentPane().setLayout(new BorderLayout());
+		frame.getContentPane().add(splashPanel);
 		frame.setUndecorated(true);
-		frame.setAlwaysOnTop(true);
+		frame.setResizable(false);
+		frame.pack();
 
-		int width = background.getWidth();
-		int height = background.getHeight();
-		frame.setSize(width, height);
-
+		int width = frame.getPreferredSize().width;
+		int height = frame.getPreferredSize().height;
+		
 		// Center the frame in the current screen.
 		Rectangle bounds = frame.getGraphicsConfiguration().getBounds();
 		frame.setLocation((bounds.width - width) / 2, (bounds.height - height) / 2);

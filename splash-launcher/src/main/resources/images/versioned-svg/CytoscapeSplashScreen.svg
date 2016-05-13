@@ -151,6 +151,5 @@
 		c-0.02,0.615-0.072,1.229-0.147,1.812h-44.858c0.115,6.48,1.772,11.512,4.889,15.064c3.113,3.516,7.473,5.309,13.056,5.309
 		c4.263,0,7.776-1.104,10.516-3.282C769.91,200.143,771.718,197.072,772.524,193.093z"/>
 </g>
-<text transform="matrix(1 0 0 1 311.9336 287.0967)" font-family="'Courier'" font-size="30">VERSION: @version@</text>
-<text transform="matrix(1 0 0 1 19.5 320.5)" font-family="'Courier'" font-size="12">Initializing OSGi container...</text>
+<text transform="matrix(1 0 0 1 318.0 287.0967)" font-family="'sans-serif'" font-size="28">version @version@</text>
 </svg>

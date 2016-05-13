@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.cytoscape.distribution</groupId>
 		<artifactId>parent</artifactId>
-		<version>3.3.0</version>
+		<version>3.4.0</version>
 		<relativePath>..</relativePath>
 	</parent>
 	
@@ -199,8 +199,14 @@
 							<artifactItems>
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
+									<artifactId>core-apps-meta</artifactId>
+									<version>3.4.0</version>
+									<type>jar</type>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.cytoscape</groupId>
 									<artifactId>biopax</artifactId>
-									<version>3.3.0</version>
+									<version>3.3.0.1</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
@@ -217,14 +223,20 @@
 								</artifactItem>
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
+									<artifactId>json</artifactId>
+									<version>3.4.0</version>
+									<type>jar</type>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.cytoscape</groupId>
 									<artifactId>network-analyzer</artifactId>
-									<version>3.3.0</version>
+									<version>3.3.1</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>network-merge</artifactId>
-									<version>3.3.0</version>
+									<version>3.3.1</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
@@ -254,25 +266,25 @@
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>cy-rest</artifactId>
-									<version>3.3.0</version>
+									<version>3.3.2</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>opencl-cycl</artifactId>
-									<version>3.3.0</version>
+									<version>3.3.1</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>opencl-layout</artifactId>
-									<version>3.3.0</version>
+									<version>3.3.1</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>welcome</artifactId>
-									<version>3.3.0</version>
+									<version>3.4.0</version>
 									<type>jar</type>
 								</artifactItem>
 							</artifactItems>

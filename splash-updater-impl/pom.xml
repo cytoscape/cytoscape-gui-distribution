@@ -4,7 +4,7 @@
 	<parent>
 		<artifactId>parent</artifactId>
 		<groupId>org.cytoscape.distribution</groupId>
-		<version>3.3.0</version>
+		<version>3.4.0</version>
 	</parent>
 
 	<properties>
@@ -85,7 +85,7 @@
 		<dependency>
 			<groupId>org.cytoscape</groupId>
 			<artifactId>app-api</artifactId>
-			<version>${project.version}</version>
+			<version>${cytoscape.api.version}</version>
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>

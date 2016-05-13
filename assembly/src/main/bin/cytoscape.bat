@@ -2,9 +2,8 @@
 
 :: First, see if help (-h, --help) or version (-v, --version) command line arguments
 :: are specified. If so, display help or the current version and exit.
-:: Note: Current version to be implemented after 3.1
 
-set CYTOSCAPE_VERSION=Cytoscape version: 3.3.0
+set CYTOSCAPE_VERSION=Cytoscape version: 3.4.0
 
 set help=false
 IF "%1"=="-h" set help=true
