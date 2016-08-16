@@ -41,10 +41,10 @@
     
     <bundle start-level="110">mvn:org.cytoscape.distribution/cmdline-impl/${project.version}</bundle>
     <bundle start-level="110">mvn:org.cytoscape/property-impl/${cytoscape.impl.version}</bundle>
+    <bundle start-level="110">mvn:org.cytoscape/event-impl/${cytoscape.impl.version}</bundle>
     
     <bundle start-level="115">mvn:org.cytoscape/datasource-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="115">mvn:org.cytoscape/equations-impl/${cytoscape.impl.version}</bundle>
-    <bundle start-level="115">mvn:org.cytoscape/event-impl/${cytoscape.impl.version}</bundle>
     
     <bundle start-level="120">mvn:org.cytoscape.distribution/application-metadata-impl/${project.version}</bundle>
     <bundle start-level="120">mvn:org.cytoscape/application-impl/${cytoscape.impl.version}</bundle>
