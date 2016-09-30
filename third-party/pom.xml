@@ -164,11 +164,11 @@
         <artifactId>violinstrings</artifactId>
         <version>1.0.2</version>
     </dependency>
-    <dependency>
+    <!--dependency>
         <groupId>cytoscape-temp</groupId>
         <artifactId>jsbml</artifactId>
         <version>0.8-b1</version>
-    </dependency>
+    </dependency -->
     <dependency>
         <groupId>cytoscape-temp</groupId>
         <artifactId>jigsaw</artifactId>
