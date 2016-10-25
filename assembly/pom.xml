@@ -228,6 +228,12 @@
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
+									<groupId>org.nrnb</groupId>
+									<artifactId>idmapper</artifactId>
+									<version>1.0.1</version>
+									<type>jar</type>
+								</artifactItem>
+								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>network-analyzer</artifactId>
 									<version>3.3.1</version>
