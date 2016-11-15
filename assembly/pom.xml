@@ -232,9 +232,9 @@
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
-									<groupId>org.nrnb</groupId>
+									<groupId>org.cytoscape</groupId>
 									<artifactId>idmapper</artifactId>
-									<version>1.0.1</version>
+									<version>3.5.0</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
