@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
@@ -8,7 +9,7 @@
 		<version>3.5.0-SNAPSHOT</version>
 		<relativePath>..</relativePath>
 	</parent>
-	
+
 	<groupId>org.cytoscape.distribution</groupId>
 	<artifactId>cytoscape</artifactId>
 	<packaging>pom</packaging>
@@ -17,7 +18,7 @@
 	<properties>
 		<maven.resources.escapeString>\</maven.resources.escapeString>
 	</properties>
-	
+
 	<dependencies>
 		<dependency>
 			<groupId>org.apache.karaf</groupId>
@@ -109,7 +110,8 @@
 						</goals>
 						<configuration>
 							<descriptors>
-								<descriptor>mvn:org.cytoscape.distribution/features/${project.version}/xml/features</descriptor>
+								<descriptor>mvn:org.cytoscape.distribution/features/${project.version}/xml/features
+								</descriptor>
 							</descriptors>
 							<features>
 								<feature>cytoscape-gui</feature>
@@ -126,9 +128,10 @@
 						</goals>
 						<configuration>
 							<descriptors>
-								<descriptor>mvn:org.cytoscape.distribution/features/${project.version}/xml/features</descriptor>
+								<descriptor>mvn:org.cytoscape.distribution/features/${project.version}/xml/features
+								</descriptor>
 							</descriptors>
-							<features/>
+							<features />
 							<includeMvnBasedDescriptors>true</includeMvnBasedDescriptors>
 							<repository>target/features-repo-dev</repository>
 						</configuration>
@@ -147,22 +150,22 @@
 							<goal>copy</goal>
 						</goals>
 						<configuration>
- 							<artifactItems>
- 								<artifactItem>
+							<artifactItems>
+								<artifactItem>
 									<groupId>org.cytoscape.distribution</groupId>
 									<artifactId>branding</artifactId>
 									<version>${project.version}</version>
 									<type>jar</type>
 									<outputDirectory>target/dependencies/branding</outputDirectory>
- 								</artifactItem>
- 								<artifactItem>
+								</artifactItem>
+								<artifactItem>
 									<groupId>org.cytoscape.distribution</groupId>
 									<artifactId>karaf-launcher</artifactId>
 									<version>${project.version}</version>
 									<type>jar</type>
 									<outputDirectory>target/dependencies/launcher</outputDirectory>
- 								</artifactItem>
- 							</artifactItems>
+								</artifactItem>
+							</artifactItems>
 						</configuration>
 					</execution>
 					<execution>
@@ -172,21 +175,22 @@
 							<goal>unpack</goal>
 						</goals>
 						<configuration>
- 							<artifactItems>
- 								<artifactItem>
+							<artifactItems>
+								<artifactItem>
 									<groupId>org.apache.karaf</groupId>
 									<artifactId>apache-karaf</artifactId>
 									<type>tar.gz</type>
 									<outputDirectory>target/dependencies</outputDirectory>
 								</artifactItem>
- 								<artifactItem>
+								<artifactItem>
 									<groupId>org.cytoscape.gui-distribution</groupId>
 									<artifactId>splash-launcher</artifactId>
 									<version>${project.version}</version>
 									<type>jar</type>
-									<outputDirectory>target/dependencies/splash-launcher</outputDirectory>
- 								</artifactItem>
- 							</artifactItems>
+									<outputDirectory>target/dependencies/splash-launcher
+									</outputDirectory>
+								</artifactItem>
+							</artifactItems>
 						</configuration>
 					</execution>
 					<execution>
@@ -313,7 +317,8 @@
 						</goals>
 						<configuration>
 							<descriptors>
-								<descriptor>target/generated-resources/xml/xslt/config-dev.xml</descriptor>
+								<descriptor>target/generated-resources/xml/xslt/config-dev.xml
+								</descriptor>
 							</descriptors>
 							<finalName>${project.artifactId}</finalName>
 						</configuration>
@@ -326,9 +331,11 @@
 						</goals>
 						<configuration>
 							<descriptors>
-								<descriptor>target/generated-resources/xml/xslt/config-unix.xml</descriptor>
+								<descriptor>target/generated-resources/xml/xslt/config-unix.xml
+								</descriptor>
 							</descriptors>
-							<finalName>${project.artifactId}-unix-${project.version}</finalName>
+							<finalName>${project.artifactId}-unix-${project.version}
+							</finalName>
 							<tarLongFileMode>gnu</tarLongFileMode>
 						</configuration>
 					</execution>
@@ -340,9 +347,11 @@
 						</goals>
 						<configuration>
 							<descriptors>
-								<descriptor>target/generated-resources/xml/xslt/config-windows.xml</descriptor>
+								<descriptor>target/generated-resources/xml/xslt/config-windows.xml
+								</descriptor>
 							</descriptors>
-							<finalName>${project.artifactId}-windows-${project.version}</finalName>
+							<finalName>${project.artifactId}-windows-${project.version}
+							</finalName>
 						</configuration>
 					</execution>
 				</executions>
@@ -351,23 +360,24 @@
 				</configuration>
 			</plugin>
 			<plugin>
-			    <groupId>org.apache.maven.plugins</groupId>
-			    <artifactId>maven-antrun-plugin</artifactId>
-			    <version>1.6</version>
-			    <executions>
-			        <execution>
-			            <id>unzip</id>
-			            <phase>generate-resources</phase>
-			            <configuration>
-			                <target>
-			                    <unzip src="src/main/resources/sampleData/biogrid.zip" dest="target/dependencies/biogrid" />
-			                </target>
-			            </configuration>
-			            <goals>
-			                <goal>run</goal>
-			            </goals>
-			        </execution>
-			    </executions>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.6</version>
+				<executions>
+					<execution>
+						<id>unzip</id>
+						<phase>generate-resources</phase>
+						<configuration>
+							<target>
+								<unzip src="src/main/resources/sampleData/biogrid.zip"
+									dest="target/dependencies/biogrid" />
+							</target>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 			<plugin>
 				<groupId>com.google.code.maven-replacer-plugin</groupId>
@@ -381,7 +391,8 @@
 							<goal>replace</goal>
 						</goals>
 						<configuration>
-							<file>target/dependencies/apache-karaf-${karaf.version}/bin/karaf</file>
+							<file>target/dependencies/apache-karaf-${karaf.version}/bin/karaf
+							</file>
 							<outputFile>target/dependencies/launcher/bin/karaf</outputFile>
 							<regex>false</regex>
 							<unescape>false</unescape>
@@ -404,11 +415,11 @@
 								</replacement>
 								<replacement>
 									<token>JAVA=`expr "$JAVA" : '.* \(/.*\)$'`</token>
-									<value/>
+									<value />
 								</replacement>
 								<replacement>
 									<token>cd "$KARAF_BASE"</token>
-									<value/>
+									<value />
 								</replacement>
 							</replacements>
 						</configuration>
@@ -420,8 +431,10 @@
 							<goal>replace</goal>
 						</goals>
 						<configuration>
-							<file>target/dependencies/apache-karaf-${karaf.version}/bin/karaf.bat</file>
-							<outputFile>target/dependencies/launcher/bin/karaf.bat</outputFile>
+							<file>target/dependencies/apache-karaf-${karaf.version}/bin/karaf.bat
+							</file>
+							<outputFile>target/dependencies/launcher/bin/karaf.bat
+							</outputFile>
 							<regex>false</regex>
 							<unescape>false</unescape>
 							<replacements>
@@ -439,7 +452,8 @@
 								</replacement>
 								<replacement>
 									<token>(__reg2.txt)</token>
-									<!-- Dirty hack: "%CD:~0,0%" expands to the empty string.  That way, the replacements below won't affect this one -->
+									<!-- Dirty hack: "%CD:~0,0%" expands to the empty string. That way, 
+										the replacements below won't affect this one -->
 									<value>(%TEMP%\_%CD:~0,0%_reg2.txt)</value>
 								</replacement>
 								<replacement>
@@ -452,7 +466,7 @@
 								</replacement>
 								<replacement>
 									<token>cd "%KARAF_BASE%"</token>
-									<value/>
+									<value />
 								</replacement>
 							</replacements>
 						</configuration>
@@ -465,13 +479,14 @@
 						</goals>
 						<configuration>
 							<includes>
-								<include>target/dependencies/apache-karaf-${karaf.version}/etc/startup.properties</include>
+								<include>target/dependencies/apache-karaf-${karaf.version}/etc/startup.properties
+								</include>
 							</includes>
 							<regex>true</regex>
 							<unescape>false</unescape>
 							<replacements>
 								<replacement>
-<token>.*org[.]apache[.]karaf[.]deployer[.]wrap.*</token>
+									<token>.*org[.]apache[.]karaf[.]deployer[.]wrap.*</token>
 									<value />
 								</replacement>
 							</replacements>
@@ -485,30 +500,35 @@
 						</goals>
 						<configuration>
 							<includes>
-								<include>target/dependencies/apache-karaf-${karaf.version}/etc/startup.properties</include>
+								<include>target/dependencies/apache-karaf-${karaf.version}/etc/startup.properties
+								</include>
 							</includes>
 							<regex>true</regex>
 							<unescape>false</unescape>
 							<replacements>
 								<replacement>
-<token>.*org[.]apache[.]karaf[.]deployer[.]wrap.*</token>
+									<token>.*org[.]apache[.]karaf[.]deployer[.]wrap.*</token>
 									<value />
 								</replacement>
 								<replacement>
-								    <token>org/apache/karaf/features/org[.]apache[.]karaf[.]features[.]management.*</token>
-								    <value />
+									<token>org/apache/karaf/features/org[.]apache[.]karaf[.]features[.]management.*
+									</token>
+									<value />
 								</replacement>
 								<replacement>
-								    <token>org/apache/karaf/diagnostic/org[.]apache[.]karaf[.]diagnostic[.]management.*</token>
-								    <value />
+									<token>org/apache/karaf/diagnostic/org[.]apache[.]karaf[.]diagnostic[.]management.*
+									</token>
+									<value />
 								</replacement>
 								<replacement>
-								    <token>org/apache/karaf/management/org[.]apache[.]karaf[.]management[.]server.*</token>
-								    <value />
+									<token>org/apache/karaf/management/org[.]apache[.]karaf[.]management[.]server.*
+									</token>
+									<value />
 								</replacement>
 								<replacement>
-								    <token>org/apache/karaf/admin/org[.]apache[.]karaf[.]admin[.]management.*</token>
-								    <value />
+									<token>org/apache/karaf/admin/org[.]apache[.]karaf[.]admin[.]management.*
+									</token>
+									<value />
 								</replacement>
 							</replacements>
 						</configuration>
