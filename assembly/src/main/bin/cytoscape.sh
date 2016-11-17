@@ -7,7 +7,7 @@
 # First, see if help (-h, --help) or version (-v, --version) command line arguments
 # are specified. If so, display help or the current version and exit.
 
-CYTOSCAPE_VERSION="Cytoscape version: 3.5.0-SNAPSHOT"
+CYTOSCAPE_VERSION="Cytoscape version: 3.5.0"
 
 if [[ $# > 0 ]]; then
 	if [ $1 == "-h" -o $1 == "--help" ]; then
