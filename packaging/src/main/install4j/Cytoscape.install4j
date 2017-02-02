@@ -752,7 +752,7 @@ Ty Coon, President of Vice&lt;/tt&gt;&lt;/p&gt;
               <java class="java.beans.XMLDecoder">
                 <object class="com.install4j.runtime.beans.screens.DefaultInfoScreen">
                   <void property="displayedText">
-                    <string>To automatically open .cys files with this version of Cytoscape, you must manually set 'Open with' in the 'Get Info' panel and select 'Change all'. The file association performed by this installation only sets this version of Cytoscape as one possible application, not necessarily the default, for .cys files. Double-clicking on a .cys file may open an older version of Cytoscape if the new version is not manually set as the default application.</string>
+                    <string>Did you know that if you use Cytoscape to save a session to a .cys file, you can automatically re-open the session by double-clicking on the file?</string>
                   </void>
                   <void property="textSource">
                     <object class="com.install4j.runtime.beans.screens.components.TextSource" field="DIRECT" />
