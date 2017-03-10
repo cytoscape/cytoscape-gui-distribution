@@ -4,7 +4,7 @@
   <parent>
     <artifactId>parent</artifactId>
     <groupId>org.cytoscape.distribution</groupId>
-    <version>3.4.0</version>
+    <version>3.5.0</version>
   </parent>
 
   <properties>
@@ -164,11 +164,11 @@
         <artifactId>violinstrings</artifactId>
         <version>1.0.2</version>
     </dependency>
-    <dependency>
+    <!--dependency>
         <groupId>cytoscape-temp</groupId>
         <artifactId>jsbml</artifactId>
         <version>0.8-b1</version>
-    </dependency>
+    </dependency -->
     <dependency>
         <groupId>cytoscape-temp</groupId>
         <artifactId>jigsaw</artifactId>
