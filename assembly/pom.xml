@@ -10,7 +10,6 @@
 		<relativePath>..</relativePath>
 	</parent>
 
-	<groupId>org.cytoscape.distribution</groupId>
 	<artifactId>cytoscape</artifactId>
 	<packaging>pom</packaging>
 	<name>Cytoscape Karaf Distribution</name>
@@ -289,12 +288,6 @@
 									<groupId>org.cytoscape</groupId>
 									<artifactId>opencl-layout</artifactId>
 									<version>3.3.1</version>
-									<type>jar</type>
-								</artifactItem>
-								<artifactItem>
-									<groupId>org.cytoscape</groupId>
-									<artifactId>welcome</artifactId>
-									<version>3.4.0</version>
 									<type>jar</type>
 								</artifactItem>
 							</artifactItems>
