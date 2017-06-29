@@ -275,7 +275,7 @@
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>cy-rest</artifactId>
-									<version>3.3.2</version>
+									<version>3.5.0</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
@@ -451,7 +451,7 @@
 								</replacement>
 								<replacement>
 									<token>(__reg2.txt)</token>
-									<!-- Dirty hack: "%CD:~0,0%" expands to the empty string. That way, 
+									<!-- Dirty hack: "%CD:~0,0%" expands to the empty string. That way,
 										the replacements below won't affect this one -->
 									<value>(%TEMP%\_%CD:~0,0%_reg2.txt)</value>
 								</replacement>
