@@ -46,7 +46,6 @@ import static org.cytoscape.view.presentation.property.BasicVisualLexicon.NODE_F
 import static org.cytoscape.view.presentation.property.BasicVisualLexicon.NODE_HEIGHT;
 import static org.cytoscape.view.presentation.property.BasicVisualLexicon.NODE_LABEL;
 import static org.cytoscape.view.presentation.property.BasicVisualLexicon.NODE_LABEL_COLOR;
-import static org.cytoscape.view.presentation.property.BasicVisualLexicon.NODE_LABEL_FONT_FACE;
 import static org.cytoscape.view.presentation.property.BasicVisualLexicon.NODE_LABEL_FONT_SIZE;
 import static org.cytoscape.view.presentation.property.BasicVisualLexicon.NODE_LABEL_TRANSPARENCY;
 import static org.cytoscape.view.presentation.property.BasicVisualLexicon.NODE_SHAPE;
@@ -58,7 +57,6 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 import java.awt.Color;
-import java.awt.Font;
 import java.awt.Paint;
 import java.io.File;
 import java.nio.file.Files;
@@ -267,7 +265,6 @@ public class Cy263SimpleSessionLodingTest extends BasicIntegrationTest {
 		assertEquals(255, nv.getVisualProperty(NODE_BORDER_TRANSPARENCY).intValue());
 		assertEquals(new Color(0,0,0), nv.getVisualProperty(NODE_LABEL_COLOR));
 		assertEquals(255, nv.getVisualProperty(NODE_LABEL_TRANSPARENCY).intValue());
-		assertEquals(Font.decode("SansSerif-BOLD-12"), nv.getVisualProperty(NODE_LABEL_FONT_FACE));
 		assertEquals(12, nv.getVisualProperty(NODE_LABEL_FONT_SIZE).intValue());
 		
 		// All edges have the same visual properties

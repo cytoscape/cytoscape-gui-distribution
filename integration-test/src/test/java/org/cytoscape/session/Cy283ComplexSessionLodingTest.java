@@ -26,7 +26,6 @@ package org.cytoscape.session;
 
 import static org.cytoscape.view.presentation.property.BasicVisualLexicon.EDGE_LABEL;
 import static org.cytoscape.view.presentation.property.BasicVisualLexicon.EDGE_LABEL_COLOR;
-import static org.cytoscape.view.presentation.property.BasicVisualLexicon.EDGE_LABEL_FONT_FACE;
 import static org.cytoscape.view.presentation.property.BasicVisualLexicon.EDGE_LABEL_FONT_SIZE;
 import static org.cytoscape.view.presentation.property.BasicVisualLexicon.EDGE_LABEL_TRANSPARENCY;
 import static org.cytoscape.view.presentation.property.BasicVisualLexicon.EDGE_LINE_TYPE;
@@ -42,7 +41,6 @@ import static org.cytoscape.view.presentation.property.BasicVisualLexicon.NODE_B
 import static org.cytoscape.view.presentation.property.BasicVisualLexicon.NODE_BORDER_WIDTH;
 import static org.cytoscape.view.presentation.property.BasicVisualLexicon.NODE_FILL_COLOR;
 import static org.cytoscape.view.presentation.property.BasicVisualLexicon.NODE_LABEL;
-import static org.cytoscape.view.presentation.property.BasicVisualLexicon.NODE_LABEL_FONT_FACE;
 import static org.cytoscape.view.presentation.property.BasicVisualLexicon.NODE_LABEL_FONT_SIZE;
 import static org.cytoscape.view.presentation.property.BasicVisualLexicon.NODE_LABEL_TRANSPARENCY;
 import static org.cytoscape.view.presentation.property.BasicVisualLexicon.NODE_NESTED_NETWORK_IMAGE_VISIBLE;
@@ -55,7 +53,6 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 import java.awt.Color;
-import java.awt.Font;
 import java.awt.Paint;
 import java.io.File;
 import java.nio.file.Files;
@@ -282,7 +279,6 @@ public class Cy283ComplexSessionLodingTest extends BasicIntegrationTest {
 		assertEquals(new Color(0,0,0), nv.getVisualProperty(NODE_BORDER_PAINT));
 		assertEquals(255, nv.getVisualProperty(NODE_BORDER_TRANSPARENCY).intValue());
 		assertEquals(255, nv.getVisualProperty(NODE_LABEL_TRANSPARENCY).intValue());
-		assertEquals(Font.decode("Dialog-BOLD-12"), nv.getVisualProperty(NODE_LABEL_FONT_FACE));
 		assertEquals(12, nv.getVisualProperty(NODE_LABEL_FONT_SIZE).intValue());
 		assertEquals(Boolean.TRUE, nv.getVisualProperty(NODE_NESTED_NETWORK_IMAGE_VISIBLE));
 		// Node label (passthrough mapping)
@@ -294,7 +290,6 @@ public class Cy283ComplexSessionLodingTest extends BasicIntegrationTest {
 		assertEquals(new Color(255,0,51), ev.getVisualProperty(EDGE_STROKE_UNSELECTED_PAINT)); // From discrete mapping
 		assertEquals(LineTypeVisualProperty.LONG_DASH, ev.getVisualProperty(EDGE_LINE_TYPE)); // From discrete mapping
 		assertEquals(255, ev.getVisualProperty(EDGE_TRANSPARENCY).intValue());
-		assertEquals(Font.decode("Default-PLAIN-10"), ev.getVisualProperty(EDGE_LABEL_FONT_FACE));
 		assertEquals(10, ev.getVisualProperty(EDGE_LABEL_FONT_SIZE).intValue());
 		assertEquals(255, ev.getVisualProperty(EDGE_LABEL_TRANSPARENCY).intValue());
 		assertEquals(ArrowShapeVisualProperty.NONE, ev.getVisualProperty(EDGE_SOURCE_ARROW_SHAPE));
