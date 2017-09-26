@@ -227,7 +227,7 @@
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>json</artifactId>
-									<version>3.4.0</version>
+									<version>3.6.0-SNAPSHOT</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
