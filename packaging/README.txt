@@ -22,7 +22,9 @@ repo is in a user directory that contains a blank (e.g.,
 "C:\Users\Elmer Fudd"). In both cases, you can solve the problem 
 by creating soft links (e.g., C:\ProgramFiles and C:\Users\ElmerFudd)
 that refer to the actual directories 
-(e.g., mkdir /d C:\ProgramFiles "C:\Program Files"). 
+(e.g., mkdir /d C:\ProgramFiles "C:\Program Files"). You'll use 
+the links in the <install4j.executable> property and in the name
+of your working directory when you're executing Maven.
 
 Second, when Maven checks the <install4j.executable> property, it's
 looking for an exact file name match. You must supply the .EXE 
