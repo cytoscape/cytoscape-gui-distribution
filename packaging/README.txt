@@ -1,6 +1,8 @@
 To build the installer bundles, edit pom.xml to change the <install4j.executable> 
 property to the location of the "install4jc" application on your machine.
 
+Don't forget to uncomment the java-doc execution block, too.
+
 Then run:
 
 	mvn clean install 
@@ -26,8 +28,3 @@ Second, when Maven checks the <install4j.executable> property, it's
 looking for an exact file name match. You must supply the .EXE 
 suffix (e.g., C:\ProgramFiles\install4j6\bin\install4jc.exe).
 
-
-
-
-This causes trouble in the 
-<install4j.executable>
