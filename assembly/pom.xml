@@ -299,7 +299,7 @@
 								<artifactItem>
 									<groupId>org.cytoscape.diffusion</groupId>
 									<artifactId>diffusion</artifactId>
-									<version>1.4.333</version>
+									<version>1.4.3</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
