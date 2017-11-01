@@ -215,7 +215,7 @@
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>command-dialog</artifactId>
-									<version>3.6</version>
+									<version>3.6.1</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
