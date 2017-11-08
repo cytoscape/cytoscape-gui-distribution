@@ -37,7 +37,7 @@
                 <enabled>true</enabled>
             </releases>
             <name>Cytoscape Releases</name>
-            <url>http://code.cytoscape.org.org/nexus/content/repositories/releases/</url>
+            <url>http://code.cytoscape.org/nexus/content/repositories/releases/</url>
         </repository>
     </repositories>
 
