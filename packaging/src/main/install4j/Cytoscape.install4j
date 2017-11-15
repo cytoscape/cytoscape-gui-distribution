@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<install4j version="5.1.14" transformSequenceNumber="4">
+<install4j version="6.1.6" transformSequenceNumber="5">
   <directoryPresets config="../../../target" />
-  <application name="Cytoscape" distributionSourceDir="" applicationId="5211-3645-3154-2580" mediaDir="dist" mediaFilePattern="${compiler:sys.shortName}_${compiler:sys.version}_${compiler:sys.platform}" compression="6" lzmaCompression="false" pack200Compression="false" excludeSignedFromPacking="true" commonExternalFiles="false" createMd5Sums="true" shrinkRuntime="true" shortName="Cytoscape" publisher="Cytoscape Consortium" publisherWeb="http://www.cytoscape.org" version="${version}" allPathsRelative="true" backupOnSave="false" autoSave="false" convertDotsToUnderscores="true" macSignature="????" installerName="" javaMinVersion="1.8" javaMaxVersion="" allowBetaVM="true" jdkMode="runtimeJre" jdkName="">
+  <application name="Cytoscape" distributionSourceDir="" applicationId="5211-3645-3154-2580" mediaDir="dist" mediaFilePattern="${compiler:sys.shortName}_${compiler:sys.version}_${compiler:sys.platform}" compression="6" lzmaCompression="false" pack200Compression="false" excludeSignedFromPacking="true" commonExternalFiles="false" createMd5Sums="true" shrinkRuntime="true" shortName="Cytoscape" publisher="Cytoscape Consortium" publisherWeb="http://www.cytoscape.org" version="${version}" allPathsRelative="true" backupOnSave="false" autoSave="false" convertDotsToUnderscores="true" macSignature="????" macVolumeId="60ff7381dde234ab" javaMinVersion="1.8" javaMaxVersion="" allowBetaVM="true" jdkMode="runtimeJre" jdkName="">
     <languages skipLanguageSelection="false" languageSelectionInPrincipalLanguage="false">
       <principalLanguage id="en" customLocalizationFile="" />
       <additionalLanguages />
@@ -57,14 +57,14 @@
     </components>
   </files>
   <launchers>
-    <launcher name="Cytoscape" id="3" customizedId="" external="false" excludeFromMenu="false" unixMode="755" menuName="" icnsFile="${basedir}/src/main/images/cytoscape3-icon-trans-128x128.icns" customMacBundleIdentifier="false" macBundleIdentifier="" swtApp="false" fileset="" macBundleBinary="JavaApplicationStub" addMacEntitlements="false" macEntitlementsFile="">
-      <executable name="Cytoscape" type="1" iconSet="true" iconFile="${basedir}/src/main/images/cytoscape3-icon-trans-128x128.ico" executableDir="." redirectStderr="true" stderrFile="output.log" stderrMode="overwrite" redirectStdout="true" stdoutFile="output.log" stdoutMode="overwrite" failOnStderrOutput="true" executableMode="1" changeWorkingDirectory="true" workingDirectory="." singleInstance="false" serviceStartType="2" serviceDependencies="" serviceDescription="" jreLocation="" executionLevel="asInvoker" checkConsoleParameter="false" globalSingleInstance="false">
+    <launcher name="Cytoscape" id="3" customizedId="" external="false" excludeFromMenu="false" unixMode="755" unixAutoStart="true" menuName="" icnsFile="${basedir}/src/main/images/cytoscape3-icon-trans-128x128.icns" customMacBundleIdentifier="false" macBundleIdentifier="" swtApp="false" fileset="" macBundleBinary="JavaApplicationStub" addMacEntitlements="false" macEntitlementsFile="" useCustomMacosExecutableName="false" customMacosExecutableName="" useJavaMinVersionOverride="false" javaMinVersionOverride="" useJavaMaxVersionOverride="false" javaMaxVersionOverride="">
+      <executable name="Cytoscape" type="1" iconSet="true" iconFile="${basedir}/src/main/images/cytoscape3-icon-trans-128x128.ico" executableDir="." redirectStderr="true" stderrFile="output.log" stderrMode="overwrite" redirectStdout="true" stdoutFile="output.log" stdoutMode="overwrite" failOnStderrOutput="true" executableMode="1" changeWorkingDirectory="true" workingDirectory="." singleInstance="false" serviceStartType="2" serviceDependencies="" serviceDescription="" jreLocation="" executionLevel="asInvoker" checkConsoleParameter="false" globalSingleInstance="false" singleInstanceActivate="true" dpiAware="false">
         <versionInfo include="false" fileVersion="${compiler:WINDOWS_VERSION}" fileDescription="Cytoscape" legalCopyright="Cytoscape Consortium" internalName="${compiler:sys.shortName}" productName="" />
       </executable>
-      <splashScreen show="false" autoOff="true" alwaysOnTop="true" width="0" height="0" bitmapFile="" java6SplashScreen="false">
+      <splashScreen show="false" width="0" height="0" bitmapFile="" windowsNative="false" textOverlay="false">
         <text>
-          <statusLine x="20" y="20" text="" font="Arial" fontSize="8" fontColor="0,0,0" fontWeight="500" />
-          <versionLine x="20" y="40" text="version ${compiler:sys.version}" font="Arial" fontSize="8" fontColor="0,0,0" fontWeight="500" />
+          <statusLine x="20" y="20" text="" fontSize="8" fontColor="0,0,0" bold="false" />
+          <versionLine x="20" y="40" text="version ${compiler:sys.version}" fontSize="8" fontColor="0,0,0" bold="false" />
         </text>
       </splashScreen>
       <java mainClass="org.cytoscape.launcher.internal.Launcher" vmParameters="-Dcom.sun.management.jmxremote &quot;-Djava.endorsed.dirs=${launcher:sys.jvmHome}/jre/lib/endorsed${launcher:sys.pathlistSeparator}${launcher:sys.jvmHome}/lib/endorsed${launcher:sys.pathlistSeparator}${launcher:sys.launcherDirectory}/framework/lib/endorsed&quot; &quot;-Djava.ext.dirs=${launcher:sys.jvmHome}/jre/lib/ext${launcher:sys.pathlistSeparator}${launcher:sys.jvmHome}/lib/ext${launcher:sys.pathlistSeparator}${launcher:sys.launcherDirectory}/framework/lib/ext&quot; &quot;-Dkaraf.instances=${launcher:sys.launcherDirectory}/framework/instances&quot;  &quot;-Dkaraf.home=${launcher:sys.launcherDirectory}/framework&quot; &quot;-Dkaraf.base=${launcher:sys.launcherDirectory}/framework&quot; &quot;-Dkaraf.etc=${launcher:sys.launcherDirectory}/framework/etc&quot; &quot;-Djava.util.logging.config.file=${launcher:sys.launcherDirectory}/framework/etc/java.util.logging.properties&quot; &quot;-Dcytoscape.home=${launcher:sys.launcherDirectory}&quot;  -Djavax.management.builder.initial=org.apache.karaf.management.boot.KarafMBeanServerBuilder  -Dkaraf.startLocalConsole=false  -Dkaraf.startRemoteShell=false" arguments="" allowVMPassthroughParameters="true" preferredVM="" bundleRuntime="true">
@@ -78,6 +78,7 @@
           <archive location="./framework/lib/karaf-jmx-boot.jar" failOnError="false" />
         </classPath>
         <nativeLibraryDirectories />
+        <vmOptions />
       </java>
       <includedFiles />
       <unextractableFiles />
@@ -97,6 +98,7 @@
     </launcher>
   </launchers>
   <installerGui installerType="1" addOnAppId="" suggestPreviousLocations="false" autoUpdateDescriptorUrl="" useAutoUpdateBaseUrl="false" autoUpdateBaseUrl="">
+    <staticMembers script="" />
     <customCode />
     <autoUpdate useMinUpdatableVersion="false" minUpdatableVersion="" useMaxUpdatableVersion="false" maxUpdatableVersion="">
       <commentFiles />
@@ -709,7 +711,10 @@ Ty Coon, President of Vice&lt;/tt&gt;&lt;/p&gt;
 </string>
                   </void>
                   <void property="textSource">
-                    <object class="com.install4j.runtime.beans.screens.components.TextSource" field="DIRECT" />
+                    <object class="java.lang.Enum" method="valueOf">
+                      <class>com.install4j.runtime.beans.screens.components.TextSource</class>
+                      <string>DIRECT</string>
+                    </object>
                   </void>
                 </object>
               </java>
@@ -747,15 +752,77 @@ Ty Coon, President of Vice&lt;/tt&gt;&lt;/p&gt;
             <actions />
             <formComponents />
           </screen>
+          <screen name="Permission to share" id="445" customizedId="" beanClass="com.install4j.runtime.beans.screens.FormScreen" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" backButton="2" finishScreen="false" wizardIndexChangeType="unchanged" wizardIndexKey="">
+            <serializedBean>
+              <java class="java.beans.XMLDecoder">
+                <object class="com.install4j.runtime.beans.screens.FormScreen">
+                  <void property="scrollable">
+                    <boolean>false</boolean>
+                  </void>
+                  <void property="subTitle">
+                    <string>Contribute to improving Cytoscape</string>
+                  </void>
+                  <void property="title">
+                    <string>Share Generic Usage Information</string>
+                  </void>
+                </object>
+              </java>
+            </serializedBean>
+            <condition />
+            <validation />
+            <preActivation />
+            <postActivation />
+            <actions />
+            <formComponents>
+              <formComponent name="" id="446" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.MultilineHtmlLabelComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.formcomponents.MultilineHtmlLabelComponent">
+                      <void property="labelHtml">
+                        <string>In order to continue improving Cytoscape and securing funding, we would like to collect generic information about typical usage (see &lt;a href="http://manual.cytoscape.org/en/stable/Cytoscape_Privacy_Policy.html"&gt;Cytoscape Privacy Policy&lt;/a&gt;). In no case would we try to tie any of this information to an individual user, institution or project.</string>
+                      </void>
+                    </object>
+                  </java>
+                </serializedBean>
+                <initScript />
+                <visibilityScript />
+              </formComponent>
+              <formComponent name="" id="447" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.CheckboxComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.formcomponents.CheckboxComponent">
+                      <void property="checkboxText">
+                        <string>Allow collection of generic usage information</string>
+                      </void>
+                      <void property="helpText">
+                        <string>Uncheck this to avoid sharing usage information</string>
+                      </void>
+                      <void property="initiallySelected">
+                        <boolean>true</boolean>
+                      </void>
+                      <void property="variableName">
+                        <string>ShareStatistics</string>
+                      </void>
+                    </object>
+                  </java>
+                </serializedBean>
+                <initScript />
+                <visibilityScript />
+              </formComponent>
+            </formComponents>
+          </screen>
           <screen name="" id="50" customizedId="" beanClass="com.install4j.runtime.beans.screens.DefaultInfoScreen" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" backButton="2" finishScreen="false" wizardIndexChangeType="unchanged" wizardIndexKey="">
             <serializedBean>
               <java class="java.beans.XMLDecoder">
                 <object class="com.install4j.runtime.beans.screens.DefaultInfoScreen">
                   <void property="displayedText">
-                    <string>To automatically open .cys files with this version of Cytoscape, you must manually set 'Open with' in the 'Get Info' panel and select 'Change all'. The file association performed by this installation only sets this version of Cytoscape as one possible application, not necessarily the default, for .cys files. Double-clicking on a .cys file may open an older version of Cytoscape if the new version is not manually set as the default application.</string>
+                    <string>Did you know that if you use Cytoscape to save a session to a .cys file, you can automatically re-open the session by double-clicking on the file?</string>
                   </void>
                   <void property="textSource">
-                    <object class="com.install4j.runtime.beans.screens.components.TextSource" field="DIRECT" />
+                    <object class="java.lang.Enum" method="valueOf">
+                      <class>com.install4j.runtime.beans.screens.components.TextSource</class>
+                      <string>DIRECT</string>
+                    </object>
                   </void>
                 </object>
               </java>
@@ -820,6 +887,25 @@ return true;
                 <serializedBean>
                   <java class="java.beans.XMLDecoder">
                     <object class="com.install4j.runtime.beans.actions.InstallFilesAction" />
+                  </java>
+                </serializedBean>
+                <condition />
+              </action>
+              <action name="" id="449" customizedId="" beanClass="com.install4j.runtime.beans.actions.text.WriteTextFileAction" enabled="true" commentSet="false" comment="" actionElevationType="elevated" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.actions.text.WriteTextFileAction">
+                      <void property="file">
+                        <object class="java.io.File">
+                          <string>${installer:sys.installationDir}/Cytoscape.installoptions</string>
+                        </object>
+                      </void>
+                      <void property="text">
+                        <string>shareStatistics=${installer:ShareStatistics}
+shareStatisticsDate=${compiler:sys.date} ${compiler:sys.time}
+</string>
+                      </void>
+                    </object>
                   </java>
                 </serializedBean>
                 <condition />
@@ -947,11 +1033,17 @@ return true;
               <void property="allowConsole">
                 <boolean>false</boolean>
               </void>
+              <void property="customMacosExecutableName">
+                <string>${i18n:UninstallerMenuEntry(${compiler:sys.fullName})}</string>
+              </void>
               <void property="frameSizeClientArea">
                 <boolean>false</boolean>
               </void>
               <void property="resizable">
                 <boolean>false</boolean>
+              </void>
+              <void property="useCustomMacosExecutableName">
+                <boolean>true</boolean>
               </void>
               <void property="watermark">
                 <boolean>false</boolean>
@@ -1023,10 +1115,15 @@ return true;
                   <java class="java.beans.XMLDecoder">
                     <object class="com.install4j.runtime.beans.actions.files.DeleteFileAction">
                       <void property="files">
-                        <array class="java.io.File" length="1">
+                        <array class="java.io.File" length="2">
                           <void index="0">
                             <object class="java.io.File">
                               <string>framework</string>
+                            </object>
+                          </void>
+                          <void index="1">
+                            <object class="java.io.File">
+                              <string>cytoscape.installoptions</string>
                             </object>
                           </void>
                         </array>
@@ -1081,7 +1178,11 @@ return true;
     </applications>
   </installerGui>
   <mediaSets>
-    <windows name="Windows 64 bit" id="11" customizedId="" mediaFileName="Cytoscape_${compiler:sys.version}_windows_64bit" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true" jreBitType="64" runPostProcessor="false" postProcessor="" failOnPostProcessorError="false" useLegacyMediaFileIds="false" legacyMediaFileIds="" includedJRE="" manualJREEntry="false" bundleType="1" jreURL="" jreShared="false" directDownload="false" installOnlyIfNecessary="false" customInstallBaseDir="" contentFilesType="1" downloadURL="" verifyIntegrity="true">
+    <windows name="Windows 64 bit" id="11" customizedId="" mediaFileName="Cytoscape_${compiler:sys.version}_windows_64bit" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true" jreBitType="64" runPostProcessor="false" postProcessor="" failOnPostProcessorError="false" useLegacyMediaFileIds="false" legacyMediaFileIds="" downloadURL="" includeAllDownloadableComponents="false" includedJRE="" manualJREEntry="false" bundleType="1" jreURL="" jreShared="false" directDownload="false" installOnlyIfNecessary="false" customInstallBaseDir="" contentFilesType="1" verifyIntegrity="true">
+      <excludedComponents>
+        <component id="235" />
+      </excludedComponents>
+      <includedDownloadableComponents />
       <excludedLaunchers />
       <excludedBeans>
         <bean refId="50" />
@@ -1095,12 +1196,12 @@ return true;
         <commentFiles />
         <customAttributes />
       </autoUpdate>
+    </windows>
+    <windows name="Windows 32 bit" id="395" customizedId="" mediaFileName="Cytoscape_${compiler:sys.version}_windows_32bit" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true" jreBitType="32" runPostProcessor="false" postProcessor="" failOnPostProcessorError="false" useLegacyMediaFileIds="false" legacyMediaFileIds="" downloadURL="" includeAllDownloadableComponents="false" includedJRE="" manualJREEntry="false" bundleType="1" jreURL="" jreShared="false" directDownload="false" installOnlyIfNecessary="false" customInstallBaseDir="" contentFilesType="1" verifyIntegrity="true">
       <excludedComponents>
         <component id="235" />
       </excludedComponents>
       <includedDownloadableComponents />
-    </windows>
-    <windows name="Windows 32 bit" id="395" customizedId="" mediaFileName="Cytoscape_${compiler:sys.version}_windows_32bit" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true" jreBitType="32" runPostProcessor="false" postProcessor="" failOnPostProcessorError="false" useLegacyMediaFileIds="false" legacyMediaFileIds="" includedJRE="" manualJREEntry="false" bundleType="1" jreURL="" jreShared="false" directDownload="false" installOnlyIfNecessary="false" customInstallBaseDir="" contentFilesType="1" downloadURL="" verifyIntegrity="true">
       <excludedLaunchers />
       <excludedBeans>
         <bean refId="50" />
@@ -1114,12 +1215,12 @@ return true;
         <commentFiles />
         <customAttributes />
       </autoUpdate>
+    </windows>
+    <macosFolder name="Mac OS X" id="9" customizedId="" mediaFileName="" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true" jreBitType="all" runPostProcessor="false" postProcessor="" failOnPostProcessorError="false" useLegacyMediaFileIds="false" legacyMediaFileIds="" downloadURL="" includeAllDownloadableComponents="false" includedJRE="" manualJREEntry="false" bundleType="1" jreURL="" jreShared="false" directDownload="false" installOnlyIfNecessary="false" appleJre="false" requiredVmIdPrefix="" customInstallBaseDir="" contentFilesType="1" installerName="${i18n:InstallerName(${compiler:sys.fullName})}" volumeName="${compiler:sys.shortName}" compressDmg="false" signLaunchers="false">
       <excludedComponents>
-        <component id="235" />
+        <component id="234" />
       </excludedComponents>
       <includedDownloadableComponents />
-    </windows>
-    <macosFolder name="Mac OS X" id="9" customizedId="" mediaFileName="" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true" jreBitType="all" runPostProcessor="false" postProcessor="" failOnPostProcessorError="false" useLegacyMediaFileIds="false" legacyMediaFileIds="" includedJRE="" manualJREEntry="false" bundleType="1" jreURL="" jreShared="false" directDownload="false" installOnlyIfNecessary="false" appleJre="false" requiredVmIdPrefix="" customInstallBaseDir="" contentFilesType="1" downloadURL="" signLaunchers="false">
       <excludedLaunchers />
       <excludedBeans />
       <overriddenPrincipalLanguage id="en" customLocalizationFile="" />
@@ -1131,12 +1232,13 @@ return true;
         <commentFiles />
         <customAttributes />
       </autoUpdate>
+      <topLevelFiles />
+    </macosFolder>
+    <unixInstaller name="Unix" id="12" customizedId="" mediaFileName="" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true" jreBitType="all" runPostProcessor="false" postProcessor="" failOnPostProcessorError="false" useLegacyMediaFileIds="false" legacyMediaFileIds="" downloadURL="" includeAllDownloadableComponents="false" includedJRE="" manualJREEntry="false" bundleType="1" jreURL="" jreShared="false" directDownload="false" installOnlyIfNecessary="false" customInstallBaseDir="" contentFilesType="1">
       <excludedComponents>
         <component id="234" />
       </excludedComponents>
       <includedDownloadableComponents />
-    </macosFolder>
-    <unixInstaller name="Unix" id="12" customizedId="" mediaFileName="" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true" jreBitType="all" runPostProcessor="false" postProcessor="" failOnPostProcessorError="false" useLegacyMediaFileIds="false" legacyMediaFileIds="" includedJRE="" manualJREEntry="false" bundleType="1" jreURL="" jreShared="false" directDownload="false" installOnlyIfNecessary="false" customInstallBaseDir="" contentFilesType="1" downloadURL="">
       <excludedLaunchers />
       <excludedBeans>
         <bean refId="50" />
@@ -1150,10 +1252,6 @@ return true;
         <commentFiles />
         <customAttributes />
       </autoUpdate>
-      <excludedComponents>
-        <component id="234" />
-      </excludedComponents>
-      <includedDownloadableComponents />
       <installerScript mode="1" file="">
         <content />
       </installerScript>
@@ -1162,6 +1260,5 @@ return true;
   <buildIds buildAll="true">
     <mediaSet refId="11" />
   </buildIds>
-  <buildOptions verbose="false" faster="false" disableSigning="false" debug="false" />
+  <buildOptions verbose="false" faster="false" disableSigning="false" disableJreBundling="false" debug="false" />
 </install4j>
-

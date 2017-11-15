@@ -4,7 +4,7 @@
   <parent>
     <groupId>org.cytoscape.distribution</groupId>
     <artifactId>parent</artifactId>
-    <version>3.5.1</version>
+    <version>3.6.0</version>
   </parent>
 
   <artifactId>packaging</artifactId>
@@ -38,7 +38,7 @@
                 <enabled>true</enabled>
             </releases>
             <name>Cytoscape Releases</name>
-            <url>http://code.cytoscape.org.org/nexus/content/repositories/releases/</url>
+            <url>http://code.cytoscape.org/nexus/content/repositories/releases/</url>
         </repository>
     </repositories>
 

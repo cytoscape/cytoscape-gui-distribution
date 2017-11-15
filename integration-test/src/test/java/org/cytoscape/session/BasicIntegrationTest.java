@@ -162,8 +162,9 @@ public abstract class BasicIntegrationTest {
 				mavenBundle().groupId("org.apache.servicemix.bundles").artifactId("org.apache.servicemix.bundles.jaxb-impl").version("2.1.6_1").startLevel(3),
 				mavenBundle().groupId("javax.activation").artifactId("com.springsource.javax.activation").version("1.1.1").startLevel(3),
 				mavenBundle().groupId("javax.xml.stream").artifactId("com.springsource.javax.xml.stream").version("1.0.1").startLevel(3),
+				mavenBundle().groupId("javax.ws.rs").artifactId("javax.ws.rs-api").version("2.0").startLevel(3),
 				mavenBundle().groupId("commons-io").artifactId("commons-io").version("2.1").startLevel(3),
-				
+			
 				// Third-party bundle
 				mavenBundle().groupId("org.cytoscape.distribution").artifactId("third-party").version(distributionBundleVersion).startLevel(3),
 
