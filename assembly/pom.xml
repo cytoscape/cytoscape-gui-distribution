@@ -303,12 +303,6 @@
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
-									<groupId>org.cytoscape</groupId>
-									<artifactId>cy-ndex-2</artifactId>
-									<version>2.1.9</version>
-									<type>jar</type>
-								</artifactItem>
-								<artifactItem>
 									<groupId>edu.ucsf.rbvi</groupId>
 									<artifactId>cyBrowser</artifactId>
 									<version>0.5.1</version>
