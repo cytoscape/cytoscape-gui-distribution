@@ -263,7 +263,7 @@
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>webservice-psicquic-client</artifactId>
-									<version>3.4.0-SNAPSHOT</version>
+									<version>3.4.0</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
