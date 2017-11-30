@@ -41,12 +41,27 @@
             </excludes>
         </fileSet>
 
-        <!-- Copy over bin/* separately to get the correct file mode -->
+        <!-- Copy over transformed bin/* separately to get the correct file mode -->
         <fileSet>
-            <directory>target/dependencies/launcher</directory>
-            <outputDirectory>/framework</outputDirectory>
+            <directory>target/dependencies/launcher/bin/</directory>
+            <outputDirectory>/framework/bin</outputDirectory>
             <includes>
-                <xsl:for-each select="scripts/script">
+                <xsl:for-each select="/config/karaf/distribution/scripts/script">
+                    <include><xsl:value-of select="."/></include>
+                </xsl:for-each>
+            </includes>
+            <excludes>
+                <exclude>*.jar</exclude>
+            </excludes>
+            <fileMode>0755</fileMode>
+        </fileSet>
+
+  		<!-- Copy over original bin/* separately to get the correct file mode -->
+        <fileSet>
+            <directory><xsl:value-of select="/config/karaf/distribution/@base"/>/bin</directory>
+            <outputDirectory>/framework/bin</outputDirectory>
+            <includes>
+                <xsl:for-each select="/config/karaf/distribution/original-scripts/script">
                     <include><xsl:value-of select="."/></include>
                 </xsl:for-each>
             </includes>
@@ -81,7 +96,7 @@
             <includes>
                 <include>*.jar</include>
             </includes>
-            <outputDirectory>/framework/lib</outputDirectory>
+            <outputDirectory>/framework/lib/boot</outputDirectory>
         </fileSet>
 
         <fileSet>
@@ -89,7 +104,7 @@
             <includes>
                 <include>*.jar</include>
             </includes>
-            <outputDirectory>/framework/lib</outputDirectory>
+            <outputDirectory>/framework/lib/boot</outputDirectory>
         </fileSet>
 
         <fileSet>

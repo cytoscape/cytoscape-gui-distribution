@@ -1,5 +1,9 @@
 package org.cytoscape.splash.internal;
 
+import java.util.Dictionary;
+import java.util.HashMap;
+import java.util.Hashtable;
+
 /*
  * #%L
  * Splash Updater
@@ -43,7 +47,8 @@ public final class SplashActivator implements BundleActivator {
     public void start( BundleContext bc ) throws Exception {
 		SplashManipulator splash = new SplashManipulator(bc, Launcher.getSplashPanel());
 		bc.addBundleListener(splash);
-		bc.registerService(CyStartListener.class.getName(), splash, new Properties());
+		Dictionary dictionary = new Hashtable();
+		bc.registerService(CyStartListener.class.getName(), splash, dictionary);
     }
 
     /**

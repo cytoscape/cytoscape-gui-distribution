@@ -94,7 +94,7 @@
 							<goal>resources</goal>
 						</goals>
 					</execution>
-				</executions>
+				</executions>		
 			</plugin>
 			<plugin>
 				<groupId>org.apache.karaf.tooling</groupId>
@@ -109,10 +109,16 @@
 						</goals>
 						<configuration>
 							<descriptors>
+								<descriptor>mvn:org.apache.karaf.features/standard/${karaf.version}/xml/features
+								</descriptor>
 								<descriptor>mvn:org.cytoscape.distribution/features/${project.version}/xml/features
 								</descriptor>
 							</descriptors>
 							<features>
+								<feature>jetty</feature>
+    							<feature>pax-http</feature>
+    							<feature>scr</feature>
+    							<feature>http</feature>
 								<feature>cytoscape-gui</feature>
 							</features>
 							<includeMvnBasedDescriptors>true</includeMvnBasedDescriptors>
@@ -215,7 +221,7 @@
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>command-dialog</artifactId>
-									<version>3.6.1</version>
+									<version>3.7.0-SNAPSHOT</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
@@ -334,7 +340,7 @@
 				<executions>
 					<execution>
 						<id>directory</id>
-						<phase>compile</phase>
+						<phase>package</phase>
 						<goals>
 							<goal>single</goal>
 						</goals>
@@ -401,6 +407,10 @@
 							<unescape>false</unescape>
 							<replacements>
 								<replacement>
+									<token>#!/bin/sh</token>
+									<value>#!/bin/bash</value>
+								</replacement>
+								<replacement>
 									<token>MAIN=org.apache.karaf.main.Main</token>
 									<value>MAIN=org.cytoscape.launcher.internal.Launcher</value>
 								</replacement>
@@ -455,7 +465,7 @@
 								</replacement>
 								<replacement>
 									<token>(__reg2.txt)</token>
-									<!-- Dirty hack: "%CD:~0,0%" expands to the empty string. That way,
+									<!-- Dirty hack: "%CD:~0,0%" expands to the empty string. That way, 
 										the replacements below won't affect this one -->
 									<value>(%TEMP%\_%CD:~0,0%_reg2.txt)</value>
 								</replacement>

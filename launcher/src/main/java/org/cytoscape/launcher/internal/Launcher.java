@@ -65,6 +65,7 @@ public class Launcher {
 		if (isLocked()) {
 			// The main data directory is locked.  We should create a new one.
 			final String dataPath = String.format("%s.%d", System.getProperty("karaf.data"), System.currentTimeMillis());
+			
 			System.setProperty("karaf.data", dataPath);
 
 			// Delete this on shutdown, otherwise it uses up a lot of space.
@@ -81,6 +82,7 @@ public class Launcher {
 	
 	private static void showSplashPanel() throws IOException {
 		File karafBase = new File(System.getProperty("karaf.base"));
+		System.out.println("karaf.base: " + karafBase);
 		BufferedImage background = ImageIO.read(new File(karafBase, "CytoscapeSplashScreen.png"));
 		splashPanel = new SplashPanel(background);
 

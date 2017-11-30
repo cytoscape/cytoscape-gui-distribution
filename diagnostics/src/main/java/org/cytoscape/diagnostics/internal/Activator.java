@@ -1,5 +1,7 @@
 package org.cytoscape.diagnostics.internal;
 
+import java.util.Hashtable;
+
 /*
  * #%L
  * Cytoscape Diagnostics
@@ -42,14 +44,14 @@ public class Activator implements BundleActivator {
 		applyStartLevelHack(context);
 		
 		PerformanceDetailsBuilder performanceDetails = new PerformanceDetailsBuilder();
-		context.registerService(PerformanceDetails.class.getName(), performanceDetails, new Properties());
+		context.registerService(PerformanceDetails.class.getName(), performanceDetails, new Hashtable());
 		
 		PerformanceTracker performanceTracker = new PerformanceTracker(context, performanceDetails);
 		context.addFrameworkListener(performanceTracker);
 		context.addBundleListener(performanceTracker);
 		
 		SystemDetailsImpl systemDetails = new SystemDetailsImpl();
-		context.registerService(SystemDetails.class.getName(), systemDetails, new Properties());
+		context.registerService(SystemDetails.class.getName(), systemDetails, new Hashtable());
 	}
 	
     private void applyStartLevelHack(BundleContext context) {

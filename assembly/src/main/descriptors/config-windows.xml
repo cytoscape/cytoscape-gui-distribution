@@ -6,9 +6,11 @@
         <feature-repository>target/features-repo</feature-repository>
         <distribution base="target/dependencies/apache-karaf-${karaf.version}">
             <scripts>
-                <script>bin/karaf.bat</script>
-                <script>bin/karaf</script>
+                <script>karaf.bat</script>
+                <script>karaf</script>
             </scripts>
+            <original-scripts>
+            </original-scripts>
         </distribution>
     </karaf>
     <cytoscape>
