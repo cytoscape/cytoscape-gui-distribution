@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <features>
   <feature name="cytoscape-gui" version="${project.version}">
+   
+    <feature>jetty</feature>
+    <feature>pax-http</feature>
+    <feature>scr</feature>
+    <feature>http</feature> 
+   
     <bundle start-level="1">mvn:org.cytoscape.distribution/diagnostics-impl/${project.version}</bundle>
 
     <bundle start-level="1">mvn:org.cytoscape.distribution/splash-updater-impl/${project.version}</bundle>
@@ -94,7 +100,6 @@
     <bundle start-level="175">mvn:org.cytoscape/app-impl/${cytoscape.impl.version}</bundle>
     
     <bundle start-level="180">mvn:org.cytoscape/scripting-impl/${cytoscape.impl.version}</bundle>
-
     <bundle start-level="185">mvn:org.cytoscape/gui-cmdline-parser-impl/${cytoscape.impl.version}</bundle>
 
     <bundle start-level="187">mvn:org.cytoscape/equations-functions-impl/${cytoscape.impl.version}</bundle>
