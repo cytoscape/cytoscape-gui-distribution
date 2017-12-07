@@ -11,7 +11,7 @@
 	<properties>
 		<bundle.symbolicName>org.cytoscape.integration-test</bundle.symbolicName>
 		<bundle.namespace>org.cytoscape.session</bundle.namespace>
-		<exam.version>3.5.0</exam.version>
+		<exam.version>4.7.0</exam.version>
 		<url.version>2.0.0</url.version>
 	</properties>
 
