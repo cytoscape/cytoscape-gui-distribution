@@ -2,7 +2,7 @@
 <features>
   <feature name="cytoscape-gui" version="${project.version}">
    
-    <feature>jetty</feature>
+    <feature version="9.3.21.v20170918">jetty</feature>
     <feature>pax-http</feature>
     <feature>scr</feature>
     <feature>http</feature> 
