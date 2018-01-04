@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.cytoscape.distribution</groupId>
 		<artifactId>parent</artifactId>
-		<version>3.6.0</version>
+		<version>3.6.1</version>
 		<relativePath>..</relativePath>
 	</parent>
 
@@ -203,7 +203,7 @@
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>core-apps-meta</artifactId>
-									<version>3.6.0</version>
+									<version>3.6.1</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
@@ -227,7 +227,7 @@
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>idmapper</artifactId>
-									<version>3.6.0</version>
+									<version>3.6.1</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
@@ -269,7 +269,7 @@
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>cy-rest</artifactId>
-									<version>3.6.0</version>
+									<version>3.6.1</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
