@@ -203,7 +203,7 @@
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>core-apps-meta</artifactId>
-									<version>3.6.1</version>
+									<version>3.6.0</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
@@ -221,13 +221,13 @@
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>json</artifactId>
-									<version>3.6.1</version>
+									<version>3.6.0</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>idmapper</artifactId>
-									<version>3.6.1</version>
+									<version>3.6.0</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
@@ -269,7 +269,7 @@
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>cy-rest</artifactId>
-									<version>3.6.1</version>
+									<version>3.6.0</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
