@@ -305,7 +305,7 @@
 								<artifactItem>
 									<groupId>edu.ucsf.rbvi</groupId>
 									<artifactId>cyBrowser</artifactId>
-									<version>0.5.1</version>
+									<version>1.0.0</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
