@@ -221,7 +221,7 @@
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>command-dialog</artifactId>
-									<version>3.7.0-SNAPSHOT</version>
+									<version>3.7.0</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
@@ -275,7 +275,7 @@
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>cy-rest</artifactId>
-									<version>3.8.0-SNAPSHOT</version>
+									<version>3.8.0</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
@@ -317,7 +317,7 @@
 								<artifactItem>
 									<groupId>edu.ucsf.rbvi</groupId>
 									<artifactId>cyBrowser</artifactId>
-									<version>0.5.1</version>
+									<version>1.0.0</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
