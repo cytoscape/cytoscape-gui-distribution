@@ -83,6 +83,7 @@ public class Launcher {
 	private static void showSplashPanel() throws IOException {
 		File karafBase = new File(System.getProperty("karaf.base"));
 		System.out.println("karaf.base: " + karafBase);
+		System.out.println("JAVA_HOME: " + System.getenv("JAVA_HOME"));
 		BufferedImage background = ImageIO.read(new File(karafBase, "CytoscapeSplashScreen.png"));
 		splashPanel = new SplashPanel(background);
 
