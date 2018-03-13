@@ -269,7 +269,7 @@
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>cy-rest</artifactId>
-									<version>3.6.0</version>
+									<version>3.6.1</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
@@ -305,7 +305,7 @@
 								<artifactItem>
 									<groupId>edu.ucsf.rbvi</groupId>
 									<artifactId>cyBrowser</artifactId>
-									<version>0.5.1</version>
+									<version>1.0.0</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
