@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <install4j version="7.0.4" transformSequenceNumber="7">
   <directoryPresets config="../../../target" />
-  <application name="Cytoscape" distributionSourceDir="" applicationId="5211-3645-3154-2580" mediaDir="dist" mediaFilePattern="${compiler:sys.shortName}_${compiler:sys.version}_${compiler:sys.platform}" compression="6" lzmaCompression="false" pack200Compression="false" excludeSignedFromPacking="true" commonExternalFiles="false" createMd5Sums="true" shrinkRuntime="true" shortName="Cytoscape" publisher="Cytoscape Consortium" publisherWeb="http://www.cytoscape.org" version="${version}" allPathsRelative="true" backupOnSave="false" autoSave="false" convertDotsToUnderscores="true" macSignature="????" macVolumeId="60ff7381dde234ab" javaMinVersion="1.8.0_144" javaMaxVersion="1.8" allowBetaVM="true" jdkMode="runtimeJre" jdkName="">
+  <application name="Cytoscape" distributionSourceDir="" applicationId="5211-3645-3154-2580" mediaDir="dist" mediaFilePattern="${compiler:sys.shortName}_${compiler:sys.version}_${compiler:sys.platform}" compression="6" lzmaCompression="false" pack200Compression="false" excludeSignedFromPacking="true" commonExternalFiles="false" createMd5Sums="true" shrinkRuntime="true" shortName="Cytoscape" publisher="Cytoscape Consortium" publisherWeb="http://www.cytoscape.org" version="${version}" allPathsRelative="true" backupOnSave="false" autoSave="false" convertDotsToUnderscores="true" macSignature="????" macVolumeId="60ff7381dde234ab" javaMinVersion="1.8.152" javaMaxVersion="1.9" allowBetaVM="true" jdkMode="runtimeJre" jdkName="">
     <languages skipLanguageSelection="false" languageSelectionInPrincipalLanguage="false">
       <principalLanguage id="en" customLocalizationFile="" />
       <additionalLanguages />
@@ -1985,7 +1985,7 @@ return console.askYesNo(message, true);
     </styles>
   </installerGui>
   <mediaSets>
-    <windows name="Windows 64 bit" id="11" customizedId="" mediaFileName="Cytoscape_${compiler:sys.version}_windows_64bit" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true" jreBitType="64" runPostProcessor="false" postProcessor="" failOnPostProcessorError="false" useLegacyMediaFileIds="false" legacyMediaFileIds="" downloadURL="" includeAllDownloadableComponents="false" includedJRE="windows-amd64-1.8.0_162" manualJREEntry="false" bundleType="2" jreURL="http://chianti.ucsd.edu/jres/windows-amd64-1.8.0_162.tar.gz" jreShared="true" directDownload="false" installOnlyIfNecessary="true" customInstallBaseDir="" contentFilesType="1" verifyIntegrity="true">
+    <windows name="Windows 64 bit" id="11" customizedId="" mediaFileName="Cytoscape_${compiler:sys.version}_windows_64bit" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true" jreBitType="64" runPostProcessor="false" postProcessor="" failOnPostProcessorError="false" useLegacyMediaFileIds="false" legacyMediaFileIds="" downloadURL="" includeAllDownloadableComponents="false" includedJRE="windows-amd64-1.8.0_162" manualJREEntry="false" bundleType="2" jreURL="http://chianti.ucsd.edu/jres/windows-amd64-1.8.0_162.tar.gz" jreShared="true" directDownload="false" installOnlyIfNecessary="false" customInstallBaseDir="" contentFilesType="1" verifyIntegrity="true">
       <excludedComponents>
         <component id="235" />
       </excludedComponents>
@@ -2004,7 +2004,7 @@ return console.askYesNo(message, true);
         <customAttributes />
       </autoUpdate>
     </windows>
-    <windows name="Windows 32 bit" id="395" customizedId="" mediaFileName="Cytoscape_${compiler:sys.version}_windows_32bit" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true" jreBitType="32" runPostProcessor="false" postProcessor="" failOnPostProcessorError="false" useLegacyMediaFileIds="false" legacyMediaFileIds="" downloadURL="" includeAllDownloadableComponents="false" includedJRE="windows-x86-1.8.0_162" manualJREEntry="false" bundleType="2" jreURL="http://chianti.ucsd.edu/jres/windows-x86-1.8.0_162.tar.gz" jreShared="true" directDownload="false" installOnlyIfNecessary="true" customInstallBaseDir="" contentFilesType="1" verifyIntegrity="true">
+    <windows name="Windows 32 bit" id="395" customizedId="" mediaFileName="Cytoscape_${compiler:sys.version}_windows_32bit" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true" jreBitType="32" runPostProcessor="false" postProcessor="" failOnPostProcessorError="false" useLegacyMediaFileIds="false" legacyMediaFileIds="" downloadURL="" includeAllDownloadableComponents="false" includedJRE="windows-x86-1.8.0_162" manualJREEntry="false" bundleType="2" jreURL="http://chianti.ucsd.edu/jres/windows-x86-1.8.0_162.tar.gz" jreShared="true" directDownload="false" installOnlyIfNecessary="false" customInstallBaseDir="" contentFilesType="1" verifyIntegrity="true">
       <excludedComponents>
         <component id="235" />
       </excludedComponents>
