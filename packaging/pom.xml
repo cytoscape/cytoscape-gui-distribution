@@ -13,7 +13,8 @@
 
   <properties>
     <!--install4j.executable>/Applications/install4j.app/Contents/Resources/app/bin/install4jc</install4j.executable-->
-		<install4j.executable>/usr/local/bin/install4jc</install4j.executable>
+    <!--<install4j.executable>/usr/local/bin/install4jc</install4j.executable>-->
+		<install4j.executable>c:\ProgramFiles\install4j7\bin\install4jc.exe</install4j.executable>
   </properties>
 
     <!-- bootstrap for cytoscape dependencies, namely the parent POM snapshots -->
