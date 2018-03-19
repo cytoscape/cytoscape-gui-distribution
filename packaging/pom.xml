@@ -72,7 +72,7 @@
               <excludeTransitive>true</excludeTransitive>
             </configuration>
           </execution>
-		  <!--
+		  <!-- Comment out JUnit if not desired -->
           <execution>
             <id>unpack-javadoc</id>
             <goals>
@@ -87,7 +87,7 @@
               <includeClassifiers>javadoc</includeClassifiers>
             </configuration>
           </execution>
-		  -->
+		  <!-- -->
           <execution>
             <id>copy-distribution</id>
             <goals>
