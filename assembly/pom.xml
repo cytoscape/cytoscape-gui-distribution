@@ -220,12 +220,6 @@
 								</artifactItem>
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
-									<artifactId>command-dialog</artifactId>
-									<version>3.7.0</version>
-									<type>jar</type>
-								</artifactItem>
-								<artifactItem>
-									<groupId>org.cytoscape</groupId>
 									<artifactId>json</artifactId>
 									<version>3.6.0</version>
 									<type>jar</type>
