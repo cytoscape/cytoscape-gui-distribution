@@ -215,7 +215,7 @@
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>biopax</artifactId>
-									<version>3.3.1</version>
+									<version>3.3.3</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
@@ -245,13 +245,13 @@
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>psi-mi</artifactId>
-									<version>3.3.1</version>
+									<version>3.3.3</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>sbml</artifactId>
-									<version>3.3.3</version>
+									<version>3.3.4</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
@@ -311,7 +311,7 @@
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>cx-support</artifactId>
-									<version>2.2.2</version>
+									<version>2.2.3</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
