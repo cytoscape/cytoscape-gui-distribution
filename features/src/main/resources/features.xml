@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <features>
+
+   
   <feature name="cytoscape-gui" version="${project.version}">
    
-    <feature version="9.4.6.v20170531">jetty</feature>
-    <feature>pax-http</feature>
-    <feature>scr</feature>
-    <feature>http</feature> 
+ 
    
     <bundle start-level="1">mvn:org.cytoscape.distribution/diagnostics-impl/${project.version}</bundle>
 
