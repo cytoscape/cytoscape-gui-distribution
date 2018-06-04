@@ -117,7 +117,7 @@
 							</descriptors>
 							<features>
 								<feature>cytoscape-gui</feature>
-								<feature version="9.4.6.v20170531">jetty</feature>
+								<feature version="9.4.10.v20180503">cytoscape-jetty</feature>
 								<feature>scr</feature>
 								<feature>pax-web-core</feature>
 								<feature>pax-jetty</feature>
