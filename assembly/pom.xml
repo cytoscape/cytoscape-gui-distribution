@@ -433,6 +433,10 @@
 									<token>cd "$KARAF_BASE"</token>
 									<value />
 								</replacement>
+								<replacement>
+									<token>lib/endorsed/org.apache.karaf.specs</token>
+									<value>$KARAF_HOME/lib/endorsed/org.apache.karaf.specs</value>
+								</replacement>
 							</replacements>
 						</configuration>
 					</execution>
@@ -479,6 +483,10 @@
 								<replacement>
 									<token>cd "%KARAF_BASE%"</token>
 									<value />
+								</replacement>
+								<replacement>
+									<token>lib/endorsed/org.apache.karaf.specs</token>
+									<value>%KARAF_HOME%/lib/endorsed/org.apache.karaf.specs</value>
 								</replacement>
 							</replacements>
 						</configuration>
