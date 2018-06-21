@@ -95,6 +95,7 @@
       <iconImageFiles>
         <file path="${basedir}/src/main/images/cytoscape3-icon-trans-16x16.png" />
         <file path="${basedir}/src/main/images/cytoscape3-icon-trans-32x32.png" />
+        <file path="${basedir}/src/main/images/cytoscape3-icon-trans-128x128.png" />
       </iconImageFiles>
     </launcher>
   </launchers>
