@@ -67,15 +67,17 @@
           <versionLine x="20" y="40" text="version ${compiler:sys.version}" fontSize="8" fontColor="0,0,0" bold="false" />
         </text>
       </splashScreen>
-      <java mainClass="org.cytoscape.launcher.internal.Launcher" mainMode="1" vmParameters="-Dcom.sun.management.jmxremote &quot;-Djava.endorsed.dirs=${launcher:sys.jvmHome}/jre/lib/endorsed${launcher:sys.pathlistSeparator}${launcher:sys.jvmHome}/lib/endorsed${launcher:sys.pathlistSeparator}${launcher:sys.launcherDirectory}/framework/lib/endorsed&quot; &quot;-Djava.ext.dirs=${launcher:sys.jvmHome}/jre/lib/ext${launcher:sys.pathlistSeparator}${launcher:sys.jvmHome}/lib/ext${launcher:sys.pathlistSeparator}${launcher:sys.launcherDirectory}/framework/lib/ext&quot; &quot;-Dkaraf.instances=${launcher:sys.launcherDirectory}/framework/instances&quot;  &quot;-Dkaraf.home=${launcher:sys.launcherDirectory}/framework&quot; &quot;-Dkaraf.base=${launcher:sys.launcherDirectory}/framework&quot; &quot;-Dkaraf.etc=${launcher:sys.launcherDirectory}/framework/etc&quot; &quot;-Djava.util.logging.config.file=${launcher:sys.launcherDirectory}/framework/etc/java.util.logging.properties&quot; &quot;-Dcytoscape.home=${launcher:sys.launcherDirectory}&quot;  -Djavax.management.builder.initial=org.apache.karaf.management.boot.KarafMBeanServerBuilder  -Dkaraf.startLocalConsole=false  -Dkaraf.startRemoteShell=false" arguments="" allowVMPassthroughParameters="true" preferredVM="" bundleRuntime="true">
+      <java mainClass="org.cytoscape.launcher.internal.Launcher" mainMode="1" vmParameters="-Dcom.sun.management.jmxremote &quot;-Djava.endorsed.dirs=${launcher:sys.jvmHome}/jre/lib/endorsed${launcher:sys.pathlistSeparator}${launcher:sys.jvmHome}/lib/endorsed${launcher:sys.pathlistSeparator}${launcher:sys.launcherDirectory}/framework/lib/endorsed&quot; &quot;-Djava.ext.dirs=${launcher:sys.jvmHome}/jre/lib/ext${launcher:sys.pathlistSeparator}${launcher:sys.jvmHome}/lib/ext${launcher:sys.pathlistSeparator}${launcher:sys.launcherDirectory}/framework/lib/ext&quot; &quot;-Dkaraf.instances=${launcher:sys.launcherDirectory}/framework/instances&quot;  &quot;-Dkaraf.home=${launcher:sys.launcherDirectory}/framework&quot; &quot;-Dkaraf.base=${launcher:sys.launcherDirectory}/framework&quot; &quot;-Dkaraf.etc=${launcher:sys.launcherDirectory}/framework/etc&quot; &quot;-Djava.util.logging.config.file=${launcher:sys.launcherDirectory}/framework/etc/java.util.logging.properties&quot; &quot;-Dcytoscape.home=${launcher:sys.launcherDirectory}&quot;  -Dkaraf.startLocalConsole=false  -Dkaraf.startRemoteShell=false" arguments="" allowVMPassthroughParameters="true" preferredVM="" bundleRuntime="true">
         <classPath>
           <scanDirectory location="." failOnError="false" />
-          <directory location="lib" failOnError="false" />
-          <archive location="./framework/lib/karaf-launcher-${version}.jar" failOnError="false" />
-          <archive location="./framework/lib/karaf-org.osgi.core.jar" failOnError="false" />
-          <archive location="./framework/lib/karaf.jar" failOnError="false" />
-          <archive location="./framework/lib/karaf-jaas-boot.jar" failOnError="false" />
-          <archive location="./framework/lib/karaf-jmx-boot.jar" failOnError="false" />
+          <directory location="lib/boot" failOnError="false" />
+          <archive location="./framework/lib/boot/branding-${version}.jar" failOnError="false" />
+          <archive location="./framework/lib/boot/karaf-launcher-${version}.jar" failOnError="false" />
+          <archive location="./framework/lib/boot/org.apache.karaf.diagnostic.boot-4.2.0.jar" failOnError="false" />
+          <archive location="./framework/lib/boot/org.apache.karaf.jaas.boot-4.2.0.jar" failOnError="false" />
+          <archive location="./framework/lib/boot/org.apache.karaf.main-4.2.0.jar" failOnError="false" />
+          <archive location="./framework/lib/boot/org.apache.karaf.specs.activator-4.2.0.jar" failOnError="false" />
+          <archive location="./framework/lib/boot/org.osgi.core-6.0.0.jar" failOnError="false" />
         </classPath>
         <modulePath />
         <nativeLibraryDirectories />
