@@ -95,7 +95,7 @@
     <bundle start-level="103">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.jaxb-impl/2.1.6_1</bundle>
     <bundle start-level="103">mvn:javax.activation/com.springsource.javax.activation/1.1.1</bundle>
     <bundle start-level="103">mvn:javax.xml.stream/com.springsource.javax.xml.stream/1.0.1</bundle>
-    <bundle start-level="103">mvn:javax.ws.rs/javax.ws.rs-api/2.0</bundle>
+    <bundle start-level="103">mvn:javax.ws.rs/javax.ws.rs-api/2.1</bundle>
 
     <bundle start-level="105">mvn:org.cytoscape/cmdline/${cytoscape.support.version}</bundle>
     
