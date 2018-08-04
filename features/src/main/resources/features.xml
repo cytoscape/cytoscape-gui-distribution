@@ -106,6 +106,8 @@
     <bundle start-level="110">mvn:org.cytoscape.distribution/cmdline-impl/${project.version}</bundle>
     <bundle start-level="110">mvn:org.cytoscape/property-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="110">mvn:org.cytoscape/event-impl/${cytoscape.impl.version}</bundle>
+
+    <bundle start-level="112">mvn:org.cytoscape/util-impl/${cytoscape.impl.version}</bundle>
     
     <bundle start-level="115">mvn:org.cytoscape/datasource-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="115">mvn:org.cytoscape/equations-impl/${cytoscape.impl.version}</bundle>
