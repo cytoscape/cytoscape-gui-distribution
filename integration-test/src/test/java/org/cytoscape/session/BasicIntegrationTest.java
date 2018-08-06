@@ -68,6 +68,7 @@ import org.cytoscape.model.CyTable;
 import org.cytoscape.model.CyTableManager;
 import org.cytoscape.model.subnetwork.CyRootNetwork;
 import org.cytoscape.task.read.OpenSessionTaskFactory;
+import org.cytoscape.util.color.PaletteProviderManager;
 import org.cytoscape.view.model.CyNetworkView;
 import org.cytoscape.view.model.CyNetworkViewManager;
 import org.cytoscape.view.model.VisualLexicon;
@@ -126,6 +127,8 @@ public abstract class BasicIntegrationTest {
 	protected CyGroupManager groupManager;
 	@Inject
 	protected CyGroupSettingsManager groupSettingsManager;
+	@Inject
+	protected PaletteProviderManager paletteManager;
 	
 	
 	// Target file name.  Assume we always have one test session file per test class.
@@ -177,6 +180,8 @@ public abstract class BasicIntegrationTest {
 
 				mavenBundle().groupId("org.cytoscape").artifactId("datasource-impl").version(implBundleVersion).startLevel(9),
 				mavenBundle().groupId("org.cytoscape").artifactId("equations-impl").version(implBundleVersion).startLevel(9),
+
+				mavenBundle().groupId("org.cytoscape").artifactId("util-impl").version(implBundleVersion).startLevel(10),
 
 				mavenBundle().groupId("org.cytoscape").artifactId("model-impl").version(implBundleVersion).startLevel(11),
 				mavenBundle().groupId("org.cytoscape").artifactId("work-impl").version(implBundleVersion).startLevel(11),
