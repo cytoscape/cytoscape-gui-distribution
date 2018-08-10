@@ -262,7 +262,7 @@
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>webservice-biomart-client</artifactId>
-									<version>3.3.1</version>
+									<version>3.3.2</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
@@ -280,19 +280,19 @@
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>opencl-cycl</artifactId>
-									<version>3.3.2</version>
+									<version>3.5.0</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>opencl-layout</artifactId>
-									<version>3.3.1</version>
+									<version>3.5.0</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>welcome</artifactId>
-									<version>3.5.1</version>
+									<version>3.5.2</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
