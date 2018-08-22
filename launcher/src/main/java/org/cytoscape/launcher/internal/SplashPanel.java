@@ -22,10 +22,13 @@ import javax.swing.SwingUtilities;
 @SuppressWarnings("serial")
 public class SplashPanel extends Component {
 	
-	private final int BORDER_WIDTH = 4;
+	private final int BORDER_WIDTH = 1;
 	private final int PROGRESS_BAR_HEIGHT = 4;
-	private final int PAD = 20;
+	private final int PAD = 24;
 	private final Color THEME_COLOR = new Color(234, 145, 35); // "CyColor.primary"
+	private final Color BACKGROUNG_COLOR = new Color(21, 21, 21);
+	private final Color BORDER_COLOR = new Color(127, 127, 127);
+	private final Color TEXT_COLOR = Color.WHITE;
 	private final Font FONT = new Font(Font.SANS_SERIF, Font.PLAIN, 12);
 	
 	BufferedImage image;
@@ -53,12 +56,12 @@ public class SplashPanel extends Component {
 		context.fillRect(0, 0, imgWidth, imgHeight);
 		context.drawImage(background, 0, 0, null);
 		
-		JLabel lbl = new JLabel("Java Version: " + System.getProperty("java.version"));
+		JLabel lbl = new JLabel("Java " + System.getProperty("java.version"));
 		FontMetrics fontMetrics = lbl.getFontMetrics(FONT);
 		fontHeight = fontMetrics.getHeight();
 		int fontWidth = lbl.getPreferredSize().width;
 		
-		context.setColor(THEME_COLOR);
+		context.setColor(TEXT_COLOR);
 		context.setFont(FONT);
 		context.drawString(lbl.getText(), imgWidth - PAD - fontWidth, PAD + fontHeight);
 		
@@ -67,17 +70,17 @@ public class SplashPanel extends Component {
 	
 	@Override
 	public void paint(Graphics g) {
-		g.setColor(THEME_COLOR);
+		g.setColor(BORDER_COLOR);
 		g.fillRect(0, 0, getWidth(), getHeight());
 		g.drawImage(image, BORDER_WIDTH, BORDER_WIDTH, image.getWidth(), image.getHeight(), null);
 	}
 	
 	public void updateMessage(final String message, final double progress) {
-    	if (!SwingUtilities.isEventDispatchThread()) {
-    		try {
-    			// Update synchronously, otherwise we end up dropping frames.
-    			// In such a case, it appears to the user that little progress
-    			// is being made, and then the system suddenly starts.
+		if (!SwingUtilities.isEventDispatchThread()) {
+			try {
+				// Update synchronously, otherwise we end up dropping frames.
+				// In such a case, it appears to the user that little progress
+				// is being made, and then the system suddenly starts.
 				SwingUtilities.invokeAndWait(new Runnable() {
 					@Override
 					public void run() {
@@ -89,24 +92,24 @@ public class SplashPanel extends Component {
 			} catch (InvocationTargetException e) {
 				e.printStackTrace();
 			}
-    		
-    		return;
-    	}
 
-    	if (!isDisplayable())
-    		return;
-    	
+			return;
+		}
+
+		if (!isDisplayable())
+			return;
+
 		drawProgressString(message);
-		
+
 		final int w = image.getWidth();
 		final int h = image.getHeight();
 		final int th = fontHeight; // Text Height
 		final int progressWidth = (int) ((w - 2 * PAD) * progress);
 
-		context.setColor(new Color(computeColor(progress)));
-		context.fillRect(PAD, h - PAD - th, progressWidth, PROGRESS_BAR_HEIGHT);
-        
-        repaint();
+		context.setColor(THEME_COLOR);
+		context.fillRect(PAD, h - PAD - th - 4, progressWidth, PROGRESS_BAR_HEIGHT);
+
+		repaint();
 	}
 	
 	public void close() {
@@ -121,22 +124,15 @@ public class SplashPanel extends Component {
 		}
 	}
 	
-	private void drawProgressString(final String s) {
+	private void drawProgressString(String s) {
 		final int w = image.getWidth();
 		final int h = image.getHeight();
 		final int th = fontHeight; // Text Height
 		final int tw = w - 2 * PAD; // Text Width
-    	
-		context.setColor(Color.WHITE);
+
+		context.setColor(BACKGROUNG_COLOR);
 		context.fillRect(PAD - 2, h - PAD - th - 2, tw + 4, th + PAD + 4);
-		context.setColor(Color.BLACK);
+		context.setColor(TEXT_COLOR);
 		context.drawString(s, PAD, h - PAD);
-	}
-	
-	private int computeColor(double progress) {
-		int red = (int) (progress * 247);
-		int green = (int) (progress * 148);
-		int blue = (int) (progress * 30);
-		return (red << 16) | (green << 8) | blue;
 	}
 }
