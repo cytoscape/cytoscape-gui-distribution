@@ -24,10 +24,9 @@ public class SplashPanel extends Component {
 	
 	private final int BORDER_WIDTH = 1;
 	private final int PROGRESS_BAR_HEIGHT = 4;
-	private final int PAD = 24;
-	private final Color THEME_COLOR = new Color(234, 145, 35); // "CyColor.primary"
+	private final int PAD = 20;
 	private final Color BACKGROUNG_COLOR = new Color(21, 21, 21);
-	private final Color BORDER_COLOR = new Color(127, 127, 127);
+	private final Color BORDER_COLOR = new Color(42, 42, 42);
 	private final Color TEXT_COLOR = Color.WHITE;
 	private final Font FONT = new Font(Font.SANS_SERIF, Font.PLAIN, 12);
 	
@@ -37,10 +36,10 @@ public class SplashPanel extends Component {
 	private final int fontHeight;
 	
 	public SplashPanel(BufferedImage background) {
-		int imgWidth = background.getWidth();
-		int imgHeight = background.getHeight();
+		int w = background.getWidth();
+		int h = background.getHeight();
 		
-		Dimension bounds = new Dimension(imgWidth + 2 * BORDER_WIDTH, imgHeight + 2 * BORDER_WIDTH);
+		Dimension bounds = new Dimension(w + 2 * BORDER_WIDTH, h + 2 * BORDER_WIDTH);
 		setMinimumSize(bounds);
 		setPreferredSize(bounds);
 		setMaximumSize(bounds);
@@ -48,12 +47,12 @@ public class SplashPanel extends Component {
 		GraphicsEnvironment environment = GraphicsEnvironment.getLocalGraphicsEnvironment();
 		GraphicsDevice device = environment.getDefaultScreenDevice();
 		GraphicsConfiguration configuration = device.getDefaultConfiguration();
-		image = configuration.createCompatibleImage(imgWidth, imgHeight);
+		image = configuration.createCompatibleImage(w, h);
 		
 		context = image.createGraphics();
 		context.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 		
-		context.fillRect(0, 0, imgWidth, imgHeight);
+		context.fillRect(0, 0, w, h);
 		context.drawImage(background, 0, 0, null);
 		
 		JLabel lbl = new JLabel("Java " + System.getProperty("java.version"));
@@ -61,9 +60,12 @@ public class SplashPanel extends Component {
 		fontHeight = fontMetrics.getHeight();
 		int fontWidth = lbl.getPreferredSize().width;
 		
+		context.setColor(BORDER_COLOR);
+		context.fillRect(0, h - PAD - fontHeight - 4, w, PROGRESS_BAR_HEIGHT);
+		
 		context.setColor(TEXT_COLOR);
 		context.setFont(FONT);
-		context.drawString(lbl.getText(), imgWidth - PAD - fontWidth, PAD + fontHeight);
+		context.drawString(lbl.getText(), w - PAD - fontWidth, PAD + fontHeight);
 		
 		drawProgressString("Initializing OSGi container...");
 	}
@@ -104,10 +106,10 @@ public class SplashPanel extends Component {
 		final int w = image.getWidth();
 		final int h = image.getHeight();
 		final int th = fontHeight; // Text Height
-		final int progressWidth = (int) ((w - 2 * PAD) * progress);
+		final int progressWidth = (int) (w * progress);
 
-		context.setColor(THEME_COLOR);
-		context.fillRect(PAD, h - PAD - th - 4, progressWidth, PROGRESS_BAR_HEIGHT);
+		context.setColor(TEXT_COLOR);
+		context.fillRect(0, h - PAD - th - 4, progressWidth, PROGRESS_BAR_HEIGHT);
 
 		repaint();
 	}
@@ -131,7 +133,7 @@ public class SplashPanel extends Component {
 		final int tw = w - 2 * PAD; // Text Width
 
 		context.setColor(BACKGROUNG_COLOR);
-		context.fillRect(PAD - 2, h - PAD - th - 2, tw + 4, th + PAD + 4);
+		context.fillRect(PAD - 2, h - PAD - th, tw + 4, th + PAD + 4);
 		context.setColor(TEXT_COLOR);
 		context.drawString(s, PAD, h - PAD);
 	}
