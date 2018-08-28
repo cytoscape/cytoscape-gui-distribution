@@ -179,6 +179,12 @@
 
 		<dependency>
 			<groupId>org.cytoscape</groupId>
+			<artifactId>util-impl</artifactId>
+			<version>${cytoscape.impl.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.cytoscape</groupId>
 			<artifactId>event-impl</artifactId>
 			<version>${cytoscape.impl.version}</version>
 			<scope>test</scope>
