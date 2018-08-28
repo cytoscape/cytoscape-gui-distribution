@@ -51,6 +51,7 @@ public class SplashPanel extends Component {
 		
 		context = image.createGraphics();
 		context.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+		context.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_LCD_HRGB);
 		
 		context.fillRect(0, 0, w, h);
 		context.drawImage(background, 0, 0, null);
