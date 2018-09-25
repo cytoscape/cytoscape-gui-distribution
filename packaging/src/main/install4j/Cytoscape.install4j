@@ -158,10 +158,19 @@
                 <serializedBean>
                   <java class="java.beans.XMLDecoder">
                     <object class="com.install4j.runtime.beans.actions.misc.RequestPrivilegesAction">
-                      <void property="failIfNotRootUnix">
-                        <boolean>true</boolean>
+                      <void property="failIfNotObtainedMac">
+                        <boolean>false</boolean>
+                      </void>
+                      <void property="failIfNotObtainedWin">
+                        <boolean>false</boolean>
                       </void>
                       <void property="obtainIfAdminMac">
+                        <boolean>true</boolean>
+                      </void>
+                      <void property="obtainIfNormalMac">
+                        <boolean>true</boolean>
+                      </void>
+                      <void property="obtainIfNormalWin">
                         <boolean>true</boolean>
                       </void>
                       <void property="updateInstallationDirectory">
