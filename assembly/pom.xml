@@ -292,7 +292,7 @@
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>welcome</artifactId>
-									<version>3.5.2</version>
+									<version>3.5.3</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
