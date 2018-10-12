@@ -5,21 +5,21 @@
 	<parent>
 		<groupId>org.cytoscape</groupId>
 		<artifactId>parent</artifactId>
-		<version>3.7.0-RC1</version>
+		<version>3.7.0-RC2</version>
 		<relativePath>../parent</relativePath>
 	</parent>
 	
 	<groupId>org.cytoscape.distribution</groupId>
 	<artifactId>parent</artifactId>
-	<version>3.7.0-RC1</version>
+	<version>3.7.0-RC2</version>
 	<packaging>pom</packaging>
 	
 	<name>Cytoscape Desktop Application Distribution</name>
 
 	<properties>
-		<cytoscape.api.version>3.7.0-RC1</cytoscape.api.version>
-		<cytoscape.support.version>3.7.0-RC1</cytoscape.support.version>
-		<cytoscape.impl.version>3.7.0-RC1</cytoscape.impl.version>
+		<cytoscape.api.version>3.7.0-RC2</cytoscape.api.version>
+		<cytoscape.support.version>3.7.0-RC2</cytoscape.support.version>
+		<cytoscape.impl.version>3.7.0-RC2</cytoscape.impl.version>
 	</properties>
 
 	<build>
