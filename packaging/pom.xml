@@ -4,7 +4,7 @@
   <parent>
     <groupId>org.cytoscape.distribution</groupId>
     <artifactId>parent</artifactId>
-    <version>3.7.0-RC2</version>
+    <version>3.7.0</version>
   </parent>
 
   <artifactId>packaging</artifactId>
