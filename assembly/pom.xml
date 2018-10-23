@@ -485,8 +485,12 @@
 									<value />
 								</replacement>
 								<replacement>
-									<token>lib/endorsed/org.apache.karaf.specs</token>
-									<value>%KARAF_HOME%/lib/endorsed/org.apache.karaf.specs</value>
+									<token>lib/endorsed/org.apache.karaf.specs.locator-4.2.1.jar</token>
+									<value>"%KARAF_HOME%/lib/endorsed/org.apache.karaf.specs.locator-4.2.1.jar"</value>
+								</replacement>
+								<replacement>
+									<token>lib/endorsed/org.apache.karaf.specs.java.xml-4.2.1.jar</token>
+									<value>"%KARAF_HOME%/lib/endorsed/org.apache.karaf.specs.java.xml-4.2.1.jar"</value>
 								</replacement>
 							</replacements>
 						</configuration>
