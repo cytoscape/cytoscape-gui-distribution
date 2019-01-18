@@ -164,6 +164,9 @@
                       <void property="failIfNotObtainedWin">
                         <boolean>false</boolean>
                       </void>
+                      <void property="obtainIfNormalMac">
+                        <boolean>true</boolean>
+                      </void>
                       <void property="obtainIfNormalWin">
                         <boolean>true</boolean>
                       </void>
