@@ -220,7 +220,7 @@
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>biopax</artifactId>
-									<version>3.3.3</version>
+									<version>3.3.4</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
