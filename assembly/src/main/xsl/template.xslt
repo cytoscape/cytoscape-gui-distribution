@@ -107,6 +107,14 @@
             <outputDirectory>/framework/lib/boot</outputDirectory>
         </fileSet>
 
+		<fileSet>
+            <directory>target/dependencies/openjfx</directory>
+            <includes>
+                <include>*.jar</include>
+            </includes>
+            <outputDirectory>/framework/lib/openjfx</outputDirectory>
+        </fileSet>
+
         <fileSet>
             <directory>target/dependencies/splash-launcher/images</directory>
             <includes>
