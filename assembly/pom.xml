@@ -489,9 +489,17 @@
 									<token>cd "$KARAF_BASE"</token>
 									<value />
 								</replacement>
+								<!--  
 								<replacement>
 									<token>lib/endorsed/org.apache.karaf.specs</token>
 									<value>$KARAF_HOME/lib/endorsed/org.apache.karaf.specs</value>
+								</replacement>-->
+								<replacement>
+									<token>--patch-module java.xml=lib/endorsed/org.apache.karaf.specs.java.xml-4.2.4.jar \</token>
+									<value>--patch-module java.xml=$KARAF_HOME/lib/endorsed/org.apache.karaf.specs.java.xml-4.2.4.jar \
+                    -p $KARAF_HOME/lib/openjfx/ \
+                    --add-modules javafx.base,javafx.swing,javafx.media,javafx.web \
+									</value>
 								</replacement>
 							</replacements>
 						</configuration>
@@ -541,12 +549,15 @@
 									<value />
 								</replacement>
 								<replacement>
-									<token>lib/endorsed/org.apache.karaf.specs.locator-4.2.1.jar</token>
-									<value>"%KARAF_HOME%/lib/endorsed/org.apache.karaf.specs.locator-4.2.1.jar"</value>
+									<token>lib/endorsed/org.apache.karaf.specs.locator-4.2.4.jar</token>
+									<value>"%KARAF_HOME%/lib/endorsed/org.apache.karaf.specs.locator-4.2.4.jar"</value>
 								</replacement>
 								<replacement>
-									<token>lib/endorsed/org.apache.karaf.specs.java.xml-4.2.1.jar</token>
-									<value>"%KARAF_HOME%/lib/endorsed/org.apache.karaf.specs.java.xml-4.2.1.jar"</value>
+									<token>--patch-module java.xml=lib/endorsed/org.apache.karaf.specs.java.xml-4.2.4.jar ^</token>
+									<value>--patch-module java.xml="%KARAF_HOME%/lib/endorsed/org.apache.karaf.specs.java.xml-4.2.4.jar" ^
+                -p "%KARAF_HOME%/lib/openjfx/" ^
+                --add-modules javafx.base,javafx.swing,javafx.media,javafx.web ^
+									</value>
 								</replacement>
 							</replacements>
 						</configuration>
