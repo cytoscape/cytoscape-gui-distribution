@@ -1,32 +1,31 @@
 package org.cytoscape.launcher.internal;
 
-import com.apple.eawt.Application;
-import com.apple.eawt.OpenFilesHandler;
-import com.apple.eawt.AppEvent.OpenFilesEvent;
-
+import java.awt.Desktop;
+import java.awt.desktop.OpenFilesHandler;
+import java.awt.desktop.OpenFilesEvent;
 
 public class MacHelper {
 
     public static void handleStartupArguments() {
         // All Mac EAWT logic
 		// Intercept session file double-clicked on Mac OS, passed by file association set by install4j
-		Application application = Application.getApplication();
+		Desktop desktop = Desktop.getDesktop();
 		
-		application.setOpenFileHandler(new OpenFilesHandler() {
+		desktop.setOpenFileHandler(new OpenFilesHandler() {
+
 			@Override
-			public void openFiles(OpenFilesEvent e) {
-				
-				if (Launcher.startupArguments.length > 0 || e.getFiles().size()>1){
+			public void openFiles(OpenFilesEvent arg0) {
+				if (Launcher.startupArguments.length > 0 || arg0.getFiles().size()>1){
 					return;
 				}
 				
-				String fileName = e.getFiles().get(0).getAbsolutePath();
+				String fileName = arg0.getFiles().get(0).getAbsolutePath();
 				if (!fileName.endsWith(".cys")){
 					return;
 				}
 				
 				String[] argsArray = {fileName};
-				Launcher.startupArguments = argsArray;				
+				Launcher.startupArguments = argsArray;	
 			}			
 		});
     }
