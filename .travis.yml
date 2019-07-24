@@ -8,7 +8,3 @@ jdk:
 branches:
   only:
     - travis-ci
-
-install:
-  script: "cat $HOME/.m2/settings.xml"
-  skip_cleanup: true
