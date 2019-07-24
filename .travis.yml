@@ -9,4 +9,5 @@ branches:
   only:
     - travis-ci
     
-script: ./travis-setup.sh
+install:
+- cat $HOME/.m2/settings.xml
