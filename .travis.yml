@@ -8,3 +8,5 @@ jdk:
 branches:
   only:
     - travis-ci
+    
+script: "cat $HOME/.m2/settings.xml"
