@@ -1,0 +1,10 @@
+language: java
+
+sudo: false
+
+jdk:
+  - oraclejdk8
+
+branches:
+  only:
+    - travis-ci
