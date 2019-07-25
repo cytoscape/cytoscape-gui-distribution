@@ -65,7 +65,7 @@
 				<module>diagnostics</module>
 				<module>branding</module>
 				<module>application-metadata-impl</module>
-				<module>integration-test</module>
+				<!-- <module>integration-test</module> -->
 				<module>features</module>
 				<module>assembly</module>
 			</modules>
