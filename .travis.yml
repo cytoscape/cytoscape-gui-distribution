@@ -12,5 +12,6 @@ branches:
 install:
 - cp .travis.settings.xml $HOME/.m2/settings.xml
 - df -h
+- printenv
 
-script: mvn clean install -q
+script: mvn clean install -B
