@@ -14,4 +14,4 @@ install:
 - df -h
 - printenv
 
-script: mvn clean install -B
+script: mvn clean install -q
