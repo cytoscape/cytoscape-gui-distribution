@@ -1,17 +1,20 @@
 language: java
-
 sudo: false
-
 jdk:
-  - openjdk8
-
+- openjdk8
 branches:
   only:
-    - travis-ci
-    
+  - travis-ci
 install:
 - cp .travis.settings.xml $HOME/.m2/settings.xml
 - df -h
 - echo $deployuser
-
 script: mvn clean install -q
+deploy:
+  provider: releases
+  api_key:
+    secure: $API_KEY
+  file: "./assembly/target/cytoscape-unix-3.8.0-SNAPSHOT.tar.gz"
+  on:
+    repo: cytoscape/cytoscape-gui-distribution
+    branch: travis-ci
