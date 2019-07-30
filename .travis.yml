@@ -13,7 +13,7 @@ script: mvn clean install -q
 deploy:
   provider: releases
   api_key:
-    secure: $API_KEY
+    secure: AJuvVUZOMDWB46KTgNpHOWj2dsRdjQg8O+Ky1pmUGGVTKJnuhgi8ouvW/wDPB45PYBQBdl5B6PUURiQg4rSu4/EFXlCmp3INX8KmXnM/NznBjd7sx3FfVf/86qkt60YMYLFmrpLJ6jOSJg9hy3eHfJMtUsav0DJZ7GEGPGBpFqs=
   file: "./assembly/target/cytoscape-unix-3.8.0-SNAPSHOT.tar.gz"
   on:
     repo: cytoscape/cytoscape-gui-distribution
