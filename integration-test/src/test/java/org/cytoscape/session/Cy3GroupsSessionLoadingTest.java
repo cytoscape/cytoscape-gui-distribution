@@ -42,6 +42,7 @@ import org.cytoscape.model.subnetwork.CyRootNetwork;
 import org.cytoscape.model.subnetwork.CySubNetwork;
 import org.cytoscape.work.TaskIterator;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.ops4j.pax.exam.junit.PaxExam;
@@ -57,6 +58,7 @@ public class Cy3GroupsSessionLoadingTest extends BasicIntegrationTest {
 		groupSettingsManager.setGroupViewType(GroupViewType.NONE);
 	}
 
+	@Ignore
 	@Test
 	public void testLoadSession() throws Exception {
 		final TaskIterator ti = openSessionTF.createTaskIterator(sessionFile);
