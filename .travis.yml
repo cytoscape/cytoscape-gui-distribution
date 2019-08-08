@@ -13,5 +13,5 @@ deploy:
   provider: script
   on:
     branch: java11
-  script: "mvn deploy -q"
+  script: "cat $HOME/.m2/settings.xml && mvn deploy -q"
   skip_cleanup: true
