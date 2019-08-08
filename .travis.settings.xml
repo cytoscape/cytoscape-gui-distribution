@@ -54,6 +54,8 @@
           </snapshots>
           <releases>
             <enabled>true</enabled>
+            <updatePolicy>always</updatePolicy>
+            <checksumPolicy>warn</checksumPolicy>
           </releases>
           <name>Cytoscape Third Party</name>
           <url>http://nrnb-nexus.ucsd.edu/repository/cytoscape_thirdparty/</url>
