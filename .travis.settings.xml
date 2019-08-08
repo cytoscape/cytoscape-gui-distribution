@@ -27,6 +27,8 @@
           <id>cytoscape_snapshots</id>
           <snapshots>
             <enabled>true</enabled>
+            <updatePolicy>always</updatePolicy>
+            <checksumPolicy>warn</checksumPolicy>
           </snapshots>
           <releases>
             <enabled>false</enabled>
