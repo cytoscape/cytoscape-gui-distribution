@@ -107,6 +107,30 @@
             <outputDirectory>/framework/lib/boot</outputDirectory>
         </fileSet>
 
+		<fileSet>
+            <directory>target/dependencies/openjfx/win</directory>
+            <includes>
+                <include>*.jar</include>
+            </includes>
+            <outputDirectory>/framework/lib/openjfx/win</outputDirectory>
+        </fileSet>
+
+		<fileSet>
+            <directory>target/dependencies/openjfx/mac</directory>
+            <includes>
+                <include>*.jar</include>
+            </includes>
+            <outputDirectory>/framework/lib/openjfx/mac</outputDirectory>
+        </fileSet>
+
+		<fileSet>
+            <directory>target/dependencies/openjfx/linux</directory>
+            <includes>
+                <include>*.jar</include>
+            </includes>
+            <outputDirectory>/framework/lib/openjfx/linux</outputDirectory>
+        </fileSet>
+
         <fileSet>
             <directory>target/dependencies/splash-launcher/images</directory>
             <includes>

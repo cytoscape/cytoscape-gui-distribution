@@ -21,6 +21,7 @@ import org.cytoscape.model.subnetwork.CyRootNetwork;
 import org.cytoscape.model.subnetwork.CySubNetwork;
 import org.cytoscape.work.TaskIterator;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 /**
@@ -36,6 +37,7 @@ public class Cy3CollapsedGroupsSessionLoadingTest extends BasicIntegrationTest {
 		groupSettingsManager.setGroupViewType(GroupViewType.NONE);
 	}
 
+	@Ignore
 	@Test
 	public void testLoadSession() throws Exception {
 		final TaskIterator ti = openSessionTF.createTaskIterator(sessionFile);

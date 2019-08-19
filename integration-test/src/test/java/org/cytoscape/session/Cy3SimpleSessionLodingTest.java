@@ -62,6 +62,7 @@ import org.cytoscape.view.vizmap.VisualStyle;
 import org.cytoscape.view.vizmap.mappings.PassthroughMapping;
 import org.cytoscape.work.TaskIterator;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.ops4j.pax.exam.junit.PaxExam;
@@ -79,6 +80,7 @@ public class Cy3SimpleSessionLodingTest extends BasicIntegrationTest {
 		checkBasicConfiguration();
 	}
 
+	@Ignore
 	@Test
 	public void testLoadSession() throws Exception {
 		final TaskIterator ti = openSessionTF.createTaskIterator(sessionFile);
