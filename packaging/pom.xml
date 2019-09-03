@@ -12,7 +12,8 @@
   <name>Cytoscape Release Packaging</name>
 
   <properties>
-    <install4j.executable>/usr/local/bin/install4jc</install4j.executable>
+    <install4j.home>/opt/install4j7/</install4j.home>
+    <install4j.macKeystorePassword>${env.MAC_KEYSTORE_PASSWORD}</install4j.macKeystorePassword>
   </properties>
 
     <!-- bootstrap for cytoscape dependencies, namely the parent POM snapshots -->
@@ -101,24 +102,20 @@
       </plugin>
       <!-- This will create the bundles -->
       <plugin>
-        <groupId>com.google.code.maven-install4j</groupId>
-        <artifactId>maven-install4j-plugin</artifactId>
-        <version>0.1.1</version>
+        <groupId>org.sonatype.install4j</groupId>
+        <artifactId>install4j-maven-plugin</artifactId>
         <executions>
           <execution>
-            <phase>compile</phase>
+            <id>compile-installers</id>
+            <phase>package</phase>
             <goals>
               <goal>compile</goal>
             </goals>
+            <configuration>
+              <projectFile>${project.build.outputDirectory}/Cytoscape.install4j</projectFile>
+            </configuration>
           </execution>
         </executions>
-        <configuration>
-          <executable>${install4j.executable}</executable>
-          <configFile>${project.build.outputDirectory}/Cytoscape.install4j</configFile>
-          <releaseId>${project.version}</releaseId>
-          <attach>true</attach>
-          <skipOnMissingExecutable>true</skipOnMissingExecutable>
-        </configuration>
       </plugin>
     </plugins>
   </build>
