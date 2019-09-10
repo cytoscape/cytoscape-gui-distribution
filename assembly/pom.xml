@@ -608,8 +608,8 @@
 									<value />
 								</replacement>
 								<replacement>
-									<token>--patch-module java.xml=lib/endorsed/org.apache.karaf.specs.locator-${karaf.version}.jar \</token>
-									<value>--patch-module java.xml=$KARAF_HOME/lib/endorsed/org.apache.karaf.specs.locator-${karaf.version}.jar \</value>
+									<token>--patch-module java.base=lib/endorsed/org.apache.karaf.specs.locator-${karaf.version}.jar \</token>
+									<value>--patch-module java.base=$KARAF_HOME/lib/endorsed/org.apache.karaf.specs.locator-${karaf.version}.jar \</value>
 								</replacement>
 								<replacement>
 									<token>--patch-module java.xml=lib/endorsed/org.apache.karaf.specs.java.xml-${karaf.version}.jar \</token>
