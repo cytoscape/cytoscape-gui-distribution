@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<install4j version="7.0.4" transformSequenceNumber="7">
-  <directoryPresets config="../../../target" />
-  <application name="Cytoscape" distributionSourceDir="" applicationId="5211-3645-3154-2580" mediaDir="dist" mediaFilePattern="${compiler:sys.shortName}_${compiler:sys.version}_${compiler:sys.platform}" compression="6" lzmaCompression="false" pack200Compression="false" excludeSignedFromPacking="true" commonExternalFiles="false" createMd5Sums="true" shrinkRuntime="true" shortName="Cytoscape" publisher="Cytoscape Consortium" publisherWeb="http://www.cytoscape.org" version="${version}" allPathsRelative="true" backupOnSave="false" autoSave="false" convertDotsToUnderscores="true" macSignature="????" macVolumeId="60ff7381dde234ab" javaMinVersion="1.8.0_152" javaMaxVersion="9" allowBetaVM="true" jdkMode="runtimeJre" jdkName="">
+<install4j version="7.0.12" transformSequenceNumber="7">
+  <directoryPresets config="/home/cybuilder/cytoscape.p12" />
+  <application name="Cytoscape" distributionSourceDir="" applicationId="5211-3645-3154-2580" mediaDir="dist" mediaFilePattern="${compiler:sys.shortName}_${compiler:sys.version}_${compiler:sys.platform}" compression="6" lzmaCompression="false" pack200Compression="false" excludeSignedFromPacking="true" commonExternalFiles="false" createMd5Sums="true" shrinkRuntime="true" shortName="Cytoscape" publisher="Cytoscape Consortium" publisherWeb="http://www.cytoscape.org" version="${version}" allPathsRelative="false" backupOnSave="false" autoSave="false" convertDotsToUnderscores="true" macSignature="????" macVolumeId="60ff7381dde234ab" javaMinVersion="11.0" javaMaxVersion="12" allowBetaVM="true" jdkMode="jdk" jdkName="">
     <languages skipLanguageSelection="false" languageSelectionInPrincipalLanguage="false">
       <principalLanguage id="en" customLocalizationFile="" />
       <additionalLanguages />
@@ -12,9 +12,13 @@
     </searchSequence>
     <variables>
       <variable name="WINDOWS_VERSION" value="@windows_version@" description="" category="" />
+      <variable name="JAVAFX_NATIVE_DIR" value="" description="OS-specific path to the OpenJFX native files in the Karaf framework." category="" />
     </variables>
     <mergedProjects />
-    <codeSigning macEnabled="false" macPkcs12File="" windowsEnabled="false" windowsKeySource="pkcs12" windowsPvkFile="" windowsSpcFile="" windowsPkcs12File="" />
+    <codeSigning macEnabled="true" macPkcs12File="/home/cybuilder/cytoscape.p12" windowsEnabled="false" windowsKeySource="pkcs12" windowsPvkFile="" windowsSpcFile="" windowsPkcs12File="" windowsPkcs11Library="" windowsPkcs11Slot="">
+      <windowsKeystoreIdentifier issuer="" serial="" subject="" />
+      <windowsPkcs11Identifier issuer="" serial="" subject="" />
+    </codeSigning>
   </application>
   <files keepModificationTimes="false" missingFilesStrategy="warn" globalExcludeSuffixes="" defaultOverwriteMode="4" defaultUninstallMode="0" launcherOverwriteMode="3" defaultFileMode="644" defaultDirMode="755">
     <filesets>
@@ -67,19 +71,27 @@
           <versionLine x="20" y="40" text="version ${compiler:sys.version}" fontSize="8" fontColor="0,0,0" bold="false" />
         </text>
       </splashScreen>
-      <java mainClass="org.cytoscape.launcher.internal.Launcher" mainMode="1" vmParameters="-Dcom.sun.management.jmxremote &quot;-Djava.endorsed.dirs=${launcher:sys.jvmHome}/jre/lib/endorsed${launcher:sys.pathlistSeparator}${launcher:sys.jvmHome}/lib/endorsed${launcher:sys.pathlistSeparator}${launcher:sys.launcherDirectory}/framework/lib/endorsed&quot; &quot;-Djava.ext.dirs=${launcher:sys.jvmHome}/jre/lib/ext${launcher:sys.pathlistSeparator}${launcher:sys.jvmHome}/lib/ext${launcher:sys.pathlistSeparator}${launcher:sys.launcherDirectory}/framework/lib/ext&quot; &quot;-Dkaraf.instances=${launcher:sys.launcherDirectory}/framework/instances&quot;  &quot;-Dkaraf.home=${launcher:sys.launcherDirectory}/framework&quot; &quot;-Dkaraf.base=${launcher:sys.launcherDirectory}/framework&quot; &quot;-Dkaraf.etc=${launcher:sys.launcherDirectory}/framework/etc&quot; &quot;-Djava.util.logging.config.file=${launcher:sys.launcherDirectory}/framework/etc/java.util.logging.properties&quot; &quot;-Dcytoscape.home=${launcher:sys.launcherDirectory}&quot;  -Dkaraf.startLocalConsole=false  -Dkaraf.startRemoteShell=false" arguments="" allowVMPassthroughParameters="true" preferredVM="" bundleRuntime="true">
+      <java mainClass="org.cytoscape.launcher.internal.Launcher" mainMode="1" vmParameters="--add-reads=java.xml=java.logging --add-exports=java.base/org.apache.karaf.specs.locator=java.xml,ALL-UNNAMED --patch-module java.base=&quot;${launcher:sys.launcherDirectory}/framework/lib/endorsed/org.apache.karaf.specs.locator-4.2.4.jar&quot; --patch-module java.xml=&quot;${launcher:sys.launcherDirectory}/framework/lib/endorsed/org.apache.karaf.specs.java.xml-4.2.4.jar&quot; -p &quot;${launcher:sys.launcherDirectory}/framework/lib/openjfx/${compiler:JAVAFX_NATIVE_DIR}&quot; --add-modules javafx.base,javafx.swing,javafx.media,javafx.web,java.scripting,java.sql --add-opens java.base/java.security=ALL-UNNAMED --add-opens java.base/java.net=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.naming/javax.naming.spi=ALL-UNNAMED --add-opens java.rmi/sun.rmi.transport.tcp=ALL-UNNAMED --add-exports=java.base/sun.net.www.protocol.http=ALL-UNNAMED --add-exports=java.base/sun.net.www.protocol.https=ALL-UNNAMED --add-exports=java.base/sun.net.www.protocol.jar=ALL-UNNAMED --add-exports=jdk.xml.dom/org.w3c.dom.html=ALL-UNNAMED --add-exports=jdk.naming.rmi/com.sun.jndi.url.rmi=ALL-UNNAMED -Dkaraf.instances=&quot;${installer:sys.userHome}/CytoscapeConfiguration/3/karaf_data/instances&quot; -Dkaraf.home=&quot;${launcher:sys.launcherDirectory}/framework&quot; -Dkaraf.base=&quot;${launcher:sys.launcherDirectory}/framework&quot; -Dkaraf.data=&quot;${installer:sys.userHome}/CytoscapeConfiguration/3/karaf_data&quot; -Dkaraf.etc=&quot;${launcher:sys.launcherDirectory}/framework/etc&quot; -Dkaraf.log=&quot;${installer:sys.userHome}/CytoscapeConfiguration/3/karaf_data/log&quot; -Dkaraf.restart.jvm.supported=true -Djava.io.tmpdir=&quot;${installer:sys.userHome}/CytoscapeConfiguration/3/karaf_data/tmp&quot; -Djava.util.logging.config.file=&quot;${launcher:sys.launcherDirectory}/framework/etc/java.util.logging.properties&quot; -Dcytoscape.home=&quot;${launcher:sys.launcherDirectory}&quot; -Dkaraf.startLocalConsole=false -Dkaraf.startRemoteShell=false" arguments="" allowVMPassthroughParameters="true" preferredVM="" bundleRuntime="true">
         <classPath>
           <scanDirectory location="." failOnError="false" />
           <directory location="lib/boot" failOnError="false" />
           <archive location="./framework/lib/boot/branding-${version}.jar" failOnError="false" />
           <archive location="./framework/lib/boot/karaf-launcher-${version}.jar" failOnError="false" />
-          <archive location="./framework/lib/boot/org.apache.karaf.diagnostic.boot-4.2.0.jar" failOnError="false" />
-          <archive location="./framework/lib/boot/org.apache.karaf.jaas.boot-4.2.0.jar" failOnError="false" />
-          <archive location="./framework/lib/boot/org.apache.karaf.main-4.2.0.jar" failOnError="false" />
-          <archive location="./framework/lib/boot/org.apache.karaf.specs.activator-4.2.0.jar" failOnError="false" />
+          <archive location="./framework/lib/boot/org.apache.karaf.diagnostic.boot-4.2.4.jar" failOnError="false" />
+          <archive location="./framework/lib/boot/org.apache.karaf.jaas.boot-4.2.4.jar" failOnError="false" />
+          <archive location="./framework/lib/boot/org.apache.karaf.main-4.2.4.jar" failOnError="false" />
+          <archive location="./framework/lib/boot/org.apache.karaf.specs.activator-4.2.4.jar" failOnError="false" />
           <archive location="./framework/lib/boot/org.osgi.core-6.0.0.jar" failOnError="false" />
+          <archive location="./framework/lib/jdk9plus/istack-commons-runtime-3.0.8.jar" failOnError="false" />
+          <archive location="./framework/lib/jdk9plus/jakarta.xml.bind-api-2.3.2.jar" failOnError="false" />
+          <archive location="./framework/lib/jdk9plus/javax.activation-1.2.0.jar" failOnError="false" />
+          <archive location="./framework/lib/jdk9plus/javax.annotation-api-1.3.jar" failOnError="false" />
+          <archive location="./framework/lib/jdk9plus/jaxb-runtime-2.3.2.jar" failOnError="false" />
+          <archive location="./framework/lib/jdk9plus/txw2-2.3.2.jar" failOnError="false" />
         </classPath>
-        <modulePath />
+        <modulePath>
+          <directory location="./framework/lib/openjfx/${compiler:JAVAFX_NATIVE_DIR}/" failOnError="false" />
+        </modulePath>
         <nativeLibraryDirectories />
         <vmOptions />
       </java>
@@ -1781,7 +1793,7 @@ return console.askYesNo(message, true);
               <group name="" id="530" customizedId="" beanClass="com.install4j.runtime.beans.groups.VerticalFormComponentGroup" enabled="true" commentSet="false" comment="" actionElevationType="inherit" useExternalParametrization="true" externalParametrizationName="Customize title bar" externalParametrizationMode="include">
                 <serializedBean>
                   <java class="java.beans.XMLDecoder">
-                    <object class="com.install4j.runtime.beans.groups.VerticalFormComponentGroup">
+                    <object class="com.install4j.runtime.beans.groups.VerticalFormComponentGroup" id="VerticalFormComponentGroup0">
                       <void property="backgroundColor">
                         <object class="java.awt.Color">
                           <int>255</int>
@@ -1811,19 +1823,21 @@ return console.askYesNo(message, true);
                           <string>icon:${installer:sys.installerApplicationMode}_header.png</string>
                         </object>
                       </void>
+                      <void id="Integer0" property="cellSpacing" />
+                      <void id="Integer1" property="borderWidth" />
                       <void property="imageInsets">
                         <object class="java.awt.Insets">
-                          <int>0</int>
+                          <object idref="Integer0" />
                           <int>5</int>
-                          <int>1</int>
-                          <int>1</int>
+                          <object idref="Integer1" />
+                          <object idref="Integer1" />
                         </object>
                       </void>
                       <void property="insets">
                         <object class="java.awt.Insets">
-                          <int>0</int>
+                          <object idref="Integer0" />
                           <int>20</int>
-                          <int>0</int>
+                          <object idref="Integer0" />
                           <int>10</int>
                         </object>
                       </void>
@@ -1905,16 +1919,17 @@ return console.askYesNo(message, true);
               <group name="" id="534" customizedId="" beanClass="com.install4j.runtime.beans.groups.HorizontalFormComponentGroup" enabled="true" commentSet="false" comment="" actionElevationType="inherit" useExternalParametrization="false" externalParametrizationName="" externalParametrizationMode="all">
                 <serializedBean>
                   <java class="java.beans.XMLDecoder">
-                    <object class="com.install4j.runtime.beans.groups.HorizontalFormComponentGroup">
+                    <object class="com.install4j.runtime.beans.groups.HorizontalFormComponentGroup" id="HorizontalFormComponentGroup0">
                       <void property="alignFirstLabel">
                         <boolean>false</boolean>
                       </void>
+                      <void id="Integer0" property="cellSpacing" />
                       <void property="insets">
                         <object class="java.awt.Insets">
                           <int>3</int>
-                          <int>5</int>
+                          <object idref="Integer0" />
                           <int>8</int>
-                          <int>5</int>
+                          <object idref="Integer0" />
                         </object>
                       </void>
                     </object>
@@ -2001,7 +2016,7 @@ return console.askYesNo(message, true);
     </styles>
   </installerGui>
   <mediaSets>
-    <windows name="Windows 64 bit" id="11" customizedId="" mediaFileName="Cytoscape_${compiler:sys.version}_windows_64bit" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true" jreBitType="64" runPostProcessor="false" postProcessor="" failOnPostProcessorError="false" useLegacyMediaFileIds="false" legacyMediaFileIds="" downloadURL="" includeAllDownloadableComponents="false" includedJRE="windows-amd64-1.8.0_162" manualJREEntry="false" bundleType="2" jreURL="http://chianti.ucsd.edu/jres/windows-amd64-1.8.0_162.tar.gz" jreShared="true" directDownload="false" installOnlyIfNecessary="false" customInstallBaseDir="" contentFilesType="1" verifyIntegrity="true">
+    <windows name="Windows 64 bit" id="11" customizedId="" mediaFileName="Cytoscape_${compiler:sys.version}_windows_64bit" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true" jreBitType="64" runPostProcessor="false" postProcessor="" failOnPostProcessorError="false" useLegacyMediaFileIds="false" legacyMediaFileIds="" downloadURL="" includeAllDownloadableComponents="false" includedJRE="windows-amd64-11.0.3" manualJREEntry="false" bundleType="2" jreURL="http://chianti.ucsd.edu/jres/windows-amd64-11.0.3.tar.gz" jreShared="true" directDownload="false" installOnlyIfNecessary="false" customInstallBaseDir="" contentFilesType="1" verifyIntegrity="true">
       <excludedComponents>
         <component id="235" />
       </excludedComponents>
@@ -2014,7 +2029,9 @@ return console.askYesNo(message, true);
       <exclude>
         <entry location=".i4j_fileset_227" fileType="regular" />
       </exclude>
-      <variables />
+      <variables>
+        <variable name="JAVAFX_NATIVE_DIR" value="win" description="" category="" />
+      </variables>
       <autoUpdate useMinUpdatableVersion="false" minUpdatableVersion="" useMaxUpdatableVersion="false" maxUpdatableVersion="">
         <commentFiles />
         <customAttributes />
@@ -2033,13 +2050,15 @@ return console.askYesNo(message, true);
       <exclude>
         <entry location=".i4j_fileset_227" fileType="regular" />
       </exclude>
-      <variables />
+      <variables>
+        <variable name="JAVAFX_NATIVE_DIR" value="win" description="" category="" />
+      </variables>
       <autoUpdate useMinUpdatableVersion="false" minUpdatableVersion="" useMaxUpdatableVersion="false" maxUpdatableVersion="">
         <commentFiles />
         <customAttributes />
       </autoUpdate>
     </windows>
-    <macosFolder name="Mac OS X" id="9" customizedId="" mediaFileName="" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true" jreBitType="all" runPostProcessor="false" postProcessor="" failOnPostProcessorError="false" useLegacyMediaFileIds="false" legacyMediaFileIds="" downloadURL="" includeAllDownloadableComponents="false" includedJRE="macosx-amd64-1.8.0_162" manualJREEntry="false" bundleType="2" jreURL="http://chianti.ucsd.edu/jres/macosx-amd64-1.8.0_162.tar.gz" jreShared="false" directDownload="false" installOnlyIfNecessary="false" requiredVmIdPrefix="" customInstallBaseDir="" contentFilesType="1" installerName="${i18n:InstallerName(${compiler:sys.fullName})}" volumeName="${compiler:sys.shortName}" compressDmg="false" signLaunchers="false">
+    <macosFolder name="Mac OS X" id="9" customizedId="" mediaFileName="" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true" jreBitType="all" runPostProcessor="false" postProcessor="" failOnPostProcessorError="false" useLegacyMediaFileIds="false" legacyMediaFileIds="" downloadURL="" includeAllDownloadableComponents="false" includedJRE="macosx-amd64-11.0.3" manualJREEntry="false" bundleType="2" jreURL="http://chianti.ucsd.edu/jres/macosx-amd64-11.0.3.tar.gz" jreShared="false" directDownload="false" installOnlyIfNecessary="false" requiredVmIdPrefix="" customInstallBaseDir="" contentFilesType="1" installerName="${i18n:InstallerName(${compiler:sys.fullName})}" volumeName="${compiler:sys.shortName}" compressDmg="false" signLaunchers="false">
       <excludedComponents>
         <component id="234" />
       </excludedComponents>
@@ -2050,7 +2069,9 @@ return console.askYesNo(message, true);
       <exclude>
         <entry location=".i4j_fileset_225" fileType="regular" />
       </exclude>
-      <variables />
+      <variables>
+        <variable name="JAVAFX_NATIVE_DIR" value="mac" description="" category="" />
+      </variables>
       <autoUpdate useMinUpdatableVersion="false" minUpdatableVersion="" useMaxUpdatableVersion="false" maxUpdatableVersion="">
         <commentFiles />
         <customAttributes />
@@ -2070,7 +2091,9 @@ return console.askYesNo(message, true);
       <exclude>
         <entry location=".i4j_fileset_225" fileType="regular" />
       </exclude>
-      <variables />
+      <variables>
+        <variable name="JAVAFX_NATIVE_DIR" value="linux" description="" category="" />
+      </variables>
       <autoUpdate useMinUpdatableVersion="false" minUpdatableVersion="" useMaxUpdatableVersion="false" maxUpdatableVersion="">
         <commentFiles />
         <customAttributes />
