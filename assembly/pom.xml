@@ -175,7 +175,7 @@
 									<type>jar</type>
 									<outputDirectory>target/dependencies/launcher</outputDirectory>
 								</artifactItem>
-								
+
 								<!-- JavaFX Mac -->
 								<artifactItem>
 									<groupId>org.openjfx</groupId>
@@ -233,7 +233,7 @@
 									<classifier>mac</classifier>
 									<outputDirectory>target/dependencies/openjfx/mac</outputDirectory>
 								</artifactItem>
-								
+
 								<!-- JavaFX Linux -->
 								<artifactItem>
 									<groupId>org.openjfx</groupId>
@@ -291,7 +291,7 @@
 									<classifier>linux</classifier>
 									<outputDirectory>target/dependencies/openjfx/linux</outputDirectory>
 								</artifactItem>
-								
+
 								<!-- JavaFX Windows -->
 								<artifactItem>
 									<groupId>org.openjfx</groupId>
@@ -448,7 +448,7 @@
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>cy-rest</artifactId>
-									<version>3.8.0</version>
+									<version>3.10.0-SNAPSHOT</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
@@ -649,7 +649,7 @@
 								</replacement>
 								<replacement>
 									<token>(__reg2.txt)</token>
-									<!-- Dirty hack: "%CD:~0,0%" expands to the empty string. That way, 
+									<!-- Dirty hack: "%CD:~0,0%" expands to the empty string. That way,
 										the replacements below won't affect this one -->
 									<value>(%TEMP%\_%CD:~0,0%_reg2.txt)</value>
 								</replacement>
