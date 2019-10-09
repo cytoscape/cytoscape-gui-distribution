@@ -147,7 +147,7 @@ public abstract class BasicIntegrationTest {
 		return options(
 				karafDistributionConfiguration().frameworkUrl(
 			            maven().groupId("org.apache.karaf").artifactId("apache-karaf").type("zip").versionAsInProject())
-			            .karafVersion("3.0.2").name("Apache Karaf").useDeployFolder(false),
+			            .karafVersion("4.2.4").name("Apache Karaf").useDeployFolder(false),
 				systemProperty("org.osgi.framework.system.packages.extra").value("com.sun.xml.internal.bind"),
 				junitBundles(),
 				vmOption("-Xmx512M"),
@@ -165,7 +165,7 @@ public abstract class BasicIntegrationTest {
 				mavenBundle().groupId("org.apache.servicemix.bundles").artifactId("org.apache.servicemix.bundles.jaxb-impl").version("2.1.6_1").startLevel(3),
 				mavenBundle().groupId("javax.activation").artifactId("com.springsource.javax.activation").version("1.1.1").startLevel(3),
 				mavenBundle().groupId("javax.xml.stream").artifactId("com.springsource.javax.xml.stream").version("1.0.1").startLevel(3),
-				mavenBundle().groupId("javax.ws.rs").artifactId("javax.ws.rs-api").version("2.0").startLevel(3),
+				mavenBundle().groupId("javax.ws.rs").artifactId("javax.ws.rs-api").version("2.1").startLevel(3),
 				mavenBundle().groupId("commons-io").artifactId("commons-io").version("2.1").startLevel(3),
 			
 				// Third-party bundle
