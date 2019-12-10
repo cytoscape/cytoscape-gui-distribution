@@ -490,7 +490,7 @@
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>cy-ndex-2</artifactId>
-									<version>2.4.0-SNAPSHOT</version>
+									<version>3.0.0</version>
 									<type>jar</type>
 								</artifactItem>
 							</artifactItems>
