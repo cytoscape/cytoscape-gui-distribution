@@ -44,12 +44,6 @@
           <name>Cytoscape Releases</name>
           <url>http://nrnb-nexus.ucsd.edu/repository/cytoscape_releases/</url>
        </repository>
-
-				<repository>
-					<id>freehep-maven</id>
-					<name>Maven FreeHEP</name>
-					<url>http://java.freehep.org/maven2</url>
-				</repository>
   </repositories>
 
   <dependencies>
