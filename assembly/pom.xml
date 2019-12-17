@@ -411,8 +411,8 @@
 								</artifactItem>
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
-									<artifactId>network-analyzer</artifactId>
-									<version>3.3.2</version>
+									<artifactId>analyzer</artifactId>
+									<version>4.2.1</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
