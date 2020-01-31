@@ -7,7 +7,7 @@
 :: If it's set, we dump startup information. Feel free to add startup
 :: information as appropriate.
 
-set CYTOSCAPE_VERSION=Cytoscape version: 3.8.0-SNAPSHOT
+set CYTOSCAPE_VERSION=Cytoscape version: 3.8.0
 
 set help=false
 IF "%1"=="-h" set help=true
