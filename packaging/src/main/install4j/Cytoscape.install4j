@@ -2098,7 +2098,7 @@ return console.askYesNo(message, true);
     </styles>
   </installerGui>
   <mediaSets>
-    <windows name="Windows 64 bit" id="11" customizedId="" mediaFileName="Cytoscape_${compiler:sys.version}_windows_64bit" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true" jreBitType="64" runPostProcessor="false" postProcessor="" failOnPostProcessorError="false" useLegacyMediaFileIds="false" legacyMediaFileIds="" downloadURL="" includeAllDownloadableComponents="false" includedJRE="windows-amd64-11.0.3" manualJREEntry="false" bundleType="2" jreURL="http://chianti.ucsd.edu/jres/windows-amd64-11.0.3.tar.gz" jreShared="true" directDownload="false" installOnlyIfNecessary="false" customInstallBaseDir="" contentFilesType="1" verifyIntegrity="true">
+    <windows name="Windows 64 bit" id="11" customizedId="" mediaFileName="Cytoscape_${compiler:sys.version}_windows_64bit" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true" jreBitType="64" runPostProcessor="false" postProcessor="" failOnPostProcessorError="false" useLegacyMediaFileIds="false" legacyMediaFileIds="" downloadURL="" includeAllDownloadableComponents="false" includedJRE="windows-amd64-11.0.6" manualJREEntry="false" bundleType="2" jreURL="https://cytoscape-builds.ucsd.edu/jres/windows-amd64-11.0.6.tar.gz" jreShared="true" directDownload="false" installOnlyIfNecessary="false" customInstallBaseDir="" contentFilesType="1" verifyIntegrity="true">
       <excludedComponents>
         <component id="235" />
       </excludedComponents>
@@ -2119,7 +2119,7 @@ return console.askYesNo(message, true);
         <customAttributes />
       </autoUpdate>
     </windows>
-    <windows name="Windows 32 bit" id="395" customizedId="" mediaFileName="Cytoscape_${compiler:sys.version}_windows_32bit" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true" jreBitType="32" runPostProcessor="false" postProcessor="" failOnPostProcessorError="false" useLegacyMediaFileIds="false" legacyMediaFileIds="" downloadURL="" includeAllDownloadableComponents="false" includedJRE="windows-x86-1.8.0_162" manualJREEntry="false" bundleType="2" jreURL="http://chianti.ucsd.edu/jres/windows-x86-1.8.0_162.tar.gz" jreShared="true" directDownload="false" installOnlyIfNecessary="false" customInstallBaseDir="" contentFilesType="1" verifyIntegrity="true">
+    <windows name="Windows 32 bit" id="395" customizedId="" mediaFileName="Cytoscape_${compiler:sys.version}_windows_32bit" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true" jreBitType="32" runPostProcessor="false" postProcessor="" failOnPostProcessorError="false" useLegacyMediaFileIds="false" legacyMediaFileIds="" downloadURL="" includeAllDownloadableComponents="false" includedJRE="" manualJREEntry="false" bundleType="2" jreURL="http://chianti.ucsd.edu/jres/windows-x86-1.8.0_162.tar.gz" jreShared="true" directDownload="false" installOnlyIfNecessary="false" customInstallBaseDir="" contentFilesType="1" verifyIntegrity="true">
       <excludedComponents>
         <component id="235" />
       </excludedComponents>
@@ -2140,7 +2140,7 @@ return console.askYesNo(message, true);
         <customAttributes />
       </autoUpdate>
     </windows>
-    <macosFolder name="Mac OS X" id="9" customizedId="" mediaFileName="" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true" jreBitType="all" runPostProcessor="false" postProcessor="" failOnPostProcessorError="false" useLegacyMediaFileIds="false" legacyMediaFileIds="" downloadURL="" includeAllDownloadableComponents="false" includedJRE="macosx-amd64-11.0.3" manualJREEntry="false" bundleType="2" jreURL="http://chianti.ucsd.edu/jres/macosx-amd64-11.0.3.tar.gz" jreShared="false" directDownload="false" installOnlyIfNecessary="false" requiredVmIdPrefix="" customInstallBaseDir="" contentFilesType="1" installerName="${i18n:InstallerName(${compiler:sys.fullName})}" volumeName="${compiler:sys.shortName}" compressDmg="false" signLaunchers="false">
+    <macosFolder name="Mac OS X" id="9" customizedId="" mediaFileName="" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true" jreBitType="all" runPostProcessor="false" postProcessor="" failOnPostProcessorError="false" useLegacyMediaFileIds="false" legacyMediaFileIds="" downloadURL="" includeAllDownloadableComponents="false" includedJRE="macosx-amd64-11.0.6" manualJREEntry="false" bundleType="2" jreURL="https://cytoscape-builds.ucsd.edu/jres/macosx-amd64-11.0.6.tar.gz" jreShared="false" directDownload="false" installOnlyIfNecessary="false" requiredVmIdPrefix="" customInstallBaseDir="" contentFilesType="1" installerName="${i18n:InstallerName(${compiler:sys.fullName})}" volumeName="${compiler:sys.shortName}" compressDmg="false" signLaunchers="false">
       <excludedComponents>
         <component id="234" />
       </excludedComponents>
