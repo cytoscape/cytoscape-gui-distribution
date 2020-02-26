@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<features>
+<features name="cytoscape-standard" xmlns="http://karaf.apache.org/xmlns/features/v1.3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://karaf.apache.org/xmlns/features/v1.3.0 http://karaf.apache.org/xmlns/features/v1.3.0">
 
      <feature name="cytoscape-karaf" description="A minimal Karaf distribution for Cytoscape" version="${project.version}">
       <feature>jaas</feature>
@@ -19,31 +19,31 @@
       <feature>service</feature>
       <feature>system</feature>
   </feature>
-  
+
   <feature name="cytoscape-gui" version="${project.version}">
-   
+
     <bundle start-level="1">mvn:org.cytoscape.distribution/diagnostics-impl/${project.version}</bundle>
 
     <bundle start-level="1">mvn:org.cytoscape.distribution/splash-updater-impl/${project.version}</bundle>
-    
+
     <!-- Third-party dependencies should be inlined into the following bundle,
          if possible. -->
     <bundle start-level="103">mvn:org.cytoscape.distribution/third-party/${project.version}</bundle>
 
     <!-- The following bundles have issues with being inlined into the
          third-party bundle. -->
-         
+
     <!-- This is a mess.  It embeds all of its dependencies and mangles their
          package names.  It also exports all of that junk. -->
     <bundle start-level="103">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.xmlbeans/2.4.0_5</bundle>
-    
+
     <!-- This bundle has dependencies on version 1.4 of itself.  Also a
          mess.  Inlining causes problems. -->
     <bundle start-level="103">mvn:commons-io/commons-io/2.1</bundle>
-    
+
     <!-- Not going to inline this either. Because of dependencies... -->
     <bundle start-level="103">mvn:cytoscape-temp/uk.ac.ebi.enfin.mi.cluster.micluster/1.6</bundle>
-    
+
     <!-- The following bundles have packages that are also provided by some
          JREs.  We can't inline these because it will create conflicts when
          the OSGi container needs to choose between the system bundle and the
@@ -58,51 +58,51 @@
     <bundle start-level="103">mvn:javax.ws.rs/javax.ws.rs-api/2.1</bundle>
 
     <bundle start-level="105">mvn:org.cytoscape/cmdline/${cytoscape.support.version}</bundle>
-    
+
     <!-- API bundles should be inlined into the following bundle,
          if possible. -->
     <bundle start-level="105">mvn:org.cytoscape/api-bundle/${cytoscape.api.version}</bundle>
-    
+
     <bundle start-level="110">mvn:org.cytoscape.distribution/cmdline-impl/${project.version}</bundle>
     <bundle start-level="110">mvn:org.cytoscape/property-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="110">mvn:org.cytoscape/event-impl/${cytoscape.impl.version}</bundle>
 
     <bundle start-level="112">mvn:org.cytoscape/util-impl/${cytoscape.impl.version}</bundle>
-    
+
     <bundle start-level="115">mvn:org.cytoscape/datasource-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="115">mvn:org.cytoscape/equations-impl/${cytoscape.impl.version}</bundle>
-    
+
     <bundle start-level="120">mvn:org.cytoscape.distribution/application-metadata-impl/${project.version}</bundle>
     <bundle start-level="120">mvn:org.cytoscape/application-impl/${cytoscape.impl.version}</bundle>
-    
+
     <bundle start-level="125">mvn:org.cytoscape/swing-util-impl/${cytoscape.impl.version}</bundle>
-    
+
     <bundle start-level="130">mvn:org.cytoscape/model-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="130">mvn:org.cytoscape/work-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="130">mvn:org.cytoscape/work-swing-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="130">mvn:org.cytoscape/work-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="130">mvn:org.cytoscape/presentation-impl/${cytoscape.impl.version}</bundle>
-    
+
     <bundle start-level="135">mvn:org.cytoscape/viewmodel-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="135">mvn:org.cytoscape/vizmap-impl/${cytoscape.impl.version}</bundle>
 
     <bundle start-level="136">mvn:org.cytoscape/layout-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="138">mvn:org.cytoscape/group-impl/${cytoscape.impl.version}</bundle>
-    
+
     <bundle start-level="140">mvn:org.cytoscape/session-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="140">mvn:org.cytoscape/vizmap-gui-core-impl/${cytoscape.impl.version}</bundle>
-    
+
     <bundle start-level="145">mvn:org.cytoscape/ding-presentation-impl/${cytoscape.impl.version}</bundle>
-    
+
     <bundle start-level="150">mvn:org.cytoscape/io-impl/${cytoscape.impl.version}</bundle>
 
     <bundle start-level="155">mvn:org.cytoscape/core-task-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="157">mvn:org.cytoscape/command-executor-impl/${cytoscape.impl.version}</bundle>
-    
+
     <bundle start-level="160">mvn:org.cytoscape/swing-application-impl/${cytoscape.impl.version}</bundle>
 
     <bundle start-level="165">mvn:org.cytoscape/jobs-impl/${cytoscape.impl.version}</bundle>
-        
+
     <bundle start-level="170">mvn:org.cytoscape/search-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="170">mvn:org.cytoscape/table-browser-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="170">mvn:org.cytoscape/vizmap-gui-impl/${cytoscape.impl.version}</bundle>
@@ -116,9 +116,9 @@
     <bundle start-level="170">mvn:org.cytoscape/filter2-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="170">mvn:org.cytoscape/graphml-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="170">mvn:org.cytoscape/edge-bundler-impl/${cytoscape.impl.version}</bundle>
-    
+
     <bundle start-level="175">mvn:org.cytoscape/app-impl/${cytoscape.impl.version}</bundle>
-    
+
     <bundle start-level="180">mvn:org.cytoscape/scripting-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="185">mvn:org.cytoscape/gui-cmdline-parser-impl/${cytoscape.impl.version}</bundle>
 
