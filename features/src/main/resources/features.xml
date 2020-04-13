@@ -93,6 +93,7 @@
     <bundle start-level="140">mvn:org.cytoscape/vizmap-gui-core-impl/${cytoscape.impl.version}</bundle>
 
     <bundle start-level="145">mvn:org.cytoscape/ding-presentation-impl/${cytoscape.impl.version}</bundle>
+    <bundle start-level="145">mvn:org.cytoscape/table-presentation-impl/${cytoscape.impl.version}</bundle>
 
     <bundle start-level="150">mvn:org.cytoscape/io-impl/${cytoscape.impl.version}</bundle>
 
