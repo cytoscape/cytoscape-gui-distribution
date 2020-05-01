@@ -1,6 +1,19 @@
 package org.cytoscape.launcher.internal;
 
 import java.awt.BorderLayout;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.RandomAccessFile;
+import java.nio.channels.FileLock;
+import java.nio.file.Files;
+import java.util.HashSet;
+import java.util.LinkedList;
+
+import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
+
+import org.apache.karaf.main.Main;
 
 /*
  * #%L
@@ -8,7 +21,7 @@ import java.awt.BorderLayout;
  * $Id:$
  * $HeadURL:$
  * %%
- * Copyright (C) 2006 - 2013 The Cytoscape Consortium
+ * Copyright (C) 2006 - 2020 The Cytoscape Consortium
  * %%
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as 
@@ -26,22 +39,6 @@ import java.awt.BorderLayout;
  * #L%
  */
 
-import java.awt.Rectangle;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.RandomAccessFile;
-import java.nio.channels.FileLock;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.Set;
-
-import javax.imageio.ImageIO;
-import javax.swing.JFrame;
-import javax.swing.SwingUtilities;
-
-import org.apache.karaf.main.Main;
 
 public class Launcher {
 	
@@ -56,38 +53,38 @@ public class Launcher {
 		showSplashPanel();
 		
 		// Intercept session file double-clicked on Mac OS, passed by file association set by install4j
-		if (isMac()) {
+		if (isMac())
 		    MacHelper.handleStartupArguments();
-		}
 				
 		setDefaultSystemProperties();
 		createConfigurationDirectory();
+		
 		if (isLocked()) {
 			// The main data directory is locked.  We should create a new one.
-			final String dataPath = String.format("%s.%d", System.getProperty("karaf.data"), System.currentTimeMillis());
+			var dataPath = String.format("%s.%d", System.getProperty("karaf.data"), System.currentTimeMillis());
 			
 			System.setProperty("karaf.data", dataPath);
 
 			// Delete this on shutdown, otherwise it uses up a lot of space.
-			Runtime.getRuntime().addShutdownHook(new Thread() {
-				@Override
-				public void run() {
-					File root = new File(dataPath);
-					deleteDirectory(root);
-				}
-			});
+			Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+				File root = new File(dataPath);
+				deleteDirectory(root);
+			}));
 		}
 		Main.main(args);
 	}
 	
 	private static void showSplashPanel() throws IOException {
-		File karafBase = new File(System.getProperty("karaf.base"));
+		var karafBase = new File(System.getProperty("karaf.base"));
 		System.out.println("karaf.base: " + karafBase);
 		System.out.println("JAVA_HOME: " + System.getenv("JAVA_HOME"));
-		BufferedImage background = ImageIO.read(new File(karafBase, "CytoscapeSplashScreen.png"));
-		splashPanel = new SplashPanel(background);
+		
+		var svgFile = new File(karafBase, "CytoscapeSplashScreen.svg");
+		var svg = svgFile.exists() ? Files.readString(svgFile.toPath()) : null;
+		
+		splashPanel = new SplashPanel(svg);
 
-		final JFrame frame = new JFrame();
+		var frame = new JFrame();
 		frame.getContentPane().setLayout(new BorderLayout());
 		frame.getContentPane().add(splashPanel);
 		frame.setUndecorated(true);
@@ -98,39 +95,34 @@ public class Launcher {
 		int height = frame.getPreferredSize().height;
 		
 		// Center the frame in the current screen.
-		Rectangle bounds = frame.getGraphicsConfiguration().getBounds();
+		var bounds = frame.getGraphicsConfiguration().getBounds();
 		frame.setLocation((bounds.width - width) / 2, (bounds.height - height) / 2);
 		
-		SwingUtilities.invokeLater(new Runnable() {
-			@Override
-			public void run() {
-				frame.setVisible(true);
-			}
-		});
+		SwingUtilities.invokeLater(() -> frame.setVisible(true));
 	}
 
 	/**
-	 * Recursively deletes a directory.  This method resolves and follows
-	 * symlinks, so use with caution!
+	 * Recursively deletes a directory. This method resolves and follows symlinks, so use with caution!
 	 */
 	private static void deleteDirectory(File root) {
-		LinkedList<File> pathStack = new LinkedList<File>();
+		var pathStack = new LinkedList<File>();
 		pathStack.push(root);
 		
 		// Track directories we've seen so we can detect cycles and
 		// stubborn files.
-		Set<File> seen = new HashSet<File>();
+		var seen = new HashSet<File>();
 		
 		while (!pathStack.isEmpty()) {
 			File directory = pathStack.pop();
 			File[] files = directory.listFiles();
+			
 			if (files.length == 0) {
 				seen.add(directory);
 				directory.delete();
 			} else {
 				if (seen.contains(directory)) {
 					System.err.printf("Couldn't delete bundle cache: %s\n", directory.getAbsolutePath());
-					 continue;
+					continue;
 				}
 				seen.add(directory);
 				
