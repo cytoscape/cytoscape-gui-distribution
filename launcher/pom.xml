@@ -21,7 +21,7 @@
 		<bundle.namespace>org.cytoscape.launcher</bundle.namespace>
 	</properties>
 
-	<packaging>jar</packaging>
+	<packaging>bundle</packaging>
 
 	<dependencies>
 		<dependency>
@@ -33,6 +33,13 @@
 			<groupId>com.apple.developer</groupId>
 			<artifactId>AppleJavaExtensions</artifactId>
 			<version>1.6</version>
+			<scope>compile</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/guru.nidi.com.kitfox/svgSalamander -->
+		<dependency>
+			<groupId>guru.nidi.com.kitfox</groupId>
+			<artifactId>svgSalamander</artifactId>
+			<version>1.1.3</version>
 			<scope>compile</scope>
 		</dependency>
 	</dependencies>
@@ -50,6 +57,9 @@
 						<Bundle-Version>${project.version}</Bundle-Version>
 						<Export-Package>!${bundle.namespace}.internal.*,${bundle.namespace}.*;version="${project.version}"</Export-Package>
 						<Private-Package>${bundle.namespace}.internal.*</Private-Package>
+						<Import-Package>*;resolution:=optional</Import-Package>
+						<Embed-Dependency>svgSalamander;inline=true</Embed-Dependency>
+						<Embed-Transitive>true</Embed-Transitive>
 						<_include>-osgi.bnd</_include>
 					</instructions>
 				</configuration>

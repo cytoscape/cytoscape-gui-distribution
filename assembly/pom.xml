@@ -393,6 +393,12 @@
 								</artifactItem>
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
+									<artifactId>aMatReader</artifactId>
+									<version>1.2.0</version>
+									<type>jar</type>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.cytoscape</groupId>
 									<artifactId>biopax</artifactId>
 									<version>3.4.0</version>
 									<type>jar</type>

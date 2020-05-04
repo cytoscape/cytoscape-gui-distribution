@@ -132,6 +132,13 @@
         </fileSet>
 
         <fileSet>
+            <directory>target/dependencies/splash-launcher/images/versioned-svg</directory>
+            <includes>
+                <include>CytoscapeSplashScreen.svg</include>
+            </includes>
+            <outputDirectory>/framework</outputDirectory>
+        </fileSet>
+        <fileSet>
             <directory>target/dependencies/splash-launcher/images</directory>
             <includes>
                 <include>CytoscapeSplashScreen.png</include>
