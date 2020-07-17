@@ -418,7 +418,7 @@
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>analyzer</artifactId>
-									<version>4.4.0</version>
+									<version>4.4.6</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
@@ -429,8 +429,8 @@
 								</artifactItem>
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
-									<artifactId>merge</artifactId>
-									<version>3.8.0</version>
+									<artifactId>network-merge</artifactId>
+									<version>3.9.2</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
