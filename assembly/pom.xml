@@ -418,7 +418,7 @@
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>analyzer</artifactId>
-									<version>4.4.0</version>
+									<version>4.4.6</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
@@ -429,8 +429,8 @@
 								</artifactItem>
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
-									<artifactId>merge</artifactId>
-									<version>3.8.0</version>
+									<artifactId>network-merge</artifactId>
+									<version>3.9.2</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
@@ -460,7 +460,7 @@
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>cy-rest</artifactId>
-									<version>3.12.0-SNAPSHOT</version>
+									<version>3.12.1-SNAPSHOT</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
@@ -490,19 +490,19 @@
 								<artifactItem>
 									<groupId>edu.ucsf.rbvi</groupId>
 									<artifactId>cyBrowser</artifactId>
-									<version>1.2.1</version>
+									<version>1.2.3</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>cx-support</artifactId>
-									<version>2.4.3</version>
+									<version>2.5.0</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>cy-ndex-2</artifactId>
-									<version>3.2.2</version>
+									<version>3.3.0</version>
 									<type>jar</type>
 								</artifactItem>
 							</artifactItems>
