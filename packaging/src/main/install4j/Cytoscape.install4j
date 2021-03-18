@@ -834,7 +834,7 @@ return true;
 
 // Set the JVM options based on the amount of physical memory and the bitness of the JVM being used
 
-String[] vmoptions = new String[2];
+String[] vmoptions = new String[3];
 Long xmxValue = Math.round(SystemInfo.getPhysicalMemory() * 0.95 / 1024 / 1024);
 
 if(!System.getProperty("os.arch").contains("64")){ //not 64-bit
@@ -848,6 +848,7 @@ Long xmsValue = Math.min(xmxValue, 2048);
 
 vmoptions[0] = "-Xms" + xmsValue + "M";
 vmoptions[1] = "-Xmx" + xmxValue + "M";
+vmoptions[2] = "-Xss5M";
 
 context.setVariable("vmoptions", vmoptions);
 return true;
