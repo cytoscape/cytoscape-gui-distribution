@@ -39,6 +39,7 @@ set physmem=%physmem:,=%
 :setVmoptions
 	echo -Xms%minmem%M>Cytoscape.vmoptions
 	echo -Xmx%maxmem%M>>Cytoscape.vmoptions
+	echo -Xss5M>>Cytoscape.vmoptions
 	goto End
 
 :Nojava

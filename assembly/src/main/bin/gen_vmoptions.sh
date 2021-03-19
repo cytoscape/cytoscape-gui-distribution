@@ -49,5 +49,6 @@ fi
 
 echo "-Xms"${minmem}M> "$vm_options_path/Cytoscape.vmoptions"
 echo "-Xmx"${maxmem}M>> "$vm_options_path/Cytoscape.vmoptions"
+echo "-Xss5M">> "$vm_options_path/Cytoscape.vmoptions"
 
 exit 0
