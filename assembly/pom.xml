@@ -180,7 +180,7 @@
 								<artifactItem>
 									<groupId>org.openjfx</groupId>
     								<artifactId>javafx-base</artifactId>
-    								<version>13</version>
+    								<version>15.0.1</version>
     								<type>jar</type>
     								<classifier>mac</classifier>
 									<outputDirectory>target/dependencies/openjfx/mac</outputDirectory>
@@ -188,7 +188,7 @@
 								<artifactItem>
 									<groupId>org.openjfx</groupId>
     								<artifactId>javafx-controls</artifactId>
-    								<version>13</version>
+    								<version>15.0.1</version>
     								<type>jar</type>
 									<classifier>mac</classifier>
 									<outputDirectory>target/dependencies/openjfx/mac</outputDirectory>
@@ -196,7 +196,7 @@
 								<artifactItem>
 									<groupId>org.openjfx</groupId>
     								<artifactId>javafx-fxml</artifactId>
-    								<version>13</version>
+    								<version>15.0.1</version>
     								<type>jar</type>
 									<classifier>mac</classifier>
 									<outputDirectory>target/dependencies/openjfx/mac</outputDirectory>
@@ -204,7 +204,7 @@
 								<artifactItem>
 									<groupId>org.openjfx</groupId>
     								<artifactId>javafx-graphics</artifactId>
-    								<version>13</version>
+    								<version>15.0.1</version>
     								<type>jar</type>
 									<classifier>mac</classifier>
 									<outputDirectory>target/dependencies/openjfx/mac</outputDirectory>
@@ -212,7 +212,7 @@
 								<artifactItem>
 									<groupId>org.openjfx</groupId>
     								<artifactId>javafx-media</artifactId>
-    								<version>13</version>
+    								<version>15.0.1</version>
     								<type>jar</type>
 									<classifier>mac</classifier>
 									<outputDirectory>target/dependencies/openjfx/mac</outputDirectory>
@@ -220,7 +220,7 @@
 								<artifactItem>
 									<groupId>org.openjfx</groupId>
     								<artifactId>javafx-swing</artifactId>
-    								<version>13</version>
+    								<version>15.0.1</version>
     								<type>jar</type>
 									<classifier>mac</classifier>
 									<outputDirectory>target/dependencies/openjfx/mac</outputDirectory>
@@ -228,7 +228,7 @@
 								<artifactItem>
 									<groupId>org.openjfx</groupId>
     								<artifactId>javafx-web</artifactId>
-    								<version>13</version>
+    								<version>15.0.1</version>
     								<type>jar</type>
 									<classifier>mac</classifier>
 									<outputDirectory>target/dependencies/openjfx/mac</outputDirectory>
@@ -238,7 +238,7 @@
 								<artifactItem>
 									<groupId>org.openjfx</groupId>
     								<artifactId>javafx-base</artifactId>
-    								<version>13</version>
+    								<version>15.0.1</version>
     								<type>jar</type>
     								<classifier>linux</classifier>
 									<outputDirectory>target/dependencies/openjfx/linux</outputDirectory>
@@ -246,7 +246,7 @@
 								<artifactItem>
 									<groupId>org.openjfx</groupId>
     								<artifactId>javafx-controls</artifactId>
-    								<version>13</version>
+    								<version>15.0.1</version>
     								<type>jar</type>
 									<classifier>linux</classifier>
 									<outputDirectory>target/dependencies/openjfx/linux</outputDirectory>
@@ -254,7 +254,7 @@
 								<artifactItem>
 									<groupId>org.openjfx</groupId>
     								<artifactId>javafx-fxml</artifactId>
-    								<version>13</version>
+    								<version>15.0.1</version>
     								<type>jar</type>
 									<classifier>linux</classifier>
 									<outputDirectory>target/dependencies/openjfx/linux</outputDirectory>
@@ -262,7 +262,7 @@
 								<artifactItem>
 									<groupId>org.openjfx</groupId>
     								<artifactId>javafx-graphics</artifactId>
-    								<version>13</version>
+    								<version>15.0.1</version>
     								<type>jar</type>
 									<classifier>linux</classifier>
 									<outputDirectory>target/dependencies/openjfx/linux</outputDirectory>
@@ -270,7 +270,7 @@
 								<artifactItem>
 									<groupId>org.openjfx</groupId>
     								<artifactId>javafx-media</artifactId>
-    								<version>13</version>
+    								<version>15.0.1</version>
     								<type>jar</type>
 									<classifier>linux</classifier>
 									<outputDirectory>target/dependencies/openjfx/linux</outputDirectory>
@@ -278,7 +278,7 @@
 								<artifactItem>
 									<groupId>org.openjfx</groupId>
     								<artifactId>javafx-swing</artifactId>
-    								<version>13</version>
+    								<version>15.0.1</version>
     								<type>jar</type>
 									<classifier>linux</classifier>
 									<outputDirectory>target/dependencies/openjfx/linux</outputDirectory>
@@ -286,7 +286,7 @@
 								<artifactItem>
 									<groupId>org.openjfx</groupId>
     								<artifactId>javafx-web</artifactId>
-    								<version>13</version>
+    								<version>15.0.1</version>
     								<type>jar</type>
 									<classifier>linux</classifier>
 									<outputDirectory>target/dependencies/openjfx/linux</outputDirectory>
@@ -296,7 +296,7 @@
 								<artifactItem>
 									<groupId>org.openjfx</groupId>
     								<artifactId>javafx-base</artifactId>
-    								<version>13</version>
+    								<version>15.0.1</version>
     								<type>jar</type>
     								<classifier>win</classifier>
 									<outputDirectory>target/dependencies/openjfx/win</outputDirectory>
@@ -304,7 +304,7 @@
 								<artifactItem>
 									<groupId>org.openjfx</groupId>
     								<artifactId>javafx-controls</artifactId>
-    								<version>13</version>
+    								<version>15.0.1</version>
     								<type>jar</type>
 									<classifier>win</classifier>
 									<outputDirectory>target/dependencies/openjfx/win</outputDirectory>
@@ -312,7 +312,7 @@
 								<artifactItem>
 									<groupId>org.openjfx</groupId>
     								<artifactId>javafx-fxml</artifactId>
-    								<version>13</version>
+    								<version>15.0.1</version>
     								<type>jar</type>
 									<classifier>win</classifier>
 									<outputDirectory>target/dependencies/openjfx/win</outputDirectory>
@@ -320,7 +320,7 @@
 								<artifactItem>
 									<groupId>org.openjfx</groupId>
     								<artifactId>javafx-graphics</artifactId>
-    								<version>13</version>
+    								<version>15.0.1</version>
     								<type>jar</type>
 									<classifier>win</classifier>
 									<outputDirectory>target/dependencies/openjfx/win</outputDirectory>
@@ -328,7 +328,7 @@
 								<artifactItem>
 									<groupId>org.openjfx</groupId>
     								<artifactId>javafx-media</artifactId>
-    								<version>13</version>
+    								<version>15.0.1</version>
     								<type>jar</type>
 									<classifier>win</classifier>
 									<outputDirectory>target/dependencies/openjfx/win</outputDirectory>
@@ -336,7 +336,7 @@
 								<artifactItem>
 									<groupId>org.openjfx</groupId>
     								<artifactId>javafx-swing</artifactId>
-    								<version>13</version>
+    								<version>15.0.1</version>
     								<type>jar</type>
 									<classifier>win</classifier>
 									<outputDirectory>target/dependencies/openjfx/win</outputDirectory>
@@ -344,7 +344,7 @@
 								<artifactItem>
 									<groupId>org.openjfx</groupId>
     								<artifactId>javafx-web</artifactId>
-    								<version>13</version>
+    								<version>15.0.1</version>
     								<type>jar</type>
 									<classifier>win</classifier>
 									<outputDirectory>target/dependencies/openjfx/win</outputDirectory>
