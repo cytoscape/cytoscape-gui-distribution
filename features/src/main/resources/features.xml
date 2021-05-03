@@ -55,6 +55,8 @@
     <bundle start-level="103">mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.jaxws-api-2.2/2.9.0</bundle>
     <bundle start-level="103">mvn:javax.activation/com.springsource.javax.activation/1.1.1</bundle>
     <bundle start-level="103">mvn:javax.xml.stream/com.springsource.javax.xml.stream/1.0.1</bundle>
+    
+    <!-- The javax.ws.rs-api bundle is shared by CyREST and REST apps. Updating or removing this will affect those apps. -->
     <bundle start-level="103">mvn:javax.ws.rs/javax.ws.rs-api/2.1</bundle>
 
     <bundle start-level="105">mvn:org.cytoscape/cmdline/${cytoscape.support.version}</bundle>
