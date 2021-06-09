@@ -7,9 +7,9 @@ This is the desktop version of Cytoscape 3.
 
 For deploying core apps to nexus, follow the steps listed below:
 
-1. Update the version number for the core app in pom.xml in assembly dir.
+1. Update the version number for the core app in pom.xml in assembly directory in this repository.
 
-2. In the pom.xml for the app, add repositories and distributionManagement entries. You can just copy these from an existing pom, like CyREST: https://github.com/cytoscape/cyREST/blob/3e1ef7fcf867dbcd80749618c4134173e02688e9/pom.xml#L35
+2. In the pom.xml for the core app, add repositories and distributionManagement entries. You can just copy these from an existing pom, like CyREST: https://github.com/cytoscape/cyREST/blob/3e1ef7fcf867dbcd80749618c4134173e02688e9/pom.xml#L35
 
 3. Add this as an entry to your maven settings.xml file (location varies between OS's, check the Maven documentation for location).
 
