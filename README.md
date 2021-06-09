@@ -12,6 +12,7 @@ For deploying core apps to nexus, follow the steps listed below:
 2. In the pom.xml for the app, add repositories and distributionManagement entries. You can just copy these from an existing pom, like CyREST: https://github.com/cytoscape/cyREST/blob/3e1ef7fcf867dbcd80749618c4134173e02688e9/pom.xml#L35
 
 3. Add this as an entry to your maven settings.xml file (location varies between OS's, check the Maven documentation for location).
+
 <servers>
   <server>
     <id>releases</id>
