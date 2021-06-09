@@ -13,7 +13,7 @@ For deploying core apps to nexus, follow the steps listed below:
 
 3. Add this as an entry to your maven settings.xml file (location varies between OS's, check the Maven documentation for location).
 
-   If you use brew to install maven, then the settings file should be in: "/usr/local/Cellar/maven/<version>/libexec/conf"
+   If you use brew to install maven, then the settings file should be in: ```/usr/local/Cellar/maven/<version>/libexec/conf```
 
 ```
 <servers>
