@@ -13,6 +13,7 @@ For deploying core apps to nexus, follow the steps listed below:
 
 3. Add this as an entry to your maven settings.xml file (location varies between OS's, check the Maven documentation for location).
 
+```
 <servers>
   <server>
     <id>releases</id>
@@ -45,5 +46,9 @@ For deploying core apps to nexus, follow the steps listed below:
     <password>turtlesallthewaydown</password>
   </server>
 </servers>
+```
+
 
 4. Add the app to the core-apps-meta pom.xml (see this: https://github.com/cytoscape/core-apps-meta/blob/d376e7efe0d393dea90e687c177a7b813598293e/pom.xml#L139). 
+
+
