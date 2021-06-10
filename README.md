@@ -1,9 +1,10 @@
-# Cytoscape 3 Desktop Version
+# Cytoscape Desktop Release Protocal
 ------------
+## Adding a New Core App
 
-This is the desktop version of Cytoscape 3.
+(To-Do)
 
-## Creating Installers
+## Updating a Core App
 
 For deploying core apps to nexus, follow the steps listed below:
 
