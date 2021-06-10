@@ -1,4 +1,4 @@
-# Cytoscape Desktop Release Protocal
+# Cytoscape Desktop Release Protocol
 ------------
 ## Adding a New Core App
 
