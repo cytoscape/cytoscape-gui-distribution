@@ -460,7 +460,7 @@
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>cy-rest</artifactId>
-									<version>3.12.2-SNAPSHOT</version>
+									<version>3.12.2</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
@@ -502,7 +502,7 @@
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>cy-ndex-2</artifactId>
-									<version>3.6.1-SNAPSHOT</version>
+									<version>3.6.1</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
