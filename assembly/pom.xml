@@ -123,7 +123,7 @@
 								<feature>pax-jetty</feature>
 								<feature>pax-http-jetty</feature>
 								<feature>pax-http</feature>
-								<feature>pax-http-service</feature>
+								<feature>pax-web-http</feature>
 								<feature>http</feature>
 							</features>
 							<includeMvnBasedDescriptors>true</includeMvnBasedDescriptors>
