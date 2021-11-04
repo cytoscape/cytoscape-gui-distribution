@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>org.cytoscape.distribution</groupId>
 		<artifactId>parent</artifactId>
-		<version>3.9.0</version>
+		<version>3.9.1-SNAPSHOT</version>
 		<relativePath>..</relativePath>
 	</parent>
 
