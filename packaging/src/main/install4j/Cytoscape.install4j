@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<install4j version="8.0.2" transformSequenceNumber="8">
+<install4j version="8.0.11" transformSequenceNumber="8">
   <directoryPresets config="/home/cybuilder/cytoscape.p12" />
-  <application name="Cytoscape" applicationId="5211-3645-3154-2580" mediaDir="dist" mediaFilePattern="${compiler:sys.shortName}_${compiler:sys.version}_${compiler:sys.platform}" shortName="Cytoscape" publisher="Cytoscape Consortium" publisherWeb="http://www.cytoscape.org" version="${version}" macVolumeId="60ff7381dde234ab" javaMinVersion="11.0" javaMaxVersion="12" allowBetaVM="true" jdkMode="jdk">
+  <application name="Cytoscape" applicationId="5211-3645-3154-2580" mediaDir="dist" mediaFilePattern="${compiler:sys.shortName}_${compiler:sys.version}_${compiler:sys.platform}" shortName="Cytoscape" publisher="Cytoscape Consortium" publisherWeb="http://www.cytoscape.org" version="${version}" macVolumeId="60ff7381dde234ab" javaMinVersion="17" javaMaxVersion="17" allowBetaVM="true" jdkMode="jdk">
     <searchSequence>
       <envVar name="JAVA_HOME" />
       <registry />
@@ -10,13 +10,7 @@
       <variable name="WINDOWS_VERSION" value="@windows_version@" />
       <variable name="JAVAFX_NATIVE_DIR" description="OS-specific path to the OpenJFX native files in the Karaf framework." />
     </variables>
-    <codeSigning macEnabled="true" macPkcs12File="/home/cybuilder/cytoscape.p12">
-      <macSearchedJars>
-        <entry>jna-*</entry>
-        <entry>swt-*</entry>
-        <entry>javafx-*</entry>
-      </macSearchedJars>
-    </codeSigning>
+    <codeSigning macEnabled="true" macPkcs12File="/home/cybuilder/cytoscape.p12" />
   </application>
   <files>
     <filesets>
@@ -1281,22 +1275,7 @@ return console.askYesNo(message, true);
       </variables>
       <jreBundle jreBundleSource="preCreated" includedJre="windows-amd64-11.0.6" bundleType="dynamic" bundleUrl="https://cytoscape-builds.ucsd.edu/jres/windows-amd64-11.0.6.tar.gz" shared="true" />
     </windows>
-    <windows name="Windows 32 bit" id="395" mediaFileName="Cytoscape_${compiler:sys.version}_windows_32bit" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true" jreBitType="32">
-      <excludedComponents>
-        <component id="235" />
-      </excludedComponents>
-      <excludedBeans>
-        <bean refId="50" />
-      </excludedBeans>
-      <exclude>
-        <entry filesetId="227" />
-      </exclude>
-      <variables>
-        <variable name="JAVAFX_NATIVE_DIR" value="win" />
-      </variables>
-      <jreBundle bundleType="dynamic" bundleUrl="http://chianti.ucsd.edu/jres/windows-x86-1.8.0_162.tar.gz" shared="true" />
-    </windows>
-    <macosFolder name="Mac OS X" id="9" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true">
+    <macosFolder name="macOS (x64)" id="9" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true">
       <excludedComponents>
         <component id="234" />
       </excludedComponents>
@@ -1307,6 +1286,18 @@ return console.askYesNo(message, true);
         <variable name="JAVAFX_NATIVE_DIR" value="mac" />
       </variables>
       <jreBundle jreBundleSource="preCreated" includedJre="macosx-amd64-11.0.6" bundleType="dynamic" bundleUrl="https://cytoscape-builds.ucsd.edu/jres/macosx-amd64-11.0.6.tar.gz" />
+    </macosFolder>
+    <macosFolder name="macOS (aarch64)" id="637" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true">
+      <excludedComponents>
+        <component id="234" />
+      </excludedComponents>
+      <exclude>
+        <entry filesetId="225" />
+      </exclude>
+      <variables>
+        <variable name="JAVAFX_NATIVE_DIR" value="mac" />
+      </variables>
+      <jreBundle jreBundleSource="preCreated" includedJre="macos-aarch64-17.0.1" bundleType="dynamic" bundleUrl="https://cytoscape-builds.ucsd.edu/jres/macosx-aarch64-17.0.1.tar.gz" />
     </macosFolder>
     <unixInstaller name="Unix" id="12" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true">
       <excludedComponents>
