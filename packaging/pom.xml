@@ -114,8 +114,8 @@
             <configuration>
               <projectFile>${project.build.outputDirectory}/Cytoscape.install4j</projectFile>
               <!-- Temporarily disable building some of the platform media files until the JRE bundles are available. -->
-              <!-- The 637 build id is the macOS aarch64 build. -->
-              <buildIds>637</buildIds>
+              <!-- windows=11, macOS x64=9, macOs aarch64=637, unix=12 -->
+              <buildIds>12,9</buildIds>
             </configuration>
           </execution>
         </executions>
