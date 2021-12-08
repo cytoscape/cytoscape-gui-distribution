@@ -1297,7 +1297,7 @@ return console.askYesNo(message, true);
       <variables>
         <variable name="JAVAFX_NATIVE_DIR" value="mac" />
       </variables>
-      <jreBundle jreBundleSource="preCreated" includedJre="macos-aarch64-17.0.1" bundleType="dynamic" bundleUrl="https://cytoscape-builds.ucsd.edu/jres/macosx-aarch64-17.0.1.tar.gz" />
+      <jreBundle jreBundleSource="preCreated" includedJre="macos-aarch64-17.0.1" bundleType="dynamic" bundleUrl="https://cytoscape-builds.ucsd.edu/jres/macos-aarch64-17.0.1.tar.gz" />
     </macosFolder>
     <unixInstaller name="Unix" id="12" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true">
       <excludedComponents>
