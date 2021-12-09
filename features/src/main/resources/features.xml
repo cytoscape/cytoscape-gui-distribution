@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <features name="cytoscape-standard" xmlns="http://karaf.apache.org/xmlns/features/v1.3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://karaf.apache.org/xmlns/features/v1.3.0 http://karaf.apache.org/xmlns/features/v1.3.0">
 
-     <feature name="cytoscape-karaf" description="A minimal Karaf distribution for Cytoscape" version="${project.version}">
+  <feature name="cytoscape-karaf" description="A minimal Karaf distribution for Cytoscape" version="${project.version}">
       <feature>jaas</feature>
       <feature>shell</feature>
       <feature>shell-compat</feature>

@@ -17,6 +17,8 @@
 
 	<properties>
 		<maven.resources.escapeString>\</maven.resources.escapeString>
+		<javafx.version>17.0.1</javafx.version>
+		<dollar>$</dollar>
 	</properties>
 
 	<dependencies>
@@ -117,13 +119,13 @@
 							</descriptors>
 							<features>
 								<feature>cytoscape-gui</feature>
-								<feature version="9.4.22.v20191022">jetty</feature>
+								<feature version="9.4.43.v20210629">jetty</feature>
 								<feature>scr</feature>
 								<feature>pax-web-core</feature>
 								<feature>pax-jetty</feature>
 								<feature>pax-http-jetty</feature>
 								<feature>pax-http</feature>
-								<feature>pax-http-service</feature>
+								<feature>pax-web-http</feature>
 								<feature>http</feature>
 							</features>
 							<includeMvnBasedDescriptors>true</includeMvnBasedDescriptors>
@@ -180,7 +182,7 @@
 								<artifactItem>
 									<groupId>org.openjfx</groupId>
     								<artifactId>javafx-base</artifactId>
-    								<version>15.0.1</version>
+    								<version>${javafx.version}</version>
     								<type>jar</type>
     								<classifier>mac</classifier>
 									<outputDirectory>target/dependencies/openjfx/mac</outputDirectory>
@@ -188,7 +190,7 @@
 								<artifactItem>
 									<groupId>org.openjfx</groupId>
     								<artifactId>javafx-controls</artifactId>
-    								<version>15.0.1</version>
+    								<version>${javafx.version}</version>
     								<type>jar</type>
 									<classifier>mac</classifier>
 									<outputDirectory>target/dependencies/openjfx/mac</outputDirectory>
@@ -196,7 +198,7 @@
 								<artifactItem>
 									<groupId>org.openjfx</groupId>
     								<artifactId>javafx-fxml</artifactId>
-    								<version>15.0.1</version>
+    								<version>${javafx.version}</version>
     								<type>jar</type>
 									<classifier>mac</classifier>
 									<outputDirectory>target/dependencies/openjfx/mac</outputDirectory>
@@ -204,7 +206,7 @@
 								<artifactItem>
 									<groupId>org.openjfx</groupId>
     								<artifactId>javafx-graphics</artifactId>
-    								<version>15.0.1</version>
+    								<version>${javafx.version}</version>
     								<type>jar</type>
 									<classifier>mac</classifier>
 									<outputDirectory>target/dependencies/openjfx/mac</outputDirectory>
@@ -212,7 +214,7 @@
 								<artifactItem>
 									<groupId>org.openjfx</groupId>
     								<artifactId>javafx-media</artifactId>
-    								<version>15.0.1</version>
+    								<version>${javafx.version}</version>
     								<type>jar</type>
 									<classifier>mac</classifier>
 									<outputDirectory>target/dependencies/openjfx/mac</outputDirectory>
@@ -220,7 +222,7 @@
 								<artifactItem>
 									<groupId>org.openjfx</groupId>
     								<artifactId>javafx-swing</artifactId>
-    								<version>15.0.1</version>
+    								<version>${javafx.version}</version>
     								<type>jar</type>
 									<classifier>mac</classifier>
 									<outputDirectory>target/dependencies/openjfx/mac</outputDirectory>
@@ -228,7 +230,7 @@
 								<artifactItem>
 									<groupId>org.openjfx</groupId>
     								<artifactId>javafx-web</artifactId>
-    								<version>15.0.1</version>
+    								<version>${javafx.version}</version>
     								<type>jar</type>
 									<classifier>mac</classifier>
 									<outputDirectory>target/dependencies/openjfx/mac</outputDirectory>
@@ -238,7 +240,7 @@
 								<artifactItem>
 									<groupId>org.openjfx</groupId>
     								<artifactId>javafx-base</artifactId>
-    								<version>15.0.1</version>
+    								<version>${javafx.version}</version>
     								<type>jar</type>
     								<classifier>linux</classifier>
 									<outputDirectory>target/dependencies/openjfx/linux</outputDirectory>
@@ -246,7 +248,7 @@
 								<artifactItem>
 									<groupId>org.openjfx</groupId>
     								<artifactId>javafx-controls</artifactId>
-    								<version>15.0.1</version>
+    								<version>${javafx.version}</version>
     								<type>jar</type>
 									<classifier>linux</classifier>
 									<outputDirectory>target/dependencies/openjfx/linux</outputDirectory>
@@ -254,7 +256,7 @@
 								<artifactItem>
 									<groupId>org.openjfx</groupId>
     								<artifactId>javafx-fxml</artifactId>
-    								<version>15.0.1</version>
+    								<version>${javafx.version}</version>
     								<type>jar</type>
 									<classifier>linux</classifier>
 									<outputDirectory>target/dependencies/openjfx/linux</outputDirectory>
@@ -262,7 +264,7 @@
 								<artifactItem>
 									<groupId>org.openjfx</groupId>
     								<artifactId>javafx-graphics</artifactId>
-    								<version>15.0.1</version>
+    								<version>${javafx.version}</version>
     								<type>jar</type>
 									<classifier>linux</classifier>
 									<outputDirectory>target/dependencies/openjfx/linux</outputDirectory>
@@ -270,7 +272,7 @@
 								<artifactItem>
 									<groupId>org.openjfx</groupId>
     								<artifactId>javafx-media</artifactId>
-    								<version>15.0.1</version>
+    								<version>${javafx.version}</version>
     								<type>jar</type>
 									<classifier>linux</classifier>
 									<outputDirectory>target/dependencies/openjfx/linux</outputDirectory>
@@ -278,7 +280,7 @@
 								<artifactItem>
 									<groupId>org.openjfx</groupId>
     								<artifactId>javafx-swing</artifactId>
-    								<version>15.0.1</version>
+    								<version>${javafx.version}</version>
     								<type>jar</type>
 									<classifier>linux</classifier>
 									<outputDirectory>target/dependencies/openjfx/linux</outputDirectory>
@@ -286,7 +288,7 @@
 								<artifactItem>
 									<groupId>org.openjfx</groupId>
     								<artifactId>javafx-web</artifactId>
-    								<version>15.0.1</version>
+    								<version>${javafx.version}</version>
     								<type>jar</type>
 									<classifier>linux</classifier>
 									<outputDirectory>target/dependencies/openjfx/linux</outputDirectory>
@@ -296,7 +298,7 @@
 								<artifactItem>
 									<groupId>org.openjfx</groupId>
     								<artifactId>javafx-base</artifactId>
-    								<version>15.0.1</version>
+    								<version>${javafx.version}</version>
     								<type>jar</type>
     								<classifier>win</classifier>
 									<outputDirectory>target/dependencies/openjfx/win</outputDirectory>
@@ -304,7 +306,7 @@
 								<artifactItem>
 									<groupId>org.openjfx</groupId>
     								<artifactId>javafx-controls</artifactId>
-    								<version>15.0.1</version>
+    								<version>${javafx.version}</version>
     								<type>jar</type>
 									<classifier>win</classifier>
 									<outputDirectory>target/dependencies/openjfx/win</outputDirectory>
@@ -312,7 +314,7 @@
 								<artifactItem>
 									<groupId>org.openjfx</groupId>
     								<artifactId>javafx-fxml</artifactId>
-    								<version>15.0.1</version>
+    								<version>${javafx.version}</version>
     								<type>jar</type>
 									<classifier>win</classifier>
 									<outputDirectory>target/dependencies/openjfx/win</outputDirectory>
@@ -320,7 +322,7 @@
 								<artifactItem>
 									<groupId>org.openjfx</groupId>
     								<artifactId>javafx-graphics</artifactId>
-    								<version>15.0.1</version>
+    								<version>${javafx.version}</version>
     								<type>jar</type>
 									<classifier>win</classifier>
 									<outputDirectory>target/dependencies/openjfx/win</outputDirectory>
@@ -328,7 +330,7 @@
 								<artifactItem>
 									<groupId>org.openjfx</groupId>
     								<artifactId>javafx-media</artifactId>
-    								<version>15.0.1</version>
+    								<version>${javafx.version}</version>
     								<type>jar</type>
 									<classifier>win</classifier>
 									<outputDirectory>target/dependencies/openjfx/win</outputDirectory>
@@ -336,7 +338,7 @@
 								<artifactItem>
 									<groupId>org.openjfx</groupId>
     								<artifactId>javafx-swing</artifactId>
-    								<version>15.0.1</version>
+    								<version>${javafx.version}</version>
     								<type>jar</type>
 									<classifier>win</classifier>
 									<outputDirectory>target/dependencies/openjfx/win</outputDirectory>
@@ -344,7 +346,7 @@
 								<artifactItem>
 									<groupId>org.openjfx</groupId>
     								<artifactId>javafx-web</artifactId>
-    								<version>15.0.1</version>
+    								<version>${javafx.version}</version>
     								<type>jar</type>
 									<classifier>win</classifier>
 									<outputDirectory>target/dependencies/openjfx/win</outputDirectory>
@@ -460,7 +462,7 @@
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>cy-rest</artifactId>
-									<version>3.12.2</version>
+									<version>3.13.0-SNAPSHOT</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
@@ -600,32 +602,12 @@
 									<value>MAIN=org.cytoscape.launcher.internal.Launcher</value>
 								</replacement>
 								<replacement>
-									<token>-Dkaraf.instances="${KARAF_BASE}/instances"</token>
-									<value>-Dkaraf.instances="${KARAF_DATA}/instances"</value>
-								</replacement>
-								<replacement>
 									<token>-Dkaraf.startRemoteShell=true</token>
 									<value>-Dkaraf.startRemoteShell=false</value>
 								</replacement>
 								<replacement>
-									<token>JAVA=`type java`</token>
-									<value>JAVA=$(which java)</value>
-								</replacement>
-								<replacement>
-									<token>JAVA=`expr "$JAVA" : '.* \(/.*\)$'`</token>
-									<value />
-								</replacement>
-								<replacement>
-									<token>cd "$KARAF_BASE"</token>
-									<value />
-								</replacement>
-								<replacement>
-									<token>--patch-module java.base=lib/endorsed/org.apache.karaf.specs.locator-${karaf.version}.jar \</token>
-									<value>--patch-module java.base=$KARAF_HOME/lib/endorsed/org.apache.karaf.specs.locator-${karaf.version}.jar \</value>
-								</replacement>
-								<replacement>
-									<token>--patch-module java.xml=lib/endorsed/org.apache.karaf.specs.java.xml-${karaf.version}.jar \</token>
-									<value>--patch-module java.xml=$KARAF_HOME/lib/endorsed/org.apache.karaf.specs.java.xml-${karaf.version}.jar \
+									<token>--patch-module java.xml=${dollar}{KARAF_HOME}/lib/endorsed/org.apache.karaf.specs.java.xml-${karaf.version}.jar \</token>
+									<value>--patch-module java.xml=${dollar}{KARAF_HOME}/lib/endorsed/org.apache.karaf.specs.java.xml-${karaf.version}.jar \
                     -p $KARAF_HOME/lib/openjfx/$JAVAFX_DIR \
                     --add-modules javafx.base,javafx.swing,javafx.media,javafx.web \
 									</value>
@@ -678,12 +660,8 @@
 									<value />
 								</replacement>
 								<replacement>
-									<token>lib/endorsed/org.apache.karaf.specs.locator-${karaf.version}.jar</token>
-									<value>"%KARAF_HOME%/lib/endorsed/org.apache.karaf.specs.locator-${karaf.version}.jar"</value>
-								</replacement>
-								<replacement>
-									<token>--patch-module java.xml=lib/endorsed/org.apache.karaf.specs.java.xml-${karaf.version}.jar ^</token>
-									<value>--patch-module java.xml="%KARAF_HOME%/lib/endorsed/org.apache.karaf.specs.java.xml-${karaf.version}.jar" ^
+									<token>--patch-module java.xml=%KARAF_HOME%\lib\endorsed\org.apache.karaf.specs.java.xml-${karaf.version}.jar ^</token>
+									<value>--patch-module java.xml=%KARAF_HOME%\lib\endorsed\org.apache.karaf.specs.java.xml-${karaf.version}.jar ^
                 -p "%KARAF_HOME%/lib/openjfx/win/" ^
                 --add-modules javafx.base,javafx.swing,javafx.media,javafx.web ^
 									</value>
