@@ -62,10 +62,10 @@
           <archive location="./framework/lib/boot/branding-${version}.jar" failOnError="false" />
           <archive location="./framework/lib/boot/karaf-launcher-${version}.jar" failOnError="false" />
           <archive location="./framework/lib/boot/opendmk_jmxremote_optional_jar-1.0-b01-ea.jar" failOnError="false" />
-          <archive location="./framework/lib/boot/org.apache.karaf.diagnostic.boot-4.2.8.jar" failOnError="false" />
-          <archive location="./framework/lib/boot/org.apache.karaf.jaas.boot-4.2.8.jar" failOnError="false" />
-          <archive location="./framework/lib/boot/org.apache.karaf.main-4.2.8.jar" failOnError="false" />
-          <archive location="./framework/lib/boot/org.apache.karaf.specs.activator-4.2.8.jar" failOnError="false" />
+          <archive location="./framework/lib/boot/org.apache.karaf.diagnostic.boot-4.2.14.jar" failOnError="false" />
+          <archive location="./framework/lib/boot/org.apache.karaf.jaas.boot-4.2.14.jar" failOnError="false" />
+          <archive location="./framework/lib/boot/org.apache.karaf.main-4.2.14.jar" failOnError="false" />
+          <archive location="./framework/lib/boot/org.apache.karaf.specs.activator-4.2.14.jar" failOnError="false" />
           <archive location="./framework/lib/boot/osgi.core-6.0.0.jar" failOnError="false" />
           <archive location="./framework/lib/jdk9plus/istack-commons-runtime-3.0.10.jar" failOnError="false" />
           <archive location="./framework/lib/jdk9plus/jakarta.xml.bind-api-2.3.2.jar" failOnError="false" />
