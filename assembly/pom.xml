@@ -444,7 +444,7 @@
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>sbml</artifactId>
-									<version>3.4.0</version>
+									<version>3.4.1</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
