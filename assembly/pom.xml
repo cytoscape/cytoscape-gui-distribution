@@ -17,7 +17,7 @@
 
 	<properties>
 		<maven.resources.escapeString>\</maven.resources.escapeString>
-    <dollar>$</dollar>
+		<dollar>$</dollar>
 	</properties>
 
 	<dependencies>
@@ -118,7 +118,7 @@
 							</descriptors>
 							<features>
 								<feature>cytoscape-gui</feature>
-								<feature version="9.4.28.v20200408">jetty</feature>
+								<feature version="9.4.22.v20191022">jetty</feature>
 								<feature>scr</feature>
 								<feature>pax-web-core</feature>
 								<feature>pax-jetty</feature>
@@ -461,7 +461,7 @@
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>cy-rest</artifactId>
-									<version>3.12.3</version>
+									<version>3.12.2</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
@@ -728,6 +728,144 @@
 									<value />
 								</replacement>
 							</replacements>
+						</configuration>
+					</execution>
+					<execution>
+						<id>patch-karaf-update-pax-logging-features</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>replace</goal>
+						</goals>
+						<configuration>
+							<includes>
+								<include>target/dependencies/apache-karaf-${karaf.version}/system/org/apache/karaf/features/framework/4.2.8/framework-4.2.8-features.xml
+								</include>
+							</includes>
+							<regex>true</regex>
+							<unescape>false</unescape>
+							<replacements>
+								<replacement>
+									<token>pax-logging-api/1.11.4</token>
+									<value>pax-logging-api/1.11.13</value>
+								</replacement>
+								<replacement>
+									<token>pax-logging-log4j2/1.11.4</token>
+									<value>pax-logging-log4j2/1.11.13</value>
+								</replacement>
+								<replacement>
+									<token>pax-logging-logback/1.11.4</token>pax-logging-logback
+									<value>pax-logging-logback/1.11.13</value>
+								</replacement>
+							</replacements>
+						</configuration>
+					</execution>
+					<execution>
+						<id>patch-karaf-update-pax-logging-shell</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>replace</goal>
+						</goals>
+						<configuration>
+							<includes>
+								<include>target/dependencies/apache-karaf-${karaf.version}/bin/shell</include>
+								<include>target/dependencies/apache-karaf-${karaf.version}/bin/shell.bat</include>
+								<include>target/dependencies/apache-karaf-${karaf.version}/bin/instance.bat</include>
+								<include>target/dependencies/apache-karaf-${karaf.version}/bin/instance</include>
+							</includes>
+							<regex>true</regex>
+							<unescape>false</unescape>
+							<replacements>
+								<replacement>
+									<token>1.11.4</token>
+									<value>1.11.13</value>
+								</replacement>
+							</replacements>
+						</configuration>
+					</execution>
+					<execution>
+						<id>patch-karaf-update-pax-logging-startup-properties</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>replace</goal>
+						</goals>
+						<configuration>
+							<includes>
+								<include>target/dependencies/apache-karaf-${karaf.version}/etc/startup.properties</include>
+							</includes>
+							<regex>true</regex>
+							<unescape>false</unescape>
+							<replacements>
+								<replacement>
+									<token>pax-logging-api/1.11.4</token>
+									<value>pax-logging-api/1.11.13</value>
+								</replacement>
+								<replacement>
+									<token>pax-logging-log4j2/1.11.4</token>
+									<value>pax-logging-log4j2/1.11.13</value>
+								</replacement>
+							</replacements>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>3.0.0</version>
+				<executions>
+					<execution>
+						<id>delete-old-pax-logging-under-karaf-system</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<target>
+								<delete dir="target/dependencies/apache-karaf-${karaf.version}/system/org/ops4j/pax/logging/pax-logging-log4j2/1.11.4" />
+								<delete dir="target/dependencies/apache-karaf-${karaf.version}/system/org/ops4j/pax/logging/pax-logging-api/1.11.4" />
+								<delete dir="target/dependencies/apache-karaf-${karaf.version}/system/org/ops4j/pax/logging/pax-logging-logback/1.11.4" />
+								<mkdir  dir="target/dependencies/apache-karaf-${karaf.version}/system/org/ops4j/pax/logging/pax-logging-log4j2/1.11.13" />
+								<mkdir  dir="target/dependencies/apache-karaf-${karaf.version}/system/org/ops4j/pax/logging/pax-logging-api/1.11.13" />
+								<mkdir  dir="target/dependencies/apache-karaf-${karaf.version}/system/org/ops4j/pax/logging/pax-logging-logback/1.11.13" />
+							</target>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>${maven-dependency-plugin.version}</version>
+				<executions>
+					<execution>
+						<id>copy-new-pax-logging-under-karaf-system</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>copy</goal>
+						</goals>
+						<configuration>
+							<artifactItems>
+								<artifactItem>
+									<groupId>org.ops4j.pax.logging</groupId>
+									<artifactId>pax-logging-log4j2</artifactId>
+									<version>1.11.13</version>
+									<type>jar</type>
+									<outputDirectory>target/dependencies/apache-karaf-${karaf.version}/system/org/ops4j/pax/logging/pax-logging-log4j2/1.11.13</outputDirectory>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.ops4j.pax.logging</groupId>
+									<artifactId>pax-logging-api</artifactId>
+									<version>1.11.13</version>
+									<type>jar</type>
+									<outputDirectory>target/dependencies/apache-karaf-${karaf.version}/system/org/ops4j/pax/logging/pax-logging-api/1.11.13</outputDirectory>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.ops4j.pax.logging</groupId>
+									<artifactId>pax-logging-logback</artifactId>
+									<version>1.11.13</version>
+									<type>jar</type>
+									<outputDirectory>target/dependencies/apache-karaf-${karaf.version}/system/org/ops4j/pax/logging/pax-logging-logback/1.11.13</outputDirectory>
+								</artifactItem>
+							</artifactItems>
 						</configuration>
 					</execution>
 				</executions>
