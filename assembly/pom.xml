@@ -753,7 +753,7 @@
 									<value>pax-logging-log4j2/1.11.13</value>
 								</replacement>
 								<replacement>
-									<token>pax-logging-logback/1.11.4</token>pax-logging-logback
+									<token>pax-logging-logback/1.11.4</token>
 									<value>pax-logging-logback/1.11.13</value>
 								</replacement>
 							</replacements>
