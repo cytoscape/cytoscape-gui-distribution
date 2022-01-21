@@ -461,7 +461,7 @@
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>cy-rest</artifactId>
-									<version>3.12.2</version>
+									<version>3.12.3</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
