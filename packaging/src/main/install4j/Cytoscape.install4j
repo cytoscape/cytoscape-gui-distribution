@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<install4j version="8.0.11" transformSequenceNumber="8">
+<install4j version="9.0.6" transformSequenceNumber="9">
   <directoryPresets config="/home/cybuilder/cytoscape.p12" />
-  <application name="Cytoscape" applicationId="5211-3645-3154-2580" mediaDir="dist" mediaFilePattern="${compiler:sys.shortName}_${compiler:sys.version}_${compiler:sys.platform}" shortName="Cytoscape" publisher="Cytoscape Consortium" publisherWeb="http://www.cytoscape.org" version="${version}" macVolumeId="60ff7381dde234ab" javaMinVersion="17" javaMaxVersion="17" allowBetaVM="true" jdkMode="jdk">
+  <application name="Cytoscape" applicationId="5211-3645-3154-2580" mediaDir="dist" mediaFilePattern="${compiler:sys.shortName}_${compiler:sys.version}_${compiler:sys.mediaName}" shortName="Cytoscape" publisher="Cytoscape Consortium" publisherWeb="http://www.cytoscape.org" version="${version}" macVolumeId="60ff7381dde234ab" javaMinVersion="17.0.2" javaMaxVersion="17" allowBetaVM="true" jdkMode="jdk">
     <searchSequence>
-      <envVar name="JAVA_HOME" />
       <registry />
+      <envVar name="JAVA_HOME" />
     </searchSequence>
     <variables>
       <variable name="WINDOWS_VERSION" value="@windows_version@" />
       <variable name="JAVAFX_NATIVE_DIR" description="OS-specific path to the OpenJFX native files in the Karaf framework." />
     </variables>
     <codeSigning macEnabled="true" macPkcs12File="/home/cybuilder/cytoscape.p12" />
+    <jreBundles jdkProviderId="Adoptium" release="17/jdk-17.0.2+8" />
   </application>
-  <files>
+  <files preserveSymlinks="false">
     <filesets>
       <fileset name="Windows file set" id="225" />
       <fileset name="Unix file set" id="227" />
@@ -49,7 +50,7 @@
       <executable name="Cytoscape" iconSet="true" iconFile="${basedir}/src/main/images/cytoscape3-icon-trans-128x128.ico" executableDir="." stderrFile="output.log" redirectStdout="true" executableMode="gui" dpiAware="false">
         <versionInfo fileVersion="${compiler:WINDOWS_VERSION}" fileDescription="Cytoscape" legalCopyright="Cytoscape Consortium" internalName="${compiler:sys.shortName}" />
       </executable>
-      <java mainClass="org.cytoscape.launcher.internal.Launcher" vmParameters="--add-reads=java.xml=java.logging --add-exports=java.base/org.apache.karaf.specs.locator=java.xml,ALL-UNNAMED --patch-module java.base=&quot;${launcher:sys.launcherDirectory}/framework/lib/endorsed/org.apache.karaf.specs.locator-4.3.3.jar&quot; --patch-module java.xml=&quot;${launcher:sys.launcherDirectory}/framework/lib/endorsed/org.apache.karaf.specs.java.xml-4.3.3.jar&quot; -p &quot;${launcher:sys.launcherDirectory}/framework/lib/openjfx/${compiler:JAVAFX_NATIVE_DIR}&quot; --add-modules javafx.base,javafx.swing,javafx.media,javafx.web --add-opens java.base/java.security=ALL-UNNAMED --add-opens java.base/java.net=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.naming/javax.naming.spi=ALL-UNNAMED --add-opens java.rmi/sun.rmi.transport.tcp=ALL-UNNAMED --add-exports=java.base/sun.net.www.protocol.file=ALL-UNNAMED --add-exports=java.base/sun.net.www.protocol.ftp=ALL-UNNAMED --add-exports=java.base/sun.net.www.protocol.http=ALL-UNNAMED --add-exports=java.base/sun.net.www.protocol.https=ALL-UNNAMED --add-exports=java.base/sun.net.www.protocol.jar=ALL-UNNAMED --add-exports=java.base/sun.net.www.content.text=ALL-UNNAMED --add-exports=jdk.xml.dom/org.w3c.dom.html=ALL-UNNAMED --add-exports=jdk.naming.rmi/com.sun.jndi.url.rmi=ALL-UNNAMED --add-exports=java.rmi/sun.rmi.registry=ALL-UNNAMED --add-exports=java.security.sasl/com.sun.security.sasl=ALL-UNNAMED -Dkaraf.instances=&quot;${launcher:sys.launcherDirectory}/framework/instances&quot; -Dkaraf.home=&quot;${launcher:sys.launcherDirectory}/framework&quot; -Dkaraf.base=&quot;${launcher:sys.launcherDirectory}/framework&quot; -Dkaraf.data=&quot;${installer:sys.userHome}/CytoscapeConfiguration/3/karaf_data&quot; -Dkaraf.etc=&quot;${launcher:sys.launcherDirectory}/framework/etc&quot; -Dkaraf.log=&quot;${installer:sys.userHome}/CytoscapeConfiguration/3/karaf_data/log&quot; -Dkaraf.restart.jvm.supported=true -Djava.io.tmpdir=&quot;${installer:sys.userHome}/CytoscapeConfiguration/3/karaf_data/tmp&quot; -Djava.util.logging.config.file=&quot;${launcher:sys.launcherDirectory}/framework/etc/java.util.logging.properties&quot; -Dcytoscape.home=&quot;${launcher:sys.launcherDirectory}&quot; -Xdock:icon=./framework/cytoscape_logo_512.png -Xdock:name=Cytoscape -Dkaraf.startLocalConsole=false -Dkaraf.startRemoteShell=false">
+      <java mainClass="org.cytoscape.launcher.internal.Launcher" vmParameters="--add-reads=java.xml=java.logging --add-exports=java.base/org.apache.karaf.specs.locator=java.xml,ALL-UNNAMED --patch-module java.base=&quot;${launcher:sys.launcherDirectory}/framework/lib/endorsed/org.apache.karaf.specs.locator-4.3.3.jar&quot; --patch-module java.xml=&quot;${launcher:sys.launcherDirectory}/framework/lib/endorsed/org.apache.karaf.specs.java.xml-4.3.3.jar&quot; -p &quot;${launcher:sys.launcherDirectory}/framework/lib/openjfx/${compiler:JAVAFX_NATIVE_DIR}&quot; --add-modules javafx.base,javafx.swing,javafx.media,javafx.web --add-opens java.base/java.security=ALL-UNNAMED --add-opens java.base/java.net=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.naming/javax.naming.spi=ALL-UNNAMED --add-opens java.rmi/sun.rmi.transport.tcp=ALL-UNNAMED --add-exports=java.base/sun.net.www.protocol.file=ALL-UNNAMED --add-exports=java.base/sun.net.www.protocol.ftp=ALL-UNNAMED --add-exports=java.base/sun.net.www.protocol.http=ALL-UNNAMED --add-exports=java.base/sun.net.www.protocol.https=ALL-UNNAMED --add-exports=java.base/sun.net.www.protocol.jar=ALL-UNNAMED --add-exports=java.base/sun.net.www.content.text=ALL-UNNAMED --add-exports=jdk.xml.dom/org.w3c.dom.html=ALL-UNNAMED --add-exports=jdk.naming.rmi/com.sun.jndi.url.rmi=ALL-UNNAMED --add-exports=java.rmi/sun.rmi.registry=ALL-UNNAMED --add-exports=java.security.sasl/com.sun.security.sasl=ALL-UNNAMED -Dkaraf.instances=&quot;${launcher:sys.launcherDirectory}/framework/instances&quot; -Dkaraf.home=&quot;${launcher:sys.launcherDirectory}/framework&quot; -Dkaraf.base=&quot;${launcher:sys.launcherDirectory}/framework&quot; -Dkaraf.data=&quot;${launcher:sys.userHome}/CytoscapeConfiguration/3/karaf_data&quot; -Dkaraf.etc=&quot;${launcher:sys.launcherDirectory}/framework/etc&quot; -Dkaraf.log=&quot;${launcher:sys.userHome}/CytoscapeConfiguration/3/karaf_data/log&quot; -Dkaraf.restart.jvm.supported=true -Djava.io.tmpdir=&quot;${launcher:sys.userHome}/CytoscapeConfiguration/3/karaf_data/tmp&quot; -Djava.util.logging.config.file=&quot;${launcher:sys.launcherDirectory}/framework/etc/java.util.logging.properties&quot; -Dcytoscape.home=&quot;${launcher:sys.launcherDirectory}&quot; -Xdock:icon=./framework/cytoscape_logo_512.png -Xdock:name=Cytoscape -Dkaraf.startLocalConsole=false -Dkaraf.startRemoteShell=false">
         <classPath>
           <scanDirectory location="." failOnError="false" />
           <directory location="lib/boot" failOnError="false" />
@@ -1081,11 +1082,19 @@ return console.askYesNo(message, true);
           <group id="523" beanClass="com.install4j.runtime.beans.groups.VerticalFormComponentGroup" useExternalParametrization="true" externalParametrizationName="Customize banner image" externalParametrizationMode="include">
             <serializedBean>
               <property name="backgroundColor">
-                <object class="java.awt.Color">
-                  <int>255</int>
-                  <int>255</int>
-                  <int>255</int>
-                  <int>255</int>
+                <object class="com.install4j.runtime.beans.LightOrDarkColor">
+                  <object class="java.awt.Color">
+                    <int>255</int>
+                    <int>255</int>
+                    <int>255</int>
+                    <int>255</int>
+                  </object>
+                  <object class="java.awt.Color">
+                    <int>49</int>
+                    <int>52</int>
+                    <int>53</int>
+                    <int>255</int>
+                  </object>
                 </object>
               </property>
               <property name="borderSides">
@@ -1094,11 +1103,19 @@ return console.askYesNo(message, true);
                 </object>
               </property>
               <property name="imageEdgeBackgroundColor">
-                <object class="java.awt.Color">
-                  <int>25</int>
-                  <int>143</int>
-                  <int>220</int>
-                  <int>255</int>
+                <object class="com.install4j.runtime.beans.LightOrDarkColor">
+                  <object class="java.awt.Color">
+                    <int>25</int>
+                    <int>143</int>
+                    <int>220</int>
+                    <int>255</int>
+                  </object>
+                  <object class="java.awt.Color">
+                    <int>0</int>
+                    <int>74</int>
+                    <int>151</int>
+                    <int>255</int>
+                  </object>
                 </object>
               </property>
               <property name="imageEdgeBorder" type="boolean" value="true" />
@@ -1152,11 +1169,19 @@ return console.askYesNo(message, true);
               <group id="530" beanClass="com.install4j.runtime.beans.groups.VerticalFormComponentGroup" useExternalParametrization="true" externalParametrizationName="Customize title bar" externalParametrizationMode="include">
                 <serializedBean>
                   <property name="backgroundColor">
-                    <object class="java.awt.Color">
-                      <int>255</int>
-                      <int>255</int>
-                      <int>255</int>
-                      <int>255</int>
+                    <object class="com.install4j.runtime.beans.LightOrDarkColor">
+                      <object class="java.awt.Color">
+                        <int>255</int>
+                        <int>255</int>
+                        <int>255</int>
+                        <int>255</int>
+                      </object>
+                      <object class="java.awt.Color">
+                        <int>49</int>
+                        <int>52</int>
+                        <int>53</int>
+                        <int>255</int>
+                      </object>
                     </object>
                   </property>
                   <property name="borderSides">
@@ -1259,7 +1284,7 @@ return console.askYesNo(message, true);
     </styles>
   </installerGui>
   <mediaSets>
-    <windows name="Windows 64 bit" id="11" mediaFileName="Cytoscape_${compiler:sys.version}_windows_64bit" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true">
+    <windows name="windows" id="11" mediaFileName="Cytoscape_${compiler:sys.version}_windows_64bit" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true">
       <excludedComponents>
         <component id="235" />
       </excludedComponents>
@@ -1274,7 +1299,7 @@ return console.askYesNo(message, true);
       </variables>
       <jreBundle jreBundleSource="preCreated" includedJre="windows-amd64-11.0.6" bundleType="dynamic" bundleUrl="https://cytoscape-builds.ucsd.edu/jres/windows-amd64-11.0.6.tar.gz" shared="true" />
     </windows>
-    <macosFolder name="macOS (x64)" id="9" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true">
+    <macosFolder name="macos x64" id="9" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true">
       <excludedComponents>
         <component id="234" />
       </excludedComponents>
@@ -1286,7 +1311,7 @@ return console.askYesNo(message, true);
       </variables>
       <jreBundle jreBundleSource="preCreated" includedJre="macos-amd64-17.0.1" bundleType="dynamic" bundleUrl="https://cytoscape-builds.ucsd.edu/jres/macos-amd64-17.0.1.tar.gz" />
     </macosFolder>
-    <macosFolder name="macOS (aarch64)" id="637" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true">
+    <macosFolder name="macos aarch64" id="637" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true" architecture="aarch64">
       <excludedComponents>
         <component id="234" />
       </excludedComponents>
@@ -1296,9 +1321,9 @@ return console.askYesNo(message, true);
       <variables>
         <variable name="JAVAFX_NATIVE_DIR" value="mac" />
       </variables>
-      <jreBundle jreBundleSource="preCreated" includedJre="macos-aarch64-17.0.1" bundleType="dynamic" bundleUrl="https://cytoscape-builds.ucsd.edu/jres/macos-aarch64-17.0.1.tar.gz" />
+      <jreBundle jreBundleSource="preCreated" includedJre="macos-aarch64-17.0.2" bundleType="dynamic" bundleUrl="https://cytoscape-builds.ucsd.edu/jres/macos-aarch64-17.0.2.tar.gz" />
     </macosFolder>
-    <unixInstaller name="Unix" id="12" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true">
+    <unixInstaller name="unix" id="12" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true">
       <excludedComponents>
         <component id="234" />
       </excludedComponents>
@@ -1311,6 +1336,7 @@ return console.askYesNo(message, true);
       <variables>
         <variable name="JAVAFX_NATIVE_DIR" value="linux" />
       </variables>
+      <jreBundle jreBundleSource="none" />
     </unixInstaller>
   </mediaSets>
   <buildIds>
