@@ -108,7 +108,6 @@
 
     <bundle start-level="165">mvn:org.cytoscape/jobs-impl/${cytoscape.impl.version}</bundle>
 
-    <bundle start-level="170">mvn:org.cytoscape/search-impl/${cytoscape.impl.version}</bundle>
 	<bundle start-level="170">mvn:org.cytoscape/search2-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="170">mvn:org.cytoscape/table-browser-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="170">mvn:org.cytoscape/vizmap-gui-impl/${cytoscape.impl.version}</bundle>
