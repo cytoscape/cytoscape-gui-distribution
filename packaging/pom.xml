@@ -12,7 +12,7 @@
   <name>Cytoscape Release Packaging</name>
 
   <properties>
-    <install4j.home>/opt/install4j8/</install4j.home>
+    <install4j.home>/opt/install4j9/</install4j.home>
     <install4j.macKeystorePassword>${env.MAC_KEYSTORE_PASSWORD}</install4j.macKeystorePassword>
   </properties>
 
@@ -115,7 +115,7 @@
               <projectFile>${project.build.outputDirectory}/Cytoscape.install4j</projectFile>
               <!-- Temporarily disable building some of the platform media files until the JRE bundles are available. -->
               <!-- windows=11, macOS x64=9, macOs aarch64=637, unix=12 -->
-              <buildIds>12,9</buildIds>
+              <buildIds>11,9,637,12</buildIds>
             </configuration>
           </execution>
         </executions>
