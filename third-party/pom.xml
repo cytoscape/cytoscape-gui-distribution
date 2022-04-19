@@ -44,6 +44,17 @@
           <name>Cytoscape Releases</name>
           <url>http://nrnb-nexus.ucsd.edu/repository/cytoscape_releases/</url>
        </repository>
+       <repository>
+          <id>psidev</id>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <name>psidev</name>
+          <url>https://www.ebi.ac.uk/Tools/maven/repos/content/repositories/pst-release/</url>
+       </repository>
   </repositories>
 
   <dependencies>
@@ -231,7 +242,7 @@
     <dependency>
         <groupId>psidev.psi.mi</groupId>
         <artifactId>psimitab</artifactId>
-        <version>1.7.9</version>
+        <version>1.8.6</version>
     </dependency>
     <dependency>
         <groupId>commons-cli</groupId>
@@ -246,7 +257,7 @@
     <dependency>
         <groupId>psidev.psi.mi</groupId>
         <artifactId>psi25-xml</artifactId>
-        <version>1.8.5</version>
+        <version>1.8.6</version>
     </dependency>
     <dependency>
         <groupId>com.fasterxml.jackson.core</groupId>
