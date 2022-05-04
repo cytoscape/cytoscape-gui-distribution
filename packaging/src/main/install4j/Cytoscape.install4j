@@ -47,10 +47,10 @@
   </files>
   <launchers>
     <launcher name="Cytoscape" id="3" icnsFile="${basedir}/src/main/images/cytoscape3-icon-trans-128x128.icns">
-      <executable name="Cytoscape" iconSet="true" iconFile="${basedir}/src/main/images/cytoscape3-icon-trans-128x128.ico" executableDir="." stderrFile="output.log" redirectStdout="true" executableMode="gui" dpiAware="false">
+      <executable name="Cytoscape" iconSet="true" iconFile="${basedir}/src/main/images/cytoscape3-icon-trans-128x128.ico" executableDir="." stderrFile="output.log" executableMode="gui" dpiAware="false">
         <versionInfo fileVersion="${compiler:WINDOWS_VERSION}" fileDescription="Cytoscape" legalCopyright="Cytoscape Consortium" internalName="${compiler:sys.shortName}" />
       </executable>
-      <java mainClass="org.cytoscape.launcher.internal.Launcher" vmParameters="--add-reads=java.xml=java.logging --add-exports=java.base/org.apache.karaf.specs.locator=java.xml,ALL-UNNAMED --patch-module java.base=&quot;${launcher:sys.launcherDirectory}/framework/lib/endorsed/org.apache.karaf.specs.locator-4.3.3.jar&quot; --patch-module java.xml=&quot;${launcher:sys.launcherDirectory}/framework/lib/endorsed/org.apache.karaf.specs.java.xml-4.3.3.jar&quot; -p &quot;${launcher:sys.launcherDirectory}/framework/lib/openjfx/${compiler:JAVAFX_NATIVE_DIR}&quot; --add-modules javafx.base,javafx.swing,javafx.media,javafx.web --add-opens java.base/java.security=ALL-UNNAMED --add-opens java.base/java.net=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.naming/javax.naming.spi=ALL-UNNAMED --add-opens java.rmi/sun.rmi.transport.tcp=ALL-UNNAMED --add-exports=java.base/sun.net.www.protocol.file=ALL-UNNAMED --add-exports=java.base/sun.net.www.protocol.ftp=ALL-UNNAMED --add-exports=java.base/sun.net.www.protocol.http=ALL-UNNAMED --add-exports=java.base/sun.net.www.protocol.https=ALL-UNNAMED --add-exports=java.base/sun.net.www.protocol.jar=ALL-UNNAMED --add-exports=java.base/sun.net.www.content.text=ALL-UNNAMED --add-exports=jdk.xml.dom/org.w3c.dom.html=ALL-UNNAMED --add-exports=jdk.naming.rmi/com.sun.jndi.url.rmi=ALL-UNNAMED --add-exports=java.rmi/sun.rmi.registry=ALL-UNNAMED --add-exports=java.security.sasl/com.sun.security.sasl=ALL-UNNAMED -Dkaraf.instances=&quot;${launcher:sys.launcherDirectory}/framework/instances&quot; -Dkaraf.home=&quot;${launcher:sys.launcherDirectory}/framework&quot; -Dkaraf.base=&quot;${launcher:sys.launcherDirectory}/framework&quot; -Dkaraf.data=&quot;${launcher:sys.userHome}/CytoscapeConfiguration/3/karaf_data&quot; -Dkaraf.etc=&quot;${launcher:sys.launcherDirectory}/framework/etc&quot; -Dkaraf.log=&quot;${launcher:sys.userHome}/CytoscapeConfiguration/3/karaf_data/log&quot; -Dkaraf.restart.jvm.supported=true -Djava.io.tmpdir=&quot;${launcher:sys.userHome}/CytoscapeConfiguration/3/karaf_data/tmp&quot; -Djava.util.logging.config.file=&quot;${launcher:sys.launcherDirectory}/framework/etc/java.util.logging.properties&quot; -Dcytoscape.home=&quot;${launcher:sys.launcherDirectory}&quot; -Xdock:icon=./framework/cytoscape_logo_512.png -Xdock:name=Cytoscape -Dkaraf.startLocalConsole=false -Dkaraf.startRemoteShell=false">
+      <java mainClass="org.cytoscape.launcher.internal.Launcher" vmParameters="--add-reads=java.xml=java.logging --add-exports=java.base/org.apache.karaf.specs.locator=java.xml,ALL-UNNAMED --patch-module java.base=&quot;${launcher:sys.launcherDirectory}/framework/lib/endorsed/org.apache.karaf.specs.locator-4.3.3.jar&quot; --patch-module java.xml=&quot;${launcher:sys.launcherDirectory}/framework/lib/endorsed/org.apache.karaf.specs.java.xml-4.3.3.jar&quot; -p &quot;${launcher:sys.launcherDirectory}/framework/lib/openjfx/${compiler:JAVAFX_NATIVE_DIR}&quot; --add-modules javafx.base,javafx.swing,javafx.media,javafx.web --add-opens java.base/java.security=ALL-UNNAMED --add-opens java.base/java.net=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.naming/javax.naming.spi=ALL-UNNAMED --add-opens java.rmi/sun.rmi.transport.tcp=ALL-UNNAMED --add-exports=java.base/sun.net.www.protocol.file=ALL-UNNAMED --add-exports=java.base/sun.net.www.protocol.ftp=ALL-UNNAMED --add-exports=java.base/sun.net.www.protocol.http=ALL-UNNAMED --add-exports=java.base/sun.net.www.protocol.https=ALL-UNNAMED --add-exports=java.base/sun.net.www.protocol.jar=ALL-UNNAMED --add-exports=java.base/sun.net.www.content.text=ALL-UNNAMED --add-exports=jdk.xml.dom/org.w3c.dom.html=ALL-UNNAMED --add-exports=jdk.naming.rmi/com.sun.jndi.url.rmi=ALL-UNNAMED --add-exports=java.rmi/sun.rmi.registry=ALL-UNNAMED --add-exports=java.security.sasl/com.sun.security.sasl=ALL-UNNAMED -Dkaraf.instances=&quot;${launcher:sys.launcherDirectory}/framework/instances&quot; -Dkaraf.home=&quot;${launcher:sys.launcherDirectory}/framework&quot; -Dkaraf.base=&quot;${launcher:sys.launcherDirectory}/framework&quot; -Dkaraf.data=&quot;${installer:sys.userHome}/CytoscapeConfiguration/3/karaf_data&quot; -Dkaraf.etc=&quot;${launcher:sys.launcherDirectory}/framework/etc&quot; -Dkaraf.log=&quot;${installer:sys.userHome}/CytoscapeConfiguration/3/karaf_data/log&quot; -Dkaraf.restart.jvm.supported=true -Djava.util.logging.config.file=&quot;${launcher:sys.launcherDirectory}/framework/etc/java.util.logging.properties&quot; -Dcytoscape.home=&quot;${launcher:sys.launcherDirectory}&quot; -Xdock:icon=./framework/cytoscape_logo_512.png -Xdock:name=Cytoscape -Dkaraf.startLocalConsole=false -Dkaraf.startRemoteShell=false">
         <classPath>
           <scanDirectory location="." failOnError="false" />
           <directory location="lib/boot" failOnError="false" />
@@ -73,7 +73,7 @@
         </modulePath>
       </java>
       <macStaticAssociationActions mode="selected" />
-      <vmOptionsFile mode="none" />
+      <vmOptionsFile mode="none" overwriteMode="1" />
       <iconImageFiles>
         <file path="${basedir}/src/main/images/cytoscape3-icon-trans-16x16.png" />
         <file path="${basedir}/src/main/images/cytoscape3-icon-trans-32x32.png" />
@@ -828,7 +828,6 @@ return true;
 
 // Set the JVM options based on the amount of physical memory and the bitness of the JVM being used
 
-String[] vmoptions = new String[3];
 Long xmxValue = Math.round(SystemInfo.getPhysicalMemory() * 0.95 / 1024 / 1024);
 
 if(!System.getProperty("os.arch").contains("64")){ //not 64-bit
@@ -840,9 +839,13 @@ if(!System.getProperty("os.arch").contains("64")){ //not 64-bit
 
 Long xmsValue = Math.min(xmxValue, 2048);
 
+Object userHome = context.getVariable("sys.userHome");
+
+String[] vmoptions = new String[4];
 vmoptions[0] = "-Xms" + xmsValue + "M";
 vmoptions[1] = "-Xmx" + xmxValue + "M";
 vmoptions[2] = "-Xss5M";
+vmoptions[3] = "-Djava.io.tmpdir=" + userHome + "/CytoscapeConfiguration/3/karaf_data/tmp";
 
 context.setVariable("vmoptions", vmoptions);
 return true;
@@ -868,6 +871,7 @@ shareStatisticsDate=${compiler:sys.date} ${compiler:sys.time}
               <action id="398" beanClass="com.install4j.runtime.beans.actions.misc.AddVmOptionsAction" actionElevationType="elevated">
                 <serializedBean>
                   <property name="launcherId" type="string">3</property>
+                  <property name="macosVmOptionsType" type="enum" class="com.install4j.runtime.beans.actions.misc.MacosVmOptionsType" value="OUTER" />
                   <property name="vmOptions" type="array" elementType="string" length="1">
                     <element index="0">${installer:vmoptions}</element>
                   </property>
