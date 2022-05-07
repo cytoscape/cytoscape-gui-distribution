@@ -907,25 +907,6 @@ shareStatisticsDate=${compiler:sys.date} ${compiler:sys.time}
                   </property>
                 </serializedBean>
               </action>
-              <action id="342" beanClass="com.install4j.runtime.beans.actions.xml.XsltAction" actionElevationType="elevated">
-                <serializedBean>
-                  <property name="file">
-                    <object class="java.io.File">
-                      <string>Cytoscape.app/Contents/Info.plist</string>
-                    </object>
-                  </property>
-                  <property name="sourceFile">
-                    <object class="java.io.File">
-                      <string>Cytoscape.app/Contents/Info.plist</string>
-                    </object>
-                  </property>
-                  <property name="xlstFile">
-                    <object class="com.install4j.api.beans.ExternalFile">
-                      <string>Info.plist.xsl</string>
-                    </object>
-                  </property>
-                </serializedBean>
-              </action>
               <action id="632" beanClass="com.install4j.runtime.beans.actions.desktop.CreateDesktopLinkAction" actionElevationType="elevated" rollbackBarrierExitCode="0">
                 <serializedBean>
                   <property name="file">
@@ -1315,7 +1296,7 @@ return console.askYesNo(message, true);
       </variables>
       <jreBundle jreBundleSource="preCreated" includedJre="macos-amd64-17.0.1" bundleType="dynamic" bundleUrl="https://cytoscape-builds.ucsd.edu/jres/macos-amd64-17.0.1.tar.gz" />
     </macosFolder>
-    <macosFolder name="macos aarch64" id="637" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true" architecture="aarch64">
+    <macosFolder name="macos aarch64" id="637" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true" architecture="aarch64" signLaunchers="true">
       <excludedComponents>
         <component id="234" />
       </excludedComponents>
