@@ -456,7 +456,7 @@
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>webservice-psicquic-client</artifactId>
-									<version>3.5.0</version>
+									<version>3.6.0</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
