@@ -13,8 +13,8 @@ set help=false
 IF "%1"=="-h" set help=true
 IF "%1"=="--help" set help=true
 
-IF "%help%"=="false" GOTO skipHelp 	
-echo.	
+IF "%help%"=="false" goto skipHelp
+echo.
 echo Cytoscape Command-line Arguments
 echo ================================
 echo usage: cytoscape.bat [OPTIONS]
@@ -30,26 +30,35 @@ echo  -S,--script ^<file^>    Execute commands from script file.
 echo  -R,--rest ^<port^>      Start a rest service.
 echo.
 
-GOTO END_BATCH
+goto END_BATCH
 :skipHelp
+
+if defined CY_DEBUG_START (
+    echo.
+    echo CY_DEBUG_START variable set, outputting debug information
+    echo.
+)
 
 set checkVersion=false
 IF "%1"=="-v" set checkVersion=true
 IF "%1"=="--version" set checkVersion=true
 
-IF "%checkVersion%"=="false" GOTO skipCheckVersion 	
+IF "%checkVersion%"=="false" goto skipCheckVersion
 echo %CYTOSCAPE_VERSION%
 
-GOTO END_BATCH
+goto END_BATCH
 :skipCheckVersion
 
 setlocal ENABLEEXTENSIONS
-set KARAF_TITLE=Cytoscape
+setlocal EnableDelayedExpansion
 set DEBUG_PORT=12345
 
 :: Create the Cytoscape.vmoptions file, if it doesn't exist.
 IF EXIST "Cytoscape.vmoptions" GOTO vmoptionsFileExists
+
+:: This might fail if directory is NOT writable...
 IF EXIST "gen_vmoptions.bat" CMD /C gen_vmoptions.bat
+
 :vmoptionsFileExists
 
 
@@ -78,47 +87,62 @@ if not exist "%KARAF_DATA%" (
     mkdir "%KARAF_DATA%\tmp"
 )
 
+if defined CY_DEBUG_START (
+  echo Checking if JAVA_HOME is already set
+)
+
+:: If JAVA_HOME is set, assume all is well and use that to launch
+:: Cytoscape
 if not "X%JAVA_HOME%"=="X" goto TryJDKEnd
-goto :TryJRE
 
-:warn
-    echo %KARAF_TITLE%: %*
-goto :EOF
+if defined CY_DEBUG_START (
+  echo JAVA_HOME not set, seeing if Java installed under jre folder in Cytoscape install
+)
 
-:TryJRE
+:: Try finding JRE under Cytoscape installation directory.
+set TestPath=%~dp0%jre
 
-:: Strategy: First try finding a commonly installed JRE. If that fails
-:: find a system JRE through the registry.
+if exist "%TestPath%" (
+    set JAVA_HOME=%TestPath%
+    if defined CY_DEBUG_START (
+        echo Setting JAVA_HOME to JRE installed with Cytoscape: %JAVA_HOME%
+    )
+    goto TryJDKEnd
+)
 
-:: The range of allowable VMs will be MinJVM <= VM < MaxJVM
-:: Note that simple lexigraphic comparisons *WON'T WORK* with JVMs > 9
-set MinJVM=1.8.0_162
-set MinRegistryJVM=1.8
-set MaxJVM=1.9
+
+:: Look for desired java in install4j shared installation directory
+set DesiredJVM=17
+
 set TestPath=%CommonProgramFiles%\i4j_jres
 
-if exist "%TestPath%" goto tryCommonJRE
-echo Did not find common files directory %TestPath%
-goto tryRegistry
+if not exist "%TestPath%" (
+    if defined CY_DEBUG_START (
+        echo Did not find common files directory %TestPath%
+    )
+    goto tryRegistry
+)
 
-:tryCommonJRE
 if defined CY_DEBUG_START (
   echo Looking for common JVMs in %TestPath%
 )
 
-:: List the directory in descending order, which will result is our
-:: picking the most recent JVM in the allowable range. We skip JVMs 
-:: outside of the allowable range.
-for /F %%i in ('dir /B/ON "%TestPath%"') do (
-  if "%%i" GEQ "%MinJVM%" (
-    if "%%i" LSS "%MaxJVM%" (
-      set JAVA_HOME=%TestPath%\%%i
+:: List the directory in descending order by date, which will result in our
+:: picking the most recent JVM matching DesiredJVM. 
+for /F %%i in ('dir /B/O-D "%TestPath%"') do (
+  set tver=%%i
+  set mver=!tver:~0,3!
 
+  if "!mver!" == "%DesiredJVM%." (
+      set JAVA_HOME=%TestPath%\%%i
       if defined CY_DEBUG_START (
-        echo Found common JVM at %TestPath%\%%i
+          echo Found common JVM at %TestPath%\%%i
       )
-      goto END
-    )
+      goto TryJDKEND
+  ) else (
+      if defined CY_DEBUG_START (
+        echo %%i Major version !mver! does not match %DesiredJVM%.
+      )
   )
 )
 
@@ -127,50 +151,127 @@ if defined CY_DEBUG_START (
   echo Looking for system JVMs in registry
 )
 
-:: No JVM found in CommonFiles ... try going through the registry.
-:: The registry lists the "CurrentVersion" key for the JRE as a platform
-:: identifier (e.g., 1.8) and not a specific JVM version (e.g., 1.8.0_162).
-:: It then has a subkey that matches the "CurrentVersion", and that subkey
-:: has a path value. So, our drill is to get the CurrentVersion, then 
-:: get the path from the corresponding subkey. There could be other
+:: No JVM found under Cytoscape install or in CommonFiles ... 
+:: try going through the registry.
+:: For Java 17 Oracle, the registry lists the "CurrentVersion" as the 
+:: specific version (e.g., 17.0.13)
+:: The JavaHome subkey under the version has a path value.
+:: So, our drill is to get the CurrentVersion, then 
+:: get the path from JavaHome. There could be other
 :: subkeys identifying specific (inactive) JVM versions ... we don't 
 :: care about those.
-::
-:: Note that it's possible that the JVM found here will be out of our
-:: useful range (e.g., the platform identifier is 1.9, while we
-:: must have 1.8) ... we'll ignore the current version if that's the case.
 ::
 set CurrentVersion=
 set JAVA_HOME=
 
-for /F "usebackq skip=2 tokens=3" %%A in (`reg query "HKLM\SOFTWARE\JavaSoft\Java Runtime Environment" /v "CurrentVersion" 2^>nul`) do (
-    set CurrentVersion=%%A
+for /F "usebackq skip=2 tokens=3" %%A in (`reg query "HKLM\SOFTWARE\JavaSoft\JDK" /v "CurrentVersion" 2^>nul`) do (
+   set tver=%%A
+   set mver=!tver:~0,3!
+   if "!mver!" == "%DesiredJVM%." ( 
+       set CurrentVersion=%%A
+   ) else (
+       if defined CY_DEBUG_START (
+           echo %%A Major version does not match %DesiredJVM%
+       )
+   )
 )
 if defined CurrentVersion (
-    for /F "usebackq skip=2 tokens=3*" %%A in (`reg query "HKLM\SOFTWARE\JavaSoft\Java Runtime Environment\%CurrentVersion%" /v JavaHome 2^>nul`) DO (
+    for /F "usebackq skip=2 tokens=3*" %%A in (`reg query "HKLM\SOFTWARE\JavaSoft\JDK\%CurrentVersion%" /v JavaHome 2^>nul`) DO (
         set JAVA_HOME=%%A %%B
 
         if defined CY_DEBUG_START (
-          echo Found system JVM %CurrentVersion% with path %%A %%B
+          echo Found system Oracle JDK JVM %CurrentVersion% with path %%A %%B
         )
 
         goto TryJDKEnd
     )
 )
+
+
+:: Look for suitable Eclipse JDK JVM
+:: By examining Eclipse Adoptium directory for folders starting with jdk-XX.
+:: where XX must match %DesiredJVM% set above
+
+set TestPath=%ProgramFiles%\Eclipse Adoptium
+
+if not exist "%TestPath%" (
+    if defined CY_DEBUG_START (
+        echo Did not find Eclipse Java directory %TestPath%
+    )
+    goto TryJDKEnd
+)
+
 if defined CY_DEBUG_START (
-  echo No system JVM defined in registry
+  echo Looking for JVMs in %TestPath%
+)
+
+:: List the directory in descending order by date, which will result in our
+:: picking the most recent JVM matching DesiredJVM.
+for /F %%i in ('dir /B/O-D "%TestPath%"') do (
+  set tver=%%i
+  set mver=!tver:~0,7!
+
+  if "!mver!" == "jdk-%DesiredJVM%." (
+      set JAVA_HOME=%TestPath%\%%i
+      if defined CY_DEBUG_START (
+          echo Found Eclipse JVM at %TestPath%\%%i
+      )
+      goto TryJDKEND
+  ) else (
+      if defined CY_DEBUG_START (
+        echo %%i Major version !mver! does not match jdk-%DesiredJVM%.
+      )
+  )
+)
+
+:: Look for suitable Microsoft JDK JVM
+:: By examining Microsoft directory for folders starting with jdk-XX.
+:: where XX must match %DesiredJVM% set above
+
+set TestPath=%ProgramFiles%\Microsoft
+
+if not exist "%TestPath%" (
+    if defined CY_DEBUG_START (
+        echo Did not find Micorsoft Java directory %TestPath%
+    )
+    goto TryJDKEnd
+)
+
+if defined CY_DEBUG_START (
+  echo Looking for JVMs in %TestPath%
+)
+
+:: List the directory in descending order by date, which will result in our
+:: picking the most recent JVM matching DesiredJVM.
+for /F %%i in ('dir /B/O-D "%TestPath%"') do (
+  set tver=%%i
+  set mver=!tver:~0,7!
+
+  if "!mver!" == "jdk-%DesiredJVM%." (
+      set JAVA_HOME=%TestPath%\%%i
+      if defined CY_DEBUG_START (
+          echo Found Microsoft JVM at %TestPath%\%%i
+      )
+      goto TryJDKEND
+  ) else (
+      if defined CY_DEBUG_START (
+        echo %%i Major version !mver! does not match jdk-%DesiredJVM%.
+      )
+  )
 )
 
 
 :TryJDKEnd
+
 if not exist "%JAVA_HOME%" (
-    call :warn JAVA_HOME is not valid: "%JAVA_HOME%"
-    goto END
+    echo.
+    echo ERROR: unable to start Cytoscape on command line, JAVA_HOME is not valid: %JAVA_HOME%
+    echo Please visit https://cytoscape.org in a browser for help
+    echo.
+    exit /b 1
 )
 
-set JAVA=%JAVA_HOME%\bin\java
-:END
-
+:: only output if CY_DEBUG_START variable is defined
 if defined CY_DEBUG_START (
   echo Using JVM found at %JAVA_HOME%
   pause
@@ -178,5 +279,4 @@ if defined CY_DEBUG_START (
 
 :: This is probably wrong.  We don't really want the user to be in this directory, do we?
 framework/bin/karaf %1 %2 %3 %4 %5 %6 %7 %8
-
 :END_BATCH
