@@ -17,7 +17,7 @@
 
 	<properties>
 		<maven.resources.escapeString>\</maven.resources.escapeString>
-		<javafx.version>17.0.1</javafx.version>
+		<javafx.version>18.0.1</javafx.version>
 		<dollar>$</dollar>
 	</properties>
 
@@ -606,9 +606,9 @@
 									<value>-Dkaraf.startRemoteShell=false</value>
 								</replacement>
 								<replacement>
-									<token>--patch-module java.xml=${dollar}{KARAF_HOME}/lib/endorsed/org.apache.karaf.specs.java.xml-${karaf.version}.jar \</token>
-									<value>--patch-module java.xml=${dollar}{KARAF_HOME}/lib/endorsed/org.apache.karaf.specs.java.xml-${karaf.version}.jar \
-                    -p $KARAF_HOME/lib/openjfx/$JAVAFX_DIR \
+									<token>--patch-module java.xml="${dollar}{KARAF_HOME}/lib/endorsed/org.apache.karaf.specs.java.xml-${karaf.version}.jar" \</token>
+									<value>--patch-module java.xml="${dollar}{KARAF_HOME}/lib/endorsed/org.apache.karaf.specs.java.xml-${karaf.version}.jar" \
+                  -p "${dollar}{KARAF_HOME}/lib/openjfx/${JAVAFX_DIR}" \
                     --add-modules javafx.base,javafx.swing,javafx.media,javafx.web \
 									</value>
 								</replacement>
@@ -668,7 +668,7 @@
 									<value>--patch-module java.base="%KARAF_HOME%\lib\endorsed\org.apache.karaf.specs.locator-${karaf.version}.jar" ^</value>
 								</replacement>
 								<replacement>
-									<token>--patch-module java.xml=%KARAF_HOME%\lib\endorsed\org.apache.karaf.specs.java.xml-${karaf.version}.jar ^</token>
+									<token>--patch-module java.xml="%KARAF_HOME%\lib\endorsed\org.apache.karaf.specs.java.xml-${karaf.version}.jar" ^</token>
 									<value>--patch-module java.xml="%KARAF_HOME%\lib\endorsed\org.apache.karaf.specs.java.xml-${karaf.version}.jar" ^
                 -p "%KARAF_HOME%/lib/openjfx/win/" ^
                 --add-modules javafx.base,javafx.swing,javafx.media,javafx.web ^
