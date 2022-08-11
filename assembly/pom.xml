@@ -178,7 +178,7 @@
 									<outputDirectory>target/dependencies/launcher</outputDirectory>
 								</artifactItem>
 
-								<!-- JavaFX Mac -->
+								<!-- JavaFX Mac Intel -->
 								<artifactItem>
 									<groupId>org.openjfx</groupId>
     								<artifactId>javafx-base</artifactId>
@@ -234,6 +234,64 @@
     								<type>jar</type>
 									<classifier>mac</classifier>
 									<outputDirectory>target/dependencies/openjfx/mac</outputDirectory>
+								</artifactItem>
+
+								<!-- JavaFX Mac aarch64 -->
+								<artifactItem>
+									<groupId>org.openjfx</groupId>
+    								<artifactId>javafx-base</artifactId>
+    								<version>${javafx.version}</version>
+    								<type>jar</type>
+    								<classifier>mac-aarch64</classifier>
+									<outputDirectory>target/dependencies/openjfx/mac_aarch64</outputDirectory>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.openjfx</groupId>
+    								<artifactId>javafx-controls</artifactId>
+    								<version>${javafx.version}</version>
+    								<type>jar</type>
+									<classifier>mac-aarch64</classifier>
+									<outputDirectory>target/dependencies/openjfx/mac_aarch64</outputDirectory>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.openjfx</groupId>
+    								<artifactId>javafx-fxml</artifactId>
+    								<version>${javafx.version}</version>
+    								<type>jar</type>
+									<classifier>mac-aarch64</classifier>
+									<outputDirectory>target/dependencies/openjfx/mac_aarch64</outputDirectory>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.openjfx</groupId>
+    								<artifactId>javafx-graphics</artifactId>
+    								<version>${javafx.version}</version>
+    								<type>jar</type>
+									<classifier>mac-aarch64</classifier>
+									<outputDirectory>target/dependencies/openjfx/mac_aarch64</outputDirectory>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.openjfx</groupId>
+    								<artifactId>javafx-media</artifactId>
+    								<version>${javafx.version}</version>
+    								<type>jar</type>
+									<classifier>mac-aarch64</classifier>
+									<outputDirectory>target/dependencies/openjfx/mac_aarch64</outputDirectory>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.openjfx</groupId>
+    								<artifactId>javafx-swing</artifactId>
+    								<version>${javafx.version}</version>
+    								<type>jar</type>
+									<classifier>mac-aarch64</classifier>
+									<outputDirectory>target/dependencies/openjfx/mac_aarch64</outputDirectory>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.openjfx</groupId>
+    								<artifactId>javafx-web</artifactId>
+    								<version>${javafx.version}</version>
+    								<type>jar</type>
+									<classifier>mac-aarch64</classifier>
+									<outputDirectory>target/dependencies/openjfx/mac_aarch64</outputDirectory>
 								</artifactItem>
 
 								<!-- JavaFX Linux -->

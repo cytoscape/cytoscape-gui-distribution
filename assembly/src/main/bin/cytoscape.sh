@@ -48,7 +48,11 @@ fi
 export JAVA_DEBUG_OPTS="-Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=${DEBUG_PORT}"
 if [ `uname` = "Darwin" ]; then
 	CYTOSCAPE_MAC_OPTS="-Xdock:icon=$script_path/framework/cytoscape_logo_512.png -Xdock:name=Cytoscape"
-	export JAVAFX_DIR="mac"
+	if [ `uname -m` = "arm64" ]; then
+		export JAVAFX_DIR="mac_aarch64"
+	else 
+		export JAVAFX_DIR="mac"
+	fi
 else
 	export JAVAFX_DIR="linux"
 fi

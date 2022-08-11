@@ -1304,7 +1304,7 @@ return console.askYesNo(message, true);
         <entry filesetId="225" />
       </exclude>
       <variables>
-        <variable name="JAVAFX_NATIVE_DIR" value="mac" />
+        <variable name="JAVAFX_NATIVE_DIR" value="mac_aarch64" />
       </variables>
       <jreBundle jreBundleSource="preCreated" includedJre="macos-aarch64-17.0.2" bundleType="dynamic" bundleUrl="https://cytoscape-builds.ucsd.edu/jres/macos-aarch64-17.0.2.tar.gz" />
     </macosFolder>

@@ -124,6 +124,14 @@
         </fileSet>
 
 		<fileSet>
+            <directory>target/dependencies/openjfx/mac_aarch64</directory>
+            <includes>
+                <include>*.jar</include>
+            </includes>
+            <outputDirectory>/framework/lib/openjfx/mac_aarch64</outputDirectory>
+        </fileSet>
+
+		<fileSet>
             <directory>target/dependencies/openjfx/linux</directory>
             <includes>
                 <include>*.jar</include>
