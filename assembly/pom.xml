@@ -663,10 +663,18 @@
 									<token>-Dkaraf.startRemoteShell=true</token>
 									<value>-Dkaraf.startRemoteShell=false</value>
 								</replacement>
+								<!-- Hack. Karaf 4.3.3 did NOT put quotes around value of java.base or java.xml below causing cytoscape to fail to launch
+							         from command line when installed under a path way spaces (Program Files\). This looks like it has been
+									 fixed in versions 4.3.4 and above https://cytoscape.atlassian.net/browse/CYTOSCAPE-12981
+  								-->
+								<replacement>
+									<token>--patch-module java.base=${dollar}{KARAF_HOME}/lib/endorsed/org.apache.karaf.specs.locator-${karaf.version}.jar \</token>
+									<value>--patch-module java.base="${dollar}{KARAF_HOME}/lib/endorsed/org.apache.karaf.specs.locator-${karaf.version}.jar" \</value>
+								</replacement>
 								<replacement>
 									<token>--patch-module java.xml=${dollar}{KARAF_HOME}/lib/endorsed/org.apache.karaf.specs.java.xml-${karaf.version}.jar \</token>
-									<value>--patch-module java.xml=${dollar}{KARAF_HOME}/lib/endorsed/org.apache.karaf.specs.java.xml-${karaf.version}.jar \
-                  -p ${dollar}{KARAF_HOME}/lib/openjfx/${JAVAFX_DIR} \
+									<value>--patch-module java.xml="${dollar}{KARAF_HOME}/lib/endorsed/org.apache.karaf.specs.java.xml-${karaf.version}.jar" \
+                  -p "${dollar}{KARAF_HOME}/lib/openjfx/${JAVAFX_DIR}" \
                     --add-modules javafx.base,javafx.swing,javafx.media,javafx.web \
 									</value>
 								</replacement>
