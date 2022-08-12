@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <install4j version="9.0.6" transformSequenceNumber="9">
-  <directoryPresets config="/Users/mkucera/temp" />
+  <directoryPresets config="/home/cybuilder/cytoscape.p12" />
   <application name="Cytoscape" applicationId="5211-3645-3154-2580" mediaDir="dist" mediaFilePattern="${compiler:sys.shortName}_${compiler:sys.version}_${compiler:sys.mediaName}" shortName="Cytoscape" publisher="Cytoscape Consortium" publisherWeb="http://www.cytoscape.org" version="${version}" macVolumeId="60ff7381dde234ab" javaMinVersion="17.0.2" javaMaxVersion="17" allowBetaVM="true" jdkMode="jdk">
     <searchSequence>
       <registry />
@@ -10,7 +10,7 @@
       <variable name="WINDOWS_VERSION" value="@windows_version@" />
       <variable name="JAVAFX_NATIVE_DIR" description="OS-specific path to the OpenJFX native files in the Karaf framework." />
     </variables>
-    <codeSigning macEnabled="true" macPkcs12File="/Users/mkucera/temp/cytoscape.p12" />
+    <codeSigning macEnabled="true" macPkcs12File="/home/cybuilder/cytoscape.p12" />
     <jreBundles jdkProviderId="Adoptium" release="17/jdk-17.0.2+8" />
   </application>
   <files preserveSymlinks="false">
