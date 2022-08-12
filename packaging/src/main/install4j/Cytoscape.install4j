@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <install4j version="9.0.6" transformSequenceNumber="9">
-  <directoryPresets config="/home/cybuilder/cytoscape.p12" />
+  <directoryPresets config="/Users/mkucera/temp" />
   <application name="Cytoscape" applicationId="5211-3645-3154-2580" mediaDir="dist" mediaFilePattern="${compiler:sys.shortName}_${compiler:sys.version}_${compiler:sys.mediaName}" shortName="Cytoscape" publisher="Cytoscape Consortium" publisherWeb="http://www.cytoscape.org" version="${version}" macVolumeId="60ff7381dde234ab" javaMinVersion="17.0.2" javaMaxVersion="17" allowBetaVM="true" jdkMode="jdk">
     <searchSequence>
       <registry />
@@ -10,25 +10,57 @@
       <variable name="WINDOWS_VERSION" value="@windows_version@" />
       <variable name="JAVAFX_NATIVE_DIR" description="OS-specific path to the OpenJFX native files in the Karaf framework." />
     </variables>
-    <codeSigning macEnabled="true" macPkcs12File="/home/cybuilder/cytoscape.p12" />
+    <codeSigning macEnabled="true" macPkcs12File="/Users/mkucera/temp/cytoscape.p12" />
     <jreBundles jdkProviderId="Adoptium" release="17/jdk-17.0.2+8" />
   </application>
   <files preserveSymlinks="false">
     <filesets>
       <fileset name="Windows file set" id="225" />
       <fileset name="Unix file set" id="227" />
+      <fileset name="Mac x64 file set" id="638" />
+      <fileset name="Mac aarch64 file set" id="640" />
     </filesets>
     <roots>
       <root id="226" fileset="225" />
       <root id="228" fileset="227" />
+      <root id="639" fileset="638" />
+      <root id="641" fileset="640" />
     </roots>
     <mountPoints>
       <mountPoint id="231" root="226" />
       <mountPoint id="232" root="228" />
+      <mountPoint id="642" root="639" />
+      <mountPoint id="643" root="641" />
     </mountPoints>
     <entries>
-      <dirEntry mountPoint="231" file="${project.build.directory}/cytoscape-windows-${version}" fileMode="755" overrideFileMode="true" overrideOverwriteMode="true" overrideUninstallMode="true" dirMode="777" overrideDirMode="true" />
-      <dirEntry mountPoint="232" file="${project.build.directory}/cytoscape-unix-${version}" fileMode="755" overrideFileMode="true" overrideOverwriteMode="true" overrideUninstallMode="true" dirMode="777" overrideDirMode="true" />
+      <dirEntry mountPoint="231" file="${project.build.directory}/cytoscape-windows" fileMode="755" overrideFileMode="true" overrideOverwriteMode="true" overrideUninstallMode="true" dirMode="777" overrideDirMode="true">
+        <exclude>
+          <entry location="framework/lib/openjfx/mac" />
+          <entry location="framework/lib/openjfx/mac_aarch64" />
+          <entry location="framework/lib/openjfx/linux" />
+        </exclude>
+      </dirEntry>
+      <dirEntry mountPoint="232" file="${project.build.directory}/cytoscape-unix" fileMode="755" overrideFileMode="true" overrideOverwriteMode="true" overrideUninstallMode="true" dirMode="777" overrideDirMode="true">
+        <exclude>
+          <entry location="framework/lib/openjfx/win" />
+          <entry location="framework/lib/openjfx/mac" />
+          <entry location="framework/lib/openjfx/mac_aarch64" />
+        </exclude>
+      </dirEntry>
+      <dirEntry mountPoint="642" file="${project.build.directory}/cytoscape-unix" fileMode="755" overrideFileMode="true" dirMode="777" overrideDirMode="true">
+        <exclude>
+          <entry location="framework/lib/openjfx/win" />
+          <entry location="framework/lib/openjfx/mac_aarch64" />
+          <entry location="framework/lib/openjfx/linux" />
+        </exclude>
+      </dirEntry>
+      <dirEntry mountPoint="643" file="${project.build.directory}/cytoscape-unix" fileMode="755" overrideFileMode="true" dirMode="777" overrideDirMode="true">
+        <exclude>
+          <entry location="framework/lib/openjfx/win" />
+          <entry location="framework/lib/openjfx/mac" />
+          <entry location="framework/lib/openjfx/linux" />
+        </exclude>
+      </dirEntry>
     </entries>
     <components>
       <component name="Windows Installation Component" id="234">
@@ -41,6 +73,18 @@
         <include>
           <entry defaultFileset="true" />
           <entry filesetId="227" />
+        </include>
+      </component>
+      <component name="Mac x64 Installation Component" id="644">
+        <include>
+          <entry defaultFileset="true" />
+          <entry filesetId="638" />
+        </include>
+      </component>
+      <component name="Mac aarch64 Installation Component" id="645">
+        <include>
+          <entry defaultFileset="true" />
+          <entry filesetId="640" />
         </include>
       </component>
     </components>
@@ -1272,24 +1316,32 @@ return console.askYesNo(message, true);
     <windows name="windows" id="11" mediaFileName="Cytoscape_${compiler:sys.version}_windows_64bit" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true">
       <excludedComponents>
         <component id="235" />
+        <component id="644" />
+        <component id="645" />
       </excludedComponents>
       <excludedBeans>
         <bean refId="50" />
       </excludedBeans>
       <exclude>
         <entry filesetId="227" />
+        <entry filesetId="638" />
+        <entry filesetId="640" />
       </exclude>
       <variables>
         <variable name="JAVAFX_NATIVE_DIR" value="win" />
       </variables>
-      <jreBundle jreBundleSource="preCreated" includedJre="windows-amd64-17.0.2" bundleType="dynamic" bundleUrl="https://cytoscape-builds.ucsd.edu/jres/windows-amd64-17.0.2.tar.gz" shared="true" />
+      <jreBundle jreBundleSource="preCreated" includedJre="windows-amd64-17.0.2" bundleType="dynamic" bundleUrl="https://cytoscape-builds.ucsd.edu/jres/windows-amd64-17.0.2.tar.gz" shared="true" sharingId="org.cytoscape.jre" />
     </windows>
     <macosFolder name="macos x64" id="9" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true">
       <excludedComponents>
         <component id="234" />
+        <component id="235" />
+        <component id="645" />
       </excludedComponents>
       <exclude>
         <entry filesetId="225" />
+        <entry filesetId="227" />
+        <entry filesetId="640" />
       </exclude>
       <variables>
         <variable name="JAVAFX_NATIVE_DIR" value="mac" />
@@ -1299,9 +1351,13 @@ return console.askYesNo(message, true);
     <macosFolder name="macos aarch64" id="637" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true" architecture="aarch64" signLaunchers="true">
       <excludedComponents>
         <component id="234" />
+        <component id="235" />
+        <component id="644" />
       </excludedComponents>
       <exclude>
         <entry filesetId="225" />
+        <entry filesetId="227" />
+        <entry filesetId="638" />
       </exclude>
       <variables>
         <variable name="JAVAFX_NATIVE_DIR" value="mac_aarch64" />
@@ -1311,12 +1367,16 @@ return console.askYesNo(message, true);
     <unixInstaller name="unix" id="12" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true">
       <excludedComponents>
         <component id="234" />
+        <component id="644" />
+        <component id="645" />
       </excludedComponents>
       <excludedBeans>
         <bean refId="50" />
       </excludedBeans>
       <exclude>
         <entry filesetId="225" />
+        <entry filesetId="638" />
+        <entry filesetId="640" />
       </exclude>
       <variables>
         <variable name="JAVAFX_NATIVE_DIR" value="linux" />

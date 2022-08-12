@@ -12,7 +12,7 @@
   <name>Cytoscape Release Packaging</name>
 
   <properties>
-    <install4j.home>/opt/install4j9/</install4j.home>
+    <install4j.home>/Applications/install4j.app/Contents/Resources/app</install4j.home>
     <install4j.macKeystorePassword>${env.MAC_KEYSTORE_PASSWORD}</install4j.macKeystorePassword>
   </properties>
 
@@ -60,18 +60,50 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-dependency-plugin</artifactId>
+        <version>3.3.0</version>
         <executions>
+
           <execution>
-            <id>unpack-distribution</id>
+            <id>unpack</id>
+            <phase>package</phase>
             <goals>
-              <goal>unpack-dependencies</goal>
+              <goal>unpack</goal>
             </goals>
             <configuration>
-              <outputDirectory>${project.build.directory}</outputDirectory>
-              <excludeTransitive>true</excludeTransitive>
+              <artifactItems>
+                <artifactItem>
+                  <groupId>org.cytoscape.distribution</groupId>
+                  <artifactId>cytoscape</artifactId>
+                  <version>${project.version}</version>
+                  <type>zip</type>
+                  <overWrite>false</overWrite>
+                  <outputDirectory>${project.build.directory}</outputDirectory>
+                  <fileMappers>
+                    <org.codehaus.plexus.components.io.filemappers.RegExpFileMapper>
+                      <pattern>^cytoscape-windows-${project.version}/</pattern>
+                      <replacement>cytoscape-windows/</replacement>
+                    </org.codehaus.plexus.components.io.filemappers.RegExpFileMapper>
+                  </fileMappers>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>org.cytoscape.distribution</groupId>
+                  <artifactId>cytoscape</artifactId>
+                  <version>${project.version}</version>
+                  <type>tar.gz</type>
+                  <overWrite>false</overWrite>
+                  <outputDirectory>${project.build.directory}</outputDirectory>
+                  <fileMappers>
+                    <org.codehaus.plexus.components.io.filemappers.RegExpFileMapper>
+                      <pattern>^cytoscape-unix-${project.version}/</pattern>
+                      <replacement>cytoscape-unix/</replacement>
+                    </org.codehaus.plexus.components.io.filemappers.RegExpFileMapper>
+                  </fileMappers>
+                </artifactItem>
+              </artifactItems>
             </configuration>
           </execution>
-		  <!-- Comment out JUnit if not desired -->
+
+          <!-- Comment out JUnit if not desired -->
           <execution>
             <id>unpack-javadoc</id>
             <goals>
@@ -86,7 +118,7 @@
               <includeClassifiers>javadoc</includeClassifiers>
             </configuration>
           </execution>
-		  <!-- -->
+          <!-- 
           <execution>
             <id>copy-distribution</id>
             <goals>
@@ -98,8 +130,10 @@
               <excludeTypes>jar</excludeTypes>
             </configuration>
           </execution>
+          -->
         </executions>
       </plugin>
+
       <!-- This will create the bundles -->
       <plugin>
         <groupId>org.sonatype.install4j</groupId>
@@ -113,13 +147,12 @@
             </goals>
             <configuration>
               <projectFile>${project.build.outputDirectory}/Cytoscape.install4j</projectFile>
-              <!-- Temporarily disable building some of the platform media files until the JRE bundles are available. -->
-              <!-- windows=11, macOS x64=9, macOs aarch64=637, unix=12 -->
               <buildIds>11,9,637,12</buildIds>
             </configuration>
           </execution>
         </executions>
       </plugin>
+
     </plugins>
   </build>
 
