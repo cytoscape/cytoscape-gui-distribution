@@ -1330,7 +1330,7 @@ return console.askYesNo(message, true);
       <variables>
         <variable name="JAVAFX_NATIVE_DIR" value="win" />
       </variables>
-      <jreBundle jreBundleSource="preCreated" includedJre="windows-amd64-17.0.2" bundleType="dynamic" bundleUrl="https://cytoscape-builds.ucsd.edu/jres/windows-amd64-17.0.2.tar.gz" shared="true" sharingId="org.cytoscape.jre" />
+      <jreBundle jreBundleSource="preCreated" includedJre="windows-amd64-17.0.2" bundleType="dynamic" bundleUrl="https://cytoscape-builds.ucsd.edu/jres/windows-amd64-17.0.2.tar.gz" sharingId="org.cytoscape.jre" />
     </windows>
     <macosFolder name="macos x64" id="9" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true">
       <excludedComponents>
