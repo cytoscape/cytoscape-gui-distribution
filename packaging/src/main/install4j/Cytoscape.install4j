@@ -883,18 +883,14 @@ if(!System.getProperty("os.arch").contains("64")){ //not 64-bit
 
 Long xmsValue = Math.min(xmxValue, 2048);
 
-Object userHome = context.getVariable("sys.userHome");
-
-String[] vmoptions = new String[4];
+String[] vmoptions = new String[3];
 vmoptions[0] = "-Xms" + xmsValue + "M";
 vmoptions[1] = "-Xmx" + xmxValue + "M";
 vmoptions[2] = "-Xss5M";
-vmoptions[3] = "-Djava.io.tmpdir=" + userHome + "/CytoscapeConfiguration/3/karaf_data/tmp";
 
 context.setVariable("vmoptions", vmoptions);
 return true;
-
-						</property>
+</property>
                     </object>
                   </property>
                 </serializedBean>
