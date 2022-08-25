@@ -90,7 +90,7 @@
     </components>
   </files>
   <launchers>
-    <launcher name="Cytoscape" id="3" icnsFile="${basedir}/src/main/images/cytoscape3-icon-trans-128x128.icns">
+    <launcher name="Cytoscape" id="3" icnsFile="${basedir}/src/main/images/cytoscape3-icon-trans-128x128.icns" macStaticAssociationsForInstallers="true">
       <executable name="Cytoscape" iconSet="true" iconFile="${basedir}/src/main/images/cytoscape3-icon-trans-128x128.ico" executableDir="." stderrFile="output.log" executableMode="gui" dpiAware="false">
         <versionInfo fileVersion="${compiler:WINDOWS_VERSION}" fileDescription="Cytoscape" legalCopyright="Cytoscape Consortium" internalName="${compiler:sys.shortName}" />
       </executable>
@@ -116,7 +116,9 @@
           <directory location="./framework/lib/openjfx/${compiler:JAVAFX_NATIVE_DIR}/" failOnError="false" />
         </modulePath>
       </java>
-      <macStaticAssociationActions mode="selected" />
+      <macStaticAssociationActions mode="selected">
+        <id>14</id>
+      </macStaticAssociationActions>
       <vmOptionsFile mode="none" overwriteMode="1" />
       <iconImageFiles>
         <file path="${basedir}/src/main/images/cytoscape3-icon-trans-16x16.png" />
