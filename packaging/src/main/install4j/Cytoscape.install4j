@@ -777,7 +777,7 @@ Ty Coon, President of Vice&lt;/tt&gt;&lt;/p&gt;
             <formComponents>
               <formComponent id="634" beanClass="com.install4j.runtime.beans.formcomponents.MultilineLabelComponent" insetBottom="10">
                 <serializedBean>
-                  <property name="labelText" type="string">Do you want to add a Cytoscaspe Desktop icon?</property>
+                  <property name="labelText" type="string">Do you want to add a Cytoscape Desktop icon?</property>
                 </serializedBean>
                 <visibilityScript>!context.isConsole()</visibilityScript>
               </formComponent>
