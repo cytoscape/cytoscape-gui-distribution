@@ -42,7 +42,8 @@
     <bundle start-level="103">mvn:commons-io/commons-io/2.1</bundle>
 
     <!-- Not going to inline this either. Because of dependencies... -->
-    <bundle start-level="103">mvn:cytoscape-temp/uk.ac.ebi.enfin.mi.cluster.micluster/1.6</bundle>
+    <!--bundle start-level="103">mvn:cytoscape-temp/uk.ac.ebi.enfin.mi.cluster.micluster/1.7.14</bundle-->
+    <!--bundle start-level="103">mvn:cytoscape-temp/uk.ac.ebi.enfin.mi.cluster.micluster/1.6</bundle-->
 
     <!-- The following bundles have packages that are also provided by some
          JREs.  We can't inline these because it will create conflicts when
