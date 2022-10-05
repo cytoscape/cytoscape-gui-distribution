@@ -523,12 +523,12 @@
 									<version>3.13.1-SNAPSHOT</version>
 									<type>jar</type>
 								</artifactItem>
-								<artifactItem>
+								<!--artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>opencl-cycl</artifactId>
 									<version>3.10.0</version>
 									<type>jar</type>
-								</artifactItem>
+								</artifactItem-->
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>opencl-layout</artifactId>
