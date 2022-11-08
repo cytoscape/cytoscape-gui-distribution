@@ -577,6 +577,12 @@
 									<version>1.3</version>
 									<type>jar</type>
 								</artifactItem>
+								<artifactItem>
+									<groupId>edu.ucsf.rbvi</groupId>
+									<artifactId>enhancedGraphics</artifactId>
+									<version>1.5.5</version>
+									<type>jar</type>
+								</artifactItem>
 							</artifactItems>
 							<outputDirectory>target/dependencies/apps</outputDirectory>
 							<useBaseVersion>true</useBaseVersion>
