@@ -17,7 +17,7 @@
 
 	<properties>
 		<maven.resources.escapeString>\</maven.resources.escapeString>
-		<javafx.version>18.0.1</javafx.version>
+		<javafx.version>18.0.2</javafx.version>
 		<dollar>$</dollar>
 	</properties>
 
