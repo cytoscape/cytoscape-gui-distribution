@@ -277,6 +277,5 @@ if defined CY_DEBUG_START (
   pause
 )
 
-:: This is probably wrong.  We don't really want the user to be in this directory, do we?
-framework/bin/karaf %1 %2 %3 %4 %5 %6 %7 %8
+"%PWD%/framework/bin/karaf" %1 %2 %3 %4 %5 %6 %7 %8
 :END_BATCH
