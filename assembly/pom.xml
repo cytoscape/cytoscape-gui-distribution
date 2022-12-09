@@ -17,7 +17,7 @@
 
 	<properties>
 		<maven.resources.escapeString>\</maven.resources.escapeString>
-		<javafx.version>18.0.1</javafx.version>
+		<javafx.version>18.0.2</javafx.version>
 		<dollar>$</dollar>
 	</properties>
 
@@ -550,7 +550,7 @@
 								<artifactItem>
 									<groupId>edu.ucsf.rbvi</groupId>
 									<artifactId>cyBrowser</artifactId>
-									<version>1.3.4</version>
+									<version>1.3.8</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
@@ -569,6 +569,24 @@
 									<groupId>org.cytoscape</groupId>
 									<artifactId>file-transfer</artifactId>
 									<version>1.1</version>
+									<type>jar</type>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.cytoscape</groupId>
+									<artifactId>LargestSubnetwork</artifactId>
+									<version>1.3</version>
+									<type>jar</type>
+								</artifactItem>
+								<artifactItem>
+									<groupId>edu.ucsf.rbvi</groupId>
+									<artifactId>enhancedGraphics</artifactId>
+									<version>1.5.5</version>
+									<type>jar</type>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.nrnb.gsoc</groupId>
+									<artifactId>enrichment</artifactId>
+									<version>2.0.0</version>
 									<type>jar</type>
 								</artifactItem>
 							</artifactItems>
