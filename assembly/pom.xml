@@ -550,7 +550,7 @@
 								<artifactItem>
 									<groupId>edu.ucsf.rbvi</groupId>
 									<artifactId>cyBrowser</artifactId>
-									<version>1.3.8</version>
+									<version>1.3.9</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
