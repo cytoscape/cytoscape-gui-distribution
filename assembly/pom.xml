@@ -490,7 +490,7 @@
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>network-merge</artifactId>
-									<version>3.9.3</version>
+									<version>3.9.4</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
