@@ -191,6 +191,233 @@ return console.askOkCancel(message, true);
               </formComponent>
             </formComponents>
           </screen>
+          <screen name="What's New" id="654" beanClass="com.install4j.runtime.beans.screens.FormScreen" rollbackBarrierExitCode="0">
+            <serializedBean>
+              <property name="subTitle" type="string" />
+              <property name="title" type="string">What's New in Cytoscape 3.10</property>
+            </serializedBean>
+            <formComponents>
+              <group id="664" beanClass="com.install4j.runtime.beans.groups.VerticalFormComponentGroup">
+                <serializedBean>
+                  <property name="visibilityScript">
+                    <object class="com.install4j.api.beans.ScriptProperty">
+                      <property name="value" type="string">formEnvironment.getLayoutGroupById("692").setVisible(false);
+
+return true;</property>
+                    </object>
+                  </property>
+                </serializedBean>
+                <beans>
+                  <group id="660" beanClass="com.install4j.runtime.beans.groups.HorizontalFormComponentGroup">
+                    <serializedBean>
+                      <property name="anchor" type="enum" class="com.install4j.api.beans.Anchor" value="NORTHWEST" />
+                      <property name="makeSameHeight" type="boolean" value="true" />
+                    </serializedBean>
+                    <beans>
+                      <formComponent id="661" beanClass="com.install4j.runtime.beans.formcomponents.MultilineHtmlLabelComponent">
+                        <serializedBean>
+                          <property name="labelHtml" type="string">&lt;html&gt;
+&lt;p&gt;&lt;b&gt;Selection Lasso Tool (1/5)&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;
+Hold &lt;b&gt;Ctrl-Shift&lt;/b&gt; on Windows/Linux, or &lt;b&gt;Cmd-Shift&lt;/b&gt; on Mac, 
+then use the mouse to draw a free-form loop around nodes you wish to select.
+&lt;/p&gt;
+&lt;/html&gt;</property>
+                        </serializedBean>
+                      </formComponent>
+                      <group id="662" beanClass="com.install4j.runtime.beans.groups.VerticalFormComponentGroup" externalParametrizationName="asdf">
+                        <serializedBean>
+                          <property name="imageEdgeBorder" type="boolean" value="true" />
+                          <property name="imageFile">
+                            <object class="com.install4j.api.beans.ExternalFile">
+                              <string>/Users/mkucera/git/cytoscape/cytoscape/gui-distribution/packaging/src/main/images/whatsnew/selection_lasso.png</string>
+                            </object>
+                          </property>
+                        </serializedBean>
+                      </group>
+                    </beans>
+                  </group>
+                  <group id="709" beanClass="com.install4j.runtime.beans.groups.HorizontalFormComponentGroup">
+                    <serializedBean>
+                      <property name="anchor" type="enum" class="com.install4j.api.beans.Anchor" value="NORTHWEST" />
+                      <property name="insets">
+                        <object class="java.awt.Insets">
+                          <int>4</int>
+                          <int>0</int>
+                          <int>4</int>
+                          <int>0</int>
+                        </object>
+                      </property>
+                      <property name="makeSameHeight" type="boolean" value="true" />
+                      <property name="visibilityScript">
+                        <object class="com.install4j.api.beans.ScriptProperty">
+                          <property name="value" type="string">return false;</property>
+                        </object>
+                      </property>
+                    </serializedBean>
+                    <beans>
+                      <formComponent id="710" beanClass="com.install4j.runtime.beans.formcomponents.MultilineHtmlLabelComponent">
+                        <serializedBean>
+                          <property name="labelHtml" type="string">&lt;html&gt;
+&lt;p&gt;&lt;b&gt;Edge Label Autorotate (2/5)&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;
+The new Edge &lt;b&gt;Label Autorotate&lt;/b&gt; visual property allows
+edge labels to be aligned with the edge slope.
+&lt;/p&gt;
+&lt;/html&gt;</property>
+                        </serializedBean>
+                      </formComponent>
+                      <group id="711" beanClass="com.install4j.runtime.beans.groups.VerticalFormComponentGroup" externalParametrizationName="asdf">
+                        <serializedBean>
+                          <property name="imageEdgeBorder" type="boolean" value="true" />
+                          <property name="imageFile">
+                            <object class="com.install4j.api.beans.ExternalFile">
+                              <string>/Users/mkucera/git/cytoscape/cytoscape/gui-distribution/packaging/src/main/images/whatsnew/edge_labels.png</string>
+                            </object>
+                          </property>
+                        </serializedBean>
+                      </group>
+                    </beans>
+                  </group>
+                  <group id="712" beanClass="com.install4j.runtime.beans.groups.HorizontalFormComponentGroup">
+                    <serializedBean>
+                      <property name="anchor" type="enum" class="com.install4j.api.beans.Anchor" value="NORTHWEST" />
+                      <property name="insets">
+                        <object class="java.awt.Insets">
+                          <int>4</int>
+                          <int>0</int>
+                          <int>4</int>
+                          <int>0</int>
+                        </object>
+                      </property>
+                      <property name="makeSameHeight" type="boolean" value="true" />
+                      <property name="visibilityScript">
+                        <object class="com.install4j.api.beans.ScriptProperty">
+                          <property name="value" type="string">return false;</property>
+                        </object>
+                      </property>
+                    </serializedBean>
+                    <beans>
+                      <formComponent id="713" beanClass="com.install4j.runtime.beans.formcomponents.MultilineHtmlLabelComponent">
+                        <serializedBean>
+                          <property name="labelHtml" type="string">&lt;html&gt;
+&lt;p&gt;&lt;b&gt;Table Styles (3/5)&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;
+Visual Styles can now be applied to columns in the Node and Edge tables.
+Use the &lt;b&gt;Column&lt;/b&gt; tab in the &lt;b&gt;Style Panel&lt;/b&gt;.
+&lt;/p&gt;
+&lt;/html&gt;</property>
+                        </serializedBean>
+                      </formComponent>
+                      <group id="714" beanClass="com.install4j.runtime.beans.groups.VerticalFormComponentGroup" externalParametrizationName="asdf">
+                        <serializedBean>
+                          <property name="imageEdgeBorder" type="boolean" value="true" />
+                          <property name="imageFile">
+                            <object class="com.install4j.api.beans.ExternalFile">
+                              <string>/Users/mkucera/git/cytoscape/cytoscape/gui-distribution/packaging/src/main/images/whatsnew/table_style.png</string>
+                            </object>
+                          </property>
+                        </serializedBean>
+                      </group>
+                    </beans>
+                  </group>
+                  <group id="692" beanClass="com.install4j.runtime.beans.groups.HorizontalFormComponentGroup">
+                    <serializedBean>
+                      <property name="anchor" type="enum" class="com.install4j.api.beans.Anchor" value="NORTHWEST" />
+                      <property name="insets">
+                        <object class="java.awt.Insets">
+                          <int>4</int>
+                          <int>0</int>
+                          <int>4</int>
+                          <int>0</int>
+                        </object>
+                      </property>
+                      <property name="makeSameHeight" type="boolean" value="true" />
+                      <property name="visibilityScript">
+                        <object class="com.install4j.api.beans.ScriptProperty">
+                          <property name="value" type="string">return false;</property>
+                        </object>
+                      </property>
+                    </serializedBean>
+                    <beans>
+                      <formComponent id="693" beanClass="com.install4j.runtime.beans.formcomponents.MultilineHtmlLabelComponent">
+                        <serializedBean>
+                          <property name="labelHtml" type="string">&lt;html&gt;
+&lt;p&gt;&lt;b&gt;App Store Panel (4/5)&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;
+Cytoscape Apps can now be found and installed from the &lt;b&gt;App Store&lt;/b&gt; panel.
+&lt;/p&gt;
+&lt;/html&gt;</property>
+                        </serializedBean>
+                      </formComponent>
+                      <group id="694" beanClass="com.install4j.runtime.beans.groups.VerticalFormComponentGroup" externalParametrizationName="asdf">
+                        <serializedBean>
+                          <property name="imageEdgeBorder" type="boolean" value="true" />
+                          <property name="imageFile">
+                            <object class="com.install4j.api.beans.ExternalFile">
+                              <string>/Users/mkucera/git/cytoscape/cytoscape/gui-distribution/packaging/src/main/images/whatsnew/app_store.png</string>
+                            </object>
+                          </property>
+                        </serializedBean>
+                      </group>
+                    </beans>
+                  </group>
+                  <group id="707" beanClass="com.install4j.runtime.beans.groups.VerticalFormComponentGroup">
+                    <serializedBean>
+                      <property name="visibilityScript">
+                        <object class="com.install4j.api.beans.ScriptProperty">
+                          <property name="value" type="string">return false;</property>
+                        </object>
+                      </property>
+                    </serializedBean>
+                    <beans>
+                      <formComponent id="708" beanClass="com.install4j.runtime.beans.formcomponents.MultilineHtmlLabelComponent">
+                        <serializedBean>
+                          <property name="labelHtml" type="string">&lt;html&gt;
+&lt;p&gt;&lt;b&gt;Other New Features (5/5)&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;ul&gt;
+    &lt;li&gt;
+        &lt;b&gt;Improved Search&lt;/b&gt;
+        &lt;ul&gt;&lt;li&gt;Search is faster and more reliable&lt;/li&gt;&lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;b&gt;New Image Manager&lt;/b&gt;
+        &lt;ul&gt;&lt;li&gt;The Image Manager has been greatly simplified for ease of use.&lt;/li&gt;&lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+&lt;/html&gt;</property>
+                        </serializedBean>
+                      </formComponent>
+                    </beans>
+                  </group>
+                  <formComponent id="703" beanClass="com.install4j.runtime.beans.formcomponents.ButtonComponent">
+                    <serializedBean>
+                      <property name="actionScript">
+                        <object class="com.install4j.api.beans.ScriptProperty">
+                          <property name="value" type="string">String[] groupIDs = {"660", "709", "712", "692", "707"};
+
+Integer step = (Integer) context.getVariable("tipStep");
+if(step == null)
+    step = 1; 
+
+for(int i = 0; i &lt; groupIDs.length; i++) {
+    String id = groupIDs[i];
+    boolean visible = step % groupIDs.length == i;
+    formEnvironment.getLayoutGroupById(id).setVisible(visible);
+}
+
+context.setVariable("tipStep", step + 1);</property>
+                        </object>
+                      </property>
+                      <property name="buttonText" type="string">Next Tip</property>
+                    </serializedBean>
+                  </formComponent>
+                </beans>
+              </group>
+            </formComponents>
+          </screen>
           <screen id="7" beanClass="com.install4j.runtime.beans.screens.LicenseScreen">
             <formComponents>
               <formComponent id="353" beanClass="com.install4j.runtime.beans.formcomponents.MultilineLabelComponent">
