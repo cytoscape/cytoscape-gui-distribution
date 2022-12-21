@@ -859,7 +859,7 @@ then use the mouse to draw a free-form loop around nodes you wish to select.
                           <property name="imageEdgeBorder" type="boolean" value="true" />
                           <property name="imageFile">
                             <object class="com.install4j.api.beans.ExternalFile">
-                              <string>/Users/mkucera/git/cytoscape/cytoscape/gui-distribution/packaging/src/main/images/whatsnew/selection_lasso.png</string>
+                              <string>${basedir}/src/main/images/whatsnew/selection_lasso.png</string>
                             </object>
                           </property>
                         </serializedBean>
@@ -901,7 +901,7 @@ edge labels to be aligned with the edge slope.
                           <property name="imageEdgeBorder" type="boolean" value="true" />
                           <property name="imageFile">
                             <object class="com.install4j.api.beans.ExternalFile">
-                              <string>/Users/mkucera/git/cytoscape/cytoscape/gui-distribution/packaging/src/main/images/whatsnew/edge_labels.png</string>
+                              <string>${basedir}/src/main/images/whatsnew/edge_labels.png</string>
                             </object>
                           </property>
                         </serializedBean>
@@ -943,7 +943,7 @@ Use the &lt;b&gt;Column&lt;/b&gt; tab in the &lt;b&gt;Style Panel&lt;/b&gt;.
                           <property name="imageEdgeBorder" type="boolean" value="true" />
                           <property name="imageFile">
                             <object class="com.install4j.api.beans.ExternalFile">
-                              <string>/Users/mkucera/git/cytoscape/cytoscape/gui-distribution/packaging/src/main/images/whatsnew/table_style.png</string>
+                              <string>${basedir}/src/main/images/whatsnew/table_style.png</string>
                             </object>
                           </property>
                         </serializedBean>
@@ -984,7 +984,7 @@ Cytoscape Apps can now be found and installed from the &lt;b&gt;App Store&lt;/b&
                           <property name="imageEdgeBorder" type="boolean" value="true" />
                           <property name="imageFile">
                             <object class="com.install4j.api.beans.ExternalFile">
-                              <string>/Users/mkucera/git/cytoscape/cytoscape/gui-distribution/packaging/src/main/images/whatsnew/app_store.png</string>
+                              <string>${basedir}/src/main/images/whatsnew/app_store.png</string>
                             </object>
                           </property>
                         </serializedBean>
@@ -1023,7 +1023,7 @@ Cytoscape Apps can now be found and installed from the &lt;b&gt;App Store&lt;/b&
                   </group>
                   <group id="729" beanClass="com.install4j.runtime.beans.groups.HorizontalFormComponentGroup">
                     <serializedBean>
-                      <property name="anchor" type="enum" class="com.install4j.api.beans.Anchor" value="NORTHEAST" />
+                      <property name="anchor" type="enum" class="com.install4j.api.beans.Anchor" value="SOUTHEAST" />
                     </serializedBean>
                     <beans>
                       <formComponent id="703" beanClass="com.install4j.runtime.beans.formcomponents.ButtonComponent">
