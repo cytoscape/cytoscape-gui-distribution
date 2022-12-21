@@ -775,7 +775,6 @@ Ty Coon, President of Vice&lt;/tt&gt;&lt;/p&gt;
           </screen>
           <screen name="Additional Options" id="715" beanClass="com.install4j.runtime.beans.screens.FormScreen" rollbackBarrierExitCode="0">
             <serializedBean>
-              <property name="subTitle" type="string" />
               <property name="title" type="string">Installation Options</property>
             </serializedBean>
             <formComponents>
@@ -826,7 +825,6 @@ In no case would this information be tied to an individual user, institution or 
           </screen>
           <screen name="What's New" id="654" beanClass="com.install4j.runtime.beans.screens.FormScreen" rollbackBarrierExitCode="0">
             <serializedBean>
-              <property name="subTitle" type="string" />
               <property name="title" type="string">What's New in Cytoscape 3.10</property>
             </serializedBean>
             <formComponents>
@@ -834,9 +832,7 @@ In no case would this information be tied to an individual user, institution or 
                 <serializedBean>
                   <property name="visibilityScript">
                     <object class="com.install4j.api.beans.ScriptProperty">
-                      <property name="value" type="string">formEnvironment.getLayoutGroupById("692").setVisible(false);
-
-return true;</property>
+                      <property name="value" type="string" />
                     </object>
                   </property>
                 </serializedBean>
@@ -1025,11 +1021,16 @@ Cytoscape Apps can now be found and installed from the &lt;b&gt;App Store&lt;/b&
                       </formComponent>
                     </beans>
                   </group>
-                  <formComponent id="703" beanClass="com.install4j.runtime.beans.formcomponents.ButtonComponent">
+                  <group id="729" beanClass="com.install4j.runtime.beans.groups.HorizontalFormComponentGroup">
                     <serializedBean>
-                      <property name="actionScript">
-                        <object class="com.install4j.api.beans.ScriptProperty">
-                          <property name="value" type="string">String[] groupIDs = {"660", "709", "712", "692", "707"};
+                      <property name="anchor" type="enum" class="com.install4j.api.beans.Anchor" value="NORTHEAST" />
+                    </serializedBean>
+                    <beans>
+                      <formComponent id="703" beanClass="com.install4j.runtime.beans.formcomponents.ButtonComponent">
+                        <serializedBean>
+                          <property name="actionScript">
+                            <object class="com.install4j.api.beans.ScriptProperty">
+                              <property name="value" type="string">String[] groupIDs = {"660", "709", "712", "692", "707"};
 
 Integer step = (Integer) context.getVariable("tipStep");
 if(step == null)
@@ -1042,11 +1043,13 @@ for(int i = 0; i &lt; groupIDs.length; i++) {
 }
 
 context.setVariable("tipStep", step + 1);</property>
-                        </object>
-                      </property>
-                      <property name="buttonText" type="string">Next Tip</property>
-                    </serializedBean>
-                  </formComponent>
+                            </object>
+                          </property>
+                          <property name="buttonText" type="string">Next Tip</property>
+                        </serializedBean>
+                      </formComponent>
+                    </beans>
+                  </group>
                 </beans>
               </group>
             </formComponents>
