@@ -1518,7 +1518,7 @@ return console.askYesNo(message, true);
       <variables>
         <variable name="JAVAFX_NATIVE_DIR" value="win" />
       </variables>
-      <jreBundle jreBundleSource="preCreated" includedJre="windows-amd64-17.0.2" bundleType="dynamic" bundleUrl="https://cytoscape-builds.ucsd.edu/jres/windows-amd64-17.0.2.tar.gz" sharingId="org.cytoscape.jre" />
+      <jreBundle jreBundleSource="preCreated" includedJre="windows-amd64-17.0.5" bundleType="dynamic" bundleUrl="https://cytoscape-builds.ucsd.edu/jres/windows-amd64-17.0.5.tar.gz" sharingId="org.cytoscape.jre" />
     </windows>
     <macosFolder name="macos x64" id="9" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true">
       <excludedComponents>
@@ -1534,7 +1534,7 @@ return console.askYesNo(message, true);
       <variables>
         <variable name="JAVAFX_NATIVE_DIR" value="mac" />
       </variables>
-      <jreBundle jreBundleSource="preCreated" includedJre="macos-amd64-17.0.1" bundleType="dynamic" bundleUrl="https://cytoscape-builds.ucsd.edu/jres/macos-amd64-17.0.1.tar.gz" />
+      <jreBundle jreBundleSource="preCreated" includedJre="macos-amd64-17.0.5" bundleType="dynamic" bundleUrl="https://cytoscape-builds.ucsd.edu/jres/macos-amd64-17.0.5.tar.gz" />
     </macosFolder>
     <macosFolder name="macos aarch64" id="637" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true" architecture="aarch64" signLaunchers="true">
       <excludedComponents>
@@ -1550,7 +1550,7 @@ return console.askYesNo(message, true);
       <variables>
         <variable name="JAVAFX_NATIVE_DIR" value="mac_aarch64" />
       </variables>
-      <jreBundle jreBundleSource="preCreated" includedJre="macos-aarch64-17.0.2" bundleType="dynamic" bundleUrl="https://cytoscape-builds.ucsd.edu/jres/macos-aarch64-17.0.2.tar.gz" />
+      <jreBundle jreBundleSource="preCreated" includedJre="macos-aarch64-17.0.5" bundleType="dynamic" bundleUrl="https://cytoscape-builds.ucsd.edu/jres/macos-aarch64-17.0.5.tar.gz" />
     </macosFolder>
     <unixInstaller name="unix" id="12" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true">
       <excludedComponents>
