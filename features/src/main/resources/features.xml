@@ -95,7 +95,7 @@
     <bundle start-level="140">mvn:org.cytoscape/session-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="140">mvn:org.cytoscape/vizmap-gui-core-impl/${cytoscape.impl.version}</bundle>
 
-	<bundle start-level="144">mvn:org.cytoscape/custom-graphics-internal/${cytoscape.impl.version}</bundle>
+    <bundle start-level="144">mvn:org.cytoscape/custom-graphics-internal/${cytoscape.impl.version}</bundle>
 
     <bundle start-level="145">mvn:org.cytoscape/ding-presentation-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="145">mvn:org.cytoscape/table-presentation-impl/${cytoscape.impl.version}</bundle>
@@ -109,7 +109,8 @@
 
     <bundle start-level="165">mvn:org.cytoscape/jobs-impl/${cytoscape.impl.version}</bundle>
 
-	<bundle start-level="170">mvn:org.cytoscape/search2-impl/${cytoscape.impl.version}</bundle>
+    <bundle start-level="170">mvn:org.cytoscape/cycl-impl/${cytoscape.impl.version}</bundle>
+    <bundle start-level="170">mvn:org.cytoscape/search2-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="170">mvn:org.cytoscape/table-browser-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="170">mvn:org.cytoscape/vizmap-gui-impl/${cytoscape.impl.version}</bundle>
     <bundle start-level="170">mvn:org.cytoscape/manual-layout-impl/${cytoscape.impl.version}</bundle>

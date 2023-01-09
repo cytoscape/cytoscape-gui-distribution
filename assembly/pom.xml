@@ -490,7 +490,7 @@
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>network-merge</artifactId>
-									<version>3.9.3</version>
+									<version>3.9.4</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
@@ -523,16 +523,16 @@
 									<version>3.13.1-SNAPSHOT</version>
 									<type>jar</type>
 								</artifactItem>
-								<artifactItem>
+								<!--artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>opencl-cycl</artifactId>
 									<version>3.10.0</version>
 									<type>jar</type>
-								</artifactItem>
+								</artifactItem-->
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>opencl-layout</artifactId>
-									<version>3.10.0</version>
+									<version>3.10.1</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
@@ -550,7 +550,7 @@
 								<artifactItem>
 									<groupId>edu.ucsf.rbvi</groupId>
 									<artifactId>cyBrowser</artifactId>
-									<version>1.3.8</version>
+									<version>1.3.9</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
