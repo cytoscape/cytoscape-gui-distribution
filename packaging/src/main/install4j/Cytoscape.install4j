@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<install4j version="9.0.6" transformSequenceNumber="9">
+<install4j version="10.0.4" transformSequenceNumber="10">
   <directoryPresets config="/home/cybuilder/cytoscape.p12" />
   <application name="Cytoscape" applicationId="5211-3645-3154-2580" mediaDir="dist" mediaFilePattern="${compiler:sys.shortName}_${compiler:sys.version}_${compiler:sys.mediaName}" shortName="Cytoscape" publisher="Cytoscape Consortium" publisherWeb="http://www.cytoscape.org" version="${version}" macVolumeId="60ff7381dde234ab" javaMinVersion="17.0.2" javaMaxVersion="17" allowBetaVM="true" jdkMode="jdk">
     <searchSequence>
@@ -13,7 +13,7 @@
     <codeSigning macEnabled="true" macPkcs12File="/home/cybuilder/cytoscape.p12" />
     <jreBundles jdkProviderId="Adoptium" release="17/jdk-17.0.2+8" />
   </application>
-  <files preserveSymlinks="false">
+  <files>
     <filesets>
       <fileset name="Windows file set" id="225" />
       <fileset name="Unix file set" id="227" />
@@ -90,7 +90,7 @@
     </components>
   </files>
   <launchers>
-    <launcher name="Cytoscape" id="3" icnsFile="${basedir}/src/main/images/cytoscape3-icon-trans-128x128.icns" macStaticAssociationsForInstallers="true">
+    <launcher name="Cytoscape" id="3" icnsFile="${basedir}/src/main/images/cytoscape3-icon-trans-128x128.icns">
       <executable name="Cytoscape" iconSet="true" iconFile="${basedir}/src/main/images/cytoscape3-icon-trans-128x128.ico" executableDir="." stderrFile="output.log" executableMode="gui" dpiAware="false">
         <versionInfo fileVersion="${compiler:WINDOWS_VERSION}" fileDescription="Cytoscape" legalCopyright="Cytoscape Consortium" internalName="${compiler:sys.shortName}" />
       </executable>
@@ -116,15 +116,15 @@
           <directory location="./framework/lib/openjfx/${compiler:JAVAFX_NATIVE_DIR}/" failOnError="false" />
         </modulePath>
       </java>
-      <macStaticAssociationActions mode="selected">
-        <id>14</id>
-      </macStaticAssociationActions>
       <vmOptionsFile mode="none" overwriteMode="1" />
       <iconImageFiles>
         <file path="${basedir}/src/main/images/cytoscape3-icon-trans-16x16.png" />
         <file path="${basedir}/src/main/images/cytoscape3-icon-trans-32x32.png" />
         <file path="${basedir}/src/main/images/cytoscape3-icon-trans-128x128.png" />
       </iconImageFiles>
+      <macStaticAssociations>
+        <fileAssociation extension="cys" description="Open Cytoscape when double-clicking a Cytoscape Session File" iconFile="${basedir}/src/main/images/cytoscape3-file-icon-trans-128x128.icns" />
+      </macStaticAssociations>
     </launcher>
   </launchers>
   <installerGui suggestPreviousLocations="false">
@@ -796,9 +796,6 @@ Ty Coon, President of Vice&lt;/tt&gt;&lt;/p&gt;
                   </formComponent>
                   <formComponent id="728" beanClass="com.install4j.runtime.beans.formcomponents.SpacerComponent" />
                   <formComponent id="723" beanClass="com.install4j.runtime.beans.formcomponents.FileAssociationsComponent" useExternalParametrization="true" externalParametrizationName="File Associations" externalParametrizationMode="include">
-                    <serializedBean>
-                      <property name="fillVertical" type="boolean" value="true" />
-                    </serializedBean>
                     <externalParametrizationPropertyNames>
                       <propertyName>selectionButtonPosition</propertyName>
                       <propertyName>showSelectionButtons</propertyName>
@@ -1127,11 +1124,6 @@ shareStatisticsDate=${compiler:sys.date} ${compiler:sys.time}
                   <property name="description" type="string">Open Cytoscape when double-clicking a Cytoscape Session File</property>
                   <property name="extension" type="string">cys</property>
                   <property name="launcherId" type="string">3</property>
-                  <property name="macIconFile">
-                    <object class="com.install4j.api.beans.ExternalFile">
-                      <string>${basedir}/src/main/images/cytoscape3-file-icon-trans-128x128.icns</string>
-                    </object>
-                  </property>
                   <property name="windowsIconFile">
                     <object class="com.install4j.api.beans.ExternalFile">
                       <string>${basedir}/src/main/images/cytoscape3-icon-trans-128x128.ico</string>
@@ -1501,7 +1493,7 @@ return console.askYesNo(message, true);
     </styles>
   </installerGui>
   <mediaSets>
-    <windows name="windows" id="11" mediaFileName="Cytoscape_${compiler:sys.version}_windows_64bit" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true">
+    <windows name="windows" id="11" mediaFileName="Cytoscape_${compiler:sys.version}_windows_64bit" installDir="Cytoscape_v${compiler:sys.version}" overridePrincipalLanguage="true" architecture="64">
       <excludedComponents>
         <component id="235" />
         <component id="644" />
