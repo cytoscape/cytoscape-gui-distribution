@@ -813,6 +813,89 @@
 							</replacements>
 						</configuration>
 					</execution>
+					<execution>
+						<id>patch-karaf-remove-jansi-from-properties</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>replace</goal>
+						</goals>
+						<configuration>
+							<includes>
+								<include>target/dependencies/apache-karaf-${karaf.version}/etc/startup.properties
+								</include>
+							</includes>
+							<regex>false</regex>
+							<unescape>false</unescape>
+							<replacements>
+								<replacement>
+									<token>mvn\:org.fusesource.jansi/jansi/2.4.0 = 8</token>
+									<value />
+								</replacement>
+							</replacements>
+						</configuration>
+					</execution>
+					<execution>
+						<id>patch-karaf-remove-jansi-from-standard-features</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>replace</goal>
+						</goals>
+						<configuration>
+							<includes>
+								<include>target/dependencies/apache-karaf-${karaf.version}/system/org/apache/karaf/features/standard/${karaf.version}/standard-${karaf.version}-features.xml
+								</include>
+							</includes>
+							<regex>false</regex>
+							<unescape>false</unescape>
+							<replacements>
+								<replacement>
+									<token>&lt;bundle dependency="true" start-level="30"&gt;mvn:org.fusesource.jansi/jansi/2.4.0&lt;/bundle&gt;</token>
+									<value />
+								</replacement>
+							</replacements>
+						</configuration>
+					</execution>
+					<execution>
+						<id>patch-karaf-remove-jansi-from-framework-features</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>replace</goal>
+						</goals>
+						<configuration>
+							<includes>
+								<include>target/dependencies/apache-karaf-${karaf.version}/system/org/apache/karaf/features/framework/${karaf.version}/framework-${karaf.version}-features.xml
+								</include>
+							</includes>
+							<regex>false</regex>
+							<unescape>false</unescape>
+							<replacements>
+								<replacement>
+									<token>&lt;bundle start-level="8"&gt;mvn:org.fusesource.jansi/jansi/2.4.0&lt;/bundle&gt;</token>
+									<value />
+								</replacement>
+							</replacements>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.7</version>
+				<executions>
+				    <execution>
+				        <phase>test</phase>
+				        <goals>
+				            <goal>run</goal>
+				        </goals>
+				        <configuration>
+				            <tasks>
+				                <delete>
+				                    <fileset dir="target/dependencies/apache-karaf-${karaf.version}/system/org/fusesource" includes="**" />
+				                </delete>
+				            </tasks>
+				        </configuration>
+				    </execution>
 				</executions>
 			</plugin>
 		</plugins>
