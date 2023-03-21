@@ -477,12 +477,6 @@
 								</artifactItem>
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
-									<artifactId>analyzer</artifactId>
-									<version>4.4.6</version>
-									<type>jar</type>
-								</artifactItem>
-								<artifactItem>
-									<groupId>org.cytoscape</groupId>
 									<artifactId>cyChart</artifactId>
 									<version>0.3.0</version>
 									<type>jar</type>
