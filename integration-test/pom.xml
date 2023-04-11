@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.cytoscape.distribution</groupId>
 		<artifactId>parent</artifactId>
-		<version>3.10.0-SNAPSHOT</version>
+		<version>3.11.0-SNAPSHOT</version>
 	</parent>
 
 	<properties>
@@ -19,7 +19,7 @@
 	<artifactId>integration-test</artifactId>
 	<name>Cytoscape GUI-Distribution Integration Test (${project.artifactId})</name>
 
-	<version>3.10.0-SNAPSHOT</version>
+	<version>3.11.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<build>
