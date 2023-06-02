@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>org.cytoscape.distribution</groupId>
 		<artifactId>parent</artifactId>
-		<version>3.10.0</version>
+		<version>3.10.1</version>
 		<relativePath>..</relativePath>
 	</parent>
 
@@ -523,12 +523,6 @@
 									<version>3.13.2</version>
 									<type>jar</type>
 								</artifactItem>
-								<!--artifactItem>
-									<groupId>org.cytoscape</groupId>
-									<artifactId>opencl-cycl</artifactId>
-									<version>3.10.0</version>
-									<type>jar</type>
-								</artifactItem-->
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>opencl-layout</artifactId>
