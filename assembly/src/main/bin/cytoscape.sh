@@ -74,6 +74,8 @@ else # Just use sensible defaults.
 		JAVA_OPTS=-Xms1550M\ -Xmx1550M
 fi
 
+export JAVA_OPTS="${JAVA_OPTS} -Djdk.util.zip.disableZip64ExtraFieldValidation=true"
+
 # The Cytoscape home directory contains the "framework" directory
 # and this script.
 CYTOSCAPE_HOME_REL=$script_path
