@@ -76,6 +76,8 @@ for /f "tokens=* delims= " %%a in (Cytoscape.vmoptions) do (
     set JAVA_OPTS=!JAVA_OPTS! %%a
 )
 set JAVA_OPTS=%JAVA_OPTS:~1%
+set JAVA_OPTS=%JAVA_OPTS% -Djdk.util.zip.disableZip64ExtraFieldValidation=true
+
 
 :setDebugOpts
 set JAVA_DEBUG_OPTS=-Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=%DEBUG_PORT%
