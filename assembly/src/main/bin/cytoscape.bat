@@ -279,6 +279,9 @@ if defined CY_DEBUG_START (
   pause
 )
 
+:: Work around Java 17.0.8 issu
+set EXTRA_JAVA_OPTS="-Djdk.util.zip.disableZip64ExtraFieldValidation=true"
+
 :: This is probably wrong.  We don't really want the user to be in this directory, do we?
 framework/bin/karaf %1 %2 %3 %4 %5 %6 %7 %8
 :END_BATCH
