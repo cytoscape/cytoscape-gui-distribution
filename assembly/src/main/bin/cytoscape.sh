@@ -79,8 +79,11 @@ fi
 CYTOSCAPE_HOME_REL=$script_path
 CYTOSCAPE_HOME_ABS=`cd "$CYTOSCAPE_HOME_REL"; pwd`
 
-export KARAF_OPTS=-Dcytoscape.home="$CYTOSCAPE_HOME_ABS"\ "$CYTOSCAPE_MAC_OPTS"
+#
+# Work around Java 17.0.8 zip issues
+export EXTRA_JAVA_OPTS="-Djdk.util.zip.disableZip64ExtraFieldValidation=true"
 
+export KARAF_OPTS=-Dcytoscape.home="$CYTOSCAPE_HOME_ABS"\ "$CYTOSCAPE_MAC_OPTS"
 export KARAF_DATA="${HOME}/CytoscapeConfiguration/3/karaf_data"
 mkdir -p "${KARAF_DATA}/tmp"
 
