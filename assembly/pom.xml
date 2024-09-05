@@ -17,7 +17,7 @@
 
 	<properties>
 		<maven.resources.escapeString>\</maven.resources.escapeString>
-		<javafx.version>18.0.2</javafx.version>
+		<javafx.version>22.0.2</javafx.version>
 		<dollar>$</dollar>
 	</properties>
 
@@ -544,7 +544,7 @@
 								<artifactItem>
 									<groupId>edu.ucsf.rbvi</groupId>
 									<artifactId>cyBrowser</artifactId>
-									<version>1.3.12</version>
+									<version>1.3.14</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
