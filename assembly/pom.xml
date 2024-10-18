@@ -886,6 +886,7 @@
 				            <tasks>
 				                <delete>
 				                    <fileset dir="target/dependencies/apache-karaf-${karaf.version}/system/org/fusesource" includes="**" />
+				                    <fileset dir="target/dependencies/apache-karaf-${karaf.version}/system/org/apache/karaf/wrapper" includes="**" />
 				                </delete>
 				            </tasks>
 				        </configuration>
