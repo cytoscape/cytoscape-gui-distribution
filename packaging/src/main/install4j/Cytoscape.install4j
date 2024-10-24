@@ -10,7 +10,17 @@
       <variable name="WINDOWS_VERSION" value="@windows_version@" />
       <variable name="JAVAFX_NATIVE_DIR" description="OS-specific path to the OpenJFX native files in the Karaf framework." />
     </variables>
-    <codeSigning macEnabled="true" macPkcs12File="/home/cybuilder/cytoscape.p12" />
+    <codeSigning macEnabled="true" macPkcs12File="/home/cybuilder/cytoscape.p12">
+      <macSearchedJars>
+        <entry>jna-*</entry>
+        <entry>swt-*</entry>
+        <entry>javafx-*</entry>
+        <entry>cycl-impl-*</entry>
+        <entry>lwjgl-*</entry>
+        <entry>gui-cmdline-parser-impl-*</entry>
+        <entry>install4j-*</entry>
+      </macSearchedJars>
+    </codeSigning>
     <jreBundles jdkProviderId="Adoptium" release="17/jdk-17.0.2+8" />
   </application>
   <files>
