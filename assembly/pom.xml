@@ -520,7 +520,7 @@
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>cy-rest</artifactId>
-									<version>3.13.2</version>
+									<version>3.13.3</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
