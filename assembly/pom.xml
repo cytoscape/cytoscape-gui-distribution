@@ -108,25 +108,33 @@
 						<id>add-features-to-repo</id>
 						<phase>generate-resources</phase>
 						<goals>
-							<goal>features-add-to-repository</goal>
+              <goal>features-add-to-repository</goal>
 						</goals>
 						<configuration>
 							<descriptors>
-								<descriptor>mvn:org.apache.karaf.features/standard/${karaf.version}/xml/features
-								</descriptor>
-								<descriptor>mvn:org.cytoscape.distribution/features/${project.version}/xml/features
-								</descriptor>
+                <descriptor>mvn:org.apache.karaf.features/standard/${karaf.version}/xml/features</descriptor>
+                <descriptor>mvn:org.cytoscape.distribution/features/${project.version}/xml/features</descriptor>
+
+                <descriptor>mvn:org.apache.aries.jax.rs/org.apache.aries.jax.rs.features/2.0.2/xml</descriptor>
+                <descriptor>mvn:org.apache.cxf.karaf/apache-cxf/3.6.5/xml/features</descriptor>
+                <descriptor>mvn:org.apache.karaf.features/specs/${karaf.version}/xml/features</descriptor>
+                <descriptor>mvn:org.apache.cxf.karaf/apache-cxf/3.6.5/xml/features</descriptor>
+
 							</descriptors>
 							<features>
 								<feature>cytoscape-gui</feature>
-								<feature version="9.4.43.v20210629">jetty</feature>
+
 								<feature>scr</feature>
-								<feature>pax-web-core</feature>
-								<feature>pax-jetty</feature>
-								<feature>pax-http-jetty</feature>
-								<feature>pax-http</feature>
-								<feature>pax-web-http</feature>
-								<feature>http</feature>
+
+                <feature>jaxb</feature>
+                <feature>jakarta.annotation</feature>
+                <feature>jaxrs</feature>
+                <feature>jackson</feature>
+                <feature>jackson-jaxrs</feature>
+
+                <feature>aries-jax-rs-whiteboard</feature>
+                <feature>aries-jax-rs-whiteboard-jackson</feature>
+
 							</features>
 							<includeMvnBasedDescriptors>true</includeMvnBasedDescriptors>
 							<repository>target/features-repo</repository>
@@ -517,12 +525,12 @@
 									<version>3.6.0</version>
 									<type>jar</type>
 								</artifactItem>
-								<artifactItem>
+								<!--artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>cy-rest</artifactId>
 									<version>3.13.2</version>
 									<type>jar</type>
-								</artifactItem>
+								</artifactItem-->
 								<!--artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>opencl-cycl</artifactId>
@@ -691,7 +699,7 @@
 									<token>--patch-module java.xml="${dollar}{KARAF_HOME}/lib/endorsed/org.apache.karaf.specs.java.xml-${karaf.version}.jar" \</token>
 									<value>--patch-module java.xml="${dollar}{KARAF_HOME}/lib/endorsed/org.apache.karaf.specs.java.xml-${karaf.version}.jar" \
                   -p "${dollar}{KARAF_HOME}/lib/openjfx/${dollar}{JAVAFX_DIR}" \
-                    --add-modules javafx.base,javafx.swing,javafx.media,javafx.web \
+                    --add-modules java.desktop,javafx.base,javafx.swing,javafx.media,javafx.web \
 									</value>
 								</replacement>
 							</replacements>
@@ -745,7 +753,7 @@
 									<token>--patch-module java.xml="%KARAF_HOME%\lib\endorsed\org.apache.karaf.specs.java.xml-${karaf.version}.jar" ^</token>
 									<value>--patch-module java.xml="%KARAF_HOME%\lib\endorsed\org.apache.karaf.specs.java.xml-${karaf.version}.jar" ^
                 -p "%KARAF_HOME%/lib/openjfx/win/" ^
-                --add-modules javafx.base,javafx.swing,javafx.media,javafx.web ^
+                --add-modules java.desktop,javafx.base,javafx.swing,javafx.media,javafx.web ^
 									</value>
 								</replacement>
 							</replacements>
@@ -828,7 +836,7 @@
 							<unescape>false</unescape>
 							<replacements>
 								<replacement>
-									<token>mvn\:org.fusesource.jansi/jansi/2.4.0 = 8</token>
+									<token>mvn\:org.fusesource.jansi/jansi/2.4.1 = 8</token>
 									<value />
 								</replacement>
 							</replacements>
@@ -849,7 +857,7 @@
 							<unescape>false</unescape>
 							<replacements>
 								<replacement>
-									<token>&lt;bundle dependency="true" start-level="30"&gt;mvn:org.fusesource.jansi/jansi/2.4.0&lt;/bundle&gt;</token>
+									<token>&lt;bundle dependency="true" start-level="30"&gt;mvn:org.fusesource.jansi/jansi/2.4.1&lt;/bundle&gt;</token>
 									<value />
 								</replacement>
 							</replacements>
@@ -870,7 +878,7 @@
 							<unescape>false</unescape>
 							<replacements>
 								<replacement>
-									<token>&lt;bundle start-level="8"&gt;mvn:org.fusesource.jansi/jansi/2.4.0&lt;/bundle&gt;</token>
+									<token>&lt;bundle start-level="8"&gt;mvn:org.fusesource.jansi/jansi/2.4.1&lt;/bundle&gt;</token>
 									<value />
 								</replacement>
 							</replacements>
