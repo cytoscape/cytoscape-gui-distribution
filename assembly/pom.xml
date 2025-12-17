@@ -836,7 +836,7 @@
 							<unescape>false</unescape>
 							<replacements>
 								<replacement>
-									<token>mvn\:org.fusesource.jansi/jansi/2.4.1 = 8</token>
+									<token>mvn\:org.fusesource.jansi/jansi/2.4.2 = 8</token>
 									<value />
 								</replacement>
 							</replacements>
@@ -857,7 +857,7 @@
 							<unescape>false</unescape>
 							<replacements>
 								<replacement>
-									<token>&lt;bundle dependency="true" start-level="30"&gt;mvn:org.fusesource.jansi/jansi/2.4.1&lt;/bundle&gt;</token>
+									<token>&lt;bundle dependency="true" start-level="30"&gt;mvn:org.fusesource.jansi/jansi/2.4.2&lt;/bundle&gt;</token>
 									<value />
 								</replacement>
 							</replacements>
@@ -878,7 +878,7 @@
 							<unescape>false</unescape>
 							<replacements>
 								<replacement>
-									<token>&lt;bundle start-level="8"&gt;mvn:org.fusesource.jansi/jansi/2.4.1&lt;/bundle&gt;</token>
+									<token>&lt;bundle start-level="8"&gt;mvn:org.fusesource.jansi/jansi/2.4.2&lt;/bundle&gt;</token>
 									<value />
 								</replacement>
 							</replacements>
