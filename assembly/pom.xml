@@ -562,7 +562,7 @@
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>cy-ndex-2</artifactId>
-									<version>3.7.0</version>
+									<version>3.7.3</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
