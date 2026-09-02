@@ -490,7 +490,7 @@
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>network-merge</artifactId>
-									<version>3.9.5</version>
+									<version>3.9.6</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
@@ -514,7 +514,7 @@
 								<artifactItem>
 									<groupId>org.cytoscape</groupId>
 									<artifactId>webservice-psicquic-client</artifactId>
-									<version>3.6.0</version>
+									<version>3.6.1</version>
 									<type>jar</type>
 								</artifactItem>
 								<artifactItem>
