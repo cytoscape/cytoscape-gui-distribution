@@ -47,6 +47,7 @@ fi
 
 export JAVA_DEBUG_OPTS="-Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=${DEBUG_PORT}"
 if [ `uname` = "Darwin" ]; then
+	CYTOSCAPE_CONFIG_DIR="$HOME/CytoscapeConfiguration"
 	CYTOSCAPE_MAC_OPTS="-Xdock:icon=$script_path/framework/cytoscape_logo_512.png -Xdock:name=Cytoscape"
 	if [ `uname -m` = "arm64" ]; then
 		export JAVAFX_DIR="mac_aarch64"
@@ -54,8 +55,14 @@ if [ `uname` = "Darwin" ]; then
 		export JAVAFX_DIR="mac"
 	fi
 else
+	if [ -d "$HOME/CytoscapeConfiguration" ]; then
+		CYTOSCAPE_CONFIG_DIR="$HOME/CytoscapeConfiguration"
+	else
+		CYTOSCAPE_CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/CytoscapeConfiguration"
+	fi
 	export JAVAFX_DIR="linux"
 fi
+export CYTOSCAPE_CONFIG_DIR
 
 #vm_options_path=$HOME/.cytoscape
 vm_options_path=$script_path
@@ -81,8 +88,8 @@ export JAVA_OPTS="${JAVA_OPTS} -Djdk.util.zip.disableZip64ExtraFieldValidation=t
 CYTOSCAPE_HOME_REL=$script_path
 CYTOSCAPE_HOME_ABS=`cd "$CYTOSCAPE_HOME_REL"; pwd`
 
-export KARAF_OPTS=-Dcytoscape.home="$CYTOSCAPE_HOME_ABS"\ "$CYTOSCAPE_MAC_OPTS"
-export KARAF_DATA="${HOME}/CytoscapeConfiguration/3/karaf_data"
+export KARAF_OPTS=-Dcytoscape.home="$CYTOSCAPE_HOME_ABS"\ -Dcytoscape.config.dir="$CYTOSCAPE_CONFIG_DIR"\ "$CYTOSCAPE_MAC_OPTS"
+export KARAF_DATA="${KARAF_DATA:-$CYTOSCAPE_CONFIG_DIR/3/karaf_data}"
 mkdir -p "${KARAF_DATA}/tmp"
 
 $script_path/framework/bin/karaf "$@"

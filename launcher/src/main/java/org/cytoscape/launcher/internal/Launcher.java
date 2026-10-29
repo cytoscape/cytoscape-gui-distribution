@@ -56,8 +56,9 @@ public class Launcher {
 		if (isMac())
 		    MacHelper.handleStartupArguments();
 				
-		setDefaultSystemProperties();
-		createConfigurationDirectory();
+		final String baseDirectory = getBaseDirectory();
+		setDefaultSystemProperties(baseDirectory);
+		createConfigurationDirectory(baseDirectory);
 		
 		if (isLocked()) {
 			// The main data directory is locked.  We should create a new one.
@@ -163,10 +164,11 @@ public class Launcher {
 		}
 	}
 
-	private static void setDefaultSystemProperties() {
-		String userHome = System.getProperty("user.home");
+	private static void setDefaultSystemProperties(String baseDirectory) {
+		System.setProperty("cytoscape.config.dir", baseDirectory);
+
 		if (System.getProperty("karaf.data") == null) {
-			System.setProperty("karaf.data", join(File.separator, userHome, "CytoscapeConfiguration", "3", "karaf_data"));
+			System.setProperty("karaf.data", join(File.separator, baseDirectory, "3", "karaf_data"));
 		}
 	}
 
@@ -184,13 +186,37 @@ public class Launcher {
 		return builder.toString();
 	}
 	
-	private static void createConfigurationDirectory() {
-		String userHome = System.getProperty("user.home");
-		File karafData = new File(join(File.separator, userHome, "CytoscapeConfiguration", "3"));
+	private static void createConfigurationDirectory(String baseDirectory) {
+		File karafData = new File(join(File.separator, baseDirectory, "3"));
 		karafData.mkdirs();
 		
 		File karafTmp = new File(karafData, "tmp");
 		karafTmp.mkdirs();
+	}
+
+	private static String getBaseDirectory() {
+		// If the config dir is already set (manually or by the cytoscape.sh launch script),
+		// just use the set value
+		final String configured = System.getProperty("cytoscape.config.dir");
+		if (configured != null && !configured.isBlank()) return configured;
+
+		final String userHome = System.getProperty("user.home");
+		final String homeBaseDir = join(File.separator, userHome, "CytoscapeConfiguration");
+
+		if (!isLinux()) {
+			return homeBaseDir;
+		}
+
+		// Follow the XDG Base Directory specification for configuration location on Linux
+		if (new File(homeBaseDir).exists()) {
+			// If the old directory exists, use it for compatibility
+			return homeBaseDir;
+		}
+		String xdgConfigHome = System.getenv("XDG_CONFIG_HOME");
+		if (xdgConfigHome == null || xdgConfigHome.isBlank()) {
+			xdgConfigHome = userHome + File.separator + ".config";
+		}
+		return join(File.separator, xdgConfigHome, "CytoscapeConfiguration");
 	}
 
 	public static String[] getStartupArguments() {
@@ -205,6 +231,10 @@ public class Launcher {
 	
 	private static boolean isMac(){
 		return System.getProperty("os.name").startsWith("Mac OS X");
+	}
+
+	private static boolean isLinux(){
+		return System.getProperty("os.name").startsWith("Linux");
 	}
 
 	public static SplashPanel getSplashPanel() {
