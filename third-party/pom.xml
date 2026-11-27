@@ -44,17 +44,24 @@
           <name>Cytoscape Releases</name>
           <url>https://nrnb-nexus.ucsd.edu/repository/cytoscape_releases/</url>
        </repository>
-       <repository>
-          <id>psidev</id>
-          <snapshots>
-            <enabled>false</enabled>
-          </snapshots>
-          <releases>
-            <enabled>true</enabled>
-          </releases>
-          <name>psidev</name>
-          <url>https://www.ebi.ac.uk/Tools/maven/repos/content/repositories/pst-release/</url>
-       </repository>
+       <!--
+          Deliberately NOT declaring EBI's 'psidev' repository here.
+
+          psidev.psi.mi:psi25-xml is served by cytoscape_thirdparty (inherited
+          from the parent POM) as a stripped POM with no parent and no
+          dependencies. EBI serves the real POM, whose parent psimi-master
+          declares a long list of dead plain-http repositories (intact.nexus,
+          ebi-repo, springsource, codehaus, download.java.net,
+          pride-proteomics) and pulls in cpdetector and the SpringSource
+          commons-logging/log4j bundles, which exist only on those hosts.
+          Maven 3.8.1+ blocks http repositories, so on a machine that has not
+          already cached the stripped POM the build fails while collecting
+          third-party's dependencies.
+
+          Declaring psidev here put it ahead of cytoscape_thirdparty in the
+          resolution order, so the real POM won and the build broke on any
+          clean checkout. See cytoscape/cytoscape#35.
+       -->
   </repositories>
 
   <dependencies>
