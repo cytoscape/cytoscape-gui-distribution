@@ -19,6 +19,14 @@
 		<maven.resources.escapeString>\</maven.resources.escapeString>
 		<javafx.version>21.0.5</javafx.version>
 		<dollar>$</dollar>
+		<!--
+			Overrides the pax-logging bundles shipped with Karaf ${karaf.version}, whose embedded
+			Log4j is vulnerable to CVE-2026-49844 (fixed in Log4j 2.25.5 / 2.26.1).
+			pax-logging 2.2.14 embeds Log4j 2.26.1. Remove this override once karaf.version
+			moves to a release whose own pax-logging is not affected.
+		-->
+		<pax.logging.version>2.2.14</pax.logging.version>
+		<pax.logging.system.dir>target/dependencies/apache-karaf-${karaf.version}/system/org/ops4j/pax/logging</pax.logging.system.dir>
 	</properties>
 
 	<dependencies>
@@ -433,6 +441,39 @@
 									<type>jar</type>
 									<outputDirectory>target/dependencies/splash-launcher
 									</outputDirectory>
+								</artifactItem>
+							</artifactItems>
+						</configuration>
+					</execution>
+					<execution>
+						<!-- See pax.logging.version: put the patched pax-logging bundles into Karaf's system repo -->
+						<id>copy-pax-logging</id>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>copy</goal>
+						</goals>
+						<configuration>
+							<artifactItems>
+								<artifactItem>
+									<groupId>org.ops4j.pax.logging</groupId>
+									<artifactId>pax-logging-api</artifactId>
+									<version>${pax.logging.version}</version>
+									<type>jar</type>
+									<outputDirectory>${pax.logging.system.dir}/pax-logging-api/${pax.logging.version}</outputDirectory>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.ops4j.pax.logging</groupId>
+									<artifactId>pax-logging-log4j2</artifactId>
+									<version>${pax.logging.version}</version>
+									<type>jar</type>
+									<outputDirectory>${pax.logging.system.dir}/pax-logging-log4j2/${pax.logging.version}</outputDirectory>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.ops4j.pax.logging</groupId>
+									<artifactId>pax-logging-logback</artifactId>
+									<version>${pax.logging.version}</version>
+									<type>jar</type>
+									<outputDirectory>${pax.logging.system.dir}/pax-logging-logback/${pax.logging.version}</outputDirectory>
 								</artifactItem>
 							</artifactItems>
 						</configuration>
@@ -876,6 +917,28 @@
 							</replacements>
 						</configuration>
 					</execution>
+					<execution>
+						<!-- See pax.logging.version: point Karaf's boot bundles and framework features at the patched pax-logging -->
+						<id>patch-karaf-pax-logging-version</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>replace</goal>
+						</goals>
+						<configuration>
+							<includes>
+								<include>target/dependencies/apache-karaf-${karaf.version}/etc/startup.properties</include>
+								<include>target/dependencies/apache-karaf-${karaf.version}/system/org/apache/karaf/features/framework/${karaf.version}/framework-${karaf.version}-features.xml</include>
+							</includes>
+							<regex>true</regex>
+							<unescape>false</unescape>
+							<replacements>
+								<replacement>
+									<token>(org[.]ops4j[.]pax[.]logging/pax-logging-(?:api|log4j2|logback))/[0-9][0-9.]*[0-9]</token>
+									<value>$1/${pax.logging.version}</value>
+								</replacement>
+							</replacements>
+						</configuration>
+					</execution>
 				</executions>
 			</plugin>
 			<plugin>
@@ -893,6 +956,10 @@
 				                <delete>
 				                    <fileset dir="target/dependencies/apache-karaf-${karaf.version}/system/org/fusesource" includes="**" />
 				                    <fileset dir="target/dependencies/apache-karaf-${karaf.version}/system/org/apache/karaf/wrapper" includes="**" />
+				                </delete>
+				                <!-- See pax.logging.version: drop Karaf's original (vulnerable) pax-logging jars -->
+				                <delete includeemptydirs="true">
+				                    <fileset dir="${pax.logging.system.dir}" includes="*/**" excludes="*/${pax.logging.version}/**" />
 				                </delete>
 				            </tasks>
 				        </configuration>
